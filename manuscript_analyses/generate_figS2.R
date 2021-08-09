@@ -55,8 +55,10 @@ m=m[(m$HL < 0.1599) & (m$HL >= 0.01),]
 m=m[!is.na(m$mtCN),]
 m$vafbin=floor(m$HL*100)/100
 m$mtcnbin=floor(m$mtCN / 25)*25
+m[(m$mtcnbin >= 225) & (m$mtcnbin <=500),"mtcnbin"]=225
 m[m$mtcnbin > 500,"mtcnbin"]=500
 m$mtcnbinlabel=paste(m$mtcnbin,m$mtcnbin+25,sep="-")
+m[m$mtcnbinlabel=="225-250","mtcnbinlabel"]="225-500"
 m[m$mtcnbinlabel=="500-525","mtcnbinlabel"]="500+"
 m$mtcnbinlabel=factor(m$mtcnbinlabel,levels=unique(m$mtcnbinlabel)[order(unique(m$mtcnbin))])
 m$mtcnbin=factor(m$mtcnbin,levels=sort(unique(m$mtcnbin)))
@@ -82,15 +84,37 @@ tmp3=tmp3[tmp3$n>0,]
 tmp3$percA=tmp3$n.numtA/tmp3$n
 tmp3$percB=tmp3$n.numtB/tmp3$n
 
-# exclude mtCN 250-500 for clarity
-tmp3=tmp3[!(tmp3$mtcnbinlabel %in% c("250-275","275-300","300-325","325-350","350-375","375-400","400-425","425-450","450-475","475-500")),]
 tmp3[is.na(tmp3)]=0
 xlabs=paste(c(1:15)/100,c(2:16)/100,sep="-")
 pdf("plots/FigS2E.pdf", width=4, height=4)
-ggplot(tmp3,aes(y=percA,x=vafbin,color=mtcnbinlabel))+geom_line() + geom_point(size=1) + ggtitle("% NUMT by VAF and mtCN")+ geom_vline(xintercept=0.05, linetype="dashed", color = "black")+ geom_vline(xintercept=0.15, linetype="dashed", color = "black")+ geom_vline(xintercept=0.1, linetype="dashed", color = "black") + scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) + scale_y_continuous(name="% NUMT-FP from numtA")+ labs(color = "mtCN")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ scale_color_brewer(palette="Spectral")
+ggplot(tmp3,aes(y=percA,x=vafbin,color=mtcnbinlabel)) +
+  geom_line() +
+  geom_point(size=1) +
+  ggtitle("% NUMT by VAF and mtCN") +
+  geom_vline(xintercept=0.05, linetype="dashed", color = "black") +
+  geom_vline(xintercept=0.15, linetype="dashed", color = "black") +
+  geom_vline(xintercept=0.1, linetype="dashed", color = "black") +
+  scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) +
+  scale_y_continuous(name="% NUMT-FP from numtA") +
+  labs(color = "mtCN") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  scale_color_brewer(palette="Spectral")
 dev.off()
 pdf("plots/FigS2F.pdf", width=4, height=4)
-ggplot(tmp3,aes(y=percB,x=vafbin,color=mtcnbinlabel))+geom_line() + geom_point(size=1) + ggtitle("% NUMT by VAF and mtCN")+ geom_vline(xintercept=0.05, linetype="dashed", color = "black")+ geom_vline(xintercept=0.15, linetype="dashed", color = "black")+ geom_vline(xintercept=0.1, linetype="dashed", color = "black") + scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) + scale_y_continuous(name="% NUMT-FP from numtB")+ labs(color = "mtCN")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ scale_color_brewer(palette="Spectral")
+ggplot(tmp3,aes(y=percB,x=vafbin,color=mtcnbinlabel)) +
+  geom_line() +
+  geom_point(size=1) +
+  ggtitle("% NUMT by VAF and mtCN") +
+  geom_vline(xintercept=0.05, linetype="dashed", color = "black") +
+  geom_vline(xintercept=0.15, linetype="dashed", color = "black") +
+  geom_vline(xintercept=0.1, linetype="dashed", color = "black") +
+  scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) +
+  scale_y_continuous(name="% NUMT-FP from numtB") +
+  labs(color = "mtCN") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  scale_color_brewer(palette="Spectral")
 dev.off()
 
 ########################################################
@@ -104,7 +128,13 @@ myhet="12684.G.A"
  subset[subset$mtcncolor > 100,"mtcncolor"]=100
  n=dim(subset)[[1]]
  pdf(paste("plots/FigS2D.pdf",sep=""), width=2.5, height=2,useDingbats=FALSE)
- ggplot(subset,aes(y=HL,x=expected,color=mtcncolor))+geom_point(size=0.5) + theme_classic()+xlab("Expected VAF for heterozygous NUMT\n1/(1+mtCN)")+ylab("Observed VAF")+ scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
+ ggplot(subset,aes(y=HL,x=expected,color=mtcncolor)) +
+  geom_point(size=0.5) +
+  theme_classic() +
+  xlab("Expected VAF for heterozygous NUMT\n1/(1+mtCN)") +
+  ylab("Observed VAF") +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0))
  dev.off()
 line=paste("\nStatistics for NUMT-FP m.12684G>A:\nn=",
   n,"; Spearman r=",signif(cor(x=subset$HL,y=subset$expected,use="pairwise.complete.obs")[1],2),
@@ -134,7 +164,17 @@ tmp1[tmp1$numtID=="numtA","letter"]="A"
 tmp1[tmp1$numtID=="numtB","letter"]="B"
 
 pdf("plots/FigS2A.pdf", width=15, height=3)
-ggplot(tmp1, aes(fill=label, y=x, x=POS.REF.ALT))+ geom_hline(yintercept=5000, color = "gray")+ geom_hline(yintercept=10000, color = "gray")+ geom_hline(yintercept=15000, color = "gray") + geom_bar(position="stack", stat="identity")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ xlab("Variants") + ylab("# Samples with variant\n(heteroplasmy 1-50%)")+ scale_fill_manual(values=c("red","orange","gray"))+geom_text(data=tmp1,aes(x=POS.REF.ALT,y=x,label=letter),vjust=-0.1)
+ggplot(tmp1, aes(fill=label, y=x, x=POS.REF.ALT)) +
+  geom_hline(yintercept=5000, color = "gray") +
+  geom_hline(yintercept=10000, color = "gray") +
+  geom_hline(yintercept=15000, color = "gray") +
+  geom_bar(position="stack", stat="identity") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  xlab("Variants") +
+  ylab("# Samples with variant\n(heteroplasmy 1-50%)") +
+  scale_fill_manual(values=c("red","orange","gray")) +
+  geom_text(data=tmp1,aes(x=POS.REF.ALT,y=x,label=letter),vjust=-0.1)
 dev.off()
 
 ########################################################
@@ -159,5 +199,13 @@ tmp3=rbind(tmp1,tmp2)
 tmp3$fraction=tmp3$x/nrow(samples)
 tmp3$vartype=factor(tmp3$vartype,levels=c("no variant","homoplasmy","FAIL heteroplasmy","PASS heteroplasmy"))
 pdf("plots/FigS2C.pdf", width=5, height=3)
-ggplot(tmp3, aes(fill=vartype, y=fraction, x=POS.REF.ALT)) + geom_bar(position="stack", stat="identity")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ labs(fill = "Variant Type")+ xlab("NUMT-FP variants") + ylab("# variants")+ scale_fill_manual(values=c("gray90","gray70","gray50","black"))+ geom_hline(yintercept=0.40, linetype="dashed", color = "gray")
+ggplot(tmp3, aes(fill=vartype, y=fraction, x=POS.REF.ALT)) +
+  geom_bar(position="stack", stat="identity") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  labs(fill = "Variant Type") +
+  xlab("NUMT-FP variants") +
+  ylab("# variants") +
+  scale_fill_manual(values=c("gray90","gray70","gray50","black")) +
+  geom_hline(yintercept=0.40, linetype="dashed", color = "gray")
 dev.off()

@@ -59,7 +59,6 @@ mu[mu$POS.REF.ALT %in% vep[vep$IMPACT %in% c("MODERATE"),"POS.REF.ALT"],"varType
 mu[mu$POS.REF.ALT %in% vep[vep$IMPACT %in% c("LOW"),"POS.REF.ALT"],"varType"]="synonymous"
 mu[mu$POS.REF.ALT %in% vep[vep$BIOTYPE %in% c("Mt_tRNA"),"POS.REF.ALT"],"varType"]="tRNA"
 mu[mu$POS.REF.ALT %in% vep[vep$BIOTYPE %in% c("Mt_rRNA"),"POS.REF.ALT"],"varType"]="rRNA"
-mu[mu$POS.REF.ALT %in% vep[vep$BIOTYPE %in% c("Mt_rRNA"),"POS.REF.ALT"],"varType"]="rRNA"
 mu[mu$POS.REF.ALT %in% vep[(vep$BIOTYPE=="") & (vep$POS >= 577) & (vep$POS < 16024),"POS.REF.ALT"],"varType"]="intergenic"
 mu[mu$POS.REF.ALT %in% vep[(vep$IMPACT=="MODIFIER") & (vep$BIOTYPE=="protein_coding"),"POS.REF.ALT"],"varType"]="intergenic"
 mu[mu$POS.REF.ALT %in% vep[(vep$BIOTYPE=="") & !((vep$POS >= 577) & (vep$POS < 16024)),"POS.REF.ALT"],"varType"]="CR"
@@ -75,6 +74,10 @@ tmp3$subset=factor(tmp3$subset,levels=rev(c("mtDNA\npositions\nn=16569","homopla
 # now plot
 mycolors=c("olivedrab","olivedrab3","olivedrab2","lightsteelblue","lightsteelblue1","gray85","black")
 pdf("plots/Fig3E.pdf", width=8, height=4,useDingbats=FALSE)
-ggplot(tmp3,aes(x=subset,fill=varType))+geom_bar(position="fill")+scale_fill_manual(values=mycolors)+theme_classic()+coord_flip()
+ggplot(tmp3,aes(x=subset,fill=varType)) +
+  geom_bar(position="fill") +
+  scale_fill_manual(values=mycolors) +
+  theme_classic() +
+  coord_flip()
 dev.off()
 

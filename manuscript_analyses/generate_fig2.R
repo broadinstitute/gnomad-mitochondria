@@ -66,12 +66,15 @@ write(line,file=outf)
 #  all.sample2var.unfiltered.annotNUMTFP.txt
 ############################
 
+# aggregate table (mat) by column POS.REF.ALT, and add label for the count column (label)
 getVar2Count <- function(mat,label) {
   var2count=aggregate(mat$count, by=list(POS.REF.ALT=mat$POS.REF.ALT), FUN=sum)
   colnames(var2count)[2]=label
   var2count
 }
 
+# aggregate table (mat) by column POS.REF.ALT, and add label for the count column (label) then merge results
+# into a second table (sofar)
 getVar2CountAndMerge <- function(mat,label,sofar) {
   tmp=getVar2Count(mat,label)
   merge(sofar,tmp,all=TRUE)
@@ -101,9 +104,11 @@ common=getVar2CountAndMerge(tmp,"PASS_HETS_1to50",common)
 allcommonhets=allm[(allm$POS.REF.ALT %in% common$POS.REF.ALT) & (allm$HL < maxhet),]
 common$SPEARMAN=0
 common$SPEARMAN.PVAL=1
+# return correlation between vector x and vector y
 mycor <- function(x,y,method) {
   cor(x=x,y=y,method=method,use="pairwise.complete.obs")
 }
+# return Pearson correlation p-value for correlation between vector x and vector y
 mycor.test <- function(x,y,method,alternative,exact) {
   cor.test(x=x,y=y,method=method,alternative=alternative,exact=exact,use="pairwise.complete.obs")
 }
@@ -192,6 +197,7 @@ write.table(pass,file="all.sample2var.passplus.annotNUMTFP.txt",quote=FALSE,sep=
 #pass=read.delim("all.sample2var.passplus.annotNUMTFP.txt",stringsAsFactors=FALSE)
 passhets=pass[pass$HL<0.95,]
 # for passhets table, set mtcnbin and mtcnbinlabel (up to 500) and vafbin
+# there should not be any NA values for mtCN, but this just makes sure
 passhets=passhets[!is.na(passhets$mtCN),]
 passhets$vafbin=floor(passhets$HL*100)/100
 passhets$mtcnbin=floor(passhets$mtCN / 25)*25
@@ -208,7 +214,10 @@ passhets$mtcnbin=factor(passhets$mtcnbin,levels=sort(unique(passhets$mtcnbin)))
 line="\nStats on heteroplasmic PASS variants that are NUMT-FP (70K samples):"
 write(line,file=outf,append=TRUE)
 
-# PASS variants 1-50%:
+# returns the number of passhets variants with VAF >=minthresh and VAF < maxthresh
+#  minthresh: minimum VAF value
+#  maxthresh: maximum VAF value
+#  release: bool, if true then count only # variants in release samples
 mycalc<-function(minthresh,maxthresh,release) {
   if (release) {
     val1=sum(passhets[(passhets$HL >= minthresh) & (passhets$HL < maxthresh) & (passhets$release3.1.1 == "true"),"linked.NUMT.FP"])
@@ -260,7 +269,14 @@ tmp3$linked.NUMT.FP=factor(tmp3$linked.NUMT.FP,levels=c(1,0))
 # exclude samples mtCN >300
 tmp3=tmp3[!(tmp3$mtcnbinlabel %in% c("300-325","325-350","350-375","375-400","400-425","425-450","450-475","475-500","500+")),]
 pdf("plots/Fig2D.pdf", width=5, height=3)
-ggplot(tmp3, aes(fill=linked.NUMT.FP, y=mean.hets1to50, x=mtcnbinlabel)) + geom_bar(position="stack", stat="identity")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ labs(fill = "NUMT-FP")+ xlab("mtDNA copy number (mtCN)") + ylab("Mean # variants/sample\n(heteroplasmy 1-50%)")+ scale_fill_manual(values=c("red","black"))
+ggplot(tmp3, aes(fill=linked.NUMT.FP, y=mean.hets1to50, x=mtcnbinlabel)) +
+  geom_bar(position="stack", stat="identity") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  labs(fill = "NUMT-FP") +
+  xlab("mtDNA copy number (mtCN)") +
+  ylab("Mean # variants/sample\n(heteroplasmy 1-50%)") +
+  scale_fill_manual(values=c("red","black"))
 dev.off()
 
 ############################
@@ -271,8 +287,10 @@ m=m[(m$HL < 0.1599) & (m$HL >= 0.01),]
 m=m[!is.na(m$mtCN),]
 m$vafbin=floor(m$HL*100)/100
 m$mtcnbin=floor(m$mtCN / 25)*25
+m[(m$mtcnbin >= 225) & (m$mtcnbin <=500),"mtcnbin"]=225
 m[m$mtcnbin > 500,"mtcnbin"]=500
 m$mtcnbinlabel=paste(m$mtcnbin,m$mtcnbin+25,sep="-")
+m[m$mtcnbinlabel=="225-250","mtcnbinlabel"]="225-500"
 m[m$mtcnbinlabel=="500-525","mtcnbinlabel"]="500+"
 m$mtcnbinlabel=factor(m$mtcnbinlabel,levels=unique(m$mtcnbinlabel)[order(unique(m$mtcnbin))])
 m$mtcnbin=factor(m$mtcnbin,levels=sort(unique(m$mtcnbin)))
@@ -285,11 +303,21 @@ colnames(tmp2)[3]="n.linkedNUMTFP"
 tmp3=merge(tmp1,tmp2,all=TRUE,by=c("vafbin","mtcnbinlabel"))
 tmp3$percNUMTFP=tmp3$n.linkedNUMTFP/tmp3$n
 tmp3=tmp3[!is.na(tmp3$percNUMTFP),]
-# exclude mtCN 250-500 for readability (and because these bins have few samples)
-tmp3=tmp3[!(tmp3$mtcnbinlabel %in% c("250-275","275-300","300-325","325-350","350-375","375-400","400-425","425-450","450-475","475-500")),]
 xlabs=paste(c(1:15)/100,c(2:16)/100,sep="-")
 pdf("plots/Fig2F.pdf", width=4, height=4)
-ggplot(tmp3,aes(y=percNUMTFP,x=vafbin,color=mtcnbinlabel))+geom_line() + geom_point(size=1) + ggtitle("% NUMT by VAF and mtCN")+ geom_vline(xintercept=0.05, linetype="dashed", color = "black")+ geom_vline(xintercept=0.15, linetype="dashed", color = "black")+ geom_vline(xintercept=0.1, linetype="dashed", color = "black") + scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) + scale_y_continuous(name="% NUMT-FP")+ labs(color = "mtCN")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ scale_color_brewer(palette="Spectral")
+ggplot(tmp3,aes(y=percNUMTFP,x=vafbin,color=mtcnbinlabel)) +
+  geom_line() +
+  geom_point(size=1) +
+  ggtitle("% NUMT by VAF and mtCN") +
+  geom_vline(xintercept=0.05, linetype="dashed", color = "black")+
+  geom_vline(xintercept=0.15, linetype="dashed", color = "black")+
+  geom_vline(xintercept=0.1, linetype="dashed", color = "black") +
+  scale_x_continuous(name="Heteroplasmy bin", limits=c(0.01, 0.15),breaks=c(c(1:15)/100),labels=xlabs) +
+  scale_y_continuous(name="% NUMT-FP")+
+  labs(color = "mtCN")+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90))+
+  scale_color_brewer(palette="Spectral")
 dev.off()
 
 ########################################################
@@ -302,7 +330,13 @@ myhet="16293.A.C"
  subset[subset$mtcncolor > 100,"mtcncolor"]=100
  n=dim(subset)[[1]]
  pdf(paste("plots/Fig2E.pdf",sep=""), width=2, height=2,useDingbats=FALSE)
- ggplot(subset,aes(y=HL,x=expected))+geom_point(size=0.5,color="red") + theme_classic()+xlab("Expected VAF for heterozygous NUMT\n1/(1+mtCN)")+ylab("Observed VAF")+ scale_x_continuous(expand = c(0, 0),limits=c(0,0.25),breaks=c(0.1,0.2)) + scale_y_continuous(expand = c(0, 0),limits=c(0,0.25),breaks=c(0.1,0.2))
+ ggplot(subset,aes(y=HL,x=expected))+
+  geom_point(size=0.5,color="red") +
+  theme_classic()+
+  xlab("Expected VAF for heterozygous NUMT\n1/(1+mtCN)")+
+  ylab("Observed VAF")+
+  scale_x_continuous(expand = c(0, 0),limits=c(0,0.25),breaks=c(0.1,0.2)) +
+  scale_y_continuous(expand = c(0, 0),limits=c(0,0.25),breaks=c(0.1,0.2))
  dev.off()
 line=paste("\nStatistics for NUMT-FP m.16293A>C:\nn=",n,"; Spearman r=",signif(cor(x=subset$HL,y=subset$expected,use="pairwise.complete.obs")[1],2),"; p=",cor.test(x=subset$HL,y=subset$expected,method="spearman",alternative="two.sided",exact=FALSE)$p.value,
   "; Note p=0 indicates p<2.2e-16",sep="")
@@ -330,7 +364,15 @@ tmp1$linked.NUMT.FP=factor(tmp1$linked.NUMT.FP,levels=c(1,0))
 # exclude homoplasmic because it causes Y-axis to be too large
 tmp1=tmp1[tmp1$vafbinlabel!="0.95-1",]
 pdf("plots/Fig2L.pdf", width=5, height=3)
-ggplot(tmp1, aes(fill=linked.NUMT.FP, y=n, x=vafbinlabel)) + geom_bar(position="stack", stat="identity")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ labs(fill = "NUMT-FP")+ xlab("Heteroplasmy bin") + ylab("# variants")+ scale_fill_manual(values=c("red","black"))+ geom_vline(xintercept=2.5, linetype="dashed", color = "black")
+ggplot(tmp1, aes(fill=linked.NUMT.FP, y=n, x=vafbinlabel)) +
+  geom_bar(position="stack", stat="identity")+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90))+
+  labs(fill = "NUMT-FP")+
+  xlab("Heteroplasmy bin") +
+  ylab("# variants")+
+  scale_fill_manual(values=c("red","black"))+
+  geom_vline(xintercept=2.5, linetype="dashed", color = "black")
 dev.off()
 
 
@@ -380,7 +422,16 @@ tmp4$vafbin=as.numeric(as.character(tmp4$vafbin))
 mybreaks=c(0,5,10,15,20,25,30,35,40,45,50)/100
 
 pdf("plots/Fig2K.pdf", width=5, height=5)
-ggplot(tmp4, aes(fill=label, y=p, x=vafbin)) + geom_bar(position="stack", stat="identity")+theme_classic() + scale_x_continuous(breaks=mybreaks, labels=mybreaks) + theme(axis.text.x = element_text(angle=90))+ xlab("VAF bin") + ylab("Fraction variants at 25 NUMT-FP sites")+ scale_fill_manual(values=c("red","orange"))+ geom_vline(xintercept=0.10, linetype="dashed", color = "black")+ geom_vline(xintercept=0.05, linetype="dashed", color = "gray")
+ggplot(tmp4, aes(fill=label, y=p, x=vafbin)) +
+  geom_bar(position="stack", stat="identity")+
+  theme_classic() +
+  scale_x_continuous(breaks=mybreaks, labels=mybreaks) +
+  theme(axis.text.x = element_text(angle=90))+
+  xlab("VAF bin") +
+  ylab("Fraction variants at 25 NUMT-FP sites")+
+  scale_fill_manual(values=c("red","orange"))+
+  geom_vline(xintercept=0.10, linetype="dashed", color = "black")+
+  geom_vline(xintercept=0.05, linetype="dashed", color = "gray")
 dev.off()
 
 
@@ -394,6 +445,7 @@ dev.off()
 #passhets=pass[pass$HL < 0.95,]
 
 # assign cell line status based on participant id prefix in NA, HG, LP, JP
+# note this is version specific: currently samples prefix v3 are all cell lines, but that is not generalizable
 samples$pref=substr(samples$participant_id,1,2)
 samples$is.cell="unknown"
 samples[samples$pref %in% c("NA","HG","LP","JP","v3"),"is.cell"]="cell line"
@@ -410,7 +462,12 @@ write(line,file=outf,append=TRUE)
 # Fig2G: density plot known cell lines vs other [file=plots/cell.density.nsamples.pdf]
 ############################
 pdf("plots/Fig2G.pdf", width=4, height=2)
-ggplot(samples, aes(x=mtCN, color=is.cell)) + geom_density()+theme_classic() + ylab("Density") + scale_x_continuous(name="mtDNA copy number (mtCN)", limits=c(0,2000)) + scale_color_manual(values=c("blue", "black"))
+ggplot(samples, aes(x=mtCN, color=is.cell)) +
+  geom_density()+
+  theme_classic() +
+  ylab("Density") +
+  scale_x_continuous(name="mtDNA copy number (mtCN)", limits=c(0,2000)) +
+  scale_color_manual(values=c("blue", "black"))
 dev.off()
 ##############################
 ## 2H: #mutations/sample in known cell lines vs mtCN50-500, group by VEP impact [file=plots/cell.stackedbar.meanhets.by.cellline.varType.pdf]
@@ -429,7 +486,7 @@ m[m$POS.REF.ALT %in% vep[vep$BIOTYPE %in% c("Mt_tRNA","Mt_rRNA"),"POS.REF.ALT"],
 m$varType=factor(m$varType,levels=c("pLOF","missense","synonymous","rRNA/tRNA","non-coding"))
 m$count=1
 
-#cell2 is either known cell line ofr mtCN 50-500
+#cell2 is either known cell line of mtCN 50-500
 samples$cell2=samples$is.cell
 samples[(samples$mtCN >= 50) & (samples$mtCN <= 500) & (samples$is.cell == "unknown"),"cell2"]="mtCN 50-500"
 samples$cell2=factor(samples$cell2,levels=c("unknown","mtCN 50-500","cell line"))
@@ -452,7 +509,13 @@ tmp3$mean.hets10to95=tmp3$n.hets10to95/tmp3$n
 tmp3$varType=factor(tmp3$varType,levels=c("pLOF","missense","rRNA/tRNA","synonymous","non-coding"))
 tmp3=tmp3[tmp3$cell2 != "unknown",]
 pdf("plots/Fig2H.pdf", width=5, height=3)
-ggplot(tmp3, aes(fill=cell2, y=mean.hets10to95, x=varType)) + geom_bar(position="dodge", stat="identity")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ xlab("mtDNA copy number (mtCN)") + ylab("Mean # variants/sample\n(heteroplasmy 10-95%)")+ scale_fill_manual(values=c("gray","blue"))
+ggplot(tmp3, aes(fill=cell2, y=mean.hets10to95, x=varType)) +
+  geom_bar(position="dodge", stat="identity")+
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90))+
+  xlab("mtDNA copy number (mtCN)") +
+  ylab("Mean # variants/sample\n(heteroplasmy 10-95%)")+
+  scale_fill_manual(values=c("gray","blue"))
 dev.off()
 
 # print enrichment and significance (Fisher's Exact) for each level

@@ -72,7 +72,16 @@ colnames(tmp2)[3]="n.hets1to50"
 tmp3=merge(tmp2,tmp1,by=c("mtcnbinlabel","insertsizebinlabel"))
 tmp3$mean.hets1to50=tmp3$n.hets1to50/tmp3$n
 pdf("plots/FigS3A.pdf", width=5, height=4,useDingbats=FALSE)
-ggplot(tmp3,aes(y=mean.hets1to50,x=mtcnbinlabel,color=insertsizebinlabel)) + geom_point(size=1) + ggtitle("Mean # hets/sample by mtCN and insert-size")+xlab("mtDNA copy number (mtCN)") + ylab("Mean # variants/sample\n(heteroplasmy 1-50%)")+ labs(color = "insert-size")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ scale_color_manual(values=brewer.pal(n = 6, name = "Blues")[2:5])+scale_y_continuous(expand = c(0, 0),limits=c(0,28))
+ggplot(tmp3,aes(y=mean.hets1to50,x=mtcnbinlabel,color=insertsizebinlabel)) +
+  geom_point(size=1) +
+  ggtitle("Mean # hets/sample by mtCN and insert-size") +
+  xlab("mtDNA copy number (mtCN)") +
+  ylab("Mean # variants/sample\n(heteroplasmy 1-50%)") +
+  labs(color = "insert-size") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  scale_color_manual(values=brewer.pal(n = 6, name = "Blues")[2:5]) +
+  scale_y_continuous(expand = c(0, 0),limits=c(0,28))
 dev.off()
 
 # do same just for linked NUMT-FPs
@@ -85,5 +94,14 @@ tmp3=merge(tmp2,tmp1,by=c("mtcnbinlabel","insertsizebinlabel"))
 tmp3$meanNUMTFP.hets1to50=tmp3$NUMTFP.hets1to50/tmp3$n
 #exclude mtCN>300
 pdf("plots/FigS3B.pdf", width=5, height=4,useDingbats=FALSE)
-ggplot(tmp3,aes(y=meanNUMTFP.hets1to50,x=mtcnbinlabel,color=insertsizebinlabel)) + geom_point(size=1) + ggtitle("Mean # NUMT-FP/sample by mtCN and insert-size")+xlab("mtDNA copy number (mtCN)") + ylab("Mean # NUMT-FP/sample\n(heteroplasmy 1-50%)")+ labs(color = "insert-size")+theme_classic() + theme(axis.text.x = element_text(angle=90))+ scale_color_manual(values=brewer.pal(n = 6, name = "Blues")[2:5])+scale_y_continuous(expand = c(0, 0),limits=c(0,28))
+ggplot(tmp3,aes(y=meanNUMTFP.hets1to50,x=mtcnbinlabel,color=insertsizebinlabel)) +
+  geom_point(size=1) +
+  ggtitle("Mean # NUMT-FP/sample by mtCN and insert-size") +
+  xlab("mtDNA copy number (mtCN)") +
+  ylab("Mean # NUMT-FP/sample\n(heteroplasmy 1-50%)") +
+  labs(color = "insert-size") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle=90)) +
+  scale_color_manual(values=brewer.pal(n = 6, name = "Blues")[2:5]) +
+  scale_y_continuous(expand = c(0, 0),limits=c(0,28))
 dev.off()

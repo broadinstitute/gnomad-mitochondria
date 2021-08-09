@@ -30,6 +30,7 @@ line="Statistics for gnomAD related to fig1"
 write(line,file=outf)
 
 # get 3 selected cohorts
+# note this mistakenly excludes 67 1KG/HGDP samples that have prefix v3.1::HG or v3.1::NA (only 4 of which pass sample filters);  however this does not substantially change results
 samples$pref=substr(samples$participant_id,1,2)
 samples[samples$pref %in% c("NA","HG"),"research_project"]="1KG/HGDP"
 samples[is.na(samples$research_project),"research_project"]=0
@@ -62,7 +63,13 @@ mycolors=c("gray","peachpuff","sandybrown","salmon4")
 ############################
 maxX=15000
 pdf("plots/Fig1C.pdf", width=6, height=4)
-ggplot(tmp, aes(x=mt_mean_coverage,color=cohort,fill=cohort)) + geom_histogram(position="identity",binwidth=25)+theme_classic() + ylab("# Samples") + scale_x_continuous(name="mtDNA mean coverage", limits=c(0,maxX),expand=c(0,0))+ scale_y_continuous(expand = c(0, 0))+scale_fill_manual(values=mycolors)+scale_color_manual(values=mycolors)
+ggplot(tmp, aes(x=mt_mean_coverage,color=cohort,fill=cohort)) +
+  geom_histogram(position="identity",binwidth=25) +
+  theme_classic() + ylab("# Samples") +
+  scale_x_continuous(name="mtDNA mean coverage", limits=c(0,maxX),expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_manual(values=mycolors) +
+  scale_color_manual(values=mycolors)
 dev.off()
 line=paste("\nCoverage histograms: missing data not shown:\nmtDNA coverage: ",sum(tmp$mt_mean_coverage > maxX)," samples with coverage ",maxX,"-",max(tmp$mt_mean_coverage),sep="")
 write(line,file=outf,append=TRUE)
@@ -72,7 +79,14 @@ write(line,file=outf,append=TRUE)
 minX=10
 maxX=60
 pdf("plots/Fig1D.pdf", width=6, height=4)
-ggplot(tmp, aes(x=wgs_median_coverage,color=cohort,fill=cohort)) + geom_histogram(position="identity",binwidth=1)+theme_classic() + ylab("# Samples") + scale_x_continuous(name="nDNA median coverage", limits=c(minX,maxX),expand=c(0,0))+ scale_y_continuous(expand = c(0, 0))+scale_fill_manual(values=mycolors)+scale_color_manual(values=mycolors)
+ggplot(tmp, aes(x=wgs_median_coverage,color=cohort,fill=cohort)) +
+  geom_histogram(position="identity",binwidth=1) +
+  theme_classic() +
+  ylab("# Samples") +
+  scale_x_continuous(name="nDNA median coverage", limits=c(minX,maxX),expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_manual(values=mycolors) +
+  scale_color_manual(values=mycolors)
 dev.off()
 line=paste("nDNA coverage: ",sum(tmp$wgs_median_coverage > maxX)," samples with coverage ",maxX,"-",max(tmp$wgs_median_coverage),sep="")
 write(line,file=outf,append=TRUE)
@@ -81,7 +95,16 @@ write(line,file=outf,append=TRUE)
 ############################
 maxX=1250
 pdf("plots/Fig1E.pdf", width=6, height=4)
-ggplot(tmp, aes(x=mtCN,color=cohort,fill=cohort)) + geom_histogram(position="identity",binwidth=5)+theme_classic() + ylab("# Samples") + scale_x_continuous(name="mtDNA copy number (mtCN)", limits=c(0,maxX),breaks=c(250,500,750,1000,1250),expand=c(0,0))+ scale_y_continuous(expand = c(0, 0))+scale_fill_manual(values=mycolors)+scale_color_manual(values=mycolors)+ geom_vline(xintercept=50, linetype="dashed", color = "black")+ geom_vline(xintercept=500, linetype="dashed", color = "black")
+ggplot(tmp, aes(x=mtCN,color=cohort,fill=cohort)) +
+  geom_histogram(position="identity",binwidth=5) +
+  theme_classic() +
+  ylab("# Samples") +
+  scale_x_continuous(name="mtDNA copy number (mtCN)", limits=c(0,maxX),breaks=c(250,500,750,1000,1250),expand=c(0,0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_manual(values=mycolors) +
+  scale_color_manual(values=mycolors) +
+  geom_vline(xintercept=50, linetype="dashed", color = "black") +
+  geom_vline(xintercept=500, linetype="dashed", color = "black")
 dev.off()
 line=paste("mtCN hist: ",sum(tmp$mtCN > maxX)," samples with mtCN ",maxX,"-",max(tmp$mtCN),sep="")
 write(line,file=outf,append=TRUE)
@@ -123,6 +146,15 @@ tmp1[tmp1$cohort=="TOPMED_COPD","CohortSet"]="TOPMED_COPD"
 tmp1$CohortSet=factor(tmp1$CohortSet,levels=c("all","NHLBI","TOPMED_COPD","1KG/HGDP"))
 
 pdf("plots/Fig1B.pdf", width=6, height=4,useDingbats=FALSE)
-ggplot(data = tmp1,aes(x = nDNA.mean,y = mtDNA.mean,color=CohortSet)) + geom_errorbar(aes(ymin = mtdnamin,ymax = mtdnamax),color="gray90",size=0.5) + geom_errorbarh(aes(xmin = ndnamin,xmax = ndnamax),color="gray90",size=0.5)+theme_classic()+ geom_point(aes(size=NumSamples))+ geom_text(aes(label=ifelse(CohortSet != "all",as.character(CohortSet),'')) ,vjust=-1,size=2)+scale_color_manual(values=mycolors)+ coord_cartesian(ylim = c(0, 20000))+xlab("mean nDNA coverage") + ylab("mean mtDNA coverage")
+ggplot(data = tmp1,aes(x = nDNA.mean,y = mtDNA.mean,color=CohortSet)) +
+  geom_errorbar(aes(ymin = mtdnamin,ymax = mtdnamax),color="gray90",size=0.5) +
+  geom_errorbarh(aes(xmin = ndnamin,xmax = ndnamax),color="gray90",size=0.5) +
+  theme_classic() +
+  geom_point(aes(size=NumSamples)) +
+  geom_text(aes(label=ifelse(CohortSet != "all",as.character(CohortSet),'')) ,vjust=-1,size=2) +
+  scale_color_manual(values=mycolors) +
+  coord_cartesian(ylim = c(0, 20000)) +
+  xlab("mean nDNA coverage") +
+  ylab("mean mtDNA coverage")
 dev.off()
 

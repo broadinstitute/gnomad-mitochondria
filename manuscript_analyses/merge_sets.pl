@@ -13,7 +13,7 @@ print <<USAGE;
 
 Usage: $0 [-h][-v][-header][-nowarn][-byname][-x lookup_file=ref_col,id_col,merge_cols] ref.txt
 
-Given a tab-del text file ref.txt, merge in data from lookup_file.
+Given a tab-del text file ref.txt, merge in data from lookup_file. This is similar in spirit to Excel vlookup function, or a database join query.
 
 For each -x lookup_file=ref_col,id_col,merge_cols
  load in lookup_file and hash by id_col
@@ -24,7 +24,6 @@ NOTE: ref_col is column number of the key column in file ref.txt
       id_col is the column number of the key column in lookup_file
       merge_col is the column number of all other columns in lookup_file that we want to merge
 
-This is similar in spirit to Excel vlookup function.
 
 EG. ref.txt has cols (probe,ensp) and human.ensp.enst.desc has cols (ensp,enst,sym,desc)
  merge_sets.pl -x human.ensp.enst.desc,1,0,1,2,3 ref.txt 
@@ -33,7 +32,10 @@ will produce file
 for all probes in ref.txt
 
 Note, if the xref file has multiple rows with the same id, the first
-row will be taken (and a warning will be given).
+row will be taken (and a warning will be given) by default.  There are special
+characters to indicate other options when there are multiple rows with the 
+same ID, eg use the row with the largest value (>), use the row with the 
+greatest text value (g), use the row with the least text value (l).
 
 If -header, then assume all files have headers, and merge these as well
 
@@ -140,7 +142,7 @@ foreach my $xfilecols (@filecols) {
   }
   ($ref_col,$id_col,@merge_cols)=split(",",$colstr,-1);
 
-  # hand special case of greater than or less than in merge_cols
+  # handle special case of greater than or less than in merge_cols
   if ((scalar(@merge_cols)) && 
       ((($merge_cols[0] =~ /^([><])(.*)$/) && ($byname)) ||  # if byname, cannot use gl
        (($merge_cols[0] =~ /^([><gl])(.*)$/) && !($byname))
@@ -258,7 +260,6 @@ foreach my $ra_row (@$ra_refrows) {
     $tab="\t"; # after the first time, print the tab
   }
   print "\n";
-  #print join("\t",map {"" || $_ } @$ra_row)."\n";  
 }
 
 ########################################################################

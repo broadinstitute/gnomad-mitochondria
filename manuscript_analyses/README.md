@@ -11,6 +11,26 @@ ish -l h_vmem=30g (optional but recommended: will launch interactive shell with 
 sh preprocess.step1.sh
 sh preprocess.step2.sh
 
+#############################################################################
+# Note these preprocess bash shell scripts call perl scripts for further data processing
+# Run script with -h option for full details.
+#
+# vcf_to_table.nosplit.pl : perl script inputs a VCF file and outputs a tab delimited 
+# output file with one line per variant per sample (with parameters specifying minimum 
+# thresholds for output)
+#
+# merge_sets.pl : perl script performs a database join (similar to Excel vlookup function) 
+# between two tab-delimited files that share a common key column
+#
+# count_mnv.pl : perl script to identify multi-nucleotide variants (MNVs);  
+# Input is tab-delimited file (one line per variant per person) sorted by SAMPLE_ID then by POS;  
+# Output is set of unique variants (POS.REF.ALT) with the allele count of that variant in the 
+# dataset (AC), the allele count of that variant as part of a multi-nucleotide variant (AC_MNV) 
+# and the percentage (AC_MNV/AC).  
+# For example: adjacent variants 5185.G.A (present 1 sample) and 5186.A.T (present in 80 samples) 
+# were observed together in 1 sample and thus two lines would be 
+# output “5185.G.A 1 1 1” and “5186.A.T 80 1 0.0125”
+#############################################################################
 
 #############################################################################
 # Step 2
@@ -24,5 +44,3 @@ Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_f
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS2.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS3.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig3E.R
-
- 
