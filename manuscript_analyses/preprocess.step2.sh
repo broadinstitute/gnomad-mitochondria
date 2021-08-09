@@ -12,6 +12,7 @@
 # B1) $SOURCE_DIR/combined_new_run.vcf.bgz
 # B2) $SOURCE_DIR/unfiltered_samples/unfiltered_sample_annotations.txt
 # B3) $SOURCE_DIR/insert_size_metrics.txt: tab-del file from Kristen with the median insert size for each sample
+# B4) $SOURCE_DIR/vep_unfiltered.vcf.bgz
 #
 # C)  additional annotation files created by Sarah/Kristen
 # C1) numtAB.txt: tab-del file of validated NUMT-FPs
