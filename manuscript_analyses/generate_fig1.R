@@ -71,7 +71,7 @@ ggplot(tmp, aes(x=mt_mean_coverage,color=cohort,fill=cohort)) +
   scale_fill_manual(values=mycolors) +
   scale_color_manual(values=mycolors)
 dev.off()
-line=paste("\nCoverage histograms: missing data not shown:\nmtDNA coverage: ",sum(tmp$mt_mean_coverage > maxX)," samples with coverage ",maxX,"-",max(tmp$mt_mean_coverage),sep="")
+line=paste("\nCoverage histograms: missing data not shown:\nmtDNA coverage: ",sum(tmp[tmp$cohort=="all","mt_mean_coverage"] > maxX)," samples with coverage ",maxX,"-",max(tmp$mt_mean_coverage),sep="")
 write(line,file=outf,append=TRUE)
 ############################
 # Fig1D: nDNA_cov hist (3 selected cohorts colored) 
@@ -88,7 +88,7 @@ ggplot(tmp, aes(x=wgs_median_coverage,color=cohort,fill=cohort)) +
   scale_fill_manual(values=mycolors) +
   scale_color_manual(values=mycolors)
 dev.off()
-line=paste("nDNA coverage: ",sum(tmp$wgs_median_coverage > maxX)," samples with coverage ",maxX,"-",max(tmp$wgs_median_coverage),sep="")
+line=paste("nDNA coverage: ",sum(tmp[tmp$cohort=="all","wgs_median_coverage"] > maxX)," samples with coverage ",maxX,"-",max(tmp$wgs_median_coverage),sep="")
 write(line,file=outf,append=TRUE)
 ############################
 # Fig1E: mtCN hist (3 selected cohorts colored)
@@ -106,7 +106,7 @@ ggplot(tmp, aes(x=mtCN,color=cohort,fill=cohort)) +
   geom_vline(xintercept=50, linetype="dashed", color = "black") +
   geom_vline(xintercept=500, linetype="dashed", color = "black")
 dev.off()
-line=paste("mtCN hist: ",sum(tmp$mtCN > maxX)," samples with mtCN ",maxX,"-",max(tmp$mtCN),sep="")
+line=paste("mtCN hist: ",sum(tmp[tmp$cohort=="all","mtCN"] > maxX)," samples with mtCN ",maxX,"-",max(tmp$mtCN),sep="")
 write(line,file=outf,append=TRUE)
 
 ##########################

@@ -89,11 +89,11 @@ mv tmp2.txt tmp1.txt
 
 ############################################
 # Now create passplus 
-# which ignores these filters: contamination|low_allele_frac|mt_many_low_hets|possible_numt
+# which ignores these filters: low_allele_frac|mt_many_low_hets|possible_numt
 # but gets rid of other FAIL filters
 ############################################
 
-cat all.sample2var.unfiltered.txt | grep -v -P "(base_qual|position|strand_bias|weak_evidence)" > all.sample2var.passplus.txt
+cat all.sample2var.unfiltered.txt | grep -v -P "(base_qual|position|strand_bias|weak_evidence|contamination)" > all.sample2var.passplus.txt
 
 ################################################
 # convert vep_unfiltered.vcf into tab-del summary.unfiltered.var.vep.txt
