@@ -69,10 +69,8 @@ grep indel summary.var.txt | cut -f 1 >> pos.ref.alt.indel_stack.txt
 # 90% of the time this variant is observed
 ############################################################
 # sort all homoplasmies by sample then position
-# Note the file is assumed to have variants already sorted numerically by position, so
-# sorting just by samplename (alphanumerically) yields the proper sort
 head -n 1 all.sample2var.txt | perl -p -e 's/DP/DP\tPOS/g' > all.sample2var.homs.txt
-cat all.sample2var.txt | awk -F "\t" ' $4 >= 0.95 { print } ' | perl -p -e 's/^(\S+)\t(\S+)\.(\S+)\.(\S+)\t(.*)$/$1\t$2\.$3\.$4\t$5\t$2/g' | sort -k 1 >> all.sample2var.homs.txt
+cat all.sample2var.txt | awk -F "\t" ' $4 >= 0.95 { print } ' | perl -p -e 's/^(\S+)\t(\S+)\.(\S+)\.(\S+)\t(.*)$/$1\t$2\.$3\.$4\t$5\t$2/g' | sort -k1,1 -k2,6n >> all.sample2var.homs.txt
 
 # get MNV count
 cat all.sample2var.homs.txt | ./count_mnv.pl > summary.var.mnv.txt

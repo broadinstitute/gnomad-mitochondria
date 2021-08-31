@@ -486,7 +486,7 @@ m[m$POS.REF.ALT %in% vep[vep$BIOTYPE %in% c("Mt_tRNA","Mt_rRNA"),"POS.REF.ALT"],
 m$varType=factor(m$varType,levels=c("pLOF","missense","synonymous","rRNA/tRNA","non-coding"))
 m$count=1
 
-#cell2 is either known cell line of mtCN 50-500
+#cell2 is either known cell line or mtCN 50-500
 samples$cell2=samples$is.cell
 samples[(samples$mtCN >= 50) & (samples$mtCN <= 500) & (samples$is.cell == "unknown"),"cell2"]="mtCN 50-500"
 samples$cell2=factor(samples$cell2,levels=c("unknown","mtCN 50-500","cell line"))
