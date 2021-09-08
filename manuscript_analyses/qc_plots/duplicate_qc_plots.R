@@ -225,6 +225,7 @@ s1_called + s2_called
 print("Fraction homoplasmic (SNV and indel duplicates Mutect):")
 (s1_hom + s2_hom)/(s1_called + s2_called)
 
+
 ##########################################################################
 # Plot duplicate comparison for indels (for both Mutect and mtDNA-Server)
 ##########################################################################
