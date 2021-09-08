@@ -25,7 +25,7 @@ mtdnaserver <- gather(mtdnaserver, "sample", "value", V7:V19)
 mtdnaserver <- mtdnaserver %>% rename(chrom = V1, pos = V2, ref = V3, alt = V4, index = V5, filter = V6)
 
 # Read in and rename columns for Mutect results
-mutect <- read.table(opt$mutect_vl_output, sep = '\t',quote = "")
+mutect <- read.table(opt$mutect_vl_output, sep = '\t', quote = "")
 mutect <- gather(mutect, "sample", "value", V7:V19)
 mutect <- mutect %>% rename(chrom = V1, pos = V2, ref = V3, alt = V4, index = V5, filter = V6)
 
