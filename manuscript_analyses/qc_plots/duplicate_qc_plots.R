@@ -103,7 +103,6 @@ mutect_density_plot <- ggplot(mutect, aes(x = s1_af)) +
 
 mutect_combined_plot <- plot_grid(mutect_density_plot, mutect_snps_plot, align = "v", ncol = 1, rel_heights = c(1, 5))
 
-
 # Plot mtDNA-Server SNPs
 mtdnaserver <- filter(snps_only, caller == "MtDNA-Server")
 mtdnaserver_snps_plot <- ggplot(mtdnaserver, aes(x = s1_af, y = s2_af)) +
@@ -172,6 +171,7 @@ print("Variants called (SNV duplicates Mutect):")
 s1_called + s2_called
 print("Fraction homoplasmic (SNV duplicates Mutect):")
 (s1_hom + s2_hom)/(s1_called + s2_called)
+
 
 #####################################################
 # Plot SNPs and indels together for just Mutect
@@ -277,8 +277,8 @@ generate_jaccard_table <- function(qc_type, method, name, data){
   
   # qc_type is either "dups", "mc", or "mm"
   # method is either "MtDNA-Server" or "Mutect"
-  # name is either "snps" or "indels" or "both"
-  # data is either a snp-only, indel-only, or complete dataframe
+  # name is "snps", "indels", or "both"
+  # data is a snp-only, indel-only, or complete dataframe
   
   # Filter to the specified QC type 
   df <- filter(data, dataset == qc_type)
@@ -288,7 +288,7 @@ generate_jaccard_table <- function(qc_type, method, name, data){
   
   # Setup dataframe to store results
   jaccard_table <- as.data.frame(matrix(0, ncol = 2, nrow = 0))
-  colnames(jaccard_table) <- c("Metric","F1")
+  colnames(jaccard_table) <- c("Metric", "F1")
 
   # Make the first row contain the column names
   jaccard_table[nrow(jaccard_table)+1,] <- c("Caller", paste(method, qc_type, name, sep="_"))
@@ -324,7 +324,7 @@ generate_jaccard_table <- function(qc_type, method, name, data){
   return(jaccard_table)
   }
 
-# Calculate jaccard index for MtDNA-Server (separately for SNPs and indels, and both for just Mutect)
+# Calculate jaccard index for mtDNA-Server (separately for SNPs and indels, and both for just Mutect)
 results_table <- generate_jaccard_table("dups", "MtDNA-Server", "snps", snps_only)
 write.table(results_table, file = "dups_snps_mtdnaserver.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 dup_jaccard_results = results_table
