@@ -22,7 +22,7 @@ opt = parse_args(opt_parser)
 
 
 # TODO: roxygen2 or other to document parameters?
-# NOTE: Plots are for pairs where at least one sample of the pair had a called variant, (0,0) values are not in the dataframe
+# NOTE: Plots are for pairs where at least one sample of the pair had a called variant: (0,0) values are not in the dataframe
 
 # Read in data and set the out directory for plots
 mtdnaserver <- read.table(opt$mtdnaserver_vl_changes, sep = '\t', quote = "", header = TRUE)
