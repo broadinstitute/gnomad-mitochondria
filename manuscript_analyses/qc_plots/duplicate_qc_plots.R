@@ -37,7 +37,6 @@ all <- rbind(mtdnaserver, mutect)
 # Filter to samples in both Mutect and mtDNA-Server dataframes (needed because several samples in mtDNA-Server failed to run and want to drop those in the comparison)
 all <- filter(all, s1 %in% mutect$s1, s2 %in% mutect$s2, s1 %in% mtdnaserver$s1, s2 %in% mtdnaserver$s2)
 
-
 # Double check that at least one sample of the pair has a heteroplasmy level above that of the min_het_threshold
 # Note: will NOT round s1 and s2 afs before comparing to min_het_threshold
 all <- filter(all, s1_af > opt$min_het_threshold | s2_af > opt$min_het_threshold)
