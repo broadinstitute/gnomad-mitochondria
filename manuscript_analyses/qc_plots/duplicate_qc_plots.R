@@ -73,7 +73,7 @@ dups <- mutate(dups, pos = as.numeric(pos))
 
 snps_only <- filter(dups, nchar(ref) == 1 & nchar(alt) == 1)
 
-# Plot Mutect snps
+# Plot Mutect SNPs
 mutect <- filter(snps_only, caller == "Mutect")
 mutect_snps_plot <- ggplot(mutect, aes(x = s1_af, y = s2_af)) +
   geom_point(size = 2.0, stroke = 0) +
