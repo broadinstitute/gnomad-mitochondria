@@ -44,7 +44,7 @@ all <- filter(all, s1_af > opt$min_het_threshold | s2_af > opt$min_het_threshold
 # Filter to PASS variants (non artifact-prone sites)
 all <- filter(all, filter == "PASS")
 
-# Count number of distinct pairs for each comparison: duplicate pairs, mother-child (mc) or mutect-mtdnaserver (mm)
+# Count number of distinct pairs for each comparison: duplicate pairs, mother-child (mc) or Mutect/mtDNA-Server (mm)
 # NOTE: at moment only plotting dups
 num_dups <- nrow(distinct(filter(all, dataset == "dups"), s1, s2))
 num_mc <- nrow(distinct(filter(all,dataset == "mc"), s1, s2))
