@@ -156,6 +156,7 @@ combined_plot
 ggsave(combined_plot, filename = "scatter_dup_snp.png", dpi = 300, width = 10, height = 6, units = "in")
 ggsave(combined_plot, filename = "scatter_dup_snp.pdf", dpi = 300, width = 10, height = 6, units = "in")
 
+
 #####################################################
 # Count number of homoplasmic SNPs
 #####################################################
