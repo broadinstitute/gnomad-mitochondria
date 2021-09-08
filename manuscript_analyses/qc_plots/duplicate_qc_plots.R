@@ -220,7 +220,7 @@ s1_called <- nrow(filter(mutect, s1_af > 0))
 s2_called <- nrow(filter(mutect, s2_af > 0))
 print("Homoplasmic variants (SNV and indel duplicates Mutect):")
 s1_hom + s2_hom
-print("Variants called(SNV and indel duplicates Mutect):")
+print("Variants called (SNV and indel duplicates Mutect):")
 (s1_called + s2_called)
 print("Fraction homoplasmic (SNV and indel duplicates Mutect):")
 (s1_hom + s2_hom)/(s1_called + s2_called)
