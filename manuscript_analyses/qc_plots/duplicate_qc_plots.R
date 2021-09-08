@@ -139,7 +139,7 @@ mtdnaserver_combined_plot
 # Combine plots for Mutect snps, Mutect density, mtDNA-Server snps, mtDNA-Server density
 combined_plot <- plot_grid(mutect_combined_plot, mtdnaserver_combined_plot, align = "h")
 
-combined_plot <-combined_plot + draw_label("Heteroplasmic Level\nSample 1", x = .50, y = .04, hjust = .5, vjust = .5,
+combined_plot <- combined_plot + draw_label("Heteroplasmic Level\nSample 1", x = .50, y = .04, hjust = .5, vjust = .5,
                                        fontfamily = "", fontface = "bold", colour = "black", size = 14,
                                        lineheight = 0.9, alpha = 1) 
 
