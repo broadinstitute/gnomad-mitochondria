@@ -217,7 +217,7 @@ ggsave(combined_plot, filename = "mutect_snps_and_indels.pdf", dpi = 300, width 
 s1_hom <- nrow(filter(mutect, s1_af >= 0.95))
 s2_hom <- nrow(filter(mutect, s2_af >= 0.95))
 s1_called <- nrow(filter(mutect, s1_af > 0))
-s2_called <- nrow(filter(mutect, s2_af >0))
+s2_called <- nrow(filter(mutect, s2_af > 0))
 print("Homoplasmic variants (SNV and indel duplicates Mutect):")
 s1_hom + s2_hom
 print("Variants called(SNV and indel duplicates Mutect):")
