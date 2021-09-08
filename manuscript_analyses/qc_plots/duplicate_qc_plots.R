@@ -104,7 +104,7 @@ mutect_density_plot <- ggplot(mutect, aes(x = s1_af)) +
 mutect_combined_plot <- plot_grid(mutect_density_plot, mutect_snps_plot, align = "v", ncol = 1, rel_heights = c(1, 5))
 
 
-# Plot mtDNA-Server snps
+# Plot mtDNA-Server SNPs
 mtdnaserver <- filter(snps_only, caller == "MtDNA-Server")
 mtdnaserver_snps_plot <- ggplot(mtdnaserver, aes(x = s1_af, y = s2_af)) +
   geom_point(size = 2.0, stroke = 0) +
