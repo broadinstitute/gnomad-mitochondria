@@ -20,8 +20,7 @@ option_list = list(
 opt_parser = OptionParser(option_list = option_list)
 opt = parse_args(opt_parser)
 
-
-# TODO: roxygen2 or other to document parameters?
+pdf(NULL)
 # NOTE: Plots are for pairs where at least one sample of the pair had a called variant: (0,0) values are not in the dataframe
 
 # Read in data and set the out directory for plots
@@ -53,7 +52,7 @@ num_mm <- nrow(distinct(filter(all, dataset == "mm"), s1, s2))
 # Format labels for plots
 dup_label = paste("Duplicate Pairs (n=", num_dups, " pairs)", sep = "")
 mc_label = paste("Mother-Child Pairs (n=", num_mc, " pairs)", sep = "")
-mm_label = paste("Mutect old-new Pairs (n=", num_mm, " pairs)", sep = "")
+mm_label = paste("Mutect vs mtDNA-Server Pairs (n=", num_mm, " pairs)", sep = "")
 
 all$dataset_name <- factor(all$dataset,
                            levels = c("dups", "mc", "mm"),
@@ -61,9 +60,54 @@ all$dataset_name <- factor(all$dataset,
 
 
 #####################################################
+# Generate functions for plotting data
+#####################################################
+plot_scatter_comparision_for_pairs <- function(df){
+  # Plot allele frequency of one sample vs that of its pair as a scatter plot
+  # Input 'df' is dataframe to be plotted
+  # 'df' should contain 's1_af' for allele frequency of one sample of a given pair
+  # and 's2_af' for allele frequency of the corresponding sample in the given pair
+  
+  snps_plot <- ggplot(df, aes(x = s1_af, y = s2_af)) +
+    geom_point(size = 2.0, stroke = 0) +
+    geom_abline(slope = 1, linetype = "dashed", colour = "black") +
+    theme_bw() +
+    theme(strip.background = element_blank(),
+          plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+          strip.text.x = element_text(size = 18, colour = "black"),
+          panel.spacing = unit(1.5, "lines"),
+          axis.text = element_text(colour = "black", size = 12),
+          axis.title = element_blank())
+  
+  return(snps_plot)
+}
+
+plot_density_for_pairs <- function(df){
+  # Plot density of allele frequency values 
+  # Input 'df' is dataframe to be plotted
+  # 'df' should contain 's1_af' for allele frequency of one sample of a given pair to use for displaying density
+  
+  density_plot <- ggplot(df, aes(x = s1_af)) +
+    geom_density() +
+    theme_bw() +
+    theme(axis.text.y = element_text(colour = "black", size = 12),
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks.x = element_blank(),
+          axis.title = element_blank(),
+          plot.title = element_text(colour = "black", size = 14, face = "bold", hjust = 0.5),
+          panel.grid.major = element_blank(), 
+          panel.grid.minor = element_blank())
+  
+  return(density_plot)
+}
+
+
+#####################################################
 # Plot duplicate comparison for SNPs
 #####################################################
-dups <- filter(all, dataset=="dups")
+# Pull out duplicate pairs data
+dups <- filter(all, dataset == "dups")
 
 # Separate variant column into position, reference, alternate to help identify SNPs vs Indels
 dups$pos <- stringr::str_split_fixed(dups$variant, "_", 4)[,2]
@@ -75,67 +119,25 @@ snps_only <- filter(dups, nchar(ref) == 1 & nchar(alt) == 1)
 
 # Plot Mutect SNPs
 mutect <- filter(snps_only, caller == "Mutect")
-mutect_snps_plot <- ggplot(mutect, aes(x = s1_af, y = s2_af)) +
-  geom_point(size = 2.0, stroke = 0) +
-  geom_abline(slope = 1, linetype = "dashed", colour = "black") +
-  theme_bw() +
-  theme(strip.background = element_blank(),
-        plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
-        strip.text.x = element_text(size = 18, colour = "black"),
-        panel.spacing = unit(1.5, "lines"),
-        plot.margin = unit(c(0.25, 0.25, 1.5, 1.5), "cm"),
-        axis.text = element_text(colour = "black", size = 12),
-        axis.title = element_blank())
+mutect_snps_plot <- plot_scatter_comparision_for_pairs(mutect) + theme(plot.margin = unit(c(0.25, 0.25, 1.5, 1.5), "cm"))
 
 # Plot Mutect density
-mutect_density_plot <- ggplot(mutect, aes(x = s1_af)) +
-  geom_density() +
-  theme_bw() +
-  theme(axis.text.y = element_text(colour = "black", size = 12),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.title = element_blank(),
-        plot.title = element_text(colour = "black", size = 14, face = "bold", hjust = 0.5),
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank()) +
-  labs(y = "Density", title = "Mutect")
+mutect_density_plot <- plot_density_for_pairs(mutect) + labs(y = "Density", title = "Mutect")
 
+# Combine plots for Mutect density and SNPs
 mutect_combined_plot <- plot_grid(mutect_density_plot, mutect_snps_plot, align = "v", ncol = 1, rel_heights = c(1, 5))
 
 # Plot mtDNA-Server SNPs
 mtdnaserver <- filter(snps_only, caller == "MtDNA-Server")
-mtdnaserver_snps_plot <- ggplot(mtdnaserver, aes(x = s1_af, y = s2_af)) +
-  geom_point(size = 2.0, stroke = 0) +
-  geom_abline(slope = 1, linetype = "dashed", colour = "black") +
-  theme_bw() +
-  theme(strip.background = element_blank(),
-        plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
-        strip.text.x = element_text(size = 18, colour = "black"),
-        panel.spacing = unit(1.5, "lines"),
-        plot.margin = unit(c(0.25, 1.5, 1.5, 0.25), "cm"),
-        axis.text = element_text(colour = "black", size = 12),
-        axis.title = element_blank())
-mtdnaserver_snps_plot
+mtdnaserver_snps_plot <- plot_scatter_comparision_for_pairs(mtdnaserver) + theme(plot.margin = unit(c(0.25, 1.5, 1.5, 0.25), "cm"))
 
 # Plot mtDNA-Server density
-mtdnaserver_density_plot <- ggplot(mtdnaserver, aes(x = s1_af)) +
-  geom_density() +
-  theme_bw() +
-  theme(axis.text.y = element_text(colour = "black", size = 12),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.title = element_blank(),
-        plot.title = element_text(colour = "black", size = 14, face = "bold", hjust = 0.5),
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank()) +
-  labs(y = "Density", title = "MtDNA-Server")
+mtdnaserver_density_plot <- plot_density_for_pairs(mtdnaserver) + labs(y = "Density", title = "MtDNA-Server")
 
+# Combine plots for mtDNA-Server density and SNPs
 mtdnaserver_combined_plot <- plot_grid(mtdnaserver_density_plot, mtdnaserver_snps_plot, align = "v", ncol = 1, rel_heights = c(1,5))
-mtdnaserver_combined_plot 
 
-# Combine plots for Mutect snps, Mutect density, mtDNA-Server snps, mtDNA-Server density
+# Combine plots for Mutect SNPs, Mutect density, mtDNA-Server SNPs, mtDNA-Server density
 combined_plot <- plot_grid(mutect_combined_plot, mtdnaserver_combined_plot, align = "h")
 
 combined_plot <- combined_plot + draw_label("Heteroplasmic Level\nSample 1", x = .50, y = .04, hjust = .5, vjust = .5,
@@ -159,51 +161,31 @@ ggsave(combined_plot, filename = "scatter_dup_snp.pdf", dpi = 300, width = 10, h
 #####################################################
 # Count number of homoplasmic SNPs
 #####################################################
-mutect_snps <- filter(snps_only, caller == "Mutect")
-
-s1_hom <- nrow(filter(mutect_snps, s1_af >= 0.95))
-s2_hom <- nrow(filter(mutect_snps, s2_af >= 0.95))
-s1_called <- nrow(filter(mutect_snps, s1_af > 0))
-s2_called <- nrow(filter(mutect_snps, s2_af > 0))
-print("Homoplasmic variants (SNV duplicates Mutect):")
+# For SNPs in duplicate samples in Mutect, calculate the fraction that are homoplasmic for the paper
+s1_hom <- nrow(filter(mutect, s1_af >= 0.95))
+s2_hom <- nrow(filter(mutect, s2_af >= 0.95))
+s1_called <- nrow(filter(mutect, s1_af > 0))
+s2_called <- nrow(filter(mutect, s2_af > 0))
+print("Homoplasmic variants (SNP duplicates Mutect):")
 s1_hom + s2_hom
-print("Variants called (SNV duplicates Mutect):")
+print("Variants called (SNP duplicates Mutect):")
 s1_called + s2_called
-print("Fraction homoplasmic (SNV duplicates Mutect):")
+print("Fraction homoplasmic (SNP duplicates Mutect):")
 (s1_hom + s2_hom)/(s1_called + s2_called)
 
 
 #####################################################
 # Plot SNPs and indels together for just Mutect
 #####################################################
-# Do not run this analysis for mtDNA-Server since indel-calling is in beta
-# Plot Mutect snps
-dups <- mutate(dups, snp=nchar(ref) == 1 & nchar(alt) == 1)
+# Do not run this analysis for mtDNA-Server since indel-calling is in beta (analyses for mtDNA-Server should keep SNPs and indels separate)
 mutect <- filter(dups, caller == "Mutect")
-mutect_snps_and_indels_plot <- ggplot(mutect, aes(x = s1_af, y = s2_af)) +
-  geom_point(size = 2.0, stroke = 0) +
-  geom_abline(slope = 1, linetype = "dashed", colour = "black") +
-  theme_bw() +
-  theme(strip.background = element_blank(),
-        plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
-        strip.text.x = element_text(size = 18, colour = "black"),
-        panel.spacing = unit(1.5, "lines"),
-        axis.text = element_text(colour = "black", size = 12),
-        axis.title = element_text(size = 14, face = "bold")) +
+
+mutect_snps_and_indels_plot <- plot_scatter_comparision_for_pairs(mutect) +
+  theme(axis.title = element_text(size = 14, face = "bold")) +
   labs(x = "Heteroplasmic Level\nSample 1", y = "Heteroplasmic Level\nSample 2")
 
-mutect_snps_and_indels_density_plot <- ggplot(mutect, aes(x = s1_af)) +
-  geom_density() +
-  theme_bw() +
-  theme(axis.text.y = element_text(colour = "black", size = 12),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.title = element_blank(),
-        axis.title.y = element_text(size = 14, face = "bold"),
-        plot.title = element_text(colour = "black", size = 14, face = "bold", hjust = 0.5),
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank()) +
+mutect_snps_and_indels_density_plot <- plot_density_for_pairs(mutect) +
+  theme(axis.title.y = element_text(size = 14, face = "bold")) +
   labs(y = "Density", title = "Mutect")
 
 combined_plot <- plot_grid(mutect_snps_and_indels_density_plot, mutect_snps_and_indels_plot, ncol = 1 , align = "v" , rel_heights = c(1,5))
@@ -219,11 +201,11 @@ s1_hom <- nrow(filter(mutect, s1_af >= 0.95))
 s2_hom <- nrow(filter(mutect, s2_af >= 0.95))
 s1_called <- nrow(filter(mutect, s1_af > 0))
 s2_called <- nrow(filter(mutect, s2_af > 0))
-print("Homoplasmic variants (SNV and indel duplicates Mutect):")
+print("Homoplasmic variants (SNP and indel duplicates Mutect):")
 s1_hom + s2_hom
-print("Variants called (SNV and indel duplicates Mutect):")
+print("Variants called (SNP and indel duplicates Mutect):")
 s1_called + s2_called
-print("Fraction homoplasmic (SNV and indel duplicates Mutect):")
+print("Fraction homoplasmic (SNP and indel duplicates Mutect):")
 (s1_hom + s2_hom)/(s1_called + s2_called)
 
 
@@ -232,37 +214,28 @@ print("Fraction homoplasmic (SNV and indel duplicates Mutect):")
 ##########################################################################
 indels_only <- filter(dups, nchar(ref) != 1 | nchar(alt) != 1)
 
-indel_comparison_plot <- ggplot(indels_only, aes(x = s1_af, y = s2_af)) +
+indel_comparison_plot <- plot_scatter_comparision_for_pairs(indels_only) +
   facet_wrap(~caller) +
   geom_point(alpha = .35, size = 2.0, stroke = 0) +
-  geom_density_2d() +
-  theme_bw() +
-  geom_abline(slope = 1, linetype = "dashed", colour = "black") +
-  theme(strip.background = element_blank(),
-        plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
-        strip.text.x = element_text(size = 18, colour = "black"),
-        panel.spacing = unit(1.5, "lines"),
-        axis.title = element_text(colour = "black", size = 18, face = "bold"),
-        axis.text = element_text(colour = "black", size = 12)) +
+  theme(axis.title = element_text(colour = "black", size = 18, face = "bold")) +
   labs(x = "Heteroplasmic Level\nSample 1", y = "Heteroplasmic Level\nSample 2", title = dup_label)
-indel_comparison_plot
+indel_comparison_plot                               
 
 ggsave(indel_comparison_plot, filename = "scatter_dup_indel.png", dpi = 300, width = 10, height = 6, units = "in")
-ggsave(indel_comparison_plot, filename = "scatter_dup_indel.pdf", dpi = 300, width = 10, height = 6, units = "in")
 
 
 #####################################################
 # Generate jaccard index table
 #####################################################
-add_jaccard_results <- function(intersect, union, jaccard_table, row_name) {
-  # intersect is dataframe containing only the intersect values
-  # union is dataframe containing only the union values
+add_jaccard_results <- function(intersect_table, union_table, jaccard_table, row_name) {
+  # intersect_table is dataframe containing only the intersect values
+  # union_table is dataframe containing only the union values
   # jaccard_table is two-column table to which results should be added
   # row_name is string to use in first column of the row
   
-  jaccard_index <- round(nrow(intersect)/nrow(union), 3) * 100
-  f1=paste(nrow(intersect), "/", nrow(union)," (", jaccard_index, "%)", sep = "")
-  jaccard_table[nrow(jaccard_table)+1,] <- c(row_name, f1)
+  jaccard_index <- round(nrow(intersect_table)/nrow(union_table), 3) * 100
+  f1 = paste(nrow(intersect_table), "/", nrow(union_table)," (", jaccard_index, "%)", sep = "")
+  jaccard_table[nrow(jaccard_table) + 1,] <- c(row_name, f1)
   
   return(jaccard_table)
   }
@@ -291,8 +264,8 @@ generate_jaccard_table <- function(qc_type, method, name, data){
   colnames(jaccard_table) <- c("Metric", "F1")
 
   # Make the first row contain the column names
-  jaccard_table[nrow(jaccard_table)+1,] <- c("Caller", paste(method, qc_type, name, sep="_"))
-  
+  jaccard_table[1,] <- c("Caller", paste(method, qc_type, name, sep="_"))
+
   # Add a row of jaccard results for each heteroplasmy level comparison
   # Want to display both the fraction and calculate the percentage
   
@@ -348,4 +321,3 @@ dup_jaccard_results = left_join(dup_jaccard_results, results_table, by = "Metric
 
 # Output final jaccard result table containing the results from all of the comparisons
 write.table(dup_jaccard_results, file = "dup_jaccard_results.txt", sep = "\t", quote = FALSE, row.names = FALSE)
-

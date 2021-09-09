@@ -19,6 +19,8 @@ option_list = list(
 opt_parser = OptionParser(option_list = option_list)
 opt = parse_args(opt_parser)
 
+pdf(NULL)
+
 # Read in and rename columns for mtDNA-Server results
 mtdnaserver <- read.table(opt$mtdnaserver_vl_output, sep = '\t', quote = "")
 mtdnaserver <- gather(mtdnaserver, "sample", "value", V7:V19)
@@ -63,4 +65,3 @@ vaf_condordance_variant_type
 
 setwd(opt$plot_directory)
 ggsave(vaf_condordance_variant_type, filename = "na12878_vaf.png", dpi = 300, width = 10, height = 6, units = "in")
-
