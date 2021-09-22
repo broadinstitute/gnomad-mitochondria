@@ -5,6 +5,8 @@ import logging
 import re
 import sys
 
+#hl._set_flags(no_whole_stage_codegen='1')
+
 from collections import Counter
 from os.path import dirname
 from textwrap import dedent
@@ -63,7 +65,7 @@ def add_genotype(mt_path: str, min_hom_threshold: float = 0.95) -> hl.MatrixTabl
             .when((mt.HL < min_hom_threshold) & (mt.HL > 0.0), hl.parse_call("0/1"))
             .when(mt.HL >= min_hom_threshold, hl.parse_call("1/1"))
             .when(mt.HL == 0, hl.parse_call("0/0"))
-            .default(hl.null(hl.tcall))
+            .default(hl.missing(hl.tcall))
         ),
     )
 
@@ -1134,10 +1136,10 @@ def add_vep(input_mt: hl.MatrixTable, run_vep: bool, vep_output: str) -> hl.Matr
                 lambda x: x.annotate(
                     lof=hl.if_else(x.lof_filter == "END_TRUNC", "HC", x.lof),
                     lof_filter=hl.if_else(
-                        x.lof_filter == "END_TRUNC", hl.null(hl.tstr), x.lof_filter
+                        x.lof_filter == "END_TRUNC", hl.missing(hl.tstr), x.lof_filter
                     ),
                     lof_flags=hl.if_else(
-                        x.lof_flags == "SINGLE_EXON", hl.null(hl.tstr), x.lof_flags
+                        x.lof_flags == "SINGLE_EXON", hl.missing(hl.tstr), x.lof_flags
                     ),
                 )
             )
