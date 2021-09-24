@@ -4,7 +4,7 @@ import math
 import os
 
 import hail as hl
-
+hl._set_flags(no_whole_stage_codegen='1')
 from hail.utils.java import info
 from typing import Dict
 
@@ -278,9 +278,9 @@ def apply_mito_artifact_filter(
             hl.locus("MT", mt.locus.position, reference_genome="GRCh37"),
             hl.locus(
                 "MT",
-                mt.locus.position + hl.len(mt.alleles[0]),
+                mt.locus.position + hl.len(mt.alleles[0]) - 1,
                 reference_genome="GRCh37",
-            ),
+            ), includes_end = True
         )
     )
 
