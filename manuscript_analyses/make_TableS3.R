@@ -1,16 +1,13 @@
-#extract G>A synonymous variants not seen at homoplasmy in gnomAD
+library(stringr)
 
 dir.create("tables")
 
-Ts_list <- c("A>G","C>T","G>A","T>C")
-annotated_syn_vcf <- read.delim(file='annotated_synthetic.vcf', header=TRUE, sep = "\t", na.strings = "")
-annotated_syn_vcf$variant <- paste("m.",annotated_syn_vcf$POS,annotated_syn_vcf$REF,">",annotated_syn_vcf$ALT,sep="")
-annotated_syn_vcf$mut <- ifelse(paste(annotated_syn_vcf$REF,">",annotated_syn_vcf$ALT,sep="") %in% Ts_list,as.character(paste(annotated_syn_vcf$REF,">",annotated_syn_vcf$ALT,sep="")),"Tv")
-annotated_syn_vcf$mitomap_ac <- (annotated_syn_vcf$Mitomap_af * 51836) #to convert to AC
+gnomad <- read.delim(file = 'reformated.vcf', header = TRUE, sep = "\t", na.strings = "")
 
-write.table(annotated_syn_vcf[grepl("synonymous",annotated_syn_vcf$Consequence) & annotated_syn_vcf$mut=="G>A" & annotated_syn_vcf$gnomAD_max_hl<0.95,c("variant","SYMBOL","Consequence","HGVSc","HGVSp","gnomAD_max_hl","Helix_max_hl","mitomap_ac")],
-            file = "tables/TableS3.txt", append = FALSE, sep = "\t", quote=FALSE, row.names = FALSE, col.names = TRUE)
+gnomad$variant <- paste("m.", gnomad$POS, gnomad$REF, ">", gnomad$ALT, sep = "")
+gnomad$HGVSp <- str_split(gnomad$HGVSp, ":", simplify = TRUE)[, 2]
 
-
+write.table(gnomad[((gnomad$VARIANT_CLASS != "SNV" & grepl('frameshift', gnomad$Consequence)) | gnomad$Consequence == "stop_gained") & gnomad$max_hl >= 0.95, c("variant", "SYMBOL", "HGVSp", "Consequence", "max_hl", "AC_hom", "AC_het")],
+            file = "tables/TableS3.txt", append = FALSE, sep = "\t", quote = FALSE, row.names = FALSE, col.names = TRUE)
 
 
