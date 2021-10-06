@@ -15,9 +15,9 @@ option_list = list(
   make_option(c("-u", "--unfiltered_sample_annotations"), type = "character", default = NULL,
               help = "Sample annotations for all, including filtered out samples, only needs to include mt_mean_coverage column", metavar = "character"),
   make_option(c("-v", "--variant_data"), type = "character", default = NULL,
-              help = "Combined sites-only file output by add_annotations.py", metavar = "character"),
+              help = "Combined sites-only file (with txt extension) output by add_annotations.py", metavar = "character"),
   make_option(c("-c", "--coverage"), type = "character", default = NULL,
-              help = "Mean coverages, tab-delimited file of 'locus', in format of chrM:position, and 'mean', mean coverage across all samples at that position", metavar = "character"),
+              help = "Mean coverages, tab-delimited file of 'locus', in format of chrM:position, and 'mean', mean coverage across all samples at that position (metrics can be obtained and extracted by running annotate_coverage.py)", metavar = "character"),
   make_option(c("-d", "--plot_directory"), type = "character", default = NULL,
               help = "Directory to which plots should be written", metavar = "character"))
 
@@ -52,12 +52,11 @@ write.table(pop_counts, pop_counts_output, sep = '\t', row.names = FALSE, quote 
 ##############################################################################
 # Calculate mean/median/min/max coverage and copy number 
 cov_stats = gnomad %>% summarize(mean_mt_mean_coverage = mean(mt_mean_coverage),
-                                  median_mt_mean_coverage = median(mt_mean_coverage),
-                                  min_mt_mean_coverage = min(mt_mean_coverage),
-                                  max_mt_mean_coverage = max(mt_mean_coverage),
-                                  median_mito_cn = median(mito_cn),
-                                  mean_mito_cn = mean(mito_cn),
-                                  median_cp_estimation = median(mito_cn))
+                                 median_mt_mean_coverage = median(mt_mean_coverage),
+                                 min_mt_mean_coverage = min(mt_mean_coverage),
+                                 max_mt_mean_coverage = max(mt_mean_coverage),
+                                 mean_mito_cn = mean(mito_cn),
+                                 median_cp_estimation = median(mito_cn))
 
 cov_stats_output <- paste(plot_dir, "/cov_stats.txt", sep = "")
 write.table(cov_stats, cov_stats_output, sep = '\t', row.names = FALSE, quote = FALSE)
@@ -65,14 +64,6 @@ write.table(cov_stats, cov_stats_output, sep = '\t', row.names = FALSE, quote = 
 ##############################################################################
 # Plot distribution of mean mitochondrial coverage across bases (Fig1A)
 ##############################################################################
-# Redefine upper boundaries for plotting purposes (group values above x into an x+ category)
-gnomad <- mutate(gnomad, mito_cn_for_plotting = ifelse(mito_cn >= 800, 800, mito_cn))
-gnomad <- mutate(gnomad, mt_mean_coverage_for_plotting = ifelse(mt_mean_coverage >= 10000, 10000, mt_mean_coverage))
-gnomad <- mutate(gnomad, ndna_coverage_for_plotting = ifelse(wgs_median_coverage >= 60, 60, wgs_median_coverage))
-gnomad_unfiltered <- mutate(data_unfiltered, mt_mean_coverage_for_plotting = ifelse(mt_mean_coverage >= 20000, 20000, mt_mean_coverage))
-
-median(gnomad_unfiltered$mt_mean_coverage)
-
 # Pull out just the position as it's own column
 mean_cov$pos <- as.integer(stringr::str_split_fixed(mean_cov$locus, ":", 2)[,2])
 
@@ -96,6 +87,9 @@ ggsave(mean_cov_per_base_plot, filename = "Fig1A.pdf", dpi = 300, width = 11, he
 ##############################################################################
 # Plot histogram distribution of mean mitochondrial coverage (FigS4A)
 ##############################################################################
+# Redefine upper boundaries for plotting purposes (group values above x into an x+ category)
+gnomad <- mutate(gnomad, mt_mean_coverage_for_plotting = ifelse(mt_mean_coverage >= 10000, 10000, mt_mean_coverage))
+
 mean_cov_hist_plot <- ggplot(gnomad, aes(x = mt_mean_coverage_for_plotting))+ 
   geom_histogram(binwidth = 100) +
   theme_bw() +
@@ -114,7 +108,7 @@ ggsave(mean_cov_hist_plot, filename = "FigS4.pdf", dpi = 300, width = 11, height
 ##############################################################################
 # Plot histogram distribution of mitochondrial copy number estimate (FigS4C)
 ##############################################################################
-cp_hist_plot <- ggplot(gnomad, aes(x = mito_cn_for_plotting)) + 
+cp_hist_plot <- ggplot(gnomad, aes(x = mito_cn)) + 
   geom_histogram(binwidth = 10) +
   theme_bw() +
   theme(axis.text = element_text(size = 20, colour = "black"),
@@ -132,6 +126,7 @@ ggsave(cp_hist_plot, filename = "FigS4C.pdf", dpi = 300, width = 10, height = 6,
 ##############################################################################
 # Plot histogram distribution of nDNA median coverage (FigS4B)
 ##############################################################################
+# Redefine upper boundaries for plotting purposes (group values above x into an x+ category)
 gnomad <- mutate(gnomad, ndna_coverage_for_plotting = ifelse(wgs_median_coverage >= 60, 60, wgs_median_coverage))
 
 ndna_cov_hist_plot <- ggplot(gnomad, aes(x = ndna_coverage_for_plotting))+ 
@@ -184,7 +179,7 @@ homoplasmic_snps <- filter(gnomad_metrics_snps, metric == "Homoplasmic")
 ##############################################################################
 # Set haplogroup colors
 ##############################################################################
-# Set the order for plotting haplogroups
+# Set the order for plotting haplogroups (based on mitochondrial phylogenetic tree from Van Oven and Kayser (2009))
 levels <- c("L0", "L1", "L5", "L2", "L6", "L4", "L3", "M", "C", "Z", "E", "G", "Q", "D", "N", "I", "W", "Y", "A", "O", "S", "X", "R", "HV", "V", "H", "J", "T", "F", "B", "P", "U", "K")
 
 # Pull out just those haplogroups found in gnomAD and maintain the order
@@ -258,7 +253,7 @@ original_plotted_hap_order <- rev(layer_scales(heteroplasmic_snps_plot)$y$range$
 # Create a new dataframe consisting the of the haplogroups in the original order
 original_hap_df <- data.frame(hap = original_plotted_hap_order)
 
-# Assign those haplogroups to the appropriate color based on their high-level haplogroup
+# Assign those haplogroups to the appropriate color based on their high-level haplogroup ("total" has already been set to "black" in haplogroup_color_list)
 original_hap_df <- original_hap_df %>% mutate(original_plotted_hap_color = case_when(.$hap %in% African ~ african_color,
                                                                                      .$hap %in% Asian ~ asian_color,
                                                                                      .$hap %in% European ~ european_color))
@@ -329,14 +324,13 @@ variant_data <- mutate(variant_data, af_percentage = af * 100)
 # Group AFs into specific percentage categories to plot singletons, doubletons, and specific AFs
 variant_data <- mutate(variant_data, variant_af_group = ifelse(ac == 1,
                                                                "singleton",
-                                                               ifelse(ac > 0 & af_percentage < 0.1,
+                                                               ifelse(ac > 1 & af_percentage < 0.1,
                                                                       "doubleton-0.1%",
                                                                       ifelse(af_percentage >= 0.1 & af_percentage < 1,
                                                                              "0.1-1%",
                                                                              ifelse(af_percentage >= 1 & af_percentage < 10,
                                                                                     "1-10%",
                                                                                     ">10%")))))
-
 # Use max heteroplasmy to determine homoplasmic/heteroplasmic for the plot
 # Define homoplasmic and heteroplasmic variants according to min_hom_threshold
 variant_data <- mutate(variant_data, variant_level = ifelse(max_hl > min_hom_threshold, "homoplasmic", "heteroplasmic"))
@@ -357,7 +351,7 @@ grouped_by_variant <- variant_data %>% group_by(variant_af_group) %>% summarise(
 
 # Create function to plot barplots for population allele frequencies
 plot_barplot <- function(df, x_variable, y_variable, fill_variable){
-  # Generate bar plot of df with the speicfied data for x and y axis
+  # Generate bar plot of df with the specified data for x and y axis
   # Input 'df' is dataframe to be plotted
   # x_variable is name of variable to use on x axis
   # y_variable is name of variable to use on y axis
@@ -384,7 +378,7 @@ plot_barplot <- function(df, x_variable, y_variable, fill_variable){
 
 # Make barplot for proportion of unique variants falling into each frequency category
 pop_af_by_variant_plot <- plot_barplot(grouped_by_variant, "variant_af_group", "proportion", NULL) +
-  labs(x = "Percent of samples with variant", y = "Proportion of\nunique variants")
+  labs(y = "Proportion of\nunique variants")
 pop_af_by_variant_plot
 
 # Now add in het/hom and whether or not a haplogroup-defining variant, and plot proportion of each frequency category that falls into these groups
@@ -401,13 +395,13 @@ grouped_by_category$variant_group <- factor(grouped_by_category$variant_group,
 
 pop_af_by_category_plot <-  plot_barplot(grouped_by_category, "variant_af_group", "proportion", "variant_group") +
   theme(legend.position = "none") +
-  labs(x = "Percent of samples with variant", y = "Proportion of\ncategory")
+  labs(y = "Proportion of\ncategory")
 pop_af_by_category_plot 
 
 # Replot the same as above, but this time with the legend so that it can be pulled out separately and added to the combined plot
 plot_for_legend  <-  plot_barplot(grouped_by_category, "variant_af_group", "proportion", "variant_group") +
   theme(legend.text = element_text(size = 8)) +
-  labs(x = "Percent of samples with variant", y = "Proportion of\ncategory")
+  labs(y = "Proportion of\ncategory")
 plot_for_legend  
 
 # Combine the pop af and freq category plots
@@ -424,6 +418,7 @@ combined_plot <- plot_grid(combined_plot, legend_b, rel_widths = c(3, 1.5), rel_
 combined_plot <- combined_plot + draw_label("Percent of samples with variant", x = 0.40, y = 0.01, hjust = 0.5, vjust = -1,
                                             fontfamily = "", fontface = "bold", colour = "black", size = 16,
                                             lineheight = 0.9, alpha = 1) 
+# NOTE: x-axis labels changed to "Allele frequency" in gnomAD manuscript and heteroplasmic categories collapsed
 combined_plot
 
 setwd(plot_dir)
@@ -447,8 +442,7 @@ hap_pop <- left_join(hap_pop, hap_sums, by = "hap") %>% ungroup()
 missing_haps <- setdiff(levels, unique(hap_pop$hap))
 for(h in missing_haps) {for(p in unique(hap_pop$pop)){hap_pop <- hap_pop %>% add_row(hap = h, pop = p, count = NA)}}
 
-# Remove total category and get complete df of all pop and haplogroup combinations
-hap_pop <- filter(hap_pop, hap != "total")
+# Get complete df of all pop and haplogroup combinations
 hap_pop <- complete(hap_pop, hap, pop)
 hap_pop <- mutate(hap_pop, percent = round(count/hap_count*100, 0))
 
@@ -511,6 +505,7 @@ biggest_hap_count <- hap_sums$hap_count[index]
 # Plot number of sample belonging to each haplogroup (Fig4A)
 ########################################################################
 ########################################################################
+# NOTE: same heatmap produced here will be added to FigS5
 heatmap_hap <- ggplot(hap_sums, aes(x = total, y = hap, fill = hap_count)) + 
   geom_tile() +
   theme_bw() +
@@ -542,9 +537,6 @@ data$population <- factor(data$pop,
                           labels = pop_full_names)
 
 unique(hap_pop_data$pop)
-hap_pop_data$pop <- factor(hap_pop_data$pop,
-                           levels = pop_abbreviations,
-                           labels = pop_full_names)
 
 # Calculate proportion of population that is in each haplgroup
 grouped_data <- data %>% group_by(population, hap) %>% summarise(count = n()) %>% mutate(proportion = count/sum(count))
@@ -641,15 +633,15 @@ pop_sums$population <- factor(pop_sums$pop,
                               labels = pop_full_names)
 
 pop_sums <- pop_sums  %>% mutate(pop_color=case_when(.$pop == "afr" ~ afr_pop_color,
-                                                      .$pop == "ami" ~ ami_pop_color,
-                                                      .$pop == "amr" ~ amr_pop_color,
-                                                      .$pop == "asj" ~ asj_pop_color,
-                                                      .$pop == "eas" ~ eas_pop_color,
-                                                      .$pop == "fin" ~ fin_pop_color,
-                                                      .$pop == "mid" ~ mid_pop_color,
-                                                      .$pop == "nfe" ~ nfe_pop_color,
-                                                      .$pop == "oth" ~ oth_pop_color,
-                                                      .$pop == "sas" ~ sas_pop_color))
+                                                     .$pop == "ami" ~ ami_pop_color,
+                                                     .$pop == "amr" ~ amr_pop_color,
+                                                     .$pop == "asj" ~ asj_pop_color,
+                                                     .$pop == "eas" ~ eas_pop_color,
+                                                     .$pop == "fin" ~ fin_pop_color,
+                                                     .$pop == "mid" ~ mid_pop_color,
+                                                     .$pop == "nfe" ~ nfe_pop_color,
+                                                     .$pop == "oth" ~ oth_pop_color,
+                                                     .$pop == "sas" ~ sas_pop_color))
 
 hist_pop_counts <- ggplot(pop_sums, aes(y = pop_count, x = population, fill = population)) + 
   geom_bar(stat = "identity") +
@@ -686,3 +678,4 @@ combined_plot1c <- plot_grid(combined_plot1a, combined_plot1b, ncol = 1, rel_hei
 setwd(plot_dir)
 ggsave(combined_plot1c, filename = "Fig4.png", dpi = 300, width = 10, height = 7, units = "in")
 ggsave(combined_plot1c, filename = "Fig4.pdf", dpi = 300, width = 10, height = 7, units = "in")
+
