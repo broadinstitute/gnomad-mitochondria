@@ -578,12 +578,12 @@ data <- rbind(data, data_with_total)
 
 # Define colors of the populations
 afr_pop_color <- "#941494"
-ami_pop_color <- "#FFC0CB"
+ami_pop_color <- "#6AB8CD"
 amr_pop_color <- "#ED1E24"
-asj_pop_color <- "#FF7F50"
+asj_pop_color <- "#6A8BCD"
 eas_pop_color <- "#108C44"
 fin_pop_color <- "#002F6C"
-mid_pop_color <- "#33CC33"
+mid_pop_color <- "#B5960B"
 nfe_pop_color <- "#6AA5CD"
 oth_pop_color <- "#ABB9B9"
 sas_pop_color <- "#FF9912"
@@ -678,4 +678,5 @@ combined_plot1c <- plot_grid(combined_plot1a, combined_plot1b, ncol = 1, rel_hei
 setwd(plot_dir)
 ggsave(combined_plot1c, filename = "Fig4.png", dpi = 300, width = 10, height = 7, units = "in")
 ggsave(combined_plot1c, filename = "Fig4.pdf", dpi = 300, width = 10, height = 7, units = "in")
+
 
