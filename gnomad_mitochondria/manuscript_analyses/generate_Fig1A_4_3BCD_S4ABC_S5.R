@@ -418,7 +418,7 @@ combined_plot <- plot_grid(combined_plot, legend_b, rel_widths = c(3, 1.5), rel_
 combined_plot <- combined_plot + draw_label("Percent of samples with variant", x = 0.40, y = 0.01, hjust = 0.5, vjust = -1,
                                             fontfamily = "", fontface = "bold", colour = "black", size = 16,
                                             lineheight = 0.9, alpha = 1) 
-# NOTE: x-axis labels changed to "Allele frequency" in gnomAD manuscript and heteroplasmic categories collapsed
+# NOTE: In gnomAD manuscript, x-axis labels changed to "Allele frequency" and heteroplasmic categories collapsed
 combined_plot
 
 setwd(plot_dir)
