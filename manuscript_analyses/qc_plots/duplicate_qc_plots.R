@@ -37,7 +37,7 @@ all <- rbind(mtdnaserver, mutect)
 all <- filter(all, s1 %in% mutect$s1, s2 %in% mutect$s2, s1 %in% mtdnaserver$s1, s2 %in% mtdnaserver$s2)
 
 # Double check that at least one sample of the pair has a heteroplasmy level above that of the min_het_threshold
-# Note: will NOT round s1 and s2 afs before comparing to min_het_threshold
+# NOTE: will NOT round s1 and s2 afs before comparing to min_het_threshold
 all <- filter(all, s1_af > opt$min_het_threshold | s2_af > opt$min_het_threshold)
 
 # Filter to PASS variants (non artifact-prone sites)
@@ -259,7 +259,7 @@ generate_jaccard_table <- function(qc_type, method, name, data){
   # Filter to the specified caller 
   df <- filter(df, caller == method)
   
-  # Setup dataframe to store results
+  # Set up dataframe to store results
   jaccard_table <- as.data.frame(matrix(0, ncol = 2, nrow = 0))
   colnames(jaccard_table) <- c("Metric", "F1")
 
