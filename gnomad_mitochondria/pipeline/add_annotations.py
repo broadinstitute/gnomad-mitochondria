@@ -5,7 +5,7 @@ import logging
 import re
 import sys
 
-#hl._set_flags(no_whole_stage_codegen='1')
+hl._set_flags(no_whole_stage_codegen='1')
 
 from collections import Counter
 from os.path import dirname
@@ -18,14 +18,14 @@ from gnomad.utils.vep import vep_struct_to_csq
 from gnomad_qc.v3.resources.meta import meta
 from gnomad.resources.grch38.gnomad import POPS
 from gnomad.resources.grch38.reference_data import dbsnp, _import_dbsnp
-from gnomad.sample_qc.ancestry import POP_NAMES
 from gnomad_mitochondria.pipeline.annotation_descriptions import add_descriptions, adjust_descriptions
 
 # Github repo locations for imports:
 # gnomad: https://github.com/broadinstitute/gnomad_methods
 # gnomad_qc: https://github.com/broadinstitute/gnomad_qc
 
-POP_NAMES["mid"] = "Middle Eastern"
+# Include NA in POPS to account for cases where population annotations are missing
+POPS.append("NA")
 
 RESOURCES = {
     "variant_context": "gs://gnomad-public-requester-pays/resources/mitochondria/variant_context/chrM_pos_ref_alt_context_categories.txt",
@@ -144,13 +144,49 @@ def add_gnomad_metadata(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     return input_mt
 
 
-def filter_by_copy_number(input_mt: hl.MatrixTable) -> hl.MatrixTable:
+def add_age_and_pop(input_mt: hl.MatrixTable, all_output: str) -> hl.MatrixTable:
+    """
+    Add sample-level metadata for age and pop.
+
+    If 'subset-to-gnomad-release' is set, these annotations are already added by the add_gnomad_metadata function.
+    If 'subset-to-gnomad-release' is not set, the user should include an 'age' and 'pop' column in the file supplied to `all-output`.
+
+    :param input_mt: MatrixTable
+    :param all_out: Path to metadata file downloaded from Terra
+    :return: MatrixTable with select age and pop annotations added
+    """
+    ht = hl.import_table(
+        all_output,
+        types={
+            "age": hl.tint32,
+            "pop": hl.tstr,
+        },
+        missing="NA",
+    ).key_by("s")
+
+    ht = ht.select(
+        "age",
+        "pop",
+    )
+
+    input_mt = input_mt.annotate_cols(**ht[input_mt.s])
+
+    found_pops = set(input_mt.pop.collect())
+    if found_pops == {None}:
+        logger.warn("No samples have been annotated for population, setting populations for all samples to NA")
+        input_mt = input_mt.annotate_cols(pop="NA")
+
+    return input_mt
+
+
+def filter_by_copy_number(input_mt: hl.MatrixTable, keep_all_samples: bool = False) -> hl.MatrixTable:
     """
     Calculate the mitochondrial copy number based on mean mitochondrial coverage and median nuclear coverage. Filter out samples with more extreme copy numbers.
 
     Note that median and mean coverage for mitochondria are very similar. Mean mitochondria coverage was used based on metrics available at the time, but releases will switch to using median mitochondria coverage.
 
     :param hl.MatrixTable input_mt: MatrixTable
+    :param keep_all_samples: If True, keep all samples (calculate mitochondrial copy number, but do not filter any samples based on this metric)
     :return: MatrixTable filtered to samples with a copy number of at least 50 and less than 500, number samples below 50 removed, number samples above 500 removed
     """
     # Calculate mitochondrial copy number, if median autosomal coverage is not present default to a wgs_median_coverage of 30x
@@ -171,16 +207,17 @@ def filter_by_copy_number(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     )
 
     # Remove sample with a mitochondrial copy number below 50 or greater than 500
-    input_mt = input_mt.filter_cols(
-        (input_mt.mito_cn >= 50) & (input_mt.mito_cn <= 500)
-    )
+    if not keep_all_samples:
+        input_mt = input_mt.filter_cols(
+            (input_mt.mito_cn >= 50) & (input_mt.mito_cn <= 500)
+        )
     input_mt = input_mt.filter_rows(hl.agg.any(input_mt.HL > 0))
 
     return input_mt, n_removed_below_cn, n_removed_above_cn
 
 
 def filter_by_contamination(
-    input_mt: hl.MatrixTable, output_dir: str
+    input_mt: hl.MatrixTable, output_dir: str, keep_all_samples: bool = False
 ) -> hl.MatrixTable:
     """
     Calculate contamination based on internal algorithm and filter out samples with contamination above 2%.
@@ -192,6 +229,7 @@ def filter_by_contamination(
 
     :param input_mt: MatrixTable
     :param output_dir: Output directory to which results should be written
+    :param keep_all_samples: If True, keep all samples (calculate contamination, but do not filter any samples based on this metric)
     :return: MatrixTable filtered to samples without contamination, number of contaminated samples removed
     """
     # Generate expression for genotypes with >= 85% heteroplasmy and no FT filters at haplogroup-defining sites that are not filtered as artifact-prone sites
@@ -267,7 +305,8 @@ def filter_by_contamination(
     data_export.export(f"{output_dir}/sample_contamination.tsv")
 
     # Filter out sample with any contamination level above 2% heteroplasmy
-    input_mt = input_mt.filter_cols(input_mt.keep)
+    if not keep_all_samples:
+        input_mt = input_mt.filter_cols(input_mt.keep)
     input_mt = input_mt.drop("keep")
 
     input_mt = input_mt.filter_rows(hl.agg.any(input_mt.HL > 0))
@@ -589,59 +628,85 @@ def add_variant_annotations(
     """
     Add variant annotations to the MatrixTable.
 
-    These annotations included AC, AF, AN information split by homoplasmic/heteroplasmic, haplogroup, population, as well as histograms for quality metrics
+    These annotations include information such as AC, AF, AN split by homoplasmic/heteroplasmic.
 
     :param input_mt: MatrixTable
     :param min_hom_threshold: Minimum heteroplasmy level to define a variant as homoplasmic
     :return: Annotated MatrixTable
     """
     # Add variant annotations
-    mt = input_mt.annotate_rows(
+    input_mt = input_mt.annotate_rows(
         **dict(generate_expressions(input_mt, min_hom_threshold))
     )
 
-    # Order the haplogroup-specific annotations
-    list_hap_order = list(set(mt.hap.collect()))
-    mt = mt.annotate_globals(hap_order=sorted(list_hap_order))
+    return input_mt
 
-    # Sanity check for haplogroups (make sure that they at least start with a letter)
-    for i in list_hap_order:
-        if not re.match("^[A-Z]", i):
-            sys.exit(f"Invalid haplogroup {i}, does not start with a letter")
 
+def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
+    """
+    Add histogram annotations for quality metrics to the MatrixTable.
+
+    :param input_mt: MatrixTable
+    :return: Annotated MatrixTable
+    """
     # Generate histogram for site quality metrics across all variants
     # TODO: decide on bin edges
-    dp_hist_all_variants = mt.aggregate_rows(hl.agg.hist(mt.dp_mean, 0, 4000, 40))
-    mt = mt.annotate_globals(
+    dp_hist_all_variants = input_mt.aggregate_rows(hl.agg.hist(input_mt.dp_mean, 0, 4000, 40))
+    input_mt = input_mt.annotate_globals(
         dp_hist_all_variants_bin_freq=dp_hist_all_variants.bin_freq,
         dp_hist_all_variants_n_larger=dp_hist_all_variants.n_larger,
         dp_hist_all_variants_bin_edges=dp_hist_all_variants.bin_edges,
     )
 
-    mq_hist_all_variants = mt.aggregate_rows(
-        hl.agg.hist(mt.mq_mean, 0, 80, 40)
+    mq_hist_all_variants = input_mt.aggregate_rows(
+        hl.agg.hist(input_mt.mq_mean, 0, 80, 40)
     )  # is 80 the actual max value here?
-    mt = mt.annotate_globals(
+    input_mt = input_mt.annotate_globals(
         mq_hist_all_variants_bin_freq=mq_hist_all_variants.bin_freq,
         mq_hist_all_variants_n_larger=mq_hist_all_variants.n_larger,
         mq_hist_all_variants_bin_edges=mq_hist_all_variants.bin_edges,
     )
 
-    tlod_hist_all_variants = mt.aggregate_rows(hl.agg.hist(mt.tlod_mean, 0, 40000, 40))
-    mt = mt.annotate_globals(
+    tlod_hist_all_variants = input_mt.aggregate_rows(hl.agg.hist(input_mt.tlod_mean, 0, 40000, 40))
+    input_mt = input_mt.annotate_globals(
         tlod_hist_all_variants_bin_freq=tlod_hist_all_variants.bin_freq,
         tlod_hist_all_variants_n_larger=tlod_hist_all_variants.n_larger,
         tlod_hist_all_variants_bin_edges=tlod_hist_all_variants.bin_edges,
     )
 
     # Generate histogram for overall age distribution
-    age_hist_all_samples = mt.aggregate_cols(hl.agg.hist(mt.age, 30, 80, 10))
-    mt = mt.annotate_globals(
+    age_hist_all_samples = input_mt.aggregate_cols(hl.agg.hist(input_mt.age, 30, 80, 10))
+    input_mt = input_mt.annotate_globals(
         age_hist_all_samples_bin_freq=age_hist_all_samples.bin_freq,
         age_hist_all_samples_n_larger=age_hist_all_samples.n_larger,
         age_hist_all_samples_n_smaller=age_hist_all_samples.n_smaller,
         age_hist_all_samples_bin_edges=age_hist_all_samples.bin_edges,
     )
+
+    # Add age histograms per variant type (heteroplasmic or homoplasmic)
+    age_data = age_hists_expr(True, input_mt.GT, input_mt.age)
+    input_mt = input_mt.annotate_rows(
+        age_hist_hom=age_data.age_hist_hom, age_hist_het=age_data.age_hist_het
+    )
+
+    return input_mt
+
+
+def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
+    """
+    Add variants annotations split by haplogroup and population.
+
+    :param input_mt: MatrixTable
+    :return: Annotated MatrixTable
+    """
+    # Order the haplogroup-specific annotations
+    list_hap_order = list(set(input_mt.hap.collect()))
+    input_mt = input_mt.annotate_globals(hap_order=sorted(list_hap_order))
+
+    # Sanity check for haplogroups (make sure that they at least start with a letter)
+    for i in list_hap_order:
+        if not re.match("^[A-Z]", i):
+            sys.exit(f"Invalid haplogroup {i}, does not start with a letter")
 
     pre_hap_annotation_labels = [
         "pre_hap_AC",
@@ -660,39 +725,39 @@ def add_variant_annotations(
         final_annotation = re.sub(
             "pre_", "", i
         )  # remove "pre" prefix for final annotations
-        mt = mt.annotate_rows(
-            **{final_annotation: standardize_haps(mt, i, sorted(list_hap_order))}
+        input_mt = input_mt.annotate_rows(
+            **{final_annotation: standardize_haps(input_mt, i, sorted(list_hap_order))}
         )
 
     # Get a list of indexes where AC of the haplogroup is greater than 0, then get the list of haplogroups with that index
-    mt = mt.annotate_rows(
-        alt_haps=hl.enumerate(mt.hap_AC)
+    input_mt = input_mt.annotate_rows(
+        alt_haps=hl.enumerate(input_mt.hap_AC)
         .filter(lambda x: x[1] > 0)
-        .map(lambda x: mt.hap_order[x[0]])
+        .map(lambda x: input_mt.hap_order[x[0]])
     )
     # Count number of haplogroups containing an alt allele
-    mt = mt.annotate_rows(n_alt_haps=hl.len(mt.alt_haps))
+    input_mt = input_mt.annotate_rows(n_alt_haps=hl.len(input_mt.alt_haps))
 
     # Calculate hapmax
-    mt = mt.annotate_rows(
-        hapmax_AF_hom=mt.hap_order[(hl.argmax(mt.hap_AF_hom, unique=True))],
-        hapmax_AF_het=mt.hap_order[(hl.argmax(mt.hap_AF_het, unique=True))],
+    input_mt = input_mt.annotate_rows(
+        hapmax_AF_hom=input_mt.hap_order[(hl.argmax(input_mt.hap_AF_hom, unique=True))],
+        hapmax_AF_het=input_mt.hap_order[(hl.argmax(input_mt.hap_AF_het, unique=True))],
     )
 
     # Calculate faf hapmax
-    mt = mt.annotate_rows(
-        faf_hapmax=hl.max(mt.hap_faf), faf_hapmax_hom=hl.max(mt.hap_faf_hom)
+    input_mt = input_mt.annotate_rows(
+        faf_hapmax=hl.max(input_mt.hap_faf), faf_hapmax_hom=hl.max(input_mt.hap_faf_hom)
     )
 
     # Add populatation annotations
-    found_pops = set(mt.pop.collect())
+    found_pops = set(input_mt.pop.collect())
     final_pops = list(found_pops)
     # Order according to POPS
     final_pops = [x for x in POPS if x in final_pops]
 
     if len((found_pops) - set(POPS)) > 0:
         sys.exit(f"Invalid population found")
-    mt = mt.annotate_globals(pop_order=final_pops)
+    input_mt = input_mt.annotate_globals(pop_order=final_pops)
 
     pre_pop_annotation_labels = [
         "pre_pop_AN",
@@ -706,13 +771,7 @@ def add_variant_annotations(
     for i in pre_pop_annotation_labels:
         # Remove "pre" prefix for final annotations
         final_annotation = re.sub("pre_", "", i)
-        mt = mt.annotate_rows(**{final_annotation: standardize_pops(mt, i, final_pops)})
-
-    # Add age histograms per variant type (heteroplasmic or homoplasmic)
-    age_data = age_hists_expr(True, mt.GT, mt.age)
-    mt = mt.annotate_rows(
-        age_hist_hom=age_data.age_hist_hom, age_hist_het=age_data.age_hist_het
-    )
+        input_mt = input_mt.annotate_rows(**{final_annotation: standardize_pops(input_mt, i, final_pops)})
 
     # Drop intermediate annotations
     annotations_to_drop = [
@@ -736,9 +795,9 @@ def add_variant_annotations(
         "pre_pop_hl_hist",
     ]
 
-    mt = mt.drop(*annotations_to_drop)
+    input_mt = input_mt.drop(*annotations_to_drop)
     # Last-minute drops (ever add back in?)
-    mt = mt.drop(
+    input_mt = input_mt.drop(
         "AC",
         "AF",
         "hap_AC",
@@ -749,11 +808,11 @@ def add_variant_annotations(
         "n_alt_haps",
     )
 
-    mt = mt.annotate_rows(
-        filters=hl.if_else(mt.filters == {"PASS"}, hl.empty_set(hl.tstr), mt.filters)
+    input_mt = input_mt.annotate_rows(
+        filters=hl.if_else(input_mt.filters == {"PASS"}, hl.empty_set(hl.tstr), input_mt.filters)
     )
 
-    return mt
+    return input_mt
 
 
 def apply_common_low_het_flag(input_mt: hl.MatrixTable) -> hl.MatrixTable:
@@ -762,7 +821,7 @@ def apply_common_low_het_flag(input_mt: hl.MatrixTable) -> hl.MatrixTable:
 
     The common_low_heteroplasmy flag marks variants where the overall frequency is > 0.001 for samples with a heteroplasmy level > 0 and < 0.50 and either "low_allele_frac" or "PASS" for the genotype filter
 
-    NOTE: The "low_allele_frac" is applied by Mutect2 to variants with a heteropalsmy level below the supplied vaf_filter_threshold
+    NOTE: The "low_allele_frac" is applied by Mutect2 to variants with a heteroplasmy level below the supplied vaf_filter_threshold
 
     :param input_mt: MatrixTable
     :return: MatrixTable with the common_low_heteroplasmy flag added
@@ -1847,6 +1906,7 @@ def main(args):
     vaf_filter_threshold = args.vaf_filter_threshold
     min_het_threshold = args.min_het_threshold
     gnomad_subset = args.subset_to_gnomad_release
+    keep_all_samples = args.keep_all_samples
     run_vep = args.run_vep
 
     logger.info("Cutoff for homoplasmic variants is set to %.2f...", min_hom_threshold)
@@ -1866,8 +1926,12 @@ def main(args):
     logger.info("Annotating tRNA predictions...")
     mt = add_trna_predictions(mt)
 
-    logger.info("Adding gnomAD metadata sample annotations...")
-    mt = add_gnomad_metadata(mt)
+    if gnomad_subset:
+        logger.info("Adding gnomAD metadata sample annotations...")
+        mt = add_gnomad_metadata(mt)
+    else:
+        logger.info("Adding age and pop annotations...")
+        mt = add_age_and_pop(mt, all_output)
 
     logger.info("Adding variant context annotations...")
     mt = add_variant_context(mt)
@@ -1882,10 +1946,10 @@ def main(args):
         mt = mt.filter_rows(hl.agg.any(mt.HL > 0))
 
     logger.info("Filtering out low copy number samples...")
-    mt, n_removed_below_cn, n_removed_above_cn = filter_by_copy_number(mt)
+    mt, n_removed_below_cn, n_removed_above_cn = filter_by_copy_number(mt, keep_all_samples)
 
     logger.info("Filtering out contaminated samples...")
-    mt, n_contaminated = filter_by_contamination(mt, output_dir)
+    mt, n_contaminated = filter_by_contamination(mt, output_dir, keep_all_samples)
 
     logger.info("Switch build and checkpoint...")
     # Switch build 37 to build 38
@@ -1946,6 +2010,11 @@ def main(args):
 
     mt = filter_genotypes(mt)
     mt = add_variant_annotations(mt, min_hom_threshold)
+    mt = mt.checkpoint(
+        f"{output_dir}/temp.mt", overwrite=args.overwrite
+    )
+    mt = add_quality_histograms(mt)
+    mt = add_annotations_by_hap_and_pop(mt)
     mt = add_descriptions(
         mt, min_hom_threshold, vaf_filter_threshold, min_het_threshold
     )
@@ -2065,6 +2134,9 @@ if __name__ == "__main__":
         "--subset-to-gnomad-release",
         help="Set to True to only include released gnomAD samples",
         action="store_true",
+    )
+    parser.add_argument(
+        "--keep-all-samples", help="Set to True keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", action="store_true",
     )
     parser.add_argument(
         "--run-vep", help="Set to True to run/rerun vep", action="store_true"
