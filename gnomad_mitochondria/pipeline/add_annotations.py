@@ -2136,7 +2136,7 @@ if __name__ == "__main__":
         action="store_true",
     )
     parser.add_argument(
-        "--keep-all-samples", help="Set to True keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", action="store_true",
+        "--keep-all-samples", help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", action="store_true",
     )
     parser.add_argument(
         "--run-vep", help="Set to True to run/rerun vep", action="store_true"
