@@ -21,7 +21,7 @@ opt_parser = OptionParser(option_list = option_list)
 opt = parse_args(opt_parser)
 
 pdf(NULL)
-# NOTE: Plots are for pairs where at least one sample of the pair had a called variant: (0,0) values are not in the dataframe
+# NOTE: plots are for pairs where at least one sample of the pair had a called variant: (0,0) values are not in the dataframe
 
 # Read in data and set the out directory for plots
 mtdnaserver <- read.table(opt$mtdnaserver_vl_changes, sep = '\t', quote = "", header = TRUE)
@@ -34,6 +34,7 @@ mutect <- mutate(mutect, caller = "Mutect")
 all <- rbind(mtdnaserver, mutect)
 
 # Filter to samples in both Mutect and mtDNA-Server dataframes (needed because several samples in mtDNA-Server failed to run and want to drop those in the comparison)
+# NOTE: both callers go through the same processing script, which keeps the samples in a consistent order for s1 and s2
 all <- filter(all, s1 %in% mutect$s1, s2 %in% mutect$s2, s1 %in% mtdnaserver$s1, s2 %in% mtdnaserver$s2)
 
 # Double check that at least one sample of the pair has a heteroplasmy level above that of the min_het_threshold
