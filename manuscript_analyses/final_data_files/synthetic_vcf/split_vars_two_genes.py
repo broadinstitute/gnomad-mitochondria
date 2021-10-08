@@ -7,7 +7,11 @@ vep_vcf = sys.argv[1]  # synthetic_vcf/NC_012920.1_synthetic_vep.vcf
 
 
 def split(file1):
+    """For variants within two genes, this function generates a vcf where the two variant consequences per VEP are split into separate lines.
 
+    :params file1: VEP annotated synthetic vcf
+
+    """
     with open(file1) as tsv_file:
         vep_vcf = csv.reader(tsv_file, delimiter="\t")
 
@@ -34,4 +38,6 @@ def split(file1):
                     file_output_vep.write(variant_details + "\t" + vep_append + "\n")
 
 
-split(vep_vcf)
+if __name__ == "__main__":
+    print("splitting variants in two genes!")
+    split(vep_vcf)

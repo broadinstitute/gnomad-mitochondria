@@ -6,6 +6,7 @@ import sys
 
 
 def make_synthetic_vcf():
+    """Generate a vcf with every possible single nucleotide variant in the mtDNA."""
     with open("NC_012920.1.fasta") as fasta:
         fasta = (
             fasta.read()
@@ -15,18 +16,18 @@ def make_synthetic_vcf():
 
         file = open("alternate_synthetic.vcf", "w")
 
-        POS = 0
+        pos = 0
 
         for base in fasta:
-            POS += 1
-            ref = fasta[int(POS) - 1]  # ie if base is not N, skip pos 3107
+            pos += 1
+            ref = fasta[int(pos) - 1]
             if ref == "A":
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "T")
                     + "\t"
@@ -36,9 +37,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "C")
                     + "\t"
@@ -48,9 +49,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "G")
                     + "\t"
@@ -61,9 +62,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "T")
                     + "\t"
@@ -73,9 +74,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "A")
                     + "\t"
@@ -85,22 +86,24 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "G")
                     + "\t"
                     + "+"
                     + "\n"
                 )
-            elif ref == "G" or ref == "N":
+            elif (
+                ref == "G" or ref == "N"
+            ):  # arbitrary grouping of N with G, to keep the spacer position m.3107 which is N in the reference sequence
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "T")
                     + "\t"
@@ -110,9 +113,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "A")
                     + "\t"
@@ -122,9 +125,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "C")
                     + "\t"
@@ -135,9 +138,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "C")
                     + "\t"
@@ -147,9 +150,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "A")
                     + "\t"
@@ -159,9 +162,9 @@ def make_synthetic_vcf():
                 file.write(
                     "MT"
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
-                    + str(POS)
+                    + str(pos)
                     + "\t"
                     + (ref + "/" + "G")
                     + "\t"
@@ -169,5 +172,9 @@ def make_synthetic_vcf():
                     + "\n"
                 )
 
+        file.close()
 
-make_synthetic_vcf()
+
+if __name__ == "__main__":
+    print("generating a synthetic vcf for the mtDNA!")
+    make_synthetic_vcf()
