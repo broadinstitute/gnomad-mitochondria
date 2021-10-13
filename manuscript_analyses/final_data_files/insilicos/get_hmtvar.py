@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# using this get Hmtvar annotations
+# using this to get Hmtvar annotations
 
 import csv
 import decimal

@@ -6,7 +6,7 @@ import sys
 
 
 def make_synthetic_vcf():
-    """Generate a vcf with every possible single nucleotide variant in the mtDNA."""
+    """Generate a VCF with every possible single nucleotide variant in the mtDNA."""
     with open("NC_012920.1.fasta") as fasta:
         fasta = (
             fasta.read()
@@ -176,5 +176,5 @@ def make_synthetic_vcf():
 
 
 if __name__ == "__main__":
-    print("generating a synthetic vcf for the mtDNA!")
+    print("generating a synthetic VCF for the mtDNA!")
     make_synthetic_vcf()

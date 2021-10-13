@@ -1,4 +1,4 @@
-# Make a synthetic vcf
+# Make a synthetic VCF
 
 # Downloaded fasta file of mtDNA reference sequence from https://www.ncbi.nlm.nih.gov/nuccore/NC_012920.1?report=fasta
 

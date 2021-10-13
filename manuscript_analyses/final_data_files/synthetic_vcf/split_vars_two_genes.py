@@ -6,10 +6,10 @@ import sys
 vep_vcf = sys.argv[1]  # synthetic_vcf/NC_012920.1_synthetic_vep.vcf
 
 
-def split(file1):
-    """For variants within two genes, this function generates a vcf where the two variant consequences per VEP are split into separate lines.
+def split(file1: str):
+    """For variants within two genes, this function generates a VCF where the two variant consequences per VEP are split into separate lines.
 
-    :params file1: VEP annotated synthetic vcf
+    :params file1: VEP annotated synthetic VCF
 
     """
     with open(file1) as tsv_file:
