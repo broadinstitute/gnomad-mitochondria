@@ -1,27 +1,26 @@
 #!/broad/software/free/Linux/redhat_7_x86_64/pkgs/r_3.5.0-bioconductor/bin/Rscript
 ############################
-# This script generates figure Snew
+# This script generates figure S4
 #
 # Input files:
 #  all.sample2var.passplus.txt: variants passing filters
 #  pos.ref.alt.indel_stack.txt: variants in indel stacks (excluded from analysis)
 #
 ## Figure list (see plots/ directory);  All figures concern variants in 56434 PASS samples
-## A: # variant calls per VAFbin (0.01-0.95), colored by label {obs. homoplasmic, heteroplasmic-only}
+## A: Number variant calls per VAFbin (0.01-0.95), colored by label {obs. homoplasmic, heteroplasmic-only}
 ## B: Fraction variant calls per VAFbin (0.01-1.00), colored by label {obs. homoplasmic, heteroplasmic-only}
 ## C: Fraction variant calls per VAFbin (0.01-1.00), colored by # variants/SAMPLE in this VAFbin -- excluding multiallelic
-## D: # variant calls per VAFbin (0.90-1.00), colored by label {obs. homoplasmic, heteroplasmic-only}
+## D: Number variant calls per VAFbin (0.90-1.00), colored by label {obs. homoplasmic, heteroplasmic-only}
 ## E: Fraction variant calls per VAFbin (0.90-1.00), colored by Max Observed Heteroplasmy {<0.95, 0.95-0.99, 1.00}
 ## F: Fraction variant calls per VAFbin (0.90-1.00), colored by # variants/SAMPLE in this VAFbin -- excluding multiallelic
-## G: # variant calls per unique variant, colored by number distinct haplogroups
+## G: Number variant calls per unique variant, colored by number distinct haplogroups
 ############################
 library(ggplot2)
 
 ########################################################
 # Variants in 56434 samples, including VAF 0.01-0.10
 ########################################################
-pass=read.delim("all.sample2var.passplus.txt",stringsAsFactors=FALSE)
-m=pass
+m=read.delim("all.sample2var.passplus.txt",stringsAsFactors=FALSE)
 m=m[(m$HL >=0.01) & (m$release3.1.1=="true"),]
 m$count=1
 
@@ -43,7 +42,7 @@ m[m$POS.REF.ALT %in% obshom,"MOH"]="0.95-0.99"
 m[m$POS.REF.ALT %in% obs1.00,"MOH"]="1.00"
 m$MOH=factor(m$MOH,levels=c("<0.95","0.95-0.99","1.00"))
 
-# annotate VAF bin in bins of 5, make top bin 0.95-1.00 (isntead of 1.00-1.05 which does not make sense)
+# annotate VAF bin in bins of 5, make top bin 0.95-1.00 (instead of 1.00-1.05 which does not make sense)
 m$vafbin=floor(m$HL*20)/20
 m[m$vafbin==1,"vafbin"]=0.95
 m$vafbinlabel=paste(m$vafbin,m$vafbin+0.05,sep="-")
