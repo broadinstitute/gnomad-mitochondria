@@ -5,8 +5,6 @@ import logging
 import re
 import sys
 
-hl._set_flags(no_whole_stage_codegen='1')
-
 from collections import Counter
 from os.path import dirname
 from textwrap import dedent
@@ -41,6 +39,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger("add annotations")
 logger.setLevel(logging.INFO)
+
+logger.info("Setting hail flag to avoid array index out of bounds error error...")
+# Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
+# TODO: reassess if this flag is still needed for future versions of Hail
+hl._set_flags(no_whole_stage_codegen='1')
 
 
 def add_genotype(mt_path: str, min_hom_threshold: float = 0.95) -> hl.MatrixTable:
@@ -144,24 +147,20 @@ def add_gnomad_metadata(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     return input_mt
 
 
-def add_age_and_pop(input_mt: hl.MatrixTable, all_output: str) -> hl.MatrixTable:
+def add_age_and_pop(input_mt: hl.MatrixTable, participant_data: str) -> hl.MatrixTable:
     """
-    Add sample-level metadata for age and pop.
-
-    If 'subset-to-gnomad-release' is set, these annotations are already added by the add_gnomad_metadata function.
-    If 'subset-to-gnomad-release' is not set, the user should include an 'age' and 'pop' column in the file supplied to `all-output`.
+    Add sample-level metadata for age and pop to `input_mt`.
 
     :param input_mt: MatrixTable
-    :param all_out: Path to metadata file downloaded from Terra
+    :param participant_data: Path to metadata file downloaded from Terra that contains sample age and pop information
     :return: MatrixTable with select age and pop annotations added
     """
     ht = hl.import_table(
-        all_output,
+        participant_data,
         types={
             "age": hl.tint32,
             "pop": hl.tstr,
         },
-        missing="NA",
     ).key_by("s")
 
     ht = ht.select(
@@ -169,12 +168,10 @@ def add_age_and_pop(input_mt: hl.MatrixTable, all_output: str) -> hl.MatrixTable
         "pop",
     )
 
-    input_mt = input_mt.annotate_cols(**ht[input_mt.s])
+    input_mt = input_mt.annotate_cols(**ht[input_mt.col_key])
 
-    found_pops = set(input_mt.pop.collect())
-    if found_pops == {None}:
-        logger.warn("No samples have been annotated for population, setting populations for all samples to NA")
-        input_mt = input_mt.annotate_cols(pop="NA")
+    # If a sample doesn't have an annotated population, set it to the string "NA"
+    input_mt = input_mt.annotate_cols(pop=hl.if_else(hl.is_missing(input_mt.pop), "NA", input_mt.pop))
 
     return input_mt
 
@@ -206,8 +203,8 @@ def filter_by_copy_number(input_mt: hl.MatrixTable, keep_all_samples: bool = Fal
         hl.agg.count_where(input_mt.mito_cn > 500)
     )
 
-    # Remove sample with a mitochondrial copy number below 50 or greater than 500
     if not keep_all_samples:
+        # Remove samples with a mitochondrial copy number below 50 or greater than 500
         input_mt = input_mt.filter_cols(
             (input_mt.mito_cn >= 50) & (input_mt.mito_cn <= 500)
         )
@@ -290,7 +287,7 @@ def filter_by_contamination(
     )
     # Save sample contamination information to separate file
     n_contaminated = input_mt.aggregate_cols(hl.agg.count_where(~input_mt.keep))
-    logger.info("Removed %d samples with contamination above 2 percent", n_contaminated)
+
     sample_data = input_mt.select_cols(
         "contamination",
         "freemix_percentage",
@@ -304,8 +301,8 @@ def filter_by_contamination(
     data_export = sample_data.cols()
     data_export.export(f"{output_dir}/sample_contamination.tsv")
 
-    # Filter out sample with any contamination level above 2% heteroplasmy
     if not keep_all_samples:
+        logger.info("Removing %d samples with contamination above 2 percent", n_contaminated)
         input_mt = input_mt.filter_cols(input_mt.keep)
     input_mt = input_mt.drop("keep")
 
@@ -314,11 +311,11 @@ def filter_by_contamination(
     return input_mt, n_contaminated
 
 
-def add_terra_metadata(input_mt: hl.MatrixTable, all_output: str) -> hl.MatrixTable:
+def add_terra_metadata(input_mt: hl.MatrixTable, participant_data: str) -> hl.MatrixTable:
     """
     Add Terra metadata to the MatrixTable.
 
-    The all_ouput file can be obtained by downloading the participant data after running Mutect2 in Terra. This file should contain the folloing columns:
+    The participant_data file can be obtained by downloading the participant data after running Mutect2 in Terra. This file should contain the following columns:
     entity:participant_id: Uploaded to Terra by user
     contamination: Output by Mutect2, gives the estimate of mitochondrial contamination
     freemix_percentage: Uploaded to Terra by user, can be calculated with VerifyBamID
@@ -327,12 +324,12 @@ def add_terra_metadata(input_mt: hl.MatrixTable, all_output: str) -> hl.MatrixTa
     mt_mean_coverage: Output by Mutect2, gives the mean mitochondrial coverage
 
     :param input_mt: MatrixTable
-    :param all_out: Path to metadata file downloaded from Terra
+    :param participant_data: Path to metadata file downloaded from Terra
     :return: MatrixTable with Terra metadata annotations added
     """
     # Add haplogroup and Mutect2/Terra output annotations
     ht = hl.import_table(
-        all_output,
+        participant_data,
         types={
             "contamination": hl.tfloat64,
             "freemix_percentage": hl.tfloat64,
@@ -622,32 +619,12 @@ def standardize_pops(
     return value
 
 
-def add_variant_annotations(
-    input_mt: hl.MatrixTable, min_hom_threshold: float = 0.95
-) -> hl.MatrixTable:
-    """
-    Add variant annotations to the MatrixTable.
-
-    These annotations include information such as AC, AF, AN split by homoplasmic/heteroplasmic.
-
-    :param input_mt: MatrixTable
-    :param min_hom_threshold: Minimum heteroplasmy level to define a variant as homoplasmic
-    :return: Annotated MatrixTable
-    """
-    # Add variant annotations
-    input_mt = input_mt.annotate_rows(
-        **dict(generate_expressions(input_mt, min_hom_threshold))
-    )
-
-    return input_mt
-
-
 def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
     Add histogram annotations for quality metrics to the MatrixTable.
 
     :param input_mt: MatrixTable
-    :return: Annotated MatrixTable
+    :return: MatrixTable annotated with quality metric histograms
     """
     # Generate histogram for site quality metrics across all variants
     # TODO: decide on bin edges
@@ -694,10 +671,10 @@ def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
 
 def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
-    Add variants annotations split by haplogroup and population.
+    Add variant annotations (such as AC, AN, AF, heteroplasmy histogram, and filtering allele frequency) split by haplogroup and population.
 
     :param input_mt: MatrixTable
-    :return: Annotated MatrixTable
+    :return: MatrixTable with variant annotations
     """
     # Order the haplogroup-specific annotations
     list_hap_order = list(set(input_mt.hap.collect()))
@@ -751,11 +728,10 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
 
     # Add populatation annotations
     found_pops = set(input_mt.pop.collect())
-    final_pops = list(found_pops)
     # Order according to POPS
-    final_pops = [x for x in POPS if x in final_pops]
+    final_pops = [x for x in POPS if x in found_pops]
 
-    if len((found_pops) - set(POPS)) > 0:
+    if len(found_pops - set(POPS)) > 0:
         sys.exit(f"Invalid population found")
     input_mt = input_mt.annotate_globals(pop_order=final_pops)
 
@@ -1900,7 +1876,7 @@ def format_vcf(
 def main(args):
     mt_path = args.mt_path
     output_dir = args.output_dir
-    all_output = args.all_output
+    participant_data= args.participant_data
     vep_results = args.vep_results
     min_hom_threshold = args.min_hom_threshold
     vaf_filter_threshold = args.vaf_filter_threshold
@@ -1918,7 +1894,7 @@ def main(args):
     mt = add_genotype(mt_path, min_hom_threshold)
 
     logger.info("Adding annotations from Terra...")
-    mt = add_terra_metadata(mt, all_output)
+    mt = add_terra_metadata(mt, participant_data)
 
     logger.info("Annotating haplogroup-defining variants...")
     mt = add_hap_defining(mt)
@@ -1926,12 +1902,14 @@ def main(args):
     logger.info("Annotating tRNA predictions...")
     mt = add_trna_predictions(mt)
 
+    # If 'subset-to-gnomad-release' is set, 'age' and 'pop' are added by the add_gnomad_metadata function.
+    # If 'subset-to-gnomad-release' is not set, the user should include an 'age' and 'pop' column in the file supplied to `participant-data`.
     if gnomad_subset:
         logger.info("Adding gnomAD metadata sample annotations...")
         mt = add_gnomad_metadata(mt)
     else:
         logger.info("Adding age and pop annotations...")
-        mt = add_age_and_pop(mt, all_output)
+        mt = add_age_and_pop(mt, participant_data)
 
     logger.info("Adding variant context annotations...")
     mt = add_variant_context(mt)
@@ -1945,10 +1923,10 @@ def main(args):
         mt = mt.filter_cols(mt.release)  # Filter to cols where release is true
         mt = mt.filter_rows(hl.agg.any(mt.HL > 0))
 
-    logger.info("Filtering out low copy number samples...")
+    logger.info("Checking for samples with low/high mitochondrial copy number...")
     mt, n_removed_below_cn, n_removed_above_cn = filter_by_copy_number(mt, keep_all_samples)
 
-    logger.info("Filtering out contaminated samples...")
+    logger.info("Checking for contaminated samples...")
     mt, n_contaminated = filter_by_contamination(mt, output_dir, keep_all_samples)
 
     logger.info("Switch build and checkpoint...")
@@ -2009,7 +1987,11 @@ def main(args):
     )
 
     mt = filter_genotypes(mt)
-    mt = add_variant_annotations(mt, min_hom_threshold)
+    # Add variant annotations such as AC, AF, and AN
+    mt = mt.annotate_rows(
+        **dict(generate_expressions(mt, min_hom_threshold))
+    )
+    # Checkpoint to help avoid Hail errors from large queries
     mt = mt.checkpoint(
         f"{output_dir}/temp.mt", overwrite=args.overwrite
     )
@@ -2096,7 +2078,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-a",
-        "--all-output",
+        "--participant-data",
         help="Output file that results from Terra data download",
         required=True,
     )
@@ -2136,7 +2118,9 @@ if __name__ == "__main__":
         action="store_true",
     )
     parser.add_argument(
-        "--keep-all-samples", help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", action="store_true",
+        "--keep-all-samples", 
+        help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", 
+        action="store_true",
     )
     parser.add_argument(
         "--run-vep", help="Set to True to run/rerun vep", action="store_true"

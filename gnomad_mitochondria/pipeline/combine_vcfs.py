@@ -4,7 +4,6 @@ import math
 import os
 
 import hail as hl
-hl._set_flags(no_whole_stage_codegen='1')
 from hail.utils.java import info
 from typing import Dict
 
@@ -39,6 +38,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger("combine_mitochondria_vcfs_into_mt")
 logger.setLevel(logging.INFO)
+
+logger.info("Setting hail flag to avoid array index out of bounds error error...")
+# Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
+# TODO: reassess if this flag is still needed for future versions of Hail
+hl._set_flags(no_whole_stage_codegen='1')
 
 
 def collect_vcf_paths(
