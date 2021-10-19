@@ -32,6 +32,7 @@ Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_f
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS2.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS3.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig3E.R
+Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS4.R
 ```
 
 
