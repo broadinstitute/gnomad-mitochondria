@@ -42,7 +42,7 @@ logger.setLevel(logging.INFO)
 logger.info("Setting hail flag to avoid array index out of bounds error error...")
 # Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
 # TODO: reassess if this flag is still needed for future versions of Hail
-hl._set_flags(no_whole_stage_codegen='1')
+hl._set_flags(no_whole_stage_codegen="1")
 
 
 def collect_vcf_paths(
@@ -284,7 +284,8 @@ def apply_mito_artifact_filter(
                 "MT",
                 mt.locus.position + hl.len(mt.alleles[0]) - 1,
                 reference_genome="GRCh37",
-            ), includes_end = True
+            ),
+            includes_end=True,
         )
     )
 

@@ -85,6 +85,7 @@ def multi_way_union_mts(mts: list, temp_dir: str, chunk_size: int) -> hl.MatrixT
         .unfilter_entries()
     )
 
+
 def main(args):
     input_tsv = args.input_tsv
     output_ht = args.output_ht

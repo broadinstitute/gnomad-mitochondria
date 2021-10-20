@@ -16,7 +16,10 @@ from gnomad.utils.vep import vep_struct_to_csq
 from gnomad_qc.v3.resources.meta import meta
 from gnomad.resources.grch38.gnomad import POPS
 from gnomad.resources.grch38.reference_data import dbsnp, _import_dbsnp
-from gnomad_mitochondria.pipeline.annotation_descriptions import add_descriptions, adjust_descriptions
+from gnomad_mitochondria.pipeline.annotation_descriptions import (
+    add_descriptions,
+    adjust_descriptions,
+)
 
 # Github repo locations for imports:
 # gnomad: https://github.com/broadinstitute/gnomad_methods
@@ -43,7 +46,7 @@ logger.setLevel(logging.INFO)
 logger.info("Setting hail flag to avoid array index out of bounds error error...")
 # Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
 # TODO: reassess if this flag is still needed for future versions of Hail
-hl._set_flags(no_whole_stage_codegen='1')
+hl._set_flags(no_whole_stage_codegen="1")
 
 
 def add_genotype(mt_path: str, min_hom_threshold: float = 0.95) -> hl.MatrixTable:
@@ -156,27 +159,24 @@ def add_age_and_pop(input_mt: hl.MatrixTable, participant_data: str) -> hl.Matri
     :return: MatrixTable with select age and pop annotations added
     """
     ht = hl.import_table(
-        participant_data,
-        types={
-            "age": hl.tint32,
-            "pop": hl.tstr,
-        },
+        participant_data, types={"age": hl.tint32, "pop": hl.tstr,},
     ).key_by("s")
 
-    ht = ht.select(
-        "age",
-        "pop",
-    )
+    ht = ht.select("age", "pop",)
 
     input_mt = input_mt.annotate_cols(**ht[input_mt.col_key])
 
     # If a sample doesn't have an annotated population, set it to the string "NA"
-    input_mt = input_mt.annotate_cols(pop=hl.if_else(hl.is_missing(input_mt.pop), "NA", input_mt.pop))
+    input_mt = input_mt.annotate_cols(
+        pop=hl.if_else(hl.is_missing(input_mt.pop), "NA", input_mt.pop)
+    )
 
     return input_mt
 
 
-def filter_by_copy_number(input_mt: hl.MatrixTable, keep_all_samples: bool = False) -> hl.MatrixTable:
+def filter_by_copy_number(
+    input_mt: hl.MatrixTable, keep_all_samples: bool = False
+) -> hl.MatrixTable:
     """
     Calculate the mitochondrial copy number based on mean mitochondrial coverage and median nuclear coverage. Filter out samples with more extreme copy numbers.
 
@@ -269,14 +269,16 @@ def filter_by_contamination(
     # Find samples on border of .02 that may flip between < 0.02 and > 0.02 from issues with floating point precision and mark these samples for removal
     epsilon = 0.000001
     border_samples = input_mt.aggregate_cols(
-            hl.agg.filter(
-                (input_mt.contam_high_het > (0.02 - epsilon))
-                & (input_mt.contam_high_het < (0.02 + epsilon)),
-                hl.agg.collect((input_mt.s)),
-            )
+        hl.agg.filter(
+            (input_mt.contam_high_het > (0.02 - epsilon))
+            & (input_mt.contam_high_het < (0.02 + epsilon)),
+            hl.agg.collect((input_mt.s)),
         )
+    )
 
-    border_samples = hl.literal(border_samples) if border_samples else hl.empty_array(hl.tstr)
+    border_samples = (
+        hl.literal(border_samples) if border_samples else hl.empty_array(hl.tstr)
+    )
 
     # Add annotation to keep only samples with a contamination less than 2%
     input_mt = input_mt.annotate_cols(
@@ -302,7 +304,9 @@ def filter_by_contamination(
     data_export.export(f"{output_dir}/sample_contamination.tsv")
 
     if not keep_all_samples:
-        logger.info("Removing %d samples with contamination above 2 percent", n_contaminated)
+        logger.info(
+            "Removing %d samples with contamination above 2 percent", n_contaminated
+        )
         input_mt = input_mt.filter_cols(input_mt.keep)
     input_mt = input_mt.drop("keep")
 
@@ -311,7 +315,9 @@ def filter_by_contamination(
     return input_mt, n_contaminated
 
 
-def add_terra_metadata(input_mt: hl.MatrixTable, participant_data: str) -> hl.MatrixTable:
+def add_terra_metadata(
+    input_mt: hl.MatrixTable, participant_data: str
+) -> hl.MatrixTable:
     """
     Add Terra metadata to the MatrixTable.
 
@@ -628,7 +634,9 @@ def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
     # Generate histogram for site quality metrics across all variants
     # TODO: decide on bin edges
-    dp_hist_all_variants = input_mt.aggregate_rows(hl.agg.hist(input_mt.dp_mean, 0, 4000, 40))
+    dp_hist_all_variants = input_mt.aggregate_rows(
+        hl.agg.hist(input_mt.dp_mean, 0, 4000, 40)
+    )
     input_mt = input_mt.annotate_globals(
         dp_hist_all_variants_bin_freq=dp_hist_all_variants.bin_freq,
         dp_hist_all_variants_n_larger=dp_hist_all_variants.n_larger,
@@ -644,7 +652,9 @@ def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
         mq_hist_all_variants_bin_edges=mq_hist_all_variants.bin_edges,
     )
 
-    tlod_hist_all_variants = input_mt.aggregate_rows(hl.agg.hist(input_mt.tlod_mean, 0, 40000, 40))
+    tlod_hist_all_variants = input_mt.aggregate_rows(
+        hl.agg.hist(input_mt.tlod_mean, 0, 40000, 40)
+    )
     input_mt = input_mt.annotate_globals(
         tlod_hist_all_variants_bin_freq=tlod_hist_all_variants.bin_freq,
         tlod_hist_all_variants_n_larger=tlod_hist_all_variants.n_larger,
@@ -652,7 +662,9 @@ def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     )
 
     # Generate histogram for overall age distribution
-    age_hist_all_samples = input_mt.aggregate_cols(hl.agg.hist(input_mt.age, 30, 80, 10))
+    age_hist_all_samples = input_mt.aggregate_cols(
+        hl.agg.hist(input_mt.age, 30, 80, 10)
+    )
     input_mt = input_mt.annotate_globals(
         age_hist_all_samples_bin_freq=age_hist_all_samples.bin_freq,
         age_hist_all_samples_n_larger=age_hist_all_samples.n_larger,
@@ -747,7 +759,9 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     for i in pre_pop_annotation_labels:
         # Remove "pre" prefix for final annotations
         final_annotation = re.sub("pre_", "", i)
-        input_mt = input_mt.annotate_rows(**{final_annotation: standardize_pops(input_mt, i, final_pops)})
+        input_mt = input_mt.annotate_rows(
+            **{final_annotation: standardize_pops(input_mt, i, final_pops)}
+        )
 
     # Drop intermediate annotations
     annotations_to_drop = [
@@ -785,7 +799,9 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     )
 
     input_mt = input_mt.annotate_rows(
-        filters=hl.if_else(input_mt.filters == {"PASS"}, hl.empty_set(hl.tstr), input_mt.filters)
+        filters=hl.if_else(
+            input_mt.filters == {"PASS"}, hl.empty_set(hl.tstr), input_mt.filters
+        )
     )
 
     return input_mt
@@ -1876,7 +1892,7 @@ def format_vcf(
 def main(args):
     mt_path = args.mt_path
     output_dir = args.output_dir
-    participant_data= args.participant_data
+    participant_data = args.participant_data
     vep_results = args.vep_results
     min_hom_threshold = args.min_hom_threshold
     vaf_filter_threshold = args.vaf_filter_threshold
@@ -1924,7 +1940,9 @@ def main(args):
         mt = mt.filter_rows(hl.agg.any(mt.HL > 0))
 
     logger.info("Checking for samples with low/high mitochondrial copy number...")
-    mt, n_removed_below_cn, n_removed_above_cn = filter_by_copy_number(mt, keep_all_samples)
+    mt, n_removed_below_cn, n_removed_above_cn = filter_by_copy_number(
+        mt, keep_all_samples
+    )
 
     logger.info("Checking for contaminated samples...")
     mt, n_contaminated = filter_by_contamination(mt, output_dir, keep_all_samples)
@@ -1988,13 +2006,9 @@ def main(args):
 
     mt = filter_genotypes(mt)
     # Add variant annotations such as AC, AF, and AN
-    mt = mt.annotate_rows(
-        **dict(generate_expressions(mt, min_hom_threshold))
-    )
+    mt = mt.annotate_rows(**dict(generate_expressions(mt, min_hom_threshold)))
     # Checkpoint to help avoid Hail errors from large queries
-    mt = mt.checkpoint(
-        f"{output_dir}/temp.mt", overwrite=args.overwrite
-    )
+    mt = mt.checkpoint(f"{output_dir}/temp.mt", overwrite=args.overwrite)
     mt = add_quality_histograms(mt)
     mt = add_annotations_by_hap_and_pop(mt)
     mt = add_descriptions(
@@ -2118,8 +2132,8 @@ if __name__ == "__main__":
         action="store_true",
     )
     parser.add_argument(
-        "--keep-all-samples", 
-        help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)", 
+        "--keep-all-samples",
+        help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)",
         action="store_true",
     )
     parser.add_argument(
