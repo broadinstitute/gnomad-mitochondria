@@ -193,9 +193,9 @@ Asian <- c("M", "C", "Z", "E", "G", "Q", "D", "N", "Y", "A", "O", "S", "F", "B",
 European <- c("I", "W", "X", "R", "HV", "V", "H", "J", "T", "U", "K")
 
 # Define which colors to use for the high-level haplogroups
-african_color <- "red2"
-asian_color <- "green3"
-european_color <- "blue2"
+african_color <- "#955F90"
+asian_color <- "#54A06F"
+european_color <- "#007ECC"
 
 # Replicate the high-level haplogroup color according to the number of haplogroups in that high-level group
 african_colors <- rep(african_color, length(African))
@@ -222,7 +222,8 @@ heteroplasmic_snps_plot <- ggplot(heteroplasmic_snps_plot_data, aes(x = value_fo
   theme_bw() +
   theme(axis.title.y = element_blank(),
         axis.title.x = element_text(size = 11, face = "bold"),
-        axis.text.y = element_text(colour = rev(haplogroup_color_list), size = 11),
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank(),
         axis.text = element_text(colour = "black", size = 11),
         plot.margin = unit(c(0.1, 0.15, 1, 0.75), "cm")) +
   labs(y = "Haplogroup", x = "# Heteroplasmic SNVs\nper sample") +
@@ -230,9 +231,11 @@ heteroplasmic_snps_plot <- ggplot(heteroplasmic_snps_plot_data, aes(x = value_fo
   scale_x_continuous(position = "top", limits = c(0, 5), breaks = c(seq(0, 5, by = 1)), labels = c(seq(0, 4, by = 1), ">5")) 
 heteroplasmic_snps_plot
 
+combined_plot_hets <- plot_grid(heatmap_hap, heteroplasmic_snps_plot, ncol = 2, align = 'h', rel_widths = c(1, 4))
+                          
 setwd(plot_dir)
-ggsave(heteroplasmic_snps_plot, filename = "FigS5.png", dpi = 300, width = 12, height = 10, units = "in")
-ggsave(heteroplasmic_snps_plot, filename = "FigS5.pdf", dpi = 300, width = 12, height = 10, units = "in")
+ggsave(combined_plot_hets, filename = "FigS5.png", dpi = 300, width = 6, height = 5, units = "in")
+ggsave(combined_plot_hets, filename = "FigS5.pdf", dpi = 300, width = 6, height = 5, units = "in")
 
 ##############################################################################
 # Plot just homoplasmic SNPs per haplogroup (Fig4B)
@@ -499,7 +502,7 @@ biggest_hap_count <- hap_sums$hap_count[index]
 
 ########################################################################
 ########################################################################
-# Plot number of sample belonging to each haplogroup (Fig4A)
+# Plot number of samples belonging to each haplogroup (Fig4A)
 ########################################################################
 ########################################################################
 # NOTE: same heatmap produced here will be added to FigS5
