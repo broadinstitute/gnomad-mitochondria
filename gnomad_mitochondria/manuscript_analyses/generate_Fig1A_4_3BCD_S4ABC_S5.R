@@ -82,7 +82,7 @@ ggsave(mean_cov_per_base_plot, filename = "Fig1A.png", dpi = 300, width = 11, he
 ggsave(mean_cov_per_base_plot, filename = "Fig1A.pdf", dpi = 300, width = 11, height = 6, units = "in")
 
 ##############################################################################
-# Plot histogram distribution of mean mitochondrial coverage (FigS4A)
+# Plot histogram distribution of mean mitochondrial coverage (FigS5A)
 ##############################################################################
 # Redefine upper boundaries for plotting purposes (group values above x into an x+ category)
 gnomad <- mutate(gnomad, mt_mean_coverage_for_plotting = ifelse(mt_mean_coverage >= 10000, 10000, mt_mean_coverage))
@@ -99,11 +99,11 @@ mean_cov_hist_plot <- ggplot(gnomad, aes(x = mt_mean_coverage_for_plotting))+
 plot(mean_cov_hist_plot )
 
 setwd(plot_dir)
-ggsave(mean_cov_hist_plot, filename = "FigS4A.png", dpi = 300, width = 11, height = 6, units = "in")
-ggsave(mean_cov_hist_plot, filename = "FigS4.pdf", dpi = 300, width = 11, height = 6, units = "in")
+ggsave(mean_cov_hist_plot, filename = "FigS5A.png", dpi = 300, width = 11, height = 6, units = "in")
+ggsave(mean_cov_hist_plot, filename = "FigS5A.pdf", dpi = 300, width = 11, height = 6, units = "in")
 
 ##############################################################################
-# Plot histogram distribution of mitochondrial copy number estimate (FigS4C)
+# Plot histogram distribution of mitochondrial copy number estimate (FigS5C)
 ##############################################################################
 cp_hist_plot <- ggplot(gnomad, aes(x = mito_cn)) + 
   geom_histogram(binwidth = 10) +
@@ -117,11 +117,11 @@ cp_hist_plot <- ggplot(gnomad, aes(x = mito_cn)) +
 plot(cp_hist_plot)
 
 setwd(plot_dir)
-ggsave(cp_hist_plot, filename = "FigS4C.png", dpi = 300, width = 10, height = 6, units = "in")
-ggsave(cp_hist_plot, filename = "FigS4C.pdf", dpi = 300, width = 10, height = 6, units = "in")
+ggsave(cp_hist_plot, filename = "FigS5C.png", dpi = 300, width = 10, height = 6, units = "in")
+ggsave(cp_hist_plot, filename = "FigS5C.pdf", dpi = 300, width = 10, height = 6, units = "in")
 
 ##############################################################################
-# Plot histogram distribution of nDNA median coverage (FigS4B)
+# Plot histogram distribution of nDNA median coverage (FigS5B)
 ##############################################################################
 # Redefine upper boundaries for plotting purposes (group values above x into an x+ category)
 gnomad <- mutate(gnomad, ndna_coverage_for_plotting = ifelse(wgs_median_coverage >= 60, 60, wgs_median_coverage))
@@ -138,8 +138,8 @@ ndna_cov_hist_plot <- ggplot(gnomad, aes(x = ndna_coverage_for_plotting))+
 plot(ndna_cov_hist_plot)
 
 setwd(plot_dir)
-ggsave(ndna_cov_hist_plot, filename = "FigS4B.png", dpi = 300, width = 10, height = 6, units = "in")
-ggsave(ndna_cov_hist_plot, filename = "FigS4B.pdf", dpi = 300, width = 10, height = 6, units = "in")
+ggsave(ndna_cov_hist_plot, filename = "FigS5B.png", dpi = 300, width = 10, height = 6, units = "in")
+ggsave(ndna_cov_hist_plot, filename = "FigS5B.pdf", dpi = 300, width = 10, height = 6, units = "in")
 
 ##############################################################################
 # Make gnomAD metrics dataframe to pull out statistic on number of hets and homs
@@ -206,8 +206,109 @@ european_colors <- rep(european_color, length(European))
 haplogroup_order <- c(African, Asian, European, "total")
 haplogroup_color_list <- c(african_colors, asian_colors, european_colors, "black")
 
+########################################################################
+########################################################################
+# Heatmap for percent of each population belonging to each haplogroup (Fig4D)
+########################################################################
+########################################################################
+# Calculate the percent of each populations made up of each haplogroup
+hap_pop <- select(data, hap, pop)
+hap_sums <- data %>% group_by(hap) %>% summarise(hap_count = n())
+pop_sums <- data %>% group_by(pop) %>% summarise(pop_count = n())
+pop_sums <- mutate(pop_sums, percent = round(pop_count/sum(pop_count) * 100, 0))
+hap_pop <- hap_pop %>% group_by(hap, pop) %>% summarise(count = n())
+hap_pop <- left_join(hap_pop, hap_sums, by = "hap") %>% ungroup() 
+
+# Finding missing haplgroups
+missing_haps <- setdiff(levels, unique(hap_pop$hap))
+for(h in missing_haps) {for(p in unique(hap_pop$pop)){hap_pop <- hap_pop %>% add_row(hap = h, pop = p, count = NA)}}
+
+# Get complete df of all pop and haplogroup combinations
+hap_pop <- complete(hap_pop, hap, pop)
+hap_pop <- mutate(hap_pop, percent = round(count/hap_count*100, 0))
+
+hap_sums <- mutate(hap_sums, total = "total") %>% ungroup()
+# Add a row for each missing haplgroup and set the total to NA
+for(h in missing_haps) {hap_sums <- hap_sums %>% add_row(hap = h, hap_count = NA, total = "total")}
+hap_sums <- hap_sums %>% add_row(hap = "total", hap_count = sum(hap_sums$hap_count, na.rm = TRUE), total = "total")
+
+# Need to add "empty "total" haplogroup to main df
+hap_pop_data <- bind_rows(hap_pop, pop_sums)
+# If haplogroup is "NA", set that haplogroup to "total" (keeping track of population totals)
+hap_pop_data <- mutate(hap_pop_data, hap = ifelse(is.na(hap), "total", hap))
+
+pop_abbreviations <- c("nfe", "afr", "amr", "fin", "eas", "sas", "asj", "ami", "mid", "oth")
+pop_full_names <- c("Non-finnish\nEuropean", "African/African\nAmerican", "Latino", "Finnish", "East\nAsian", "South\nAsian", "Ashkenazi\nJewish", "Amish", "Middle\nEastern", "Other")
+# Set the order for populations
+pop_order <- c(
+  "African/African\nAmerican", 
+  "Non-finnish\nEuropean",
+  "Finnish",
+  "Amish",
+  "Ashkenazi\nJewish",
+  "Middle\nEastern",
+  "South\nAsian",
+  "East\nAsian", 
+  "Latino",
+  "Other")
+
+# Expand abbreviated population names to their full names and order them 
+hap_pop_data$pop <- factor(hap_pop_data$pop,
+                           levels = pop_abbreviations,
+                           labels = pop_full_names)
+
+heatmap_hap_pop <- ggplot(hap_pop_data, aes(x = pop, y = hap, fill = percent)) + 
+  geom_tile() +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(colour = "black", angle = 45, vjust = 0, hjust = 0, size = 8),
+    axis.text.y = element_text(colour = rev(haplogroup_color_list), size = 8),
+    axis.title = element_text(colour = "black", face = "bold"),
+    axis.title.y = element_text(size = 8, color = "white"),
+    axis.ticks.y = element_blank(),
+    legend.position = "none") +
+  scale_y_discrete(limits = rev(haplogroup_order))  +
+  scale_x_discrete(position = "top", limits = pop_order) +
+  geom_text(size = 2.75, fontface = 'bold', aes(pop, hap, label = ifelse(is.na(percent), "-", percent))) +
+  scale_fill_gradient2(low = "gray85", high = "gray75", na.value = "white") +
+  labs(x = "Haplogroup by nuclear ancestry (%)", fill = "Percent")
+heatmap_hap_pop
+
+# Get the indexes of haplogroups in decreasing order of their counts
+# Second value is the haplogroup with the highest count (will want this to be the darkest in the heatmap); first value is for "total"
+index <- order(hap_sums$hap_count, decreasing = T)[2:2]
+biggest_hap_count <- hap_sums$hap_count[index]
+
+########################################################################
+########################################################################
+# Plot number of samples belonging to each haplogroup (Fig4A)
+########################################################################
+########################################################################
+# NOTE: same heatmap produced here will be added to FigS6
+heatmap_hap <- ggplot(hap_sums, aes(x = total, y = hap, fill = hap_count)) + 
+  geom_tile() +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        plot.margin = unit(c(0, 0, 0, 0), "cm"),
+        axis.title.y = element_text(colour = "black", face = "bold"),
+        axis.title.x = element_text(colour = "black", face = "bold",size = 9),
+        axis.text.y = element_text(colour = rev(haplogroup_color_list), size = 8),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.ticks.y = element_blank()) +
+  scale_y_discrete(limits = rev(haplogroup_order)) +
+  scale_x_discrete(position = "top") +
+  theme(legend.position = "none") +
+  geom_text(size = 2.75, fontface ='bold', aes(total, hap, label = ifelse(is.na(hap_count), "-", hap_count)))  +
+  scale_fill_gradient2(low = "gray85", high = "gray75", na.value = "white", limits = c(0, biggest_hap_count))  +
+  labs(y = "mtDNA haplogroup", x = "#\n Samples")
+heatmap_hap 
+
 ##############################################################################
-# Plot just number of SNPs for heteroplasmic variants (FigS5)
+# Plot just number of SNPs for heteroplasmic variants (FigS6)
 ##############################################################################
 # Create boxplot of heteroplasmic SNPs
 # First generate a category for "total" by duplicating the heteroplasmic_snps dataframe, adding a "total" haplogroup, and rbinding this back onto heteroplasmic_snps
@@ -232,10 +333,10 @@ heteroplasmic_snps_plot <- ggplot(heteroplasmic_snps_plot_data, aes(x = value_fo
 heteroplasmic_snps_plot
 
 combined_plot_hets <- plot_grid(heatmap_hap, heteroplasmic_snps_plot, ncol = 2, align = 'h', rel_widths = c(1, 4))
-                          
+
 setwd(plot_dir)
-ggsave(combined_plot_hets, filename = "FigS5.png", dpi = 300, width = 6, height = 5, units = "in")
-ggsave(combined_plot_hets, filename = "FigS5.pdf", dpi = 300, width = 6, height = 5, units = "in")
+ggsave(combined_plot_hets, filename = "FigS6.png", dpi = 300, width = 6, height = 5, units = "in")
+ggsave(combined_plot_hets, filename = "FigS6.pdf", dpi = 300, width = 6, height = 5, units = "in")
 
 ##############################################################################
 # Plot just homoplasmic SNPs per haplogroup (Fig4B)
@@ -425,106 +526,6 @@ setwd(plot_dir)
 ggsave(combined_plot, filename = "Fig3BC.png", dpi = 300, width = 7, height = 4, units = "in")
 ggsave(combined_plot, filename = "Fig3BC.pdf", dpi = 300, width = 7, height = 4, units = "in")
 
-########################################################################
-########################################################################
-# Heatmap for percent of each population belonging to each haplogroup (Fig4D)
-########################################################################
-########################################################################
-# Calculate the percent of each populations made up of each haplogroup
-hap_pop <- select(data, hap, pop)
-hap_sums <- data %>% group_by(hap) %>% summarise(hap_count = n())
-pop_sums <- data %>% group_by(pop) %>% summarise(pop_count = n())
-pop_sums <- mutate(pop_sums, percent = round(pop_count/sum(pop_count) * 100, 0))
-hap_pop <- hap_pop %>% group_by(hap, pop) %>% summarise(count = n())
-hap_pop <- left_join(hap_pop, hap_sums, by = "hap") %>% ungroup() 
-
-# Finding missing haplgroups
-missing_haps <- setdiff(levels, unique(hap_pop$hap))
-for(h in missing_haps) {for(p in unique(hap_pop$pop)){hap_pop <- hap_pop %>% add_row(hap = h, pop = p, count = NA)}}
-
-# Get complete df of all pop and haplogroup combinations
-hap_pop <- complete(hap_pop, hap, pop)
-hap_pop <- mutate(hap_pop, percent = round(count/hap_count*100, 0))
-
-hap_sums <- mutate(hap_sums, total = "total") %>% ungroup()
-# Add a row for each missing haplgroup and set the total to NA
-for(h in missing_haps) {hap_sums <- hap_sums %>% add_row(hap = h, hap_count = NA, total = "total")}
-hap_sums <- hap_sums %>% add_row(hap = "total", hap_count = sum(hap_sums$hap_count, na.rm = TRUE), total = "total")
-
-# Need to add "empty "total" haplogroup to main df
-hap_pop_data <- bind_rows(hap_pop, pop_sums)
-# If haplogroup is "NA", set that haplogroup to "total" (keeping track of population totals)
-hap_pop_data <- mutate(hap_pop_data, hap = ifelse(is.na(hap), "total", hap))
-
-pop_abbreviations <- c("nfe", "afr", "amr", "fin", "eas", "sas", "asj", "ami", "mid", "oth")
-pop_full_names <- c("Non-finnish\nEuropean", "African/African\nAmerican", "Latino", "Finnish", "East\nAsian", "South\nAsian", "Ashkenazi\nJewish", "Amish", "Middle\nEastern", "Other")
-# Set the order for populations
-pop_order <- c(
-  "African/African\nAmerican", 
-  "Non-finnish\nEuropean",
-  "Finnish",
-  "Amish",
-  "Ashkenazi\nJewish",
-  "Middle\nEastern",
-  "South\nAsian",
-  "East\nAsian", 
-  "Latino",
-  "Other")
-
-# Expand abbreviated population names to their full names and order them 
-hap_pop_data$pop <- factor(hap_pop_data$pop,
-                           levels = pop_abbreviations,
-                           labels = pop_full_names)
-
-heatmap_hap_pop <- ggplot(hap_pop_data, aes(x = pop, y = hap, fill = percent)) + 
-  geom_tile() +
-  theme_bw() +
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(),
-    axis.text.x = element_text(colour = "black", angle = 45, vjust = 0, hjust = 0, size = 8),
-    axis.text.y = element_text(colour = rev(haplogroup_color_list), size = 8),
-    axis.title = element_text(colour = "black", face = "bold"),
-    axis.title.y = element_text(size = 8, color = "white"),
-    axis.ticks.y = element_blank(),
-    legend.position = "none") +
-  scale_y_discrete(limits = rev(haplogroup_order))  +
-  scale_x_discrete(position = "top", limits = pop_order) +
-  geom_text(size = 2.75, fontface = 'bold', aes(pop, hap, label = ifelse(is.na(percent), "-", percent))) +
-  scale_fill_gradient2(low = "gray85", high = "gray75", na.value = "white") +
-  labs(x = "Haplogroup by nuclear ancestry (%)", fill = "Percent")
-heatmap_hap_pop
-
-# Get the indexes of haplogroups in decreasing order of their counts
-# Second value is the haplogroup with the highest count (will want this to be the darkest in the heatmap); first value is for "total"
-index <- order(hap_sums$hap_count, decreasing = T)[2:2]
-biggest_hap_count <- hap_sums$hap_count[index]
-
-########################################################################
-########################################################################
-# Plot number of samples belonging to each haplogroup (Fig4A)
-########################################################################
-########################################################################
-# NOTE: same heatmap produced here will be added to FigS5
-heatmap_hap <- ggplot(hap_sums, aes(x = total, y = hap, fill = hap_count)) + 
-  geom_tile() +
-  theme_bw() +
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        plot.margin = unit(c(0, 0, 0, 0), "cm"),
-        axis.title.y = element_text(colour = "black", face = "bold"),
-        axis.title.x = element_text(colour = "black", face = "bold",size = 9),
-        axis.text.y = element_text(colour = rev(haplogroup_color_list), size = 8),
-        axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.ticks.y = element_blank()) +
-  scale_y_discrete(limits = rev(haplogroup_order)) +
-  scale_x_discrete(position = "top") +
-  theme(legend.position = "none") +
-  geom_text(size = 2.75, fontface ='bold', aes(total, hap, label = ifelse(is.na(hap_count), "-", hap_count)))  +
-  scale_fill_gradient2(low = "gray85", high = "gray75", na.value = "white", limits = c(0, biggest_hap_count))  +
-  labs(y = "mtDNA haplogroup", x = "#\n Samples")
-heatmap_hap 
 
 ########################################################################
 ########################################################################
@@ -678,5 +679,4 @@ combined_plot1c <- plot_grid(combined_plot1a, combined_plot1b, ncol = 1, rel_hei
 setwd(plot_dir)
 ggsave(combined_plot1c, filename = "Fig4.png", dpi = 300, width = 10, height = 7, units = "in")
 ggsave(combined_plot1c, filename = "Fig4.pdf", dpi = 300, width = 10, height = 7, units = "in")
-
 
