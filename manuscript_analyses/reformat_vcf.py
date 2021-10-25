@@ -325,7 +325,7 @@ def parse_vcf(matches_samples: Dict[str, str], gnomAD_path: str):
     return (matches_annotations, matches_base, matches_codon, matches_insilico)
 
 
-"""now generate 'reformated.vcf', which is used to produce fig5, fig6, figS4d, figS6, figS7 and table S3
+"""now generate 'reformated.vcf', which is used to produce fig5, fig6, figS5d, figS7, figS8 and table S3
 this includes the above gathered annotations from gnomAD VCF and other sources"""
 
 
@@ -812,7 +812,7 @@ if __name__ == "__main__":
     (matches_annotations, matches_base, matches_codon, matches_insilico) = parse_vcf(
         matches_samples, args.gnomAD_path
     )
-    # now write the output file "reformated.vcf", which is used to produce fig5, fig6, figS4d, figS6, figS7 and table S3
+    # now write the output file "reformated.vcf", which is used to produce fig5, fig6, figS5d, figS7, figS8 and table S3
     write_file_for_figures(
         matches_annotations,
         matches_disease,
