@@ -48,10 +48,10 @@ Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_f
 
 Note that the gnomAD data files used (VCF with genotype and heteroplasmy level data for each sample, and txt with sample annotations) are not publicly available. The path to the directories with the required files (`insilicos`,`other_databases`,`synthetic_vcf`, and the input gnomAD data) can be specified via `reformat_vcf.py`, the default follows the directory structure of this repo. 
 
-The script produces two output files: (1) `reformated.vcf`, which is used as the input file for figures 5, 6, S4D, S6, S7 and table S2, the input for `make_TableS3.R` is generated via the second output file, (2) `annotated_synthetic.vcf`. The latter file is provided in this repo.
+The script produces two output files: (1) `reformated.vcf`, which is used as the input file for figures 5, 6, S5D, S7, S8 and table S3, the input for `make_TableS4.R` is generated via the second output file, (2) `annotated_synthetic.vcf`. The latter file is provided in this repo.
 
-### Generate plots for figures 5, 6, S4D, S6, S7 and tables 2, 3
-The figures were generated in R. The script `make_all_Figs5_6_S4d_S6_S7_Tables_S2_S3.R` can be used to produce all specified figures and tables. Alternatively, the figures can be generated individually using the relevant scripts (named for the figure or table they produce). Note that `options(bitmapType = 'cairo', device = 'png')` can be commented/uncommented depending on if you are using Rstudio or the terminal to run the R scripts (relevant for collate_Figure5.R, make_FigS6.R, make_FigS7.R, make_Fig6.R, make FigS4d.R, make_all_Figs5_6_S4d_S6_S7_Tables_S2_S3.R scripts). 
+### Generate plots for figures 5, 6, S5D, S7, S8 and tables 3, 4
+The figures were generated in R. The script `make_all_Figs5_6_S5d_S7_S8_Tables_S3_S4.R` can be used to produce all specified figures and tables. Alternatively, the figures can be generated individually using the relevant scripts (named for the figure or table they produce). Note that `options(bitmapType = 'cairo', device = 'png')` can be commented/uncommented depending on if you are using Rstudio or the terminal to run the R scripts (relevant for collate_Figure5.R, make_FigS7.R, make_FigS8.R, make_Fig6.R, make FigS5d.R, make_all_Figs5_6_S5d_S7_S8_Tables_S3_S4.R scripts). 
 
 **Version details**
 R v3.6.1: `cowplot 1.0.0` `dplyr 0.8.5` `forcats 0.5.0` `ggbeeswarm 0.6.0` `ggplot2 2_3.3.0 ` `ggpubr 0.3.0` `ggrepel 0.8.2` `gridExtra 2.3` `plyr 1.8.6` `tidyr 1.1.0` `scales 1.1.1` `stringr 1.4.0`

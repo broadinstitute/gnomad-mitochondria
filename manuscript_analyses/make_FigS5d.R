@@ -46,5 +46,5 @@ ggplot(data, aes(x = as.numeric(value), colour = variable)) + stat_ecdf() +
   geom_vline(xintercept = 0.95, linetype = "dotted", color = "black", size = 0.5)
 
 #options(bitmapType = 'cairo', device = 'png')
-ggsave("figures/FigS4d.png", width = 10, height = 5)
-ggsave("figures/FigS4d.pdf", width = 10, height = 5)
+ggsave("figures/FigS5d.png", width = 10, height = 5)
+ggsave("figures/FigS5d.pdf", width = 10, height = 5)

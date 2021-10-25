@@ -49,9 +49,9 @@ gnomad_cfrm$count <- gnomad_cfrm$AC_hom + gnomad_cfrm$AC_het
 gnomad_cfrm$variant <- factor(gnomad_cfrm$variant, levels = c(unique(gnomad_cfrm[order(gnomad_cfrm$count, -gnomad_cfrm$POS), c("variant")]))) #order by count for plot
 gnomad_cfrm$all_haplogroups <- factor(gnomad_cfrm$all_haplogroups, levels = c("L0", "L1", "L5", "L2", "L6", "L4", "L3", "M", "C", "Z", "E", "G", "Q", "D", "N", "Y", "A", "O", "S", "F", "B", "P", "I", "W", "X", "R", "HV", "V", "H", "J", "T", "U", "K"))
 # to match subset haplogroups displayed on plot
-haplo_colors = c("#e20000", "#f05032", "#fc7e61", #reds - african haplogroups
-                 "#00910e", "#3f9f35", "#63af55", "#82be74", "#9fcd93", "#badbb0", "#d2e8cc", "#e7f2e3", #greens - asian haplogroups
-                 "#00508e", "#275a95", "#3c659d", "#4e70a4", "#5c79ab", "#6983b1", "#788fb9", "#879ac0", "#96a6c8", "#a7b4d1") #blues - european haplogroups
+haplo_colors = c("#7a4e75", "#a577a1", "#b792b4", #purples - african haplogroups
+                 "#396c4c", "#417c57", "#4e9467", "#65aa7d", "#81ba95", "#a1ccb0", "#c4dfce", "#e1efe6", #greens - asian haplogroups
+                 "#004c7a", "#005b93", "#0067a6", "#0073b9", "#007bc7", "#007ecc", "#2591d3", "#48a3da", "#6bb4e1", "#8cc5e8") #blues - european haplogroups
 # other displays on plot
 gnomad_cfrm$cf <- sub("^", "1 in ",comma(ceiling(1 / ((gnomad_cfrm$count) / gnomad_cfrm$AN)), accuracy = 1))
 gnomad_cfrm$Mitomap_dz_homoplasmy <- ifelse(gnomad_cfrm$variant == "m.7465A>AC", "+", as.character(gnomad_cfrm$Mitomap_dz_homoplasmy)) #manually adding this datapoint for misaligned indel in 
