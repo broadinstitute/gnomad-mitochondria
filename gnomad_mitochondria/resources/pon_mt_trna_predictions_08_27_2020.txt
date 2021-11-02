@@ -1,0 +1,4522 @@
+mt-tRNA	mtDNA_position	Reference_nucleotide	New_nucleotide	Classification	ML_probability_of_pathogenicity	Prediction_of_Kondrashov_method
+Ala	5655	A	C	Neutral	0.282437	1
+Ala	5655	A	G	Neutral	0.171284	0
+Ala	5655	A	T	Neutral	0.282437	1
+Ala	5654	A	C	Neutral	0.32813	1
+Ala	5654	A	G	Neutral	0.251853	1
+Ala	5654	A	T	Neutral	0.32813	1
+Ala	5653	G	A	Likely pathogenic	0.569971	1
+Ala	5653	G	C	Likely pathogenic	0.576816	1
+Ala	5653	G	T	Likely pathogenic	0.576816	1
+Ala	5652	G	A	Likely pathogenic	0.662798	1
+Ala	5652	G	C	Likely pathogenic	0.662798	1
+Ala	5652	G	T	Likely pathogenic	0.662798	1
+Ala	5651	G	A	Neutral	0.111034	0
+Ala	5651	G	C	Neutral	0.230348	0
+Ala	5651	G	T	Neutral	0.11925	0
+Ala	5650	C	A	Likely neutral	0.421278	1
+Ala	5650	C	G	Likely neutral	0.421278	1
+Ala	5650	C	T	Likely neutral	0.398032	0
+Ala	5649	T	A	Likely pathogenic	0.557289	1
+Ala	5649	T	C	Likely pathogenic	0.557289	1
+Ala	5649	T	G	Likely pathogenic	0.557289	1
+Ala	5648	T	A	Pathogenic	0.687236	1
+Ala	5648	T	C	Pathogenic	0.687236	1
+Ala	5648	T	G	Pathogenic	0.687236	1
+Ala	5647	A	C	Likely pathogenic	0.551845	1
+Ala	5647	A	G	Likely pathogenic	0.551845	1
+Ala	5647	A	T	Likely pathogenic	0.551845	1
+Ala	5646	G	A	Pathogenic	0.857394	1
+Ala	5646	G	C	Pathogenic	0.857394	1
+Ala	5646	G	T	Pathogenic	0.857394	1
+Ala	5645	C	A	Pathogenic	0.762294	1
+Ala	5645	C	G	Pathogenic	0.762294	1
+Ala	5645	C	T	Pathogenic	0.707162	1
+Ala	5644	T	A	Likely pathogenic	0.557289	1
+Ala	5644	T	C	Likely pathogenic	0.557289	1
+Ala	5644	T	G	Likely pathogenic	0.557289	1
+Ala	5643	T	A	Pathogenic	0.829214	1
+Ala	5643	T	C	Pathogenic	0.829214	1
+Ala	5643	T	G	Pathogenic	0.829214	1
+Ala	5642	A	C	Pathogenic	0.773953	1
+Ala	5642	A	G	Pathogenic	0.773953	1
+Ala	5642	A	T	Pathogenic	0.773953	1
+Ala	5641	A	C	Pathogenic	0.758972	1
+Ala	5641	A	G	Pathogenic	0.758972	1
+Ala	5641	A	T	Pathogenic	0.758972	1
+Ala	5640	T	A	Neutral	0.35436	1
+Ala	5640	T	C	Neutral	0.332296	1
+Ala	5640	T	G	Neutral	0.285424	1
+Ala	5639	T	A	Likely neutral	0.461596	1
+Ala	5639	T	C	Likely neutral	0.486996	1
+Ala	5639	T	G	Likely neutral	0.461596	1
+Ala	5638	A	C	Neutral	0.309338	1
+Ala	5638	A	G	Neutral	0.309338	1
+Ala	5638	A	T	Neutral	0.209293	1
+Ala	5637	A	C	Pathogenic	0.814917	1
+Ala	5637	A	G	Pathogenic	0.814917	1
+Ala	5637	A	T	Pathogenic	0.814917	1
+Ala	5636	A	C	Likely pathogenic	0.552649	1
+Ala	5636	A	G	Likely pathogenic	0.552649	1
+Ala	5636	A	T	Likely pathogenic	0.552649	1
+Ala	5635	G	A	Pathogenic	0.952477	1
+Ala	5635	G	C	Pathogenic	0.952477	1
+Ala	5635	G	T	Pathogenic	0.952477	1
+Ala	5634	T	A	Neutral	0.260415	0
+Ala	5634	T	C	Neutral	0.175808	0
+Ala	5634	T	G	Neutral	0.260415	0
+Ala	5633	G	A	Neutral	0.128957	0
+Ala	5633	G	C	Neutral	0.224239	0
+Ala	5633	G	T	Neutral	0.224239	0
+Ala	5632	G	A	Neutral	0.142977	0
+Ala	5632	G	C	Neutral	0.184593	0
+Ala	5632	G	T	Neutral	0.146989	0
+Ala	5631	C	A	Neutral	0.268488	1
+Ala	5631	C	G	Neutral	0.320958	1
+Ala	5631	C	T	Neutral	0.281321	0
+Ala	5630	T	A	Likely pathogenic	0.676586	1
+Ala	5630	T	C	Likely pathogenic	0.676586	1
+Ala	5630	T	G	Likely pathogenic	0.676586	1
+Ala	5629	G	A	Pathogenic	0.857104	1
+Ala	5629	G	C	Pathogenic	0.901169	1
+Ala	5629	G	T	Pathogenic	0.901169	1
+Ala	5628	A	C	Likely pathogenic	0.588326	1
+Ala	5628	A	G	Likely pathogenic	0.60086	1
+Ala	5628	A	T	Likely pathogenic	0.588326	1
+Ala	5627	T	A	Likely neutral	0.3961	1
+Ala	5627	T	C	Likely neutral	0.3961	1
+Ala	5627	T	G	Likely neutral	0.381811	1
+Ala	5626	T	A	Likely pathogenic	0.576718	1
+Ala	5626	T	C	Likely pathogenic	0.576718	1
+Ala	5626	T	G	Likely pathogenic	0.576718	1
+Ala	5625	T	A	Likely neutral	0.342678	1
+Ala	5625	T	C	Likely neutral	0.342678	1
+Ala	5625	T	G	Likely neutral	0.342678	1
+Ala	5624	G	A	Likely pathogenic	0.58559	1
+Ala	5624	G	C	Likely pathogenic	0.58559	1
+Ala	5624	G	T	Likely pathogenic	0.58559	1
+Ala	5623	C	A	Likely neutral	0.486682	1
+Ala	5623	C	G	Likely neutral	0.486682	1
+Ala	5623	C	T	Likely neutral	0.486682	1
+Ala	5622	G	A	Neutral	0.145897	1
+Ala	5622	G	C	Neutral	0.25211	1
+Ala	5622	G	T	Neutral	0.25211	1
+Ala	5621	T	A	Neutral	0.233966	1
+Ala	5621	T	C	Neutral	0.227644	0
+Ala	5621	T	G	Neutral	0.233966	1
+Ala	5620	T	A	Likely neutral	0.449452	1
+Ala	5620	T	C	Neutral	0.33859	1
+Ala	5620	T	G	Likely neutral	0.449452	1
+Ala	5619	C	A	Pathogenic	0.795829	1
+Ala	5619	C	G	Pathogenic	0.795829	1
+Ala	5619	C	T	Pathogenic	0.733342	1
+Ala	5618	A	C	Pathogenic	0.69698	1
+Ala	5618	A	G	Likely pathogenic	0.655597	1
+Ala	5618	A	T	Pathogenic	0.69698	1
+Ala	5617	G	A	Likely neutral	0.437299	0
+Ala	5617	G	C	Likely pathogenic	0.51557	1
+Ala	5617	G	T	Likely neutral	0.459151	1
+Ala	5616	T	A	Neutral	0.130409	0
+Ala	5616	T	C	Neutral	0.143598	0
+Ala	5616	T	G	Neutral	0.122375	0
+Ala	5615	T	A	Neutral	0.167185	1
+Ala	5615	T	C	Neutral	0.260703	1
+Ala	5615	T	G	Neutral	0.260703	1
+Ala	5614	G	A	Pathogenic	0.828027	1
+Ala	5614	G	C	Pathogenic	0.828027	1
+Ala	5614	G	T	Pathogenic	0.828027	1
+Ala	5613	A	C	Pathogenic	0.684314	1
+Ala	5613	A	G	Pathogenic	0.684314	1
+Ala	5613	A	T	Pathogenic	0.684314	1
+Ala	5612	T	A	Likely neutral	0.388924	1
+Ala	5612	T	C	Likely neutral	0.388924	1
+Ala	5612	T	G	Likely neutral	0.388924	1
+Ala	5611	G	A	Pathogenic	0.756504	0
+Ala	5611	G	C	Pathogenic	0.756504	1
+Ala	5611	G	T	Pathogenic	0.756504	1
+Ala	5610	C	A	Neutral	0.323959	1
+Ala	5610	C	G	Neutral	0.323959	1
+Ala	5610	C	T	Neutral	0.230596	0
+Ala	5609	A	C	Likely neutral	0.486771	1
+Ala	5609	A	G	Neutral	0.356046	0
+Ala	5609	A	T	Likely neutral	0.486771	1
+Ala	5608	G	A	Likely neutral	0.471098	0
+Ala	5608	G	C	Likely pathogenic	0.545261	0
+Ala	5608	G	T	Likely pathogenic	0.545261	0
+Ala	5607	A	C	Neutral	0.326177	1
+Ala	5607	A	G	Neutral	0.251218	1
+Ala	5607	A	T	Neutral	0.326177	1
+Ala	5606	G	A	Neutral	0.276092	0
+Ala	5606	G	C	Likely neutral	0.394729	0
+Ala	5606	G	T	Neutral	0.272314	0
+Ala	5605	T	A	Neutral	0.227455	0
+Ala	5605	T	C	Neutral	0.13363	0
+Ala	5605	T	G	Neutral	0.227455	0
+Ala	5604	G	A	Neutral	0.14797	0
+Ala	5604	G	C	Neutral	0.309338	0
+Ala	5604	G	T	Neutral	0.193536	0
+Ala	5603	G	A	Neutral	0.121345	0
+Ala	5603	G	C	Neutral	0.243638	0
+Ala	5603	G	T	Neutral	0.119398	0
+Ala	5602	G	A	Neutral	0.172013	0
+Ala	5602	G	C	Neutral	0.246604	0
+Ala	5602	G	T	Neutral	0.246604	0
+Ala	5601	G	A	Neutral	0.126794	0
+Ala	5601	G	C	Neutral	0.288603	0
+Ala	5601	G	T	Neutral	0.128006	0
+Ala	5600	T	A	Neutral	0.090545	0
+Ala	5600	T	C	Neutral	0.076182	0
+Ala	5600	T	G	Neutral	0.078134	0
+Ala	5599	T	A	Neutral	0.33125	1
+Ala	5599	T	C	Neutral	0.263609	1
+Ala	5599	T	G	Neutral	0.33125	1
+Ala	5598	T	A	Likely neutral	0.422026	1
+Ala	5598	T	C	Neutral	0.309963	0
+Ala	5598	T	G	Likely neutral	0.422026	1
+Ala	5597	T	A	Likely neutral	0.485435	1
+Ala	5597	T	C	Likely neutral	0.482714	0
+Ala	5597	T	G	Likely neutral	0.485435	1
+Ala	5596	G	A	Neutral	0.296738	0
+Ala	5596	G	C	Likely neutral	0.43271	1
+Ala	5596	G	T	Likely neutral	0.43271	1
+Ala	5595	C	A	Likely pathogenic	0.606306	1
+Ala	5595	C	G	Likely pathogenic	0.606306	1
+Ala	5595	C	T	Likely neutral	0.45988	0
+Ala	5594	A	C	Pathogenic	0.745681	1
+Ala	5594	A	G	Pathogenic	0.745681	1
+Ala	5594	A	T	Pathogenic	0.745681	1
+Ala	5593	G	A	Pathogenic	0.722952	0
+Ala	5593	G	C	Pathogenic	0.789274	1
+Ala	5593	G	T	Pathogenic	0.789274	1
+Ala	5592	T	A	Likely neutral	0.438751	1
+Ala	5592	T	C	Neutral	0.302677	0
+Ala	5592	T	G	Likely neutral	0.438751	1
+Ala	5591	C	A	Pathogenic	0.720907	1
+Ala	5591	C	G	Pathogenic	0.720907	1
+Ala	5591	C	T	Likely pathogenic	0.698818	1
+Ala	5590	C	A	Pathogenic	0.772967	1
+Ala	5590	C	G	Pathogenic	0.772967	1
+Ala	5590	C	T	Pathogenic	0.74565	1
+Ala	5589	T	A	Likely pathogenic	0.557289	1
+Ala	5589	T	C	Likely pathogenic	0.557289	1
+Ala	5589	T	G	Likely pathogenic	0.557289	1
+Ala	5588	T	A	Pathogenic	0.829214	1
+Ala	5588	T	C	Pathogenic	0.829214	0
+Ala	5588	T	G	Pathogenic	0.829214	1
+Ala	5587	A	C	Likely neutral	0.386061	1
+Ala	5587	A	G	Likely neutral	0.321902	1
+Ala	5587	A	T	Likely neutral	0.386061	1
+Arg	10405	T	A	Likely neutral	0.439602	1
+Arg	10405	T	C	Likely pathogenic	0.511333	1
+Arg	10405	T	G	Likely pathogenic	0.520766	1
+Arg	10406	G	A	Pathogenic	0.641918	1
+Arg	10406	G	C	Pathogenic	0.769946	1
+Arg	10406	G	T	Pathogenic	0.769946	1
+Arg	10407	G	A	Likely pathogenic	0.525201	1
+Arg	10407	G	C	Pathogenic	0.620361	1
+Arg	10407	G	T	Pathogenic	0.620361	1
+Arg	10408	T	A	Likely pathogenic	0.632928	1
+Arg	10408	T	C	Likely pathogenic	0.563759	1
+Arg	10408	T	G	Likely pathogenic	0.632928	1
+Arg	10409	A	C	Pathogenic	0.849146	1
+Arg	10409	A	G	Pathogenic	0.777208	1
+Arg	10409	A	T	Pathogenic	0.849146	0
+Arg	10410	T	A	Neutral	0.235434	0
+Arg	10410	T	C	Neutral	0.173037	0
+Arg	10410	T	G	Neutral	0.201862	0
+Arg	10411	A	C	Likely neutral	0.450624	1
+Arg	10411	A	G	Likely neutral	0.428791	1
+Arg	10411	A	T	Likely pathogenic	0.550274	1
+Arg	10412	T	A	Likely pathogenic	0.572269	1
+Arg	10412	T	C	Likely pathogenic	0.572269	1
+Arg	10412	T	G	Likely pathogenic	0.572269	1
+Arg	10413	A	C	Likely pathogenic	0.592893	1
+Arg	10413	A	G	Likely pathogenic	0.592893	1
+Arg	10413	A	T	Likely pathogenic	0.592893	1
+Arg	10414	G	A	Pathogenic	0.934205	0
+Arg	10414	G	C	Pathogenic	0.950455	1
+Arg	10414	G	T	Pathogenic	0.950455	1
+Arg	10415	T	A	Likely pathogenic	0.58395	1
+Arg	10415	T	C	Likely pathogenic	0.58395	1
+Arg	10415	T	G	Likely pathogenic	0.58395	1
+Arg	10416	T	A	Pathogenic	0.792667	1
+Arg	10416	T	C	Pathogenic	0.775603	1
+Arg	10416	T	G	Pathogenic	0.792667	1
+Arg	10417	T	A	Pathogenic	0.834862	1
+Arg	10417	T	C	Pathogenic	0.834862	1
+Arg	10417	T	G	Pathogenic	0.834862	1
+Arg	10418	A	C	Pathogenic	0.802708	1
+Arg	10418	A	G	Pathogenic	0.802708	1
+Arg	10418	A	T	Pathogenic	0.802708	1
+Arg	10419	A	C	Pathogenic	0.707725	1
+Arg	10419	A	G	Likely pathogenic	0.609137	1
+Arg	10419	A	T	Likely pathogenic	0.661616	1
+Arg	10420	A	C	Neutral	0.31541	0
+Arg	10420	A	G	Neutral	0.312237	0
+Arg	10420	A	T	Neutral	0.310955	0
+Arg	10421	C	A	Neutral	0.304062	0
+Arg	10421	C	G	Neutral	0.279994	0
+Arg	10421	C	T	Neutral	0.245693	0
+Arg	10422	A	C	Likely neutral	0.464802	1
+Arg	10422	A	G	Likely pathogenic	0.573545	1
+Arg	10422	A	T	Likely neutral	0.472035	1
+Arg	10423	A	C	Pathogenic	0.820112	1
+Arg	10423	A	G	Pathogenic	0.820112	1
+Arg	10423	A	T	Pathogenic	0.820112	1
+Arg	10424	A	C	Pathogenic	0.81073	1
+Arg	10424	A	G	Pathogenic	0.771829	1
+Arg	10424	A	T	Pathogenic	0.81073	1
+Arg	10425	A	C	Pathogenic	0.733185	1
+Arg	10425	A	G	Pathogenic	0.733185	1
+Arg	10425	A	T	Pathogenic	0.733185	1
+Arg	10426	C	A	Likely neutral	0.46061	1
+Arg	10426	C	G	Likely neutral	0.46061	1
+Arg	10426	C	T	Likely neutral	0.420811	0
+Arg	10427	G	A	Likely neutral	0.431186	0
+Arg	10427	G	C	Likely neutral	0.40746	0
+Arg	10427	G	T	Neutral	0.350176	0
+Arg	10428	A	C	Likely pathogenic	0.547422	1
+Arg	10428	A	G	Likely neutral	0.469832	1
+Arg	10428	A	T	Likely pathogenic	0.547422	1
+Arg	10429	A	C	Likely pathogenic	0.540889	1
+Arg	10429	A	G	Likely pathogenic	0.505543	1
+Arg	10429	A	T	Likely pathogenic	0.540889	1
+Arg	10430	T	A	Neutral	0.335015	1
+Arg	10430	T	C	Neutral	0.335015	1
+Arg	10430	T	G	Neutral	0.335015	1
+Arg	10431	G	A	Pathogenic	0.931862	1
+Arg	10431	G	C	Pathogenic	0.931862	1
+Arg	10431	G	T	Pathogenic	0.931862	1
+Arg	10432	A	C	Pathogenic	0.749544	1
+Arg	10432	A	G	Pathogenic	0.690711	1
+Arg	10432	A	T	Pathogenic	0.749544	1
+Arg	10433	T	A	Likely pathogenic	0.576934	1
+Arg	10433	T	C	Likely pathogenic	0.576934	1
+Arg	10433	T	G	Likely pathogenic	0.576934	1
+Arg	10434	T	A	Likely pathogenic	0.607506	1
+Arg	10434	T	C	Likely pathogenic	0.607506	1
+Arg	10434	T	G	Likely pathogenic	0.607506	1
+Arg	10435	T	A	Likely neutral	0.463135	1
+Arg	10435	T	C	Likely neutral	0.463135	1
+Arg	10435	T	G	Likely neutral	0.463135	1
+Arg	10436	C	A	Likely pathogenic	0.60126	1
+Arg	10436	C	G	Likely pathogenic	0.60126	1
+Arg	10436	C	T	Likely pathogenic	0.60126	1
+Arg	10437	G	A	Pathogenic	0.698031	1
+Arg	10437	G	C	Pathogenic	0.754763	1
+Arg	10437	G	T	Pathogenic	0.754763	1
+Arg	10438	A	C	Pathogenic	0.719244	1
+Arg	10438	A	G	Pathogenic	0.719244	1
+Arg	10438	A	T	Pathogenic	0.719244	1
+Arg	10439	C	A	Pathogenic	0.642881	1
+Arg	10439	C	G	Pathogenic	0.642881	1
+Arg	10439	C	T	Pathogenic	0.642881	1
+Arg	10440	T	A	Pathogenic	0.653205	1
+Arg	10440	T	C	Likely pathogenic	0.56122	1
+Arg	10440	T	G	Pathogenic	0.653205	1
+Arg	10441	C	A	Pathogenic	0.915942	1
+Arg	10441	C	G	Pathogenic	0.915942	1
+Arg	10441	C	T	Pathogenic	0.915942	1
+Arg	10442	A	C	Pathogenic	0.65028	1
+Arg	10442	A	G	Pathogenic	0.65028	1
+Arg	10442	A	T	Pathogenic	0.65028	1
+Arg	10443	T	A	Likely pathogenic	0.508016	1
+Arg	10443	T	C	Likely pathogenic	0.506197	1
+Arg	10443	T	G	Likely pathogenic	0.527415	1
+Arg	10444	T	A	Pathogenic	0.834862	1
+Arg	10444	T	C	Pathogenic	0.834862	1
+Arg	10444	T	G	Pathogenic	0.834862	1
+Arg	10445	A	C	Pathogenic	0.639133	1
+Arg	10445	A	G	Likely pathogenic	0.622085	1
+Arg	10445	A	T	Pathogenic	0.639133	1
+Arg	10446	A	C	Likely neutral	0.391897	0
+Arg	10446	A	G	Likely neutral	0.407785	0
+Arg	10446	A	T	Likely neutral	0.391897	0
+Arg	10447	A	C	Pathogenic	0.766483	1
+Arg	10447	A	G	Pathogenic	0.719875	1
+Arg	10447	A	T	Pathogenic	0.766483	1
+Arg	10448	T	A	Neutral	0.366649	1
+Arg	10448	T	C	Neutral	0.359298	1
+Arg	10448	T	G	Likely neutral	0.408182	1
+Arg	10449	T	A	Pathogenic	0.825447	1
+Arg	10449	T	C	Pathogenic	0.799763	1
+Arg	10449	T	G	Pathogenic	0.825447	1
+Arg	10450	A	C	Likely pathogenic	0.661303	1
+Arg	10450	A	G	Likely pathogenic	0.635361	1
+Arg	10450	A	T	Likely pathogenic	0.661303	1
+Arg	10451	T	A	Likely neutral	0.426889	1
+Arg	10451	T	C	Likely neutral	0.453231	1
+Arg	10451	T	G	Likely neutral	0.426889	1
+Arg	10452	G	A	Pathogenic	0.769486	1
+Arg	10452	G	C	Pathogenic	0.888808	1
+Arg	10452	G	T	Pathogenic	0.888808	1
+Arg	10453	A	C	Likely pathogenic	0.582565	1
+Arg	10453	A	G	Likely pathogenic	0.521444	0
+Arg	10453	A	T	Likely pathogenic	0.52317	1
+Arg	10454	T	A	Neutral	0.223182	0
+Arg	10454	T	C	Neutral	0.228482	0
+Arg	10454	T	G	Neutral	0.316002	0
+Arg	10455	A	C	Neutral	0.094622	0
+Arg	10455	A	G	Neutral	0.094977	0
+Arg	10455	A	T	Neutral	0.162667	0
+Arg	10456	A	C	Neutral	0.25976	0
+Arg	10456	A	G	Neutral	0.197452	0
+Arg	10456	A	T	Neutral	0.25976	0
+Arg	10457	T	A	Neutral	0.348163	1
+Arg	10457	T	C	Neutral	0.378142	0
+Arg	10457	T	G	Likely neutral	0.395938	1
+Arg	10458	C	A	Pathogenic	0.807697	1
+Arg	10458	C	G	Pathogenic	0.807697	1
+Arg	10458	C	T	Pathogenic	0.701418	1
+Arg	10459	A	C	Likely pathogenic	0.616975	1
+Arg	10459	A	G	Likely pathogenic	0.562986	1
+Arg	10459	A	T	Likely pathogenic	0.616975	1
+Arg	10460	T	A	Likely pathogenic	0.622872	1
+Arg	10460	T	C	Likely pathogenic	0.602364	1
+Arg	10460	T	G	Likely pathogenic	0.622872	1
+Arg	10461	A	C	Pathogenic	0.850735	1
+Arg	10461	A	G	Pathogenic	0.822338	1
+Arg	10461	A	T	Pathogenic	0.850735	1
+Arg	10462	T	A	Likely pathogenic	0.561784	1
+Arg	10462	T	C	Likely neutral	0.438506	1
+Arg	10462	T	G	Likely neutral	0.457729	1
+Arg	10463	T	A	Neutral	0.318664	0
+Arg	10463	T	C	Neutral	0.311335	0
+Arg	10463	T	G	Neutral	0.308332	0
+Arg	10464	T	A	Pathogenic	0.660464	0
+Arg	10464	T	C	Pathogenic	0.758914	1
+Arg	10464	T	G	Pathogenic	0.788145	1
+Arg	10465	A	C	Likely pathogenic	0.568651	1
+Arg	10465	A	G	Likely pathogenic	0.548324	1
+Arg	10465	A	T	Likely pathogenic	0.568651	1
+Arg	10466	C	A	Likely neutral	0.490431	1
+Arg	10466	C	G	Likely neutral	0.490431	1
+Arg	10466	C	T	Likely neutral	0.458315	1
+Arg	10467	C	A	Pathogenic	0.771473	1
+Arg	10467	C	G	Pathogenic	0.771473	1
+Arg	10467	C	T	Pathogenic	0.641485	1
+Arg	10468	A	C	Pathogenic	0.738774	1
+Arg	10468	A	G	Pathogenic	0.738774	1
+Arg	10468	A	T	Pathogenic	0.656383	1
+Arg	10469	A	C	Likely pathogenic	0.614912	1
+Arg	10469	A	G	Likely pathogenic	0.540172	1
+Arg	10469	A	T	Likely pathogenic	0.50247	1
+Asn	5729	T	A	Likely pathogenic	0.635233	1
+Asn	5729	T	C	Likely pathogenic	0.635233	1
+Asn	5729	T	G	Likely pathogenic	0.635233	1
+Asn	5728	A	C	Likely pathogenic	0.630658	1
+Asn	5728	A	G	Likely pathogenic	0.591783	0
+Asn	5728	A	T	Likely pathogenic	0.630658	1
+Asn	5727	G	A	Pathogenic	0.877708	1
+Asn	5727	G	C	Pathogenic	0.911938	1
+Asn	5727	G	T	Pathogenic	0.911938	1
+Asn	5726	A	C	Pathogenic	0.722271	1
+Asn	5726	A	G	Pathogenic	0.693126	1
+Asn	5726	A	T	Pathogenic	0.722271	1
+Asn	5725	T	A	Likely pathogenic	0.602123	1
+Asn	5725	T	C	Likely pathogenic	0.571583	0
+Asn	5725	T	G	Likely pathogenic	0.602123	1
+Asn	5724	T	A	Likely neutral	0.442912	1
+Asn	5724	T	C	Likely neutral	0.377419	1
+Asn	5724	T	G	Likely neutral	0.442912	1
+Asn	5723	G	A	Pathogenic	0.663168	0
+Asn	5723	G	C	Pathogenic	0.781609	1
+Asn	5723	G	T	Pathogenic	0.781609	1
+Asn	5722	A	C	Pathogenic	0.623993	1
+Asn	5722	A	G	Pathogenic	0.623993	1
+Asn	5722	A	T	Pathogenic	0.623993	1
+Asn	5721	A	C	Likely pathogenic	0.53019	1
+Asn	5721	A	G	Likely neutral	0.489705	1
+Asn	5721	A	T	Likely pathogenic	0.53019	1
+Asn	5720	G	A	Pathogenic	0.740717	0
+Asn	5720	G	C	Pathogenic	0.79802	1
+Asn	5720	G	T	Pathogenic	0.79802	1
+Asn	5719	C	A	Pathogenic	0.661622	1
+Asn	5719	C	G	Pathogenic	0.661622	1
+Asn	5719	C	T	Pathogenic	0.661622	1
+Asn	5718	C	A	Pathogenic	0.826073	1
+Asn	5718	C	G	Pathogenic	0.826073	1
+Asn	5718	C	T	Pathogenic	0.826073	1
+Asn	5717	A	C	Likely pathogenic	0.625663	0
+Asn	5717	A	G	Likely pathogenic	0.625663	0
+Asn	5717	A	T	Likely pathogenic	0.553224	0
+Asn	5716	G	A	Pathogenic	0.74311	0
+Asn	5716	G	C	Pathogenic	0.828325	1
+Asn	5716	G	T	Pathogenic	0.789662	1
+Asn	5715	T	A	Neutral	0.389463	1
+Asn	5715	T	C	Likely neutral	0.407439	0
+Asn	5715	T	G	Likely neutral	0.403568	1
+Asn	5714	T	A	Likely neutral	0.383121	1
+Asn	5714	T	C	Likely neutral	0.350371	1
+Asn	5714	T	G	Neutral	0.303816	1
+Asn	5713	G	A	Likely neutral	0.481051	1
+Asn	5713	G	C	Pathogenic	0.618624	1
+Asn	5713	G	T	Likely neutral	0.490952	1
+Asn	5712	A	C	Neutral	0.350373	0
+Asn	5712	A	G	Neutral	0.338138	0
+Asn	5712	A	T	Neutral	0.339168	0
+Asn	5711	T	A	Neutral	0.279434	0
+Asn	5711	T	C	Neutral	0.304068	0
+Asn	5711	T	G	Neutral	0.330399	0
+Asn	5710	T	A	Likely pathogenic	0.519513	1
+Asn	5710	T	C	Likely pathogenic	0.592281	1
+Asn	5710	T	G	Likely pathogenic	0.592281	1
+Asn	5709	A	C	Likely pathogenic	0.505799	1
+Asn	5709	A	G	Likely neutral	0.425823	1
+Asn	5709	A	T	Likely neutral	0.405446	1
+Asn	5708	G	A	Likely neutral	0.498628	0
+Asn	5708	G	C	Likely pathogenic	0.55821	0
+Asn	5708	G	T	Likely pathogenic	0.535061	0
+Asn	5707	G	A	Pathogenic	0.731459	1
+Asn	5707	G	C	Pathogenic	0.731459	1
+Asn	5707	G	T	Pathogenic	0.731459	1
+Asn	5706	G	A	Pathogenic	0.883618	1
+Asn	5706	G	C	Pathogenic	0.883618	1
+Asn	5706	G	T	Pathogenic	0.833745	1
+Asn	5705	T	A	Likely pathogenic	0.520264	0
+Asn	5705	T	C	Likely neutral	0.429454	0
+Asn	5705	T	G	Likely pathogenic	0.520264	0
+Asn	5704	G	A	Neutral	0.196151	0
+Asn	5704	G	C	Neutral	0.203323	0
+Asn	5704	G	T	Neutral	0.098686	0
+Asn	5703	C	A	Likely pathogenic	0.540476	1
+Asn	5703	C	G	Likely pathogenic	0.577356	1
+Asn	5703	C	T	Likely pathogenic	0.65034	1
+Asn	5702	T	A	Likely pathogenic	0.57786	1
+Asn	5702	T	C	Likely pathogenic	0.57786	1
+Asn	5702	T	G	Likely pathogenic	0.57786	1
+Asn	5701	T	A	Pathogenic	0.834862	1
+Asn	5701	T	C	Pathogenic	0.834862	1
+Asn	5701	T	G	Pathogenic	0.834862	1
+Asn	5700	A	C	Likely pathogenic	0.63423	1
+Asn	5700	A	G	Likely pathogenic	0.63423	1
+Asn	5700	A	T	Likely pathogenic	0.63423	1
+Asn	5699	G	A	Pathogenic	0.919015	1
+Asn	5699	G	C	Pathogenic	0.919015	1
+Asn	5699	G	T	Pathogenic	0.919015	1
+Asn	5698	C	A	Pathogenic	0.727536	1
+Asn	5698	C	G	Pathogenic	0.727536	1
+Asn	5698	C	T	Pathogenic	0.727536	1
+Asn	5697	T	A	Likely pathogenic	0.570362	1
+Asn	5697	T	C	Likely pathogenic	0.570362	1
+Asn	5697	T	G	Likely pathogenic	0.570362	1
+Asn	5696	G	A	Pathogenic	0.758058	1
+Asn	5696	G	C	Pathogenic	0.758058	1
+Asn	5696	G	T	Pathogenic	0.758058	1
+Asn	5695	T	A	Likely neutral	0.42759	1
+Asn	5695	T	C	Likely neutral	0.42759	1
+Asn	5695	T	G	Likely neutral	0.42759	1
+Asn	5694	T	A	Pathogenic	0.683343	1
+Asn	5694	T	C	Pathogenic	0.683343	1
+Asn	5694	T	G	Pathogenic	0.683343	1
+Asn	5693	A	C	Pathogenic	0.768982	1
+Asn	5693	A	G	Pathogenic	0.768982	1
+Asn	5693	A	T	Pathogenic	0.768982	1
+Asn	5692	A	C	Likely pathogenic	0.719225	1
+Asn	5692	A	G	Likely pathogenic	0.719225	1
+Asn	5692	A	T	Likely pathogenic	0.719225	1
+Asn	5691	C	A	Pathogenic	0.787219	1
+Asn	5691	C	G	Pathogenic	0.787219	1
+Asn	5691	C	T	Pathogenic	0.787219	1
+Asn	5690	T	A	Pathogenic	0.682356	1
+Asn	5690	T	C	Pathogenic	0.682356	1
+Asn	5690	T	G	Pathogenic	0.682356	1
+Asn	5689	A	C	Pathogenic	0.868825	1
+Asn	5689	A	G	Pathogenic	0.868825	1
+Asn	5689	A	T	Pathogenic	0.868825	1
+Asn	5688	A	C	Likely neutral	0.434169	1
+Asn	5688	A	G	Likely neutral	0.434169	1
+Asn	5688	A	T	Likely neutral	0.434169	1
+Asn	5687	G	A	Pathogenic	0.728455	1
+Asn	5687	G	C	Pathogenic	0.699096	1
+Asn	5687	G	T	Pathogenic	0.656834	1
+Asn	5686	T	A	Neutral	0.234806	1
+Asn	5686	T	C	Neutral	0.279429	1
+Asn	5686	T	G	Neutral	0.210761	1
+Asn	5685	G	A	Neutral	0.240348	0
+Asn	5685	G	C	Neutral	0.248558	0
+Asn	5685	G	T	Neutral	0.311377	0
+Asn	5684	T	A	Likely neutral	0.457467	1
+Asn	5684	T	C	Likely neutral	0.437462	1
+Asn	5684	T	G	Likely neutral	0.492346	1
+Asn	5683	T	A	Likely pathogenic	0.555181	1
+Asn	5683	T	C	Likely pathogenic	0.609323	1
+Asn	5683	T	G	Likely pathogenic	0.609323	1
+Asn	5682	T	A	Neutral	0.269113	0
+Asn	5682	T	C	Neutral	0.295135	0
+Asn	5682	T	G	Likely neutral	0.329648	0
+Asn	5681	G	A	Pathogenic	0.62996	0
+Asn	5681	G	C	Pathogenic	0.739648	1
+Asn	5681	G	T	Pathogenic	0.739648	1
+Asn	5680	T	A	Likely neutral	0.463484	0
+Asn	5680	T	C	Likely neutral	0.474282	1
+Asn	5680	T	G	Likely pathogenic	0.575726	1
+Asn	5679	G	A	Likely pathogenic	0.572241	1
+Asn	5679	G	C	Pathogenic	0.693028	1
+Asn	5679	G	T	Pathogenic	0.693028	1
+Asn	5678	G	A	Likely pathogenic	0.610908	1
+Asn	5678	G	C	Likely pathogenic	0.663352	1
+Asn	5678	G	T	Likely pathogenic	0.663352	1
+Asn	5677	G	A	Pathogenic	0.925445	1
+Asn	5677	G	C	Pathogenic	0.925445	1
+Asn	5677	G	T	Pathogenic	0.925445	1
+Asn	5676	T	A	Neutral	0.178468	0
+Asn	5676	T	C	Neutral	0.143176	0
+Asn	5676	T	G	Neutral	0.173953	0
+Asn	5675	T	A	Neutral	0.258535	1
+Asn	5675	T	C	Neutral	0.336585	1
+Asn	5675	T	G	Neutral	0.267397	1
+Asn	5674	T	A	Neutral	0.339423	0
+Asn	5674	T	C	Neutral	0.299839	0
+Asn	5674	T	G	Neutral	0.301684	0
+Asn	5673	A	C	Neutral	0.220274	0
+Asn	5673	A	G	Neutral	0.250539	0
+Asn	5673	A	T	Neutral	0.295745	0
+Asn	5672	A	C	Neutral	0.319542	0
+Asn	5672	A	G	Neutral	0.262874	0
+Asn	5672	A	T	Neutral	0.284521	0
+Asn	5671	G	A	Likely neutral	0.393639	0
+Asn	5671	G	C	Likely neutral	0.436936	0
+Asn	5671	G	T	Neutral	0.331551	0
+Asn	5670	T	A	Likely neutral	0.363497	0
+Asn	5670	T	C	Neutral	0.325124	0
+Asn	5670	T	G	Neutral	0.332711	0
+Asn	5669	C	A	Pathogenic	0.765499	1
+Asn	5669	C	G	Pathogenic	0.765499	1
+Asn	5669	C	T	Pathogenic	0.765499	1
+Asn	5668	C	A	Likely pathogenic	0.614331	1
+Asn	5668	C	G	Likely pathogenic	0.614331	1
+Asn	5668	C	T	Likely pathogenic	0.599264	1
+Asn	5667	C	A	Pathogenic	0.695672	1
+Asn	5667	C	G	Pathogenic	0.695672	1
+Asn	5667	C	T	Likely pathogenic	0.573955	1
+Asn	5666	A	C	Likely neutral	0.405413	1
+Asn	5666	A	G	Neutral	0.326855	1
+Asn	5666	A	T	Neutral	0.375563	0
+Asn	5665	T	A	Likely neutral	0.380321	0
+Asn	5665	T	C	Likely neutral	0.449346	0
+Asn	5665	T	G	Likely neutral	0.380321	0
+Asn	5664	T	A	Neutral	0.262011	0
+Asn	5664	T	C	Neutral	0.30651	0
+Asn	5664	T	G	Neutral	0.262011	0
+Asn	5663	G	A	Neutral	0.3473	0
+Asn	5663	G	C	Neutral	0.329608	0
+Asn	5663	G	T	Neutral	0.235199	0
+Asn	5662	G	A	Likely neutral	0.473048	0
+Asn	5662	G	C	Likely neutral	0.471328	0
+Asn	5662	G	T	Likely neutral	0.471328	0
+Asn	5661	T	A	Pathogenic	0.728295	1
+Asn	5661	T	C	Likely pathogenic	0.589277	1
+Asn	5661	T	G	Pathogenic	0.728295	1
+Asn	5660	C	A	Pathogenic	0.876773	1
+Asn	5660	C	G	Pathogenic	0.876773	1
+Asn	5660	C	T	Pathogenic	0.856494	1
+Asn	5659	T	A	Pathogenic	0.682356	1
+Asn	5659	T	C	Pathogenic	0.682356	0
+Asn	5659	T	G	Pathogenic	0.682356	1
+Asn	5658	A	C	Likely pathogenic	0.63423	1
+Asn	5658	A	G	Likely pathogenic	0.63423	1
+Asn	5658	A	T	Likely pathogenic	0.63423	1
+Asn	5657	G	A	Pathogenic	0.826259	1
+Asn	5657	G	C	Pathogenic	0.826259	1
+Asn	5657	G	T	Pathogenic	0.826259	1
+Asp	7518	A	C	Likely neutral	0.388024	1
+Asp	7518	A	G	Likely neutral	0.313655	0
+Asp	7518	A	T	Likely neutral	0.335988	1
+Asp	7519	A	C	Likely neutral	0.370474	1
+Asp	7519	A	G	Likely neutral	0.370474	1
+Asp	7519	A	T	Likely neutral	0.370474	1
+Asp	7520	G	A	Likely neutral	0.406763	1
+Asp	7520	G	C	Likely neutral	0.454536	1
+Asp	7520	G	T	Likely neutral	0.454536	1
+Asp	7521	G	A	Likely neutral	0.457566	0
+Asp	7521	G	C	Likely neutral	0.459094	0
+Asp	7521	G	T	Likely neutral	0.459094	0
+Asp	7522	T	A	Likely pathogenic	0.561343	1
+Asp	7522	T	C	Likely pathogenic	0.561343	1
+Asp	7522	T	G	Likely pathogenic	0.561343	1
+Asp	7523	A	C	Pathogenic	0.639598	1
+Asp	7523	A	G	Likely pathogenic	0.610183	1
+Asp	7523	A	T	Likely pathogenic	0.610183	1
+Asp	7524	T	A	Likely neutral	0.47058	1
+Asp	7524	T	C	Likely neutral	0.385119	1
+Asp	7524	T	G	Likely neutral	0.47058	1
+Asp	7525	T	A	Likely pathogenic	0.600464	1
+Asp	7525	T	C	Likely pathogenic	0.600464	1
+Asp	7525	T	G	Likely pathogenic	0.600464	1
+Asp	7526	A	C	Likely neutral	0.468085	1
+Asp	7526	A	G	Likely neutral	0.468085	1
+Asp	7526	A	T	Likely neutral	0.468085	1
+Asp	7527	G	A	Pathogenic	0.874793	0
+Asp	7527	G	C	Pathogenic	0.874793	1
+Asp	7527	G	T	Pathogenic	0.874793	1
+Asp	7528	A	C	Neutral	0.254152	1
+Asp	7528	A	G	Neutral	0.254152	1
+Asp	7528	A	T	Neutral	0.216443	1
+Asp	7529	A	C	Pathogenic	0.771652	1
+Asp	7529	A	G	Pathogenic	0.771652	1
+Asp	7529	A	T	Pathogenic	0.771652	1
+Asp	7530	A	C	Pathogenic	0.771652	1
+Asp	7530	A	G	Pathogenic	0.771652	1
+Asp	7530	A	T	Pathogenic	0.771652	1
+Asp	7531	A	C	Likely pathogenic	0.616555	1
+Asp	7531	A	G	Likely pathogenic	0.616555	1
+Asp	7531	A	T	Likely pathogenic	0.616555	1
+Asp	7532	A	C	Likely neutral	0.497508	1
+Asp	7532	A	G	Likely neutral	0.389413	1
+Asp	7532	A	T	Likely neutral	0.497508	1
+Asp	7533	C	A	Neutral	0.093985	0
+Asp	7533	C	G	Neutral	0.212427	0
+Asp	7533	C	T	Neutral	0.108571	0
+Asp	7534	C	A	Neutral	0.341529	0
+Asp	7534	C	G	Neutral	0.342177	0
+Asp	7534	C	T	Neutral	0.22588	0
+Asp	7535	A	C	Neutral	0.190841	1
+Asp	7535	A	G	Neutral	0.190841	1
+Asp	7535	A	T	Neutral	0.190841	1
+Asp	7536	T	A	Likely pathogenic	0.603319	1
+Asp	7536	T	C	Likely pathogenic	0.605308	1
+Asp	7536	T	G	Likely pathogenic	0.605308	1
+Asp	7537	T	A	Pathogenic	0.742435	1
+Asp	7537	T	C	Pathogenic	0.742435	1
+Asp	7537	T	G	Pathogenic	0.742435	1
+Asp	7538	T	A	Neutral	0.253391	1
+Asp	7538	T	C	Neutral	0.314016	1
+Asp	7538	T	G	Neutral	0.314016	1
+Asp	7539	C	A	Pathogenic	0.88991	1
+Asp	7539	C	G	Pathogenic	0.88991	1
+Asp	7539	C	T	Pathogenic	0.88991	0
+Asp	7540	A	C	Likely neutral	0.436136	1
+Asp	7540	A	G	Likely neutral	0.413631	0
+Asp	7540	A	T	Likely neutral	0.436136	1
+Asp	7541	T	A	Likely pathogenic	0.582519	1
+Asp	7541	T	C	Likely pathogenic	0.582519	1
+Asp	7541	T	G	Likely pathogenic	0.582519	1
+Asp	7542	A	C	Likely pathogenic	0.530755	1
+Asp	7542	A	G	Likely neutral	0.415402	1
+Asp	7542	A	T	Likely pathogenic	0.530755	1
+Asp	7543	A	C	Likely neutral	0.481338	1
+Asp	7543	A	G	Likely neutral	0.324739	1
+Asp	7543	A	T	Likely neutral	0.481338	1
+Asp	7544	C	A	Likely pathogenic	0.593897	1
+Asp	7544	C	G	Likely pathogenic	0.593897	1
+Asp	7544	C	T	Likely pathogenic	0.51373	1
+Asp	7545	T	A	Likely neutral	0.467816	1
+Asp	7545	T	C	Likely neutral	0.422755	1
+Asp	7545	T	G	Likely neutral	0.467816	1
+Asp	7546	T	A	Likely pathogenic	0.527095	1
+Asp	7546	T	C	Likely pathogenic	0.527095	1
+Asp	7546	T	G	Likely pathogenic	0.527095	1
+Asp	7547	T	A	Neutral	0.287255	1
+Asp	7547	T	C	Neutral	0.176658	1
+Asp	7547	T	G	Neutral	0.287255	1
+Asp	7548	G	A	Pathogenic	0.71321	1
+Asp	7548	G	C	Pathogenic	0.71321	1
+Asp	7548	G	T	Pathogenic	0.71321	1
+Asp	7549	T	A	Likely pathogenic	0.520196	1
+Asp	7549	T	C	Likely pathogenic	0.520196	1
+Asp	7549	T	G	Likely pathogenic	0.520196	1
+Asp	7550	C	A	Pathogenic	0.794856	1
+Asp	7550	C	G	Pathogenic	0.794856	1
+Asp	7550	C	T	Pathogenic	0.794856	1
+Asp	7551	A	C	Likely neutral	0.425374	1
+Asp	7551	A	G	Likely neutral	0.320812	1
+Asp	7551	A	T	Likely neutral	0.425374	1
+Asp	7552	A	C	Likely pathogenic	0.530556	1
+Asp	7552	A	G	Likely neutral	0.487836	1
+Asp	7552	A	T	Likely pathogenic	0.530556	1
+Asp	7553	A	C	Neutral	0.327324	1
+Asp	7553	A	G	Neutral	0.249866	1
+Asp	7553	A	T	Neutral	0.327324	1
+Asp	7554	G	A	Pathogenic	0.864244	1
+Asp	7554	G	C	Pathogenic	0.894033	1
+Asp	7554	G	T	Pathogenic	0.894033	1
+Asp	7555	T	A	Likely neutral	0.358113	1
+Asp	7555	T	C	Neutral	0.305211	1
+Asp	7555	T	G	Likely neutral	0.358113	1
+Asp	7556	T	A	Pathogenic	0.666281	1
+Asp	7556	T	C	Likely pathogenic	0.592569	1
+Asp	7556	T	G	Pathogenic	0.666281	1
+Asp	7557	A	C	Pathogenic	0.777675	1
+Asp	7557	A	G	Pathogenic	0.777675	1
+Asp	7557	A	T	Pathogenic	0.777675	1
+Asp	7558	A	C	Likely neutral	0.411662	1
+Asp	7558	A	G	Likely neutral	0.411662	1
+Asp	7558	A	T	Likely neutral	0.411662	1
+Asp	7559	A	C	Neutral	0.21873	0
+Asp	7559	A	G	Neutral	0.172682	0
+Asp	7559	A	T	Neutral	0.160635	0
+Asp	7560	T	A	Likely neutral	0.488874	1
+Asp	7560	T	C	Likely neutral	0.488874	1
+Asp	7560	T	G	Likely neutral	0.488874	1
+Asp	7561	T	A	Likely neutral	0.446403	1
+Asp	7561	T	C	Neutral	0.329043	1
+Asp	7561	T	G	Likely neutral	0.446403	1
+Asp	7562	A	C	Pathogenic	0.78682	1
+Asp	7562	A	G	Pathogenic	0.78682	1
+Asp	7562	A	T	Pathogenic	0.78682	1
+Asp	7563	T	A	Likely neutral	0.398556	0
+Asp	7563	T	C	Likely neutral	0.345623	1
+Asp	7563	T	G	Likely neutral	0.398556	1
+Asp	7564	A	C	Likely neutral	0.419818	1
+Asp	7564	A	G	Neutral	0.313198	0
+Asp	7564	A	T	Likely neutral	0.382823	1
+Asp	7565	G	A	Likely neutral	0.348522	0
+Asp	7565	G	C	Likely neutral	0.416914	1
+Asp	7565	G	T	Likely neutral	0.416914	1
+Asp	7566	G	A	Neutral	0.339361	1
+Asp	7566	G	C	Likely neutral	0.453763	1
+Asp	7566	G	T	Likely neutral	0.453763	1
+Asp	7567	C	A	Neutral	0.12425	0
+Asp	7567	C	G	Neutral	0.242021	0
+Asp	7567	C	T	Neutral	0.171571	0
+Asp	7568	T	A	Neutral	0.167682	0
+Asp	7568	T	C	Neutral	0.124802	0
+Asp	7568	T	G	Neutral	0.219653	0
+Asp	7569	A	C	Likely neutral	0.402496	0
+Asp	7569	A	G	Likely neutral	0.366256	0
+Asp	7569	A	T	Neutral	0.304997	0
+Asp	7570	A	C	Likely neutral	0.317531	0
+Asp	7570	A	G	Likely neutral	0.39397	0
+Asp	7570	A	T	Neutral	0.283522	0
+Asp	7571	A	C	Neutral	0.158365	0
+Asp	7571	A	G	Neutral	0.28164	0
+Asp	7571	A	T	Neutral	0.207748	0
+Asp	7572	T	A	Neutral	0.158947	0
+Asp	7572	T	C	Neutral	0.17316	0
+Asp	7572	T	G	Neutral	0.191235	0
+Asp	7573	C	A	Likely neutral	0.479604	1
+Asp	7573	C	G	Likely neutral	0.479604	1
+Asp	7573	C	T	Likely neutral	0.366149	1
+Asp	7574	C	A	Likely pathogenic	0.542752	1
+Asp	7574	C	G	Likely pathogenic	0.542752	1
+Asp	7574	C	T	Likely pathogenic	0.505954	0
+Asp	7575	T	A	Likely pathogenic	0.51136	1
+Asp	7575	T	C	Likely neutral	0.489436	0
+Asp	7575	T	G	Likely pathogenic	0.51136	1
+Asp	7576	A	C	Neutral	0.301755	1
+Asp	7576	A	G	Neutral	0.203007	1
+Asp	7576	A	T	Neutral	0.219956	0
+Asp	7577	T	A	Likely pathogenic	0.582519	1
+Asp	7577	T	C	Likely pathogenic	0.582519	1
+Asp	7577	T	G	Likely pathogenic	0.582519	1
+Asp	7578	A	C	Likely pathogenic	0.512749	1
+Asp	7578	A	G	Likely neutral	0.404472	1
+Asp	7578	A	T	Likely pathogenic	0.512749	1
+Asp	7579	T	A	Likely pathogenic	0.582519	1
+Asp	7579	T	C	Likely pathogenic	0.582519	1
+Asp	7579	T	G	Likely pathogenic	0.582519	1
+Asp	7580	A	C	Pathogenic	0.711124	1
+Asp	7580	A	G	Pathogenic	0.682377	1
+Asp	7580	A	T	Pathogenic	0.711124	1
+Asp	7581	T	A	Likely neutral	0.424784	0
+Asp	7581	T	C	Likely neutral	0.424784	0
+Asp	7581	T	G	Likely neutral	0.424784	0
+Asp	7582	C	A	Pathogenic	0.832805	1
+Asp	7582	C	G	Pathogenic	0.832805	1
+Asp	7582	C	T	Pathogenic	0.808497	1
+Asp	7583	T	A	Likely pathogenic	0.528246	1
+Asp	7583	T	C	Likely pathogenic	0.528246	1
+Asp	7583	T	G	Likely pathogenic	0.528246	1
+Asp	7584	T	A	Likely pathogenic	0.530955	1
+Asp	7584	T	C	Likely neutral	0.39198	0
+Asp	7584	T	G	Likely pathogenic	0.530955	1
+Asp	7585	A	C	Neutral	0.096765	0
+Asp	7585	A	G	Neutral	0.213403	0
+Asp	7585	A	T	Neutral	0.087485	0
+Cys	5826	A	C	Likely neutral	0.486131	1
+Cys	5826	A	G	Likely neutral	0.379215	0
+Cys	5826	A	T	Likely neutral	0.486131	1
+Cys	5825	G	A	Pathogenic	0.916975	1
+Cys	5825	G	C	Pathogenic	0.916975	1
+Cys	5825	G	T	Pathogenic	0.916975	1
+Cys	5824	C	A	Likely neutral	0.498102	1
+Cys	5824	C	G	Likely neutral	0.498102	1
+Cys	5824	C	T	Likely neutral	0.458938	0
+Cys	5823	T	A	Likely neutral	0.39442	0
+Cys	5823	T	C	Likely neutral	0.411586	0
+Cys	5823	T	G	Likely neutral	0.39442	0
+Cys	5822	C	A	Likely neutral	0.490106	1
+Cys	5822	C	G	Likely neutral	0.490106	1
+Cys	5822	C	T	Likely neutral	0.43664	0
+Cys	5821	C	A	Neutral	0.231694	1
+Cys	5821	C	G	Neutral	0.231694	1
+Cys	5821	C	T	Neutral	0.136859	0
+Cys	5820	G	A	Likely neutral	0.460301	1
+Cys	5820	G	C	Likely pathogenic	0.598001	1
+Cys	5820	G	T	Likely pathogenic	0.598001	1
+Cys	5819	A	C	Likely pathogenic	0.565549	1
+Cys	5819	A	G	Likely pathogenic	0.565549	1
+Cys	5819	A	T	Likely neutral	0.499752	1
+Cys	5818	G	A	Likely neutral	0.336002	0
+Cys	5818	G	C	Likely neutral	0.38805	0
+Cys	5818	G	T	Likely neutral	0.38805	0
+Cys	5817	G	A	Pathogenic	0.803719	1
+Cys	5817	G	C	Pathogenic	0.803719	1
+Cys	5817	G	T	Pathogenic	0.803719	1
+Cys	5816	T	A	Likely pathogenic	0.62239	1
+Cys	5816	T	C	Likely pathogenic	0.62239	1
+Cys	5816	T	G	Likely pathogenic	0.62239	1
+Cys	5815	G	A	Pathogenic	0.93127	1
+Cys	5815	G	C	Pathogenic	0.93127	1
+Cys	5815	G	T	Pathogenic	0.93127	1
+Cys	5814	A	C	Likely pathogenic	0.611163	1
+Cys	5814	A	G	Likely pathogenic	0.583707	1
+Cys	5814	A	T	Likely pathogenic	0.583958	0
+Cys	5813	T	A	Neutral	0.113582	0
+Cys	5813	T	C	Neutral	0.212305	0
+Cys	5813	T	G	Neutral	0.212305	0
+Cys	5812	T	A	Neutral	0.12831	1
+Cys	5812	T	C	Neutral	0.12831	1
+Cys	5812	T	G	Neutral	0.154222	1
+Cys	5811	T	A	Neutral	0.132894	0
+Cys	5811	T	C	Neutral	0.235367	0
+Cys	5811	T	G	Neutral	0.235367	0
+Cys	5810	T	A	Likely neutral	0.465272	0
+Cys	5810	T	C	Likely neutral	0.465272	1
+Cys	5810	T	G	Likely neutral	0.485306	1
+Cys	5809	C	A	Pathogenic	0.909803	1
+Cys	5809	C	G	Pathogenic	0.909803	1
+Cys	5809	C	T	Pathogenic	0.909803	1
+Cys	5808	A	C	Likely pathogenic	0.631934	1
+Cys	5808	A	G	Likely pathogenic	0.631934	1
+Cys	5808	A	T	Likely pathogenic	0.631934	1
+Cys	5807	T	A	Likely neutral	0.409756	0
+Cys	5807	T	C	Neutral	0.330272	0
+Cys	5807	T	G	Likely neutral	0.409756	0
+Cys	5806	A	C	Neutral	0.228446	0
+Cys	5806	A	G	Neutral	0.188677	0
+Cys	5806	A	T	Neutral	0.228446	0
+Cys	5805	T	A	Pathogenic	0.715167	1
+Cys	5805	T	C	Pathogenic	0.715167	1
+Cys	5805	T	G	Pathogenic	0.715167	1
+Cys	5804	T	A	Neutral	0.283031	0
+Cys	5804	T	C	Neutral	0.170545	0
+Cys	5804	T	G	Neutral	0.283031	0
+Cys	5803	G	A	Pathogenic	0.857104	1
+Cys	5803	G	C	Pathogenic	0.901169	1
+Cys	5803	G	T	Pathogenic	0.901169	1
+Cys	5802	A	C	Likely neutral	0.415675	1
+Cys	5802	A	G	Neutral	0.327239	1
+Cys	5802	A	T	Likely neutral	0.415675	1
+Cys	5801	A	C	Pathogenic	0.883127	1
+Cys	5801	A	G	Pathogenic	0.883127	1
+Cys	5801	A	T	Pathogenic	0.883127	1
+Cys	5800	T	A	Likely neutral	0.470953	1
+Cys	5800	T	C	Likely neutral	0.459016	1
+Cys	5800	T	G	Likely neutral	0.470953	1
+Cys	5799	T	A	Likely neutral	0.342678	1
+Cys	5799	T	C	Likely neutral	0.342678	1
+Cys	5799	T	G	Likely neutral	0.342678	1
+Cys	5798	G	A	Likely pathogenic	0.58559	1
+Cys	5798	G	C	Likely pathogenic	0.58559	1
+Cys	5798	G	T	Likely pathogenic	0.58559	1
+Cys	5797	C	A	Pathogenic	0.686324	1
+Cys	5797	C	G	Pathogenic	0.686324	1
+Cys	5797	C	T	Pathogenic	0.686324	1
+Cys	5796	A	C	Likely pathogenic	0.643438	1
+Cys	5796	A	G	Likely pathogenic	0.643438	1
+Cys	5796	A	T	Likely pathogenic	0.643438	1
+Cys	5795	A	C	Pathogenic	0.69395	1
+Cys	5795	A	G	Pathogenic	0.69395	1
+Cys	5795	A	T	Pathogenic	0.69395	1
+Cys	5794	A	C	Likely neutral	0.491683	1
+Cys	5794	A	G	Likely neutral	0.39811	1
+Cys	5794	A	T	Likely neutral	0.491683	1
+Cys	5793	T	A	Pathogenic	0.715167	1
+Cys	5793	T	C	Pathogenic	0.715167	1
+Cys	5793	T	G	Pathogenic	0.715167	1
+Cys	5792	T	A	Likely pathogenic	0.530851	1
+Cys	5792	T	C	Likely pathogenic	0.530851	1
+Cys	5792	T	G	Likely pathogenic	0.530851	1
+Cys	5791	C	A	Pathogenic	0.663036	1
+Cys	5791	C	G	Pathogenic	0.663036	1
+Cys	5791	C	T	Likely pathogenic	0.640334	1
+Cys	5790	G	A	Neutral	0.188187	0
+Cys	5790	G	C	Neutral	0.298306	0
+Cys	5790	G	T	Neutral	0.298306	0
+Cys	5789	A	C	Likely neutral	0.415675	1
+Cys	5789	A	G	Neutral	0.327239	1
+Cys	5789	A	T	Likely neutral	0.415675	1
+Cys	5788	A	C	Likely neutral	0.468177	1
+Cys	5788	A	G	Likely neutral	0.468177	1
+Cys	5788	A	T	Likely neutral	0.468177	1
+Cys	5787	G	A	Pathogenic	0.710738	1
+Cys	5787	G	C	Pathogenic	0.762333	1
+Cys	5787	G	T	Pathogenic	0.762333	1
+Cys	5786	A	C	Neutral	0.288055	0
+Cys	5786	A	G	Neutral	0.270154	0
+Cys	5786	A	T	Neutral	0.288055	0
+Cys	5785	A	C	Likely neutral	0.401214	1
+Cys	5785	A	G	Likely neutral	0.401214	1
+Cys	5785	A	T	Neutral	0.29768	1
+Cys	5784	G	A	Pathogenic	0.916975	1
+Cys	5784	G	C	Pathogenic	0.916975	1
+Cys	5784	G	T	Pathogenic	0.916975	1
+Cys	5783	C	A	Likely pathogenic	0.52977	1
+Cys	5783	C	G	Likely pathogenic	0.52977	1
+Cys	5783	C	T	Likely neutral	0.409562	1
+Cys	5782	A	C	Pathogenic	0.745681	1
+Cys	5782	A	G	Pathogenic	0.745681	1
+Cys	5782	A	T	Pathogenic	0.745681	1
+Cys	5781	G	A	Pathogenic	0.916975	1
+Cys	5781	G	C	Pathogenic	0.916975	1
+Cys	5781	G	T	Pathogenic	0.916975	1
+Cys	5780	C	A	Neutral	0.133138	0
+Cys	5780	C	G	Neutral	0.235189	0
+Cys	5780	C	T	Neutral	0.124037	0
+Cys	5779	T	A	Neutral	0.208393	0
+Cys	5779	T	C	Neutral	0.196451	0
+Cys	5779	T	G	Neutral	0.191223	0
+Cys	5778	T	A	Neutral	0.163925	0
+Cys	5778	T	C	Neutral	0.215968	0
+Cys	5778	T	G	Neutral	0.269859	0
+Cys	5777	C	A	Neutral	0.276402	0
+Cys	5777	C	G	Neutral	0.344635	0
+Cys	5777	C	T	Neutral	0.210185	0
+Cys	5776	A	C	Likely neutral	0.408809	0
+Cys	5776	A	G	Likely neutral	0.408809	0
+Cys	5776	A	T	Likely neutral	0.349687	0
+Cys	5775	A	C	Neutral	0.230533	0
+Cys	5775	A	G	Neutral	0.172273	0
+Cys	5775	A	T	Neutral	0.205645	0
+Cys	5774	A	C	Neutral	0.2018	0
+Cys	5774	A	G	Neutral	0.207099	0
+Cys	5774	A	T	Neutral	0.197525	0
+Cys	5773	C	A	Neutral	0.155279	0
+Cys	5773	C	G	Neutral	0.155279	0
+Cys	5773	C	T	Neutral	0.130184	0
+Cys	5772	C	A	Likely pathogenic	0.564006	1
+Cys	5772	C	G	Likely pathogenic	0.564006	1
+Cys	5772	C	T	Likely pathogenic	0.518008	1
+Cys	5771	T	A	Likely pathogenic	0.590016	1
+Cys	5771	T	C	Likely pathogenic	0.590016	1
+Cys	5771	T	G	Likely pathogenic	0.590016	1
+Cys	5770	G	A	Neutral	0.318627	1
+Cys	5770	G	C	Likely neutral	0.433541	1
+Cys	5770	G	T	Likely neutral	0.433541	1
+Cys	5769	C	A	Likely pathogenic	0.640928	1
+Cys	5769	C	G	Likely pathogenic	0.640928	1
+Cys	5769	C	T	Likely pathogenic	0.640928	1
+Cys	5768	C	A	Likely neutral	0.399174	1
+Cys	5768	C	G	Likely neutral	0.399174	1
+Cys	5768	C	T	Neutral	0.289366	1
+Cys	5767	G	A	Likely neutral	0.383317	0
+Cys	5767	G	C	Likely neutral	0.447011	1
+Cys	5767	G	T	Likely neutral	0.447011	1
+Cys	5766	G	A	Neutral	0.271509	0
+Cys	5766	G	C	Likely neutral	0.410634	1
+Cys	5766	G	T	Likely neutral	0.410634	1
+Cys	5765	G	A	Likely neutral	0.449438	1
+Cys	5765	G	C	Likely neutral	0.49819	1
+Cys	5765	G	T	Likely neutral	0.49819	1
+Cys	5764	G	A	Neutral	0.37011	0
+Cys	5764	G	C	Likely neutral	0.462958	1
+Cys	5764	G	T	Likely neutral	0.462958	1
+Cys	5763	C	A	Pathogenic	0.825152	1
+Cys	5763	C	G	Pathogenic	0.825152	1
+Cys	5763	C	T	Pathogenic	0.825152	1
+Cys	5762	T	A	Likely pathogenic	0.557289	1
+Cys	5762	T	C	Likely pathogenic	0.557289	0
+Cys	5762	T	G	Likely pathogenic	0.557289	1
+Cys	5761	T	A	Likely neutral	0.415688	1
+Cys	5761	T	C	Likely neutral	0.415688	1
+Cys	5761	T	G	Likely neutral	0.415688	1
+Gln	4400	T	A	Pathogenic	0.775779	1
+Gln	4400	T	C	Pathogenic	0.775779	1
+Gln	4400	T	G	Pathogenic	0.775779	1
+Gln	4399	A	C	Likely pathogenic	0.532888	1
+Gln	4399	A	G	Likely pathogenic	0.507228	1
+Gln	4399	A	T	Likely pathogenic	0.532888	1
+Gln	4398	G	A	Likely pathogenic	0.566028	1
+Gln	4398	G	C	Likely pathogenic	0.566028	1
+Gln	4398	G	T	Likely pathogenic	0.566028	1
+Gln	4397	G	A	Neutral	0.253298	0
+Gln	4397	G	C	Neutral	0.3313	1
+Gln	4397	G	T	Neutral	0.3313	1
+Gln	4396	A	C	Likely pathogenic	0.575498	1
+Gln	4396	A	G	Likely pathogenic	0.529987	1
+Gln	4396	A	T	Likely pathogenic	0.575498	0
+Gln	4395	T	A	Neutral	0.265717	0
+Gln	4395	T	C	Neutral	0.218601	0
+Gln	4395	T	G	Neutral	0.265717	0
+Gln	4394	G	A	Neutral	0.087123	0
+Gln	4394	G	C	Neutral	0.192708	0
+Gln	4394	G	T	Neutral	0.08572	0
+Gln	4393	G	A	Neutral	0.14246	0
+Gln	4393	G	C	Neutral	0.251134	0
+Gln	4393	G	T	Neutral	0.157942	0
+Gln	4392	G	A	Neutral	0.20511	0
+Gln	4392	G	C	Neutral	0.301383	0
+Gln	4392	G	T	Neutral	0.244746	0
+Gln	4391	G	A	Pathogenic	0.900271	1
+Gln	4391	G	C	Pathogenic	0.900271	1
+Gln	4391	G	T	Pathogenic	0.900271	1
+Gln	4390	T	A	Likely pathogenic	0.549888	1
+Gln	4390	T	C	Likely pathogenic	0.549888	1
+Gln	4390	T	G	Likely pathogenic	0.549888	1
+Gln	4389	G	A	Pathogenic	0.899313	1
+Gln	4389	G	C	Pathogenic	0.899313	1
+Gln	4389	G	T	Pathogenic	0.899313	1
+Gln	4388	T	A	Likely neutral	0.458506	1
+Gln	4388	T	C	Likely neutral	0.438904	1
+Gln	4388	T	G	Likely neutral	0.458506	1
+Gln	4387	G	A	Neutral	0.206972	0
+Gln	4387	G	C	Neutral	0.324113	0
+Gln	4387	G	T	Neutral	0.232535	0
+Gln	4386	A	C	Neutral	0.276041	0
+Gln	4386	A	G	Neutral	0.180043	0
+Gln	4386	A	T	Neutral	0.150774	0
+Gln	4385	T	A	Neutral	0.129274	0
+Gln	4385	T	C	Neutral	0.173375	0
+Gln	4385	T	G	Neutral	0.144356	0
+Gln	4384	A	C	Neutral	0.254638	0
+Gln	4384	A	G	Neutral	0.118071	0
+Gln	4384	A	T	Neutral	0.115475	0
+Gln	4383	G	A	Likely neutral	0.369845	1
+Gln	4383	G	C	Likely neutral	0.369845	1
+Gln	4383	G	T	Likely neutral	0.369845	1
+Gln	4382	G	A	Pathogenic	0.694097	1
+Gln	4382	G	C	Pathogenic	0.694097	1
+Gln	4382	G	T	Pathogenic	0.694097	1
+Gln	4381	T	A	Likely neutral	0.350222	1
+Gln	4381	T	C	Likely neutral	0.350222	1
+Gln	4381	T	G	Likely neutral	0.350222	1
+Gln	4380	G	A	Neutral	0.307299	0
+Gln	4380	G	C	Neutral	0.32369	0
+Gln	4380	G	T	Neutral	0.32369	0
+Gln	4379	G	A	Likely pathogenic	0.543646	0
+Gln	4379	G	C	Likely pathogenic	0.543646	0
+Gln	4379	G	T	Likely pathogenic	0.543646	0
+Gln	4378	C	A	Pathogenic	0.738289	1
+Gln	4378	C	G	Pathogenic	0.738289	1
+Gln	4378	C	T	Pathogenic	0.738289	1
+Gln	4377	A	C	Likely pathogenic	0.611173	1
+Gln	4377	A	G	Likely pathogenic	0.611173	1
+Gln	4377	A	T	Likely pathogenic	0.611173	1
+Gln	4376	C	A	Likely pathogenic	0.585113	1
+Gln	4376	C	G	Likely pathogenic	0.585113	1
+Gln	4376	C	T	Likely pathogenic	0.585113	1
+Gln	4375	G	A	Likely neutral	0.416193	1
+Gln	4375	G	C	Likely neutral	0.434836	1
+Gln	4375	G	T	Likely neutral	0.434836	1
+Gln	4374	G	A	Neutral	0.186468	0
+Gln	4374	G	C	Neutral	0.316298	1
+Gln	4374	G	T	Neutral	0.316298	1
+Gln	4373	A	C	Likely neutral	0.425147	1
+Gln	4373	A	G	Neutral	0.266233	1
+Gln	4373	A	T	Likely neutral	0.425147	1
+Gln	4372	G	A	Pathogenic	0.894294	1
+Gln	4372	G	C	Pathogenic	0.894294	1
+Gln	4372	G	T	Pathogenic	0.894294	1
+Gln	4371	A	C	Likely neutral	0.393671	1
+Gln	4371	A	G	Likely neutral	0.32814	0
+Gln	4371	A	T	Likely neutral	0.393671	1
+Gln	4370	A	C	Likely pathogenic	0.620088	1
+Gln	4370	A	G	Likely pathogenic	0.552936	0
+Gln	4370	A	T	Likely pathogenic	0.552936	0
+Gln	4369	T	A	Neutral	0.113466	0
+Gln	4369	T	C	Neutral	0.134563	0
+Gln	4369	T	G	Neutral	0.1038	0
+Gln	4368	T	A	Likely pathogenic	0.527095	1
+Gln	4368	T	C	Likely pathogenic	0.527095	1
+Gln	4368	T	G	Likely pathogenic	0.527095	1
+Gln	4367	T	A	Likely pathogenic	0.527095	1
+Gln	4367	T	C	Likely pathogenic	0.527095	1
+Gln	4367	T	G	Likely pathogenic	0.527095	1
+Gln	4366	T	A	Likely neutral	0.323294	1
+Gln	4366	T	C	Likely neutral	0.323294	1
+Gln	4366	T	G	Likely neutral	0.323294	1
+Gln	4365	G	A	Likely pathogenic	0.558385	1
+Gln	4365	G	C	Likely pathogenic	0.558385	1
+Gln	4365	G	T	Likely pathogenic	0.558385	1
+Gln	4364	G	A	Neutral	0.211299	0
+Gln	4364	G	C	Neutral	0.295015	0
+Gln	4364	G	T	Neutral	0.295015	0
+Gln	4363	A	C	Neutral	0.281228	0
+Gln	4363	A	G	Neutral	0.194086	0
+Gln	4363	A	T	Neutral	0.281228	0
+Gln	4362	T	A	Likely pathogenic	0.597554	0
+Gln	4362	T	C	Likely pathogenic	0.602127	0
+Gln	4362	T	G	Likely pathogenic	0.602127	1
+Gln	4361	T	A	Likely neutral	0.491882	1
+Gln	4361	T	C	Likely neutral	0.433771	0
+Gln	4361	T	G	Likely neutral	0.491882	1
+Gln	4360	C	A	Pathogenic	0.872772	1
+Gln	4360	C	G	Pathogenic	0.872772	1
+Gln	4360	C	T	Pathogenic	0.872772	1
+Gln	4359	T	A	Pathogenic	0.658355	1
+Gln	4359	T	C	Pathogenic	0.638881	1
+Gln	4359	T	G	Pathogenic	0.658355	1
+Gln	4358	C	A	Likely neutral	0.446355	1
+Gln	4358	C	G	Likely neutral	0.446355	1
+Gln	4358	C	T	Likely neutral	0.367528	0
+Gln	4357	A	C	Likely neutral	0.428534	1
+Gln	4357	A	G	Likely neutral	0.389805	1
+Gln	4357	A	T	Neutral	0.359802	1
+Gln	4356	G	A	Neutral	0.212878	0
+Gln	4356	G	C	Neutral	0.273167	0
+Gln	4356	G	T	Neutral	0.273167	0
+Gln	4355	G	A	Likely pathogenic	0.56818	1
+Gln	4355	G	C	Likely pathogenic	0.56818	1
+Gln	4355	G	T	Likely pathogenic	0.56818	1
+Gln	4354	G	A	Neutral	0.146553	0
+Gln	4354	G	C	Neutral	0.283097	0
+Gln	4354	G	T	Neutral	0.138066	0
+Gln	4353	A	C	Neutral	0.302865	1
+Gln	4353	A	G	Neutral	0.227617	0
+Gln	4353	A	T	Neutral	0.221027	0
+Gln	4352	T	A	Likely neutral	0.360093	1
+Gln	4352	T	C	Likely neutral	0.326522	1
+Gln	4352	T	G	Neutral	0.322339	1
+Gln	4351	G	A	Neutral	0.24225	1
+Gln	4351	G	C	Neutral	0.321074	1
+Gln	4351	G	T	Neutral	0.321074	1
+Gln	4350	G	A	Likely neutral	0.398935	1
+Gln	4350	G	C	Likely neutral	0.451217	1
+Gln	4350	G	T	Likely neutral	0.451217	1
+Gln	4349	G	A	Pathogenic	0.90568	1
+Gln	4349	G	C	Pathogenic	0.90568	1
+Gln	4349	G	T	Pathogenic	0.90568	1
+Gln	4348	T	A	Likely neutral	0.325217	1
+Gln	4348	T	C	Likely neutral	0.325217	1
+Gln	4348	T	G	Likely neutral	0.325217	1
+Gln	4347	T	A	Likely neutral	0.375079	1
+Gln	4347	T	C	Likely neutral	0.375079	1
+Gln	4347	T	G	Likely neutral	0.375079	1
+Gln	4346	C	A	Likely neutral	0.49481	1
+Gln	4346	C	G	Likely neutral	0.49481	1
+Gln	4346	C	T	Likely neutral	0.49481	1
+Gln	4345	G	A	Neutral	0.162132	0
+Gln	4345	G	C	Neutral	0.287654	0
+Gln	4345	G	T	Neutral	0.287654	0
+Gln	4344	A	C	Likely pathogenic	0.552	1
+Gln	4344	A	G	Likely pathogenic	0.552	1
+Gln	4344	A	T	Likely pathogenic	0.552	1
+Gln	4343	T	A	Neutral	0.148507	0
+Gln	4343	T	C	Neutral	0.106665	0
+Gln	4343	T	G	Neutral	0.108026	0
+Gln	4342	T	A	Neutral	0.133031	0
+Gln	4342	T	C	Neutral	0.135742	0
+Gln	4342	T	G	Neutral	0.127739	0
+Gln	4341	C	A	Pathogenic	0.872772	1
+Gln	4341	C	G	Pathogenic	0.872772	1
+Gln	4341	C	T	Pathogenic	0.872772	1
+Gln	4340	T	A	Neutral	0.374948	1
+Gln	4340	T	C	Likely neutral	0.387653	0
+Gln	4340	T	G	Neutral	0.374948	1
+Gln	4339	C	A	Likely pathogenic	0.576449	1
+Gln	4339	C	G	Likely pathogenic	0.576449	1
+Gln	4339	C	T	Likely pathogenic	0.564982	1
+Gln	4338	A	C	Likely neutral	0.437601	1
+Gln	4338	A	G	Likely neutral	0.399184	1
+Gln	4338	A	T	Likely neutral	0.410805	1
+Gln	4337	T	A	Neutral	0.322522	0
+Gln	4337	T	C	Neutral	0.293221	0
+Gln	4337	T	G	Neutral	0.322522	1
+Gln	4336	A	C	Neutral	0.210068	0
+Gln	4336	A	G	Neutral	0.111472	0
+Gln	4336	A	T	Neutral	0.108451	0
+Gln	4335	G	A	Likely neutral	0.384636	0
+Gln	4335	G	C	Likely neutral	0.47186	0
+Gln	4335	G	T	Likely neutral	0.47186	0
+Gln	4334	T	A	Likely neutral	0.471828	0
+Gln	4334	T	C	Neutral	0.316177	1
+Gln	4334	T	G	Likely neutral	0.471828	1
+Gln	4333	C	A	Neutral	0.295669	1
+Gln	4333	C	G	Neutral	0.295669	1
+Gln	4333	C	T	Neutral	0.215974	0
+Gln	4332	C	A	Pathogenic	0.736003	1
+Gln	4332	C	G	Pathogenic	0.736003	1
+Gln	4332	C	T	Pathogenic	0.703567	1
+Gln	4331	T	A	Likely pathogenic	0.602417	1
+Gln	4331	T	C	Likely pathogenic	0.584404	1
+Gln	4331	T	G	Likely pathogenic	0.602417	1
+Gln	4330	A	C	Likely pathogenic	0.540247	1
+Gln	4330	A	G	Likely pathogenic	0.540247	1
+Gln	4330	A	T	Likely pathogenic	0.540247	1
+Gln	4329	G	A	Pathogenic	0.771757	1
+Gln	4329	G	C	Pathogenic	0.771757	1
+Gln	4329	G	T	Pathogenic	0.771757	1
+Glu	14742	G	A	Likely pathogenic	0.58875	0
+Glu	14742	G	C	Pathogenic	0.657225	0
+Glu	14742	G	T	Pathogenic	0.657225	0
+Glu	14741	T	A	Likely neutral	0.36524	1
+Glu	14741	T	C	Neutral	0.291789	1
+Glu	14741	T	G	Likely neutral	0.36524	1
+Glu	14740	T	A	Likely pathogenic	0.50065	1
+Glu	14740	T	C	Likely pathogenic	0.50065	1
+Glu	14740	T	G	Likely pathogenic	0.50065	1
+Glu	14739	C	A	Likely pathogenic	0.517058	1
+Glu	14739	C	G	Likely pathogenic	0.517058	1
+Glu	14739	C	T	Likely pathogenic	0.507731	0
+Glu	14738	T	A	Likely pathogenic	0.53565	1
+Glu	14738	T	C	Likely pathogenic	0.61789	0
+Glu	14738	T	G	Likely pathogenic	0.53565	1
+Glu	14737	T	A	Likely neutral	0.372165	1
+Glu	14737	T	C	Likely neutral	0.356884	0
+Glu	14737	T	G	Likely neutral	0.372165	1
+Glu	14736	G	A	Likely neutral	0.404636	0
+Glu	14736	G	C	Likely neutral	0.493167	1
+Glu	14736	G	T	Likely neutral	0.493167	1
+Glu	14735	T	A	Likely neutral	0.482597	1
+Glu	14735	T	C	Likely neutral	0.482597	1
+Glu	14735	T	G	Likely neutral	0.482597	1
+Glu	14734	A	C	Likely neutral	0.468085	1
+Glu	14734	A	G	Likely neutral	0.468085	1
+Glu	14734	A	T	Likely neutral	0.468085	1
+Glu	14733	G	A	Pathogenic	0.933834	1
+Glu	14733	G	C	Pathogenic	0.933834	1
+Glu	14733	G	T	Pathogenic	0.933834	1
+Glu	14732	T	A	Likely pathogenic	0.520981	1
+Glu	14732	T	C	Likely pathogenic	0.520981	1
+Glu	14732	T	G	Likely pathogenic	0.520981	1
+Glu	14731	T	A	Likely neutral	0.456958	1
+Glu	14731	T	C	Likely neutral	0.456958	1
+Glu	14731	T	G	Likely neutral	0.456958	1
+Glu	14730	G	A	Pathogenic	0.917206	1
+Glu	14730	G	C	Pathogenic	0.917206	1
+Glu	14730	G	T	Pathogenic	0.917206	1
+Glu	14729	A	C	Likely pathogenic	0.519081	1
+Glu	14729	A	G	Likely pathogenic	0.519081	1
+Glu	14729	A	T	Likely pathogenic	0.519081	1
+Glu	14728	A	C	Likely pathogenic	0.575804	1
+Glu	14728	A	G	Likely pathogenic	0.552782	0
+Glu	14728	A	T	Likely pathogenic	0.575804	1
+Glu	14727	A	C	Neutral	0.198696	0
+Glu	14727	A	G	Neutral	0.1653	0
+Glu	14727	A	T	Neutral	0.154769	0
+Glu	14726	T	A	Neutral	0.338562	1
+Glu	14726	T	C	Likely neutral	0.395961	1
+Glu	14726	T	G	Likely neutral	0.402928	1
+Glu	14725	A	C	Likely neutral	0.428031	1
+Glu	14725	A	G	Likely neutral	0.428031	1
+Glu	14725	A	T	Likely neutral	0.428031	1
+Glu	14724	C	A	Pathogenic	0.80024	1
+Glu	14724	C	G	Pathogenic	0.80024	1
+Glu	14724	C	T	Pathogenic	0.80024	1
+Glu	14723	A	C	Pathogenic	0.776137	1
+Glu	14723	A	G	Pathogenic	0.776137	1
+Glu	14723	A	T	Pathogenic	0.776137	1
+Glu	14722	A	C	Likely pathogenic	0.663354	1
+Glu	14722	A	G	Likely pathogenic	0.628087	1
+Glu	14722	A	T	Likely pathogenic	0.663354	1
+Glu	14721	C	A	Likely pathogenic	0.572326	1
+Glu	14721	C	G	Likely pathogenic	0.572326	1
+Glu	14721	C	T	Likely pathogenic	0.560639	1
+Glu	14720	G	A	Likely pathogenic	0.528959	1
+Glu	14720	G	C	Likely pathogenic	0.58676	1
+Glu	14720	G	T	Likely pathogenic	0.58676	1
+Glu	14719	A	C	Likely pathogenic	0.576476	1
+Glu	14719	A	G	Likely pathogenic	0.59341	0
+Glu	14719	A	T	Likely pathogenic	0.576476	1
+Glu	14718	T	A	Neutral	0.181048	1
+Glu	14718	T	C	Neutral	0.181048	1
+Glu	14718	T	G	Neutral	0.181048	1
+Glu	14717	G	A	Pathogenic	0.788893	1
+Glu	14717	G	C	Pathogenic	0.788893	1
+Glu	14717	G	T	Pathogenic	0.788893	1
+Glu	14716	G	A	Neutral	0.170078	0
+Glu	14716	G	C	Neutral	0.303175	0
+Glu	14716	G	T	Neutral	0.199026	0
+Glu	14715	T	A	Likely neutral	0.36524	1
+Glu	14715	T	C	Neutral	0.291789	0
+Glu	14715	T	G	Likely neutral	0.36524	1
+Glu	14714	T	A	Likely pathogenic	0.527095	1
+Glu	14714	T	C	Likely pathogenic	0.527095	1
+Glu	14714	T	G	Likely pathogenic	0.527095	1
+Glu	14713	T	A	Likely pathogenic	0.527095	1
+Glu	14713	T	C	Likely pathogenic	0.527095	1
+Glu	14713	T	G	Likely pathogenic	0.527095	1
+Glu	14712	T	A	Likely pathogenic	0.527095	1
+Glu	14712	T	C	Likely pathogenic	0.527095	1
+Glu	14712	T	G	Likely pathogenic	0.527095	1
+Glu	14711	T	A	Likely neutral	0.375079	1
+Glu	14711	T	C	Likely neutral	0.375079	1
+Glu	14711	T	G	Likely neutral	0.375079	1
+Glu	14710	C	A	Pathogenic	0.794856	1
+Glu	14710	C	G	Pathogenic	0.794856	1
+Glu	14710	C	T	Pathogenic	0.794856	1
+Glu	14709	A	C	Likely neutral	0.386234	0
+Glu	14709	A	G	Likely neutral	0.368136	0
+Glu	14709	A	T	Likely neutral	0.386234	0
+Glu	14708	T	A	Likely neutral	0.461165	1
+Glu	14708	T	C	Likely neutral	0.461165	1
+Glu	14708	T	G	Likely neutral	0.47155	1
+Glu	14707	A	C	Neutral	0.335286	1
+Glu	14707	A	G	Neutral	0.279793	0
+Glu	14707	A	T	Neutral	0.335286	1
+Glu	14706	T	A	Neutral	0.356564	0
+Glu	14706	T	C	Neutral	0.268998	0
+Glu	14706	T	G	Neutral	0.356564	0
+Glu	14705	C	A	Pathogenic	0.88991	1
+Glu	14705	C	G	Pathogenic	0.88991	1
+Glu	14705	C	T	Pathogenic	0.88991	1
+Glu	14704	A	C	Likely pathogenic	0.602469	1
+Glu	14704	A	G	Likely pathogenic	0.602469	1
+Glu	14704	A	T	Likely pathogenic	0.602469	1
+Glu	14703	T	A	Likely neutral	0.482806	1
+Glu	14703	T	C	Likely neutral	0.396853	0
+Glu	14703	T	G	Likely neutral	0.482806	1
+Glu	14702	T	A	Neutral	0.342	1
+Glu	14702	T	C	Likely neutral	0.394967	1
+Glu	14702	T	G	Likely neutral	0.394967	1
+Glu	14701	G	A	Neutral	0.126728	0
+Glu	14701	G	C	Neutral	0.241249	0
+Glu	14701	G	T	Neutral	0.241249	0
+Glu	14700	G	A	Likely pathogenic	0.623657	1
+Glu	14700	G	C	Pathogenic	0.679587	1
+Glu	14700	G	T	Pathogenic	0.679587	1
+Glu	14699	T	A	Likely pathogenic	0.605152	1
+Glu	14699	T	C	Likely pathogenic	0.605152	1
+Glu	14699	T	G	Likely pathogenic	0.605152	1
+Glu	14698	C	A	Likely pathogenic	0.538036	1
+Glu	14698	C	G	Likely pathogenic	0.538036	1
+Glu	14698	C	T	Likely neutral	0.461668	1
+Glu	14697	G	A	Neutral	0.151947	0
+Glu	14697	G	C	Neutral	0.2312	0
+Glu	14697	G	T	Neutral	0.151825	0
+Glu	14696	T	A	Likely neutral	0.352843	1
+Glu	14696	T	C	Neutral	0.255691	0
+Glu	14696	T	G	Likely neutral	0.352843	1
+Glu	14695	G	A	Likely neutral	0.389329	1
+Glu	14695	G	C	Likely neutral	0.470153	1
+Glu	14695	G	T	Likely neutral	0.470153	1
+Glu	14694	G	A	Pathogenic	0.90568	1
+Glu	14694	G	C	Pathogenic	0.90568	1
+Glu	14694	G	T	Pathogenic	0.90568	1
+Glu	14693	T	A	Neutral	0.215802	1
+Glu	14693	T	C	Neutral	0.215802	1
+Glu	14693	T	G	Neutral	0.215802	1
+Glu	14692	T	A	Likely neutral	0.285961	0
+Glu	14692	T	C	Neutral	0.154611	0
+Glu	14692	T	G	Likely neutral	0.285961	0
+Glu	14691	G	A	Neutral	0.186823	0
+Glu	14691	G	C	Neutral	0.22843	0
+Glu	14691	G	T	Neutral	0.176137	0
+Glu	14690	T	A	Neutral	0.122544	0
+Glu	14690	T	C	Neutral	0.149422	0
+Glu	14690	T	G	Neutral	0.122544	0
+Glu	14689	A	C	Likely neutral	0.379592	1
+Glu	14689	A	G	Neutral	0.32569	0
+Glu	14689	A	T	Likely neutral	0.379592	1
+Glu	14688	G	A	Neutral	0.286118	0
+Glu	14688	G	C	Neutral	0.311774	0
+Glu	14688	G	T	Neutral	0.276696	0
+Glu	14687	T	A	Likely neutral	0.474417	1
+Glu	14687	T	C	Likely neutral	0.449109	1
+Glu	14687	T	G	Likely neutral	0.354487	1
+Glu	14686	C	A	Pathogenic	0.71995	1
+Glu	14686	C	G	Pathogenic	0.71995	1
+Glu	14686	C	T	Pathogenic	0.71995	1
+Glu	14685	C	A	Likely neutral	0.393139	1
+Glu	14685	C	G	Likely neutral	0.393139	1
+Glu	14685	C	T	Neutral	0.337324	1
+Glu	14684	G	A	Likely neutral	0.395289	0
+Glu	14684	G	C	Likely neutral	0.380359	0
+Glu	14684	G	T	Likely neutral	0.380359	0
+Glu	14683	T	A	Likely neutral	0.438188	0
+Glu	14683	T	C	Likely neutral	0.438188	0
+Glu	14683	T	G	Likely neutral	0.438188	0
+Glu	14682	G	A	Likely neutral	0.454641	1
+Glu	14682	G	C	Likely pathogenic	0.557118	1
+Glu	14682	G	T	Likely pathogenic	0.557118	1
+Glu	14681	C	A	Neutral	0.306608	1
+Glu	14681	C	G	Neutral	0.306608	1
+Glu	14681	C	T	Neutral	0.283227	0
+Glu	14680	G	A	Neutral	0.198	0
+Glu	14680	G	C	Neutral	0.307457	0
+Glu	14680	G	T	Neutral	0.307457	0
+Glu	14679	A	C	Neutral	0.292179	1
+Glu	14679	A	G	Neutral	0.196211	0
+Glu	14679	A	T	Neutral	0.292179	1
+Glu	14678	G	A	Likely pathogenic	0.513404	1
+Glu	14678	G	C	Likely pathogenic	0.580907	1
+Glu	14678	G	T	Likely pathogenic	0.580907	1
+Glu	14677	A	C	Likely neutral	0.468168	1
+Glu	14677	A	G	Likely neutral	0.468168	1
+Glu	14677	A	T	Likely neutral	0.468168	1
+Glu	14676	A	C	Pathogenic	0.639455	1
+Glu	14676	A	G	Likely pathogenic	0.529556	1
+Glu	14676	A	T	Pathogenic	0.639455	1
+Glu	14675	T	A	Neutral	0.310083	0
+Glu	14675	T	C	Neutral	0.24537	0
+Glu	14675	T	G	Neutral	0.310083	0
+Glu	14674	A	C	Neutral	0.214072	0
+Glu	14674	A	G	Neutral	0.094179	0
+Glu	14674	A	T	Neutral	0.088535	0
+Gly	9991	A	C	Likely neutral	0.434744	1
+Gly	9991	A	G	Neutral	0.353317	1
+Gly	9991	A	T	Likely neutral	0.434744	1
+Gly	9992	C	A	Likely pathogenic	0.551776	1
+Gly	9992	C	G	Likely pathogenic	0.551776	1
+Gly	9992	C	T	Likely pathogenic	0.53962	1
+Gly	9993	T	A	Pathogenic	0.680088	1
+Gly	9993	T	C	Pathogenic	0.680088	0
+Gly	9993	T	G	Pathogenic	0.680088	1
+Gly	9994	C	A	Pathogenic	0.700258	1
+Gly	9994	C	G	Pathogenic	0.700258	1
+Gly	9994	C	T	Pathogenic	0.692418	1
+Gly	9995	T	A	Neutral	0.361244	1
+Gly	9995	T	C	Likely neutral	0.363815	1
+Gly	9995	T	G	Neutral	0.361244	1
+Gly	9996	T	A	Neutral	0.350813	1
+Gly	9996	T	C	Neutral	0.25789	1
+Gly	9996	T	G	Neutral	0.350813	1
+Gly	9997	T	A	Pathogenic	0.681074	1
+Gly	9997	T	C	Likely pathogenic	0.616584	1
+Gly	9997	T	G	Pathogenic	0.681074	1
+Gly	9998	T	A	Likely pathogenic	0.537284	1
+Gly	9998	T	C	Likely pathogenic	0.511333	1
+Gly	9998	T	G	Likely pathogenic	0.537284	1
+Gly	9999	A	C	Likely neutral	0.468085	1
+Gly	9999	A	G	Likely neutral	0.468085	1
+Gly	9999	A	T	Likely neutral	0.468085	1
+Gly	10000	G	A	Pathogenic	0.933834	1
+Gly	10000	G	C	Pathogenic	0.933834	1
+Gly	10000	G	T	Pathogenic	0.933834	1
+Gly	10001	T	A	Likely pathogenic	0.561343	1
+Gly	10001	T	C	Likely pathogenic	0.561343	1
+Gly	10001	T	G	Likely pathogenic	0.561343	1
+Gly	10002	A	C	Pathogenic	0.78682	1
+Gly	10002	A	G	Pathogenic	0.78682	1
+Gly	10002	A	T	Pathogenic	0.78682	1
+Gly	10003	T	A	Likely pathogenic	0.526879	1
+Gly	10003	T	C	Likely pathogenic	0.55082	0
+Gly	10003	T	G	Likely pathogenic	0.526879	1
+Gly	10004	A	C	Neutral	0.097079	1
+Gly	10004	A	G	Neutral	0.218798	1
+Gly	10004	A	T	Neutral	0.103234	1
+Gly	10005	A	C	Likely neutral	0.485443	1
+Gly	10005	A	G	Likely neutral	0.402262	1
+Gly	10005	A	T	Likely neutral	0.485443	1
+Gly	10006	A	C	Neutral	0.156748	0
+Gly	10006	A	G	Neutral	0.145384	0
+Gly	10006	A	T	Neutral	0.147455	0
+Gly	10007	T	A	Neutral	0.144564	0
+Gly	10007	T	C	Neutral	0.12769	0
+Gly	10007	T	G	Neutral	0.234224	0
+Gly	10008	A	C	Likely neutral	0.432846	1
+Gly	10008	A	G	Likely neutral	0.432846	1
+Gly	10008	A	T	Likely neutral	0.432846	1
+Gly	10009	G	A	Likely pathogenic	0.628799	0
+Gly	10009	G	C	Pathogenic	0.67108	1
+Gly	10009	G	T	Pathogenic	0.67108	1
+Gly	10010	T	A	Likely pathogenic	0.623925	1
+Gly	10010	T	C	Likely pathogenic	0.623925	1
+Gly	10010	T	G	Likely pathogenic	0.623925	1
+Gly	10011	A	C	Likely neutral	0.482315	1
+Gly	10011	A	G	Likely neutral	0.482315	1
+Gly	10011	A	T	Likely neutral	0.482315	1
+Gly	10012	C	A	Likely neutral	0.416491	1
+Gly	10012	C	G	Likely neutral	0.416491	1
+Gly	10012	C	T	Neutral	0.301549	1
+Gly	10013	C	A	Neutral	0.11862	0
+Gly	10013	C	G	Neutral	0.126953	0
+Gly	10013	C	T	Neutral	0.113854	0
+Gly	10014	G	A	Neutral	0.141225	0
+Gly	10014	G	C	Neutral	0.262145	1
+Gly	10014	G	T	Neutral	0.143558	1
+Gly	10015	T	A	Neutral	0.196193	0
+Gly	10015	T	C	Neutral	0.18781	0
+Gly	10015	T	G	Neutral	0.196193	1
+Gly	10016	T	A	Pathogenic	0.775779	1
+Gly	10016	T	C	Pathogenic	0.775779	1
+Gly	10016	T	G	Pathogenic	0.775779	1
+Gly	10017	A	C	Likely neutral	0.458047	1
+Gly	10017	A	G	Likely neutral	0.46836	0
+Gly	10017	A	T	Likely neutral	0.458047	1
+Gly	10018	A	C	Likely pathogenic	0.684357	1
+Gly	10018	A	G	Likely pathogenic	0.684357	1
+Gly	10018	A	T	Likely pathogenic	0.684357	1
+Gly	10019	C	A	Likely pathogenic	0.560761	1
+Gly	10019	C	G	Likely pathogenic	0.560761	1
+Gly	10019	C	T	Likely pathogenic	0.560761	1
+Gly	10020	T	A	Likely neutral	0.343502	1
+Gly	10020	T	C	Likely neutral	0.343502	1
+Gly	10020	T	G	Likely neutral	0.343502	1
+Gly	10021	T	A	Likely neutral	0.375079	1
+Gly	10021	T	C	Likely neutral	0.375079	1
+Gly	10021	T	G	Likely neutral	0.375079	1
+Gly	10022	C	A	Likely pathogenic	0.540601	1
+Gly	10022	C	G	Likely pathogenic	0.540601	1
+Gly	10022	C	T	Likely pathogenic	0.540601	1
+Gly	10023	C	A	Pathogenic	0.657095	1
+Gly	10023	C	G	Pathogenic	0.657095	1
+Gly	10023	C	T	Pathogenic	0.657095	1
+Gly	10024	A	C	Likely pathogenic	0.612614	1
+Gly	10024	A	G	Likely pathogenic	0.612614	1
+Gly	10024	A	T	Likely pathogenic	0.612614	1
+Gly	10025	A	C	Likely pathogenic	0.635665	1
+Gly	10025	A	G	Likely pathogenic	0.635665	1
+Gly	10025	A	T	Likely pathogenic	0.635665	1
+Gly	10026	T	A	Pathogenic	0.638231	1
+Gly	10026	T	C	Pathogenic	0.638231	1
+Gly	10026	T	G	Pathogenic	0.638231	1
+Gly	10027	T	A	Neutral	0.32557	1
+Gly	10027	T	C	Neutral	0.235976	0
+Gly	10027	T	G	Neutral	0.32557	1
+Gly	10028	A	C	Pathogenic	0.777675	1
+Gly	10028	A	G	Pathogenic	0.777675	1
+Gly	10028	A	T	Pathogenic	0.777675	1
+Gly	10029	A	C	Likely neutral	0.34311	1
+Gly	10029	A	G	Neutral	0.199574	0
+Gly	10029	A	T	Neutral	0.256812	0
+Gly	10030	C	A	Likely neutral	0.376541	1
+Gly	10030	C	G	Likely neutral	0.415612	1
+Gly	10030	C	T	Likely neutral	0.386632	0
+Gly	10031	T	A	Neutral	0.145828	0
+Gly	10031	T	C	Neutral	0.141871	0
+Gly	10031	T	G	Neutral	0.227533	0
+Gly	10032	A	C	Likely neutral	0.375979	0
+Gly	10032	A	G	Neutral	0.298679	0
+Gly	10032	A	T	Likely neutral	0.375979	0
+Gly	10033	G	A	Likely pathogenic	0.607502	1
+Gly	10033	G	C	Pathogenic	0.672266	1
+Gly	10033	G	T	Pathogenic	0.672266	1
+Gly	10034	T	A	Neutral	0.087842	0
+Gly	10034	T	C	Neutral	0.097321	0
+Gly	10034	T	G	Neutral	0.159598	0
+Gly	10035	T	A	Likely pathogenic	0.510841	1
+Gly	10035	T	C	Likely neutral	0.378166	1
+Gly	10035	T	G	Likely pathogenic	0.510841	1
+Gly	10036	T	A	Neutral	0.347434	1
+Gly	10036	T	C	Likely neutral	0.287245	1
+Gly	10036	T	G	Neutral	0.347434	1
+Gly	10037	T	A	Neutral	0.190023	1
+Gly	10037	T	C	Neutral	0.135074	1
+Gly	10037	T	G	Neutral	0.237467	1
+Gly	10038	G	A	Likely pathogenic	0.59857	1
+Gly	10038	G	C	Pathogenic	0.68185	1
+Gly	10038	G	T	Pathogenic	0.68185	1
+Gly	10039	A	C	Neutral	0.286307	1
+Gly	10039	A	G	Neutral	0.139183	1
+Gly	10039	A	T	Neutral	0.286307	1
+Gly	10040	C	A	Neutral	0.15662	0
+Gly	10040	C	G	Neutral	0.231407	0
+Gly	10040	C	T	Neutral	0.168017	0
+Gly	10041	A	C	Neutral	0.079114	0
+Gly	10041	A	G	Neutral	0.102302	0
+Gly	10041	A	T	Neutral	0.074706	0
+Gly	10042	A	C	Neutral	0.108719	1
+Gly	10042	A	G	Neutral	0.182632	0
+Gly	10042	A	T	Neutral	0.146199	1
+Gly	10043	C	A	Neutral	0.195813	0
+Gly	10043	C	G	Neutral	0.294124	0
+Gly	10043	C	T	Neutral	0.167219	0
+Gly	10044	A	C	Neutral	0.211472	0
+Gly	10044	A	G	Neutral	0.211472	0
+Gly	10044	A	T	Neutral	0.234736	0
+Gly	10045	T	A	Neutral	0.143599	0
+Gly	10045	T	C	Neutral	0.119185	0
+Gly	10045	T	G	Neutral	0.121246	0
+Gly	10046	T	A	Neutral	0.305006	1
+Gly	10046	T	C	Neutral	0.242635	1
+Gly	10046	T	G	Neutral	0.305006	1
+Gly	10047	C	A	Likely pathogenic	0.529521	1
+Gly	10047	C	G	Likely neutral	0.491372	1
+Gly	10047	C	T	Likely neutral	0.448078	1
+Gly	10048	A	C	Neutral	0.296251	1
+Gly	10048	A	G	Neutral	0.211964	1
+Gly	10048	A	T	Neutral	0.237466	1
+Gly	10049	A	C	Likely neutral	0.40123	1
+Gly	10049	A	G	Likely neutral	0.368168	1
+Gly	10049	A	T	Likely neutral	0.349318	1
+Gly	10050	A	C	Likely pathogenic	0.53211	1
+Gly	10050	A	G	Likely neutral	0.416399	1
+Gly	10050	A	T	Likely pathogenic	0.53211	1
+Gly	10051	A	C	Likely pathogenic	0.650529	1
+Gly	10051	A	G	Likely pathogenic	0.567912	1
+Gly	10051	A	T	Likely pathogenic	0.650529	1
+Gly	10052	A	C	Likely neutral	0.384969	1
+Gly	10052	A	G	Likely neutral	0.304245	1
+Gly	10052	A	T	Neutral	0.302748	1
+Gly	10053	A	C	Neutral	0.349763	1
+Gly	10053	A	G	Neutral	0.303397	1
+Gly	10053	A	T	Neutral	0.349763	1
+Gly	10054	G	A	Pathogenic	0.729676	1
+Gly	10054	G	C	Pathogenic	0.747744	1
+Gly	10054	G	T	Pathogenic	0.747744	1
+Gly	10055	A	C	Likely neutral	0.413629	1
+Gly	10055	A	G	Likely neutral	0.339604	0
+Gly	10055	A	T	Likely neutral	0.339604	1
+Gly	10056	G	A	Likely pathogenic	0.55689	1
+Gly	10056	G	C	Likely pathogenic	0.618902	1
+Gly	10056	G	T	Likely pathogenic	0.618902	1
+Gly	10057	T	A	Likely neutral	0.460387	1
+Gly	10057	T	C	Likely neutral	0.433497	1
+Gly	10057	T	G	Likely neutral	0.47727	1
+Gly	10058	A	C	Likely neutral	0.477818	1
+Gly	10058	A	G	Likely neutral	0.446616	1
+Gly	10058	A	T	Likely neutral	0.477818	1
+His	12138	G	A	Pathogenic	0.899313	1
+His	12138	G	C	Pathogenic	0.899313	1
+His	12138	G	T	Pathogenic	0.899313	1
+His	12139	T	A	Likely pathogenic	0.561343	1
+His	12139	T	C	Likely pathogenic	0.561343	1
+His	12139	T	G	Likely pathogenic	0.561343	1
+His	12140	A	C	Likely neutral	0.491711	1
+His	12140	A	G	Likely neutral	0.405914	1
+His	12140	A	T	Likely pathogenic	0.520469	1
+His	12141	A	C	Likely neutral	0.478097	1
+His	12141	A	G	Likely neutral	0.413207	1
+His	12141	A	T	Likely neutral	0.478097	0
+His	12142	A	C	Likely pathogenic	0.599573	1
+His	12142	A	G	Pathogenic	0.633078	1
+His	12142	A	T	Likely pathogenic	0.56534	1
+His	12143	T	A	Likely pathogenic	0.526134	1
+His	12143	T	C	Likely neutral	0.465269	1
+His	12143	T	G	Likely pathogenic	0.526134	1
+His	12144	A	C	Pathogenic	0.78682	1
+His	12144	A	G	Pathogenic	0.78682	1
+His	12144	A	T	Pathogenic	0.78682	1
+His	12145	T	A	Likely neutral	0.432439	1
+His	12145	T	C	Likely neutral	0.432439	1
+His	12145	T	G	Likely neutral	0.432439	1
+His	12146	A	C	Likely neutral	0.468085	1
+His	12146	A	G	Likely neutral	0.468085	1
+His	12146	A	T	Likely neutral	0.468085	1
+His	12147	G	A	Pathogenic	0.875726	1
+His	12147	G	C	Pathogenic	0.89777	1
+His	12147	G	T	Pathogenic	0.89777	1
+His	12148	T	A	Likely pathogenic	0.520981	1
+His	12148	T	C	Likely pathogenic	0.520981	1
+His	12148	T	G	Likely pathogenic	0.520981	1
+His	12149	T	A	Pathogenic	0.771386	1
+His	12149	T	C	Pathogenic	0.771386	1
+His	12149	T	G	Pathogenic	0.771386	1
+His	12150	T	A	Pathogenic	0.775779	1
+His	12150	T	C	Pathogenic	0.775779	1
+His	12150	T	G	Pathogenic	0.775779	1
+His	12151	A	C	Likely pathogenic	0.649738	1
+His	12151	A	G	Likely pathogenic	0.649738	1
+His	12151	A	T	Likely pathogenic	0.649738	1
+His	12152	A	C	Neutral	0.148422	1
+His	12152	A	G	Neutral	0.217491	1
+His	12152	A	T	Neutral	0.217491	1
+His	12153	C	A	Neutral	0.111539	0
+His	12153	C	G	Neutral	0.210179	0
+His	12153	C	T	Neutral	0.090172	0
+His	12154	C	A	Neutral	0.133819	0
+His	12154	C	G	Neutral	0.276653	0
+His	12154	C	T	Neutral	0.122468	0
+His	12155	A	C	Likely pathogenic	0.612614	1
+His	12155	A	G	Likely pathogenic	0.612614	1
+His	12155	A	T	Likely pathogenic	0.612614	1
+His	12156	A	C	Pathogenic	0.73642	1
+His	12156	A	G	Pathogenic	0.73642	1
+His	12156	A	T	Pathogenic	0.73642	1
+His	12157	A	C	Pathogenic	0.73642	1
+His	12157	A	G	Pathogenic	0.73642	1
+His	12157	A	T	Pathogenic	0.73642	1
+His	12158	A	C	Likely pathogenic	0.684357	1
+His	12158	A	G	Likely pathogenic	0.684357	1
+His	12158	A	T	Likely pathogenic	0.684357	1
+His	12159	C	A	Pathogenic	0.650833	1
+His	12159	C	G	Pathogenic	0.650833	1
+His	12159	C	T	Likely pathogenic	0.550419	1
+His	12160	A	C	Likely neutral	0.436136	1
+His	12160	A	G	Likely neutral	0.413631	1
+His	12160	A	T	Likely neutral	0.436136	1
+His	12161	T	A	Likely neutral	0.434532	1
+His	12161	T	C	Likely neutral	0.383652	1
+His	12161	T	G	Likely neutral	0.434532	1
+His	12162	C	A	Likely pathogenic	0.576449	1
+His	12162	C	G	Likely pathogenic	0.576449	1
+His	12162	C	T	Likely pathogenic	0.564982	1
+His	12163	A	C	Pathogenic	0.699696	1
+His	12163	A	G	Pathogenic	0.699696	1
+His	12163	A	T	Pathogenic	0.699696	1
+His	12164	G	A	Pathogenic	0.80484	1
+His	12164	G	C	Pathogenic	0.841648	1
+His	12164	G	T	Pathogenic	0.841648	1
+His	12165	A	C	Pathogenic	0.677382	1
+His	12165	A	G	Likely pathogenic	0.640748	1
+His	12165	A	T	Pathogenic	0.677382	1
+His	12166	T	A	Neutral	0.267399	1
+His	12166	T	C	Neutral	0.222731	1
+His	12166	T	G	Neutral	0.267399	1
+His	12167	T	A	Neutral	0.317432	1
+His	12167	T	C	Neutral	0.292013	1
+His	12167	T	G	Neutral	0.317432	1
+His	12168	G	A	Pathogenic	0.71321	1
+His	12168	G	C	Pathogenic	0.71321	1
+His	12168	G	T	Pathogenic	0.71321	1
+His	12169	T	A	Likely neutral	0.350222	1
+His	12169	T	C	Likely neutral	0.350222	1
+His	12169	T	G	Likely neutral	0.350222	1
+His	12170	G	A	Pathogenic	0.765256	1
+His	12170	G	C	Pathogenic	0.765256	1
+His	12170	G	T	Pathogenic	0.765256	1
+His	12171	A	C	Likely neutral	0.424786	1
+His	12171	A	G	Likely neutral	0.424786	1
+His	12171	A	T	Likely neutral	0.424786	1
+His	12172	A	C	Likely pathogenic	0.56836	1
+His	12172	A	G	Likely pathogenic	0.526207	1
+His	12172	A	T	Likely pathogenic	0.56836	1
+His	12173	T	A	Likely pathogenic	0.510741	1
+His	12173	T	C	Likely neutral	0.471212	1
+His	12173	T	G	Likely pathogenic	0.510741	1
+His	12174	C	A	Pathogenic	0.872772	1
+His	12174	C	G	Pathogenic	0.872772	1
+His	12174	C	T	Pathogenic	0.872772	1
+His	12175	T	A	Likely pathogenic	0.58736	1
+His	12175	T	C	Likely pathogenic	0.574147	1
+His	12175	T	G	Likely pathogenic	0.58736	1
+His	12176	G	A	Likely neutral	0.367926	1
+His	12176	G	C	Likely neutral	0.434539	1
+His	12176	G	T	Likely neutral	0.389942	1
+His	12177	A	C	Likely pathogenic	0.506969	1
+His	12177	A	G	Neutral	0.360043	1
+His	12177	A	T	Likely pathogenic	0.506969	1
+His	12178	C	A	Neutral	0.161575	0
+His	12178	C	G	Neutral	0.266135	0
+His	12178	C	T	Neutral	0.170554	0
+His	12179	A	C	Neutral	0.18393	0
+His	12179	A	G	Neutral	0.233432	0
+His	12179	A	T	Neutral	0.206493	0
+His	12180	A	C	Likely pathogenic	0.591227	1
+His	12180	A	G	Likely pathogenic	0.591227	1
+His	12180	A	T	Likely pathogenic	0.525782	1
+His	12181	C	A	Neutral	0.363706	0
+His	12181	C	G	Neutral	0.363706	0
+His	12181	C	T	Neutral	0.320151	0
+His	12182	A	C	Pathogenic	0.699696	1
+His	12182	A	G	Pathogenic	0.699696	1
+His	12182	A	T	Pathogenic	0.699696	1
+His	12183	G	A	Pathogenic	0.801564	1
+His	12183	G	C	Pathogenic	0.838788	1
+His	12183	G	T	Pathogenic	0.838788	1
+His	12184	A	C	Neutral	0.305105	0
+His	12184	A	G	Neutral	0.238995	0
+His	12184	A	T	Neutral	0.305105	0
+His	12185	G	A	Neutral	0.295204	1
+His	12185	G	C	Neutral	0.304003	1
+His	12185	G	T	Neutral	0.304003	1
+His	12186	G	A	Neutral	0.113839	0
+His	12186	G	C	Neutral	0.158399	0
+His	12186	G	T	Neutral	0.192845	1
+His	12187	C	A	Neutral	0.152681	0
+His	12187	C	G	Neutral	0.24888	0
+His	12187	C	T	Neutral	0.152465	0
+His	12188	T	A	Neutral	0.215361	0
+His	12188	T	C	Neutral	0.13086	0
+His	12188	T	G	Neutral	0.215361	0
+His	12189	T	A	Neutral	0.242958	0
+His	12189	T	C	Neutral	0.116402	0
+His	12189	T	G	Neutral	0.242958	0
+His	12190	A	C	Neutral	0.118213	1
+His	12190	A	G	Neutral	0.098257	1
+His	12190	A	T	Neutral	0.148299	1
+His	12191	C	A	Neutral	0.094681	0
+His	12191	C	G	Neutral	0.182861	0
+His	12191	C	T	Neutral	0.114509	0
+His	12192	G	A	Neutral	0.121872	0
+His	12192	G	C	Neutral	0.117493	0
+His	12192	G	T	Neutral	0.159307	0
+His	12193	A	C	Neutral	0.108366	0
+His	12193	A	G	Neutral	0.19914	0
+His	12193	A	T	Neutral	0.130359	0
+His	12194	C	A	Likely neutral	0.39477	1
+His	12194	C	G	Likely neutral	0.431575	1
+His	12194	C	T	Neutral	0.336825	0
+His	12195	C	A	Neutral	0.305584	1
+His	12195	C	G	Neutral	0.305584	1
+His	12195	C	T	Neutral	0.256985	1
+His	12196	C	A	Neutral	0.217013	0
+His	12196	C	G	Neutral	0.217013	0
+His	12196	C	T	Neutral	0.183691	0
+His	12197	C	A	Pathogenic	0.696834	1
+His	12197	C	G	Pathogenic	0.696834	1
+His	12197	C	T	Likely pathogenic	0.617531	1
+His	12198	T	A	Likely pathogenic	0.528246	1
+His	12198	T	C	Likely pathogenic	0.528246	1
+His	12198	T	G	Likely pathogenic	0.528246	1
+His	12199	T	A	Pathogenic	0.775779	1
+His	12199	T	C	Pathogenic	0.775779	1
+His	12199	T	G	Pathogenic	0.775779	1
+His	12200	A	C	Likely pathogenic	0.512749	1
+His	12200	A	G	Likely neutral	0.404472	1
+His	12200	A	T	Likely pathogenic	0.512749	1
+His	12201	T	A	Likely neutral	0.433095	1
+His	12201	T	C	Likely neutral	0.462684	1
+His	12201	T	G	Likely neutral	0.476622	1
+His	12202	T	A	Likely pathogenic	0.529277	0
+His	12202	T	C	Likely neutral	0.435821	1
+His	12202	T	G	Likely pathogenic	0.529277	1
+His	12203	T	A	Likely pathogenic	0.516454	1
+His	12203	T	C	Likely neutral	0.379239	1
+His	12203	T	G	Likely pathogenic	0.516454	1
+His	12204	A	C	Likely neutral	0.482315	1
+His	12204	A	G	Likely neutral	0.482315	1
+His	12204	A	T	Likely neutral	0.482315	1
+His	12205	C	A	Pathogenic	0.674612	1
+His	12205	C	G	Pathogenic	0.674612	1
+His	12205	C	T	Pathogenic	0.674612	1
+His	12206	C	A	Likely neutral	0.435195	1
+His	12206	C	G	Likely neutral	0.435195	1
+His	12206	C	T	Likely neutral	0.435195	1
+Ile	4263	A	C	Likely neutral	0.398614	1
+Ile	4263	A	G	Likely neutral	0.398614	1
+Ile	4263	A	T	Likely neutral	0.398614	1
+Ile	4264	G	A	Pathogenic	0.922413	1
+Ile	4264	G	C	Pathogenic	0.922413	1
+Ile	4264	G	T	Pathogenic	0.922413	1
+Ile	4265	A	C	Likely pathogenic	0.547549	1
+Ile	4265	A	G	Likely pathogenic	0.547549	1
+Ile	4265	A	T	Likely pathogenic	0.547549	1
+Ile	4266	A	C	Pathogenic	0.827889	1
+Ile	4266	A	G	Pathogenic	0.827889	1
+Ile	4266	A	T	Pathogenic	0.827889	1
+Ile	4267	A	C	Pathogenic	0.883127	1
+Ile	4267	A	G	Pathogenic	0.883127	1
+Ile	4267	A	T	Pathogenic	0.883127	1
+Ile	4268	T	A	Likely pathogenic	0.655077	1
+Ile	4268	T	C	Likely pathogenic	0.67617	1
+Ile	4268	T	G	Likely pathogenic	0.655077	1
+Ile	4269	A	C	Pathogenic	0.851567	1
+Ile	4269	A	G	Pathogenic	0.851567	1
+Ile	4269	A	T	Pathogenic	0.851567	1
+Ile	4270	T	A	Neutral	0.326081	1
+Ile	4270	T	C	Neutral	0.354232	1
+Ile	4270	T	G	Neutral	0.326081	1
+Ile	4271	G	A	Pathogenic	0.766949	1
+Ile	4271	G	C	Pathogenic	0.766949	1
+Ile	4271	G	T	Pathogenic	0.766949	1
+Ile	4272	T	A	Pathogenic	0.776058	1
+Ile	4272	T	C	Pathogenic	0.776058	1
+Ile	4272	T	G	Pathogenic	0.776058	1
+Ile	4273	C	A	Pathogenic	0.87982	1
+Ile	4273	C	G	Pathogenic	0.87982	1
+Ile	4273	C	T	Pathogenic	0.87982	1
+Ile	4274	T	A	Likely pathogenic	0.646768	1
+Ile	4274	T	C	Likely pathogenic	0.653443	1
+Ile	4274	T	G	Likely pathogenic	0.646768	1
+Ile	4275	G	A	Pathogenic	0.785592	1
+Ile	4275	G	C	Pathogenic	0.785592	1
+Ile	4275	G	T	Pathogenic	0.785592	1
+Ile	4276	A	C	Pathogenic	0.681711	1
+Ile	4276	A	G	Pathogenic	0.681711	1
+Ile	4276	A	T	Pathogenic	0.681711	1
+Ile	4277	T	A	Neutral	0.232384	0
+Ile	4277	T	C	Neutral	0.153285	0
+Ile	4277	T	G	Neutral	0.232384	0
+Ile	4278	A	C	Likely pathogenic	0.667244	1
+Ile	4278	A	G	Likely pathogenic	0.616235	1
+Ile	4278	A	T	Likely pathogenic	0.667244	1
+Ile	4279	A	C	Pathogenic	0.69395	1
+Ile	4279	A	G	Pathogenic	0.69395	1
+Ile	4279	A	T	Pathogenic	0.69395	1
+Ile	4280	A	C	Likely pathogenic	0.51315	1
+Ile	4280	A	G	Likely pathogenic	0.530133	1
+Ile	4280	A	T	Likely pathogenic	0.530133	1
+Ile	4281	A	C	Likely pathogenic	0.552649	1
+Ile	4281	A	G	Likely pathogenic	0.552649	1
+Ile	4281	A	T	Likely pathogenic	0.552649	1
+Ile	4282	G	A	Pathogenic	0.922413	1
+Ile	4282	G	C	Pathogenic	0.922413	1
+Ile	4282	G	T	Pathogenic	0.922413	1
+Ile	4283	A	C	Pathogenic	0.682441	1
+Ile	4283	A	G	Pathogenic	0.682441	1
+Ile	4283	A	T	Pathogenic	0.682441	1
+Ile	4284	G	A	Likely pathogenic	0.595079	0
+Ile	4284	G	C	Likely pathogenic	0.606153	0
+Ile	4284	G	T	Likely pathogenic	0.606153	0
+Ile	4285	T	A	Likely pathogenic	0.561141	1
+Ile	4285	T	C	Likely pathogenic	0.561141	1
+Ile	4285	T	G	Likely pathogenic	0.561141	1
+Ile	4286	T	A	Pathogenic	0.829214	1
+Ile	4286	T	C	Pathogenic	0.829214	1
+Ile	4286	T	G	Pathogenic	0.829214	1
+Ile	4287	A	C	Likely pathogenic	0.545183	1
+Ile	4287	A	G	Likely pathogenic	0.545183	1
+Ile	4287	A	T	Likely pathogenic	0.545183	1
+Ile	4288	C	A	Pathogenic	0.781012	1
+Ile	4288	C	G	Pathogenic	0.781012	1
+Ile	4288	C	T	Pathogenic	0.781012	1
+Ile	4289	T	A	Likely pathogenic	0.557289	1
+Ile	4289	T	C	Likely pathogenic	0.557289	1
+Ile	4289	T	G	Likely pathogenic	0.557289	1
+Ile	4290	T	A	Likely pathogenic	0.576718	1
+Ile	4290	T	C	Likely pathogenic	0.576718	1
+Ile	4290	T	G	Likely pathogenic	0.576718	1
+Ile	4291	T	A	Likely neutral	0.342678	1
+Ile	4291	T	C	Likely neutral	0.342678	1
+Ile	4291	T	G	Likely neutral	0.342678	1
+Ile	4292	G	A	Pathogenic	0.809824	1
+Ile	4292	G	C	Pathogenic	0.809824	1
+Ile	4292	G	T	Pathogenic	0.809824	1
+Ile	4293	A	C	Likely pathogenic	0.617732	1
+Ile	4293	A	G	Likely pathogenic	0.617732	1
+Ile	4293	A	T	Likely pathogenic	0.617732	1
+Ile	4294	T	A	Likely pathogenic	0.548361	1
+Ile	4294	T	C	Likely pathogenic	0.548361	1
+Ile	4294	T	G	Likely pathogenic	0.548361	1
+Ile	4295	A	C	Likely neutral	0.427032	1
+Ile	4295	A	G	Likely neutral	0.364541	1
+Ile	4295	A	T	Likely neutral	0.427032	1
+Ile	4296	G	A	Pathogenic	0.827301	1
+Ile	4296	G	C	Pathogenic	0.827301	1
+Ile	4296	G	T	Pathogenic	0.827301	1
+Ile	4297	A	C	Pathogenic	0.682441	1
+Ile	4297	A	G	Pathogenic	0.682441	1
+Ile	4297	A	T	Pathogenic	0.682441	1
+Ile	4298	G	A	Pathogenic	0.952477	1
+Ile	4298	G	C	Pathogenic	0.952477	1
+Ile	4298	G	T	Pathogenic	0.952477	1
+Ile	4299	T	A	Likely pathogenic	0.619131	1
+Ile	4299	T	C	Likely pathogenic	0.619131	1
+Ile	4299	T	G	Likely pathogenic	0.619131	1
+Ile	4300	A	C	Pathogenic	0.807423	1
+Ile	4300	A	G	Pathogenic	0.777312	1
+Ile	4300	A	T	Pathogenic	0.807423	1
+Ile	4301	A	C	Pathogenic	0.827889	1
+Ile	4301	A	G	Pathogenic	0.827889	1
+Ile	4301	A	T	Pathogenic	0.827889	1
+Ile	4302	A	C	Pathogenic	0.706664	1
+Ile	4302	A	G	Pathogenic	0.706664	1
+Ile	4302	A	T	Pathogenic	0.706664	1
+Ile	4303	T	A	Neutral	0.207677	0
+Ile	4303	T	C	Neutral	0.207677	0
+Ile	4303	T	G	Neutral	0.25589	0
+Ile	4304	A	C	Neutral	0.101	1
+Ile	4304	A	G	Neutral	0.135436	1
+Ile	4304	A	T	Neutral	0.094128	1
+Ile	4305	A	C	Pathogenic	0.732725	1
+Ile	4305	A	G	Pathogenic	0.732725	1
+Ile	4305	A	T	Pathogenic	0.732725	1
+Ile	4306	T	A	Likely pathogenic	0.555408	1
+Ile	4306	T	C	Likely pathogenic	0.555408	1
+Ile	4306	T	G	Likely pathogenic	0.555408	1
+Ile	4307	A	C	Likely pathogenic	0.597953	1
+Ile	4307	A	G	Likely pathogenic	0.597953	1
+Ile	4307	A	T	Likely pathogenic	0.597953	1
+Ile	4308	G	A	Likely pathogenic	0.659084	1
+Ile	4308	G	C	Likely pathogenic	0.659084	1
+Ile	4308	G	T	Likely pathogenic	0.659084	1
+Ile	4309	G	A	Likely pathogenic	0.553385	0
+Ile	4309	G	C	Likely neutral	0.489266	1
+Ile	4309	G	T	Likely neutral	0.489266	1
+Ile	4310	A	C	Neutral	0.28436	1
+Ile	4310	A	G	Neutral	0.324918	0
+Ile	4310	A	T	Neutral	0.28436	1
+Ile	4311	G	A	Pathogenic	0.916975	1
+Ile	4311	G	C	Pathogenic	0.916975	1
+Ile	4311	G	T	Pathogenic	0.916975	1
+Ile	4312	C	A	Neutral	0.155589	0
+Ile	4312	C	G	Neutral	0.243001	0
+Ile	4312	C	T	Neutral	0.177567	0
+Ile	4313	T	A	Neutral	0.21057	0
+Ile	4313	T	C	Neutral	0.177008	0
+Ile	4313	T	G	Neutral	0.161774	0
+Ile	4314	T	A	Neutral	0.194939	0
+Ile	4314	T	C	Neutral	0.121051	0
+Ile	4314	T	G	Neutral	0.248613	0
+Ile	4315	A	C	Neutral	0.135548	0
+Ile	4315	A	G	Neutral	0.19565	0
+Ile	4315	A	T	Neutral	0.140842	0
+Ile	4316	A	C	Pathogenic	0.69395	1
+Ile	4316	A	G	Pathogenic	0.69395	1
+Ile	4316	A	T	Pathogenic	0.69395	1
+Ile	4317	A	C	Likely neutral	0.421841	1
+Ile	4317	A	G	Neutral	0.24575	1
+Ile	4317	A	T	Likely neutral	0.421841	1
+Ile	4318	C	A	Neutral	0.210417	0
+Ile	4318	C	G	Neutral	0.144574	0
+Ile	4318	C	T	Neutral	0.130055	0
+Ile	4319	C	A	Likely pathogenic	0.598646	1
+Ile	4319	C	G	Likely pathogenic	0.598646	1
+Ile	4319	C	T	Likely pathogenic	0.598646	1
+Ile	4320	C	A	Likely neutral	0.389061	1
+Ile	4320	C	G	Likely neutral	0.389061	1
+Ile	4320	C	T	Likely neutral	0.389061	1
+Ile	4321	C	A	Neutral	0.315693	1
+Ile	4321	C	G	Neutral	0.315693	1
+Ile	4321	C	T	Neutral	0.273792	0
+Ile	4322	C	A	Pathogenic	0.781319	1
+Ile	4322	C	G	Pathogenic	0.781319	1
+Ile	4322	C	T	Pathogenic	0.781319	1
+Ile	4323	T	A	Likely pathogenic	0.557289	1
+Ile	4323	T	C	Likely pathogenic	0.557289	1
+Ile	4323	T	G	Likely pathogenic	0.557289	1
+Ile	4324	T	A	Pathogenic	0.829214	1
+Ile	4324	T	C	Pathogenic	0.829214	1
+Ile	4324	T	G	Pathogenic	0.829214	1
+Ile	4325	A	C	Likely pathogenic	0.609422	1
+Ile	4325	A	G	Likely pathogenic	0.501448	1
+Ile	4325	A	T	Likely pathogenic	0.609422	1
+Ile	4326	T	A	Pathogenic	0.715167	1
+Ile	4326	T	C	Pathogenic	0.715167	1
+Ile	4326	T	G	Pathogenic	0.715167	1
+Ile	4327	T	A	Pathogenic	0.79398	1
+Ile	4327	T	C	Pathogenic	0.79398	1
+Ile	4327	T	G	Pathogenic	0.79398	1
+Ile	4328	T	A	Likely pathogenic	0.530851	1
+Ile	4328	T	C	Likely pathogenic	0.530851	1
+Ile	4328	T	G	Likely pathogenic	0.530851	1
+Ile	4329	C	A	Pathogenic	0.87982	1
+Ile	4329	C	G	Pathogenic	0.87982	1
+Ile	4329	C	T	Pathogenic	0.87982	1
+Ile	4330	T	A	Pathogenic	0.668027	1
+Ile	4330	T	C	Pathogenic	0.668027	1
+Ile	4330	T	G	Pathogenic	0.668027	1
+Ile	4331	A	C	Likely neutral	0.386061	1
+Ile	4331	A	G	Likely neutral	0.321902	1
+Ile	4331	A	T	Likely neutral	0.386061	1
+Leu(CUN)	12266	A	C	Likely pathogenic	0.520265	1
+Leu(CUN)	12266	A	G	Likely neutral	0.360727	1
+Leu(CUN)	12266	A	T	Likely pathogenic	0.520265	1
+Leu(CUN)	12267	C	A	Pathogenic	0.754809	1
+Leu(CUN)	12267	C	G	Pathogenic	0.754809	1
+Leu(CUN)	12267	C	T	Pathogenic	0.754809	1
+Leu(CUN)	12268	T	A	Likely pathogenic	0.528246	1
+Leu(CUN)	12268	T	C	Likely pathogenic	0.528246	1
+Leu(CUN)	12268	T	G	Likely pathogenic	0.528246	1
+Leu(CUN)	12269	T	A	Pathogenic	0.771386	1
+Leu(CUN)	12269	T	C	Pathogenic	0.771386	1
+Leu(CUN)	12269	T	G	Pathogenic	0.771386	1
+Leu(CUN)	12270	T	A	Pathogenic	0.771386	1
+Leu(CUN)	12270	T	C	Pathogenic	0.771386	1
+Leu(CUN)	12270	T	G	Pathogenic	0.771386	1
+Leu(CUN)	12271	T	A	Pathogenic	0.666281	1
+Leu(CUN)	12271	T	C	Likely pathogenic	0.592569	1
+Leu(CUN)	12271	T	G	Pathogenic	0.666281	1
+Leu(CUN)	12272	A	C	Pathogenic	0.777675	1
+Leu(CUN)	12272	A	G	Pathogenic	0.777675	1
+Leu(CUN)	12272	A	T	Pathogenic	0.777675	1
+Leu(CUN)	12273	A	C	Neutral	0.21889	1
+Leu(CUN)	12273	A	G	Neutral	0.281684	1
+Leu(CUN)	12273	A	T	Neutral	0.183972	1
+Leu(CUN)	12274	A	C	Likely neutral	0.444728	1
+Leu(CUN)	12274	A	G	Likely neutral	0.444728	1
+Leu(CUN)	12274	A	T	Likely neutral	0.444728	1
+Leu(CUN)	12275	G	A	Likely pathogenic	0.63813	1
+Leu(CUN)	12275	G	C	Likely pathogenic	0.63813	1
+Leu(CUN)	12275	G	T	Likely pathogenic	0.63813	1
+Leu(CUN)	12276	G	A	Pathogenic	0.755929	1
+Leu(CUN)	12276	G	C	Pathogenic	0.755929	1
+Leu(CUN)	12276	G	T	Pathogenic	0.755929	1
+Leu(CUN)	12277	A	C	Pathogenic	0.718727	1
+Leu(CUN)	12277	A	G	Pathogenic	0.718727	1
+Leu(CUN)	12277	A	T	Pathogenic	0.718727	1
+Leu(CUN)	12278	T	A	Likely pathogenic	0.582519	1
+Leu(CUN)	12278	T	C	Likely pathogenic	0.582519	1
+Leu(CUN)	12278	T	G	Likely pathogenic	0.582519	1
+Leu(CUN)	12279	A	C	Likely neutral	0.450436	1
+Leu(CUN)	12279	A	G	Likely neutral	0.366602	1
+Leu(CUN)	12279	A	T	Likely neutral	0.450436	1
+Leu(CUN)	12280	A	C	Likely neutral	0.340492	0
+Leu(CUN)	12280	A	G	Neutral	0.193991	0
+Leu(CUN)	12280	A	T	Likely neutral	0.340492	0
+Leu(CUN)	12281	C	A	Neutral	0.186514	0
+Leu(CUN)	12281	C	G	Neutral	0.224365	0
+Leu(CUN)	12281	C	T	Neutral	0.183353	0
+Leu(CUN)	12282	A	C	Likely pathogenic	0.536365	1
+Leu(CUN)	12282	A	G	Likely pathogenic	0.536365	1
+Leu(CUN)	12282	A	T	Likely pathogenic	0.536365	1
+Leu(CUN)	12283	G	A	Pathogenic	0.685166	1
+Leu(CUN)	12283	G	C	Pathogenic	0.685166	1
+Leu(CUN)	12283	G	T	Pathogenic	0.685166	1
+Leu(CUN)	12284	C	A	Neutral	0.186112	0
+Leu(CUN)	12284	C	G	Neutral	0.252633	0
+Leu(CUN)	12284	C	T	Neutral	0.181853	0
+Leu(CUN)	12285	T	A	Neutral	0.123361	0
+Leu(CUN)	12285	T	C	Neutral	0.124805	0
+Leu(CUN)	12285	T	G	Neutral	0.214066	0
+Leu(CUN)	12286	A	C	Pathogenic	0.695011	1
+Leu(CUN)	12286	A	G	Pathogenic	0.695011	1
+Leu(CUN)	12286	A	T	Pathogenic	0.672323	1
+Leu(CUN)	12287	T	A	Likely pathogenic	0.538808	1
+Leu(CUN)	12287	T	C	Likely pathogenic	0.538808	1
+Leu(CUN)	12287	T	G	Likely pathogenic	0.538808	1
+Leu(CUN)	12288	C	A	Pathogenic	0.71995	1
+Leu(CUN)	12288	C	G	Pathogenic	0.71995	1
+Leu(CUN)	12288	C	T	Pathogenic	0.71995	1
+Leu(CUN)	12289	C	A	Pathogenic	0.80198	1
+Leu(CUN)	12289	C	G	Pathogenic	0.80198	1
+Leu(CUN)	12289	C	T	Pathogenic	0.80198	1
+Leu(CUN)	12290	A	C	Neutral	0.129599	0
+Leu(CUN)	12290	A	G	Neutral	0.126103	0
+Leu(CUN)	12290	A	T	Neutral	0.188998	0
+Leu(CUN)	12291	T	A	Pathogenic	0.638231	1
+Leu(CUN)	12291	T	C	Pathogenic	0.638231	1
+Leu(CUN)	12291	T	G	Pathogenic	0.638231	1
+Leu(CUN)	12292	T	A	Likely neutral	0.476707	1
+Leu(CUN)	12292	T	C	Likely neutral	0.464699	1
+Leu(CUN)	12292	T	G	Likely neutral	0.476707	1
+Leu(CUN)	12293	G	A	Likely pathogenic	0.632613	1
+Leu(CUN)	12293	G	C	Pathogenic	0.683754	1
+Leu(CUN)	12293	G	T	Pathogenic	0.683754	1
+Leu(CUN)	12294	G	A	Pathogenic	0.801352	1
+Leu(CUN)	12294	G	C	Pathogenic	0.856903	1
+Leu(CUN)	12294	G	T	Pathogenic	0.856903	1
+Leu(CUN)	12295	T	A	Likely neutral	0.411394	0
+Leu(CUN)	12295	T	C	Neutral	0.286664	0
+Leu(CUN)	12295	T	G	Likely neutral	0.411394	0
+Leu(CUN)	12296	C	A	Pathogenic	0.699895	1
+Leu(CUN)	12296	C	G	Pathogenic	0.699895	1
+Leu(CUN)	12296	C	T	Pathogenic	0.699895	1
+Leu(CUN)	12297	T	A	Likely neutral	0.343502	1
+Leu(CUN)	12297	T	C	Likely neutral	0.343502	1
+Leu(CUN)	12297	T	G	Likely neutral	0.343502	1
+Leu(CUN)	12298	T	A	Likely pathogenic	0.581961	1
+Leu(CUN)	12298	T	C	Likely pathogenic	0.581961	1
+Leu(CUN)	12298	T	G	Likely pathogenic	0.581961	1
+Leu(CUN)	12299	A	C	Likely neutral	0.432846	1
+Leu(CUN)	12299	A	G	Likely neutral	0.432846	1
+Leu(CUN)	12299	A	T	Likely neutral	0.432846	1
+Leu(CUN)	12300	G	A	Likely neutral	0.369845	1
+Leu(CUN)	12300	G	C	Likely neutral	0.369845	1
+Leu(CUN)	12300	G	T	Likely neutral	0.369845	1
+Leu(CUN)	12301	G	A	Likely neutral	0.40193	1
+Leu(CUN)	12301	G	C	Likely neutral	0.40193	1
+Leu(CUN)	12301	G	T	Likely neutral	0.40193	1
+Leu(CUN)	12302	C	A	Neutral	0.328089	0
+Leu(CUN)	12302	C	G	Neutral	0.300797	0
+Leu(CUN)	12302	C	T	Neutral	0.300797	0
+Leu(CUN)	12303	C	A	Neutral	0.166913	0
+Leu(CUN)	12303	C	G	Neutral	0.136172	0
+Leu(CUN)	12303	C	T	Neutral	0.210456	0
+Leu(CUN)	12304	C	A	Likely neutral	0.429656	1
+Leu(CUN)	12304	C	G	Likely neutral	0.429656	1
+Leu(CUN)	12304	C	T	Neutral	0.309463	1
+Leu(CUN)	12305	C	A	Pathogenic	0.732438	1
+Leu(CUN)	12305	C	G	Pathogenic	0.732438	1
+Leu(CUN)	12305	C	T	Pathogenic	0.684383	1
+Leu(CUN)	12306	A	C	Likely pathogenic	0.640899	1
+Leu(CUN)	12306	A	G	Likely pathogenic	0.588905	1
+Leu(CUN)	12306	A	T	Likely pathogenic	0.640899	1
+Leu(CUN)	12307	A	C	Pathogenic	0.771652	1
+Leu(CUN)	12307	A	G	Pathogenic	0.771652	1
+Leu(CUN)	12307	A	T	Pathogenic	0.771652	1
+Leu(CUN)	12308	A	C	Likely neutral	0.411662	1
+Leu(CUN)	12308	A	G	Likely neutral	0.411662	1
+Leu(CUN)	12308	A	T	Likely neutral	0.411662	1
+Leu(CUN)	12309	A	C	Likely pathogenic	0.543827	1
+Leu(CUN)	12309	A	G	Likely pathogenic	0.543827	1
+Leu(CUN)	12309	A	T	Likely pathogenic	0.543827	1
+Leu(CUN)	12310	A	C	Pathogenic	0.668408	1
+Leu(CUN)	12310	A	G	Pathogenic	0.668408	1
+Leu(CUN)	12310	A	T	Pathogenic	0.668408	1
+Leu(CUN)	12311	T	A	Neutral	0.109545	0
+Leu(CUN)	12311	T	C	Neutral	0.095802	0
+Leu(CUN)	12311	T	G	Neutral	0.203878	0
+Leu(CUN)	12312	T	A	Neutral	0.22035	0
+Leu(CUN)	12312	T	C	Neutral	0.213065	0
+Leu(CUN)	12312	T	G	Neutral	0.327563	1
+Leu(CUN)	12313	T	A	Pathogenic	0.771386	1
+Leu(CUN)	12313	T	C	Pathogenic	0.771386	1
+Leu(CUN)	12313	T	G	Pathogenic	0.771386	1
+Leu(CUN)	12314	T	A	Likely neutral	0.456958	1
+Leu(CUN)	12314	T	C	Likely neutral	0.456958	1
+Leu(CUN)	12314	T	G	Likely neutral	0.456958	1
+Leu(CUN)	12315	G	A	Pathogenic	0.788893	1
+Leu(CUN)	12315	G	C	Pathogenic	0.788893	1
+Leu(CUN)	12315	G	T	Pathogenic	0.788893	1
+Leu(CUN)	12316	G	A	Pathogenic	0.90568	1
+Leu(CUN)	12316	G	C	Pathogenic	0.90568	1
+Leu(CUN)	12316	G	T	Pathogenic	0.90568	1
+Leu(CUN)	12317	T	A	Likely neutral	0.350222	1
+Leu(CUN)	12317	T	C	Likely neutral	0.350222	1
+Leu(CUN)	12317	T	G	Likely neutral	0.350222	1
+Leu(CUN)	12318	G	A	Likely pathogenic	0.508705	1
+Leu(CUN)	12318	G	C	Likely pathogenic	0.508705	1
+Leu(CUN)	12318	G	T	Likely pathogenic	0.508705	1
+Leu(CUN)	12319	C	A	Likely neutral	0.491812	1
+Leu(CUN)	12319	C	G	Likely pathogenic	0.533615	1
+Leu(CUN)	12319	C	T	Likely pathogenic	0.533615	1
+Leu(CUN)	12320	A	C	Likely pathogenic	0.612614	1
+Leu(CUN)	12320	A	G	Likely pathogenic	0.612614	1
+Leu(CUN)	12320	A	T	Likely pathogenic	0.612614	1
+Leu(CUN)	12321	A	C	Likely pathogenic	0.632571	1
+Leu(CUN)	12321	A	G	Likely pathogenic	0.632571	1
+Leu(CUN)	12321	A	T	Likely pathogenic	0.632571	1
+Leu(CUN)	12322	C	A	Likely neutral	0.360017	1
+Leu(CUN)	12322	C	G	Likely neutral	0.427603	1
+Leu(CUN)	12322	C	T	Likely neutral	0.427603	1
+Leu(CUN)	12323	T	A	Likely pathogenic	0.523591	1
+Leu(CUN)	12323	T	C	Likely pathogenic	0.523591	1
+Leu(CUN)	12323	T	G	Likely pathogenic	0.523591	1
+Leu(CUN)	12324	C	A	Pathogenic	0.71995	1
+Leu(CUN)	12324	C	G	Pathogenic	0.71995	1
+Leu(CUN)	12324	C	T	Pathogenic	0.71995	1
+Leu(CUN)	12325	C	A	Pathogenic	0.80198	1
+Leu(CUN)	12325	C	G	Pathogenic	0.80198	1
+Leu(CUN)	12325	C	T	Pathogenic	0.80198	1
+Leu(CUN)	12326	A	C	Pathogenic	0.737697	1
+Leu(CUN)	12326	A	G	Pathogenic	0.737697	1
+Leu(CUN)	12326	A	T	Pathogenic	0.737697	1
+Leu(CUN)	12327	A	C	Pathogenic	0.771652	1
+Leu(CUN)	12327	A	G	Pathogenic	0.771652	1
+Leu(CUN)	12327	A	T	Pathogenic	0.771652	1
+Leu(CUN)	12328	A	C	Pathogenic	0.837565	1
+Leu(CUN)	12328	A	G	Pathogenic	0.837565	1
+Leu(CUN)	12328	A	T	Pathogenic	0.837565	0
+Leu(CUN)	12329	T	A	Likely pathogenic	0.582519	1
+Leu(CUN)	12329	T	C	Likely pathogenic	0.582519	1
+Leu(CUN)	12329	T	G	Likely pathogenic	0.582519	1
+Leu(CUN)	12330	A	C	Pathogenic	0.648119	1
+Leu(CUN)	12330	A	G	Likely pathogenic	0.590253	1
+Leu(CUN)	12330	A	T	Pathogenic	0.648119	1
+Leu(CUN)	12331	A	C	Pathogenic	0.771652	1
+Leu(CUN)	12331	A	G	Pathogenic	0.771652	1
+Leu(CUN)	12331	A	T	Pathogenic	0.771652	1
+Leu(CUN)	12332	A	C	Pathogenic	0.771652	1
+Leu(CUN)	12332	A	G	Pathogenic	0.771652	1
+Leu(CUN)	12332	A	T	Pathogenic	0.771652	1
+Leu(CUN)	12333	A	C	Likely neutral	0.370474	1
+Leu(CUN)	12333	A	G	Likely neutral	0.370474	1
+Leu(CUN)	12333	A	T	Likely neutral	0.370474	1
+Leu(CUN)	12334	G	A	Pathogenic	0.934854	1
+Leu(CUN)	12334	G	C	Pathogenic	0.934854	1
+Leu(CUN)	12334	G	T	Pathogenic	0.934854	1
+Leu(CUN)	12335	T	A	Likely neutral	0.464235	1
+Leu(CUN)	12335	T	C	Likely neutral	0.377579	1
+Leu(CUN)	12335	T	G	Likely neutral	0.464235	1
+Leu(CUN)	12336	A	C	Likely pathogenic	0.595901	1
+Leu(CUN)	12336	A	G	Likely pathogenic	0.595901	1
+Leu(CUN)	12336	A	T	Likely pathogenic	0.595901	1
+Leu(UUR)	3230	G	A	Likely pathogenic	0.580013	NA
+Leu(UUR)	3230	G	C	Pathogenic	0.652515	1
+Leu(UUR)	3230	G	T	Pathogenic	0.652515	1
+Leu(UUR)	3231	T	A	Likely neutral	0.496628	1
+Leu(UUR)	3231	T	C	Likely neutral	0.469042	1
+Leu(UUR)	3231	T	G	Likely neutral	0.496628	1
+Leu(UUR)	3232	T	A	Pathogenic	0.829214	1
+Leu(UUR)	3232	T	C	Pathogenic	0.829214	1
+Leu(UUR)	3232	T	G	Pathogenic	0.829214	1
+Leu(UUR)	3233	A	C	Pathogenic	0.855084	1
+Leu(UUR)	3233	A	G	Pathogenic	0.855084	1
+Leu(UUR)	3233	A	T	Pathogenic	0.855084	1
+Leu(UUR)	3234	A	C	Neutral	0.351727	1
+Leu(UUR)	3234	A	G	Neutral	0.316851	0
+Leu(UUR)	3234	A	T	Neutral	0.351727	1
+Leu(UUR)	3235	G	A	Pathogenic	0.922413	1
+Leu(UUR)	3235	G	C	Pathogenic	0.922413	1
+Leu(UUR)	3235	G	T	Pathogenic	0.922413	1
+Leu(UUR)	3236	A	C	Neutral	0.311796	1
+Leu(UUR)	3236	A	G	Neutral	0.206714	1
+Leu(UUR)	3236	A	T	Neutral	0.311796	1
+Leu(UUR)	3237	T	A	Neutral	0.372367	1
+Leu(UUR)	3237	T	C	Neutral	0.372367	1
+Leu(UUR)	3237	T	G	Neutral	0.372367	1
+Leu(UUR)	3238	G	A	Pathogenic	0.668708	1
+Leu(UUR)	3238	G	C	Pathogenic	0.668708	1
+Leu(UUR)	3238	G	T	Pathogenic	0.668708	1
+Leu(UUR)	3239	G	A	Pathogenic	0.715899	1
+Leu(UUR)	3239	G	C	Pathogenic	0.715899	1
+Leu(UUR)	3239	G	T	Pathogenic	0.715899	1
+Leu(UUR)	3240	C	A	Pathogenic	0.81625	1
+Leu(UUR)	3240	C	G	Pathogenic	0.81625	1
+Leu(UUR)	3240	C	T	Pathogenic	0.81625	1
+Leu(UUR)	3241	A	C	Likely pathogenic	0.617418	1
+Leu(UUR)	3241	A	G	Likely pathogenic	0.617418	1
+Leu(UUR)	3241	A	T	Likely pathogenic	0.617418	1
+Leu(UUR)	3242	G	A	Pathogenic	0.835737	1
+Leu(UUR)	3242	G	C	Pathogenic	0.835737	1
+Leu(UUR)	3242	G	T	Pathogenic	0.835737	1
+Leu(UUR)	3243	A	C	Likely pathogenic	0.732748	1
+Leu(UUR)	3243	A	G	Likely pathogenic	0.732748	1
+Leu(UUR)	3243	A	T	Likely pathogenic	0.732748	1
+Leu(UUR)	3244	G	A	Pathogenic	0.798971	1
+Leu(UUR)	3244	G	C	Pathogenic	0.798971	1
+Leu(UUR)	3244	G	T	Pathogenic	0.798971	1
+Leu(UUR)	3245	C	A	Likely neutral	0.455417	1
+Leu(UUR)	3245	C	G	Likely neutral	0.455417	1
+Leu(UUR)	3245	C	T	Likely neutral	0.411346	1
+Leu(UUR)	3246	C	A	Likely neutral	0.451564	1
+Leu(UUR)	3246	C	G	Likely neutral	0.451564	1
+Leu(UUR)	3246	C	T	Likely neutral	0.419925	1
+Leu(UUR)	3247	C	A	Neutral	0.120887	1
+Leu(UUR)	3247	C	G	Neutral	0.21547	1
+Leu(UUR)	3247	C	T	Neutral	0.125283	1
+Leu(UUR)	3248	G	A	Likely neutral	0.430845	1
+Leu(UUR)	3248	G	C	Likely neutral	0.45555	1
+Leu(UUR)	3248	G	T	Likely neutral	0.45555	1
+Leu(UUR)	3249	G	A	Pathogenic	0.743799	1
+Leu(UUR)	3249	G	C	Pathogenic	0.743799	1
+Leu(UUR)	3249	G	T	Pathogenic	0.743799	1
+Leu(UUR)	3250	T	A	Neutral	0.099735	0
+Leu(UUR)	3250	T	C	Neutral	0.10167	0
+Leu(UUR)	3250	T	G	Neutral	0.196076	0
+Leu(UUR)	3251	A	C	Likely pathogenic	0.616235	1
+Leu(UUR)	3251	A	G	Likely pathogenic	0.667244	1
+Leu(UUR)	3251	A	T	Likely pathogenic	0.667244	1
+Leu(UUR)	3252	A	C	Pathogenic	0.719206	1
+Leu(UUR)	3252	A	G	Pathogenic	0.719206	1
+Leu(UUR)	3252	A	T	Pathogenic	0.719206	1
+Leu(UUR)	3253	T	A	Neutral	0.34383	0
+Leu(UUR)	3253	T	C	Neutral	0.34383	0
+Leu(UUR)	3253	T	G	Likely neutral	0.389886	0
+Leu(UUR)	3254	C	A	Neutral	0.158674	1
+Leu(UUR)	3254	C	G	Neutral	0.158674	1
+Leu(UUR)	3254	C	T	Neutral	0.218172	0
+Leu(UUR)	3255	G	A	Pathogenic	0.726867	1
+Leu(UUR)	3255	G	C	Pathogenic	0.726867	1
+Leu(UUR)	3255	G	T	Pathogenic	0.726867	1
+Leu(UUR)	3256	C	A	Pathogenic	0.81625	1
+Leu(UUR)	3256	C	G	Pathogenic	0.81625	1
+Leu(UUR)	3256	C	T	Pathogenic	0.81625	1
+Leu(UUR)	3257	A	C	Neutral	0.241024	1
+Leu(UUR)	3257	A	G	Neutral	0.24403	1
+Leu(UUR)	3257	A	T	Neutral	0.273054	1
+Leu(UUR)	3258	T	A	Likely pathogenic	0.669007	1
+Leu(UUR)	3258	T	C	Likely pathogenic	0.724173	1
+Leu(UUR)	3258	T	G	Likely pathogenic	0.669007	1
+Leu(UUR)	3259	A	C	Pathogenic	0.855084	1
+Leu(UUR)	3259	A	G	Pathogenic	0.855084	1
+Leu(UUR)	3259	A	T	Pathogenic	0.855084	1
+Leu(UUR)	3260	A	C	Pathogenic	0.827889	1
+Leu(UUR)	3260	A	G	Pathogenic	0.827889	1
+Leu(UUR)	3260	A	T	Pathogenic	0.827889	1
+Leu(UUR)	3261	A	C	Likely pathogenic	0.538591	1
+Leu(UUR)	3261	A	G	Likely neutral	0.486165	1
+Leu(UUR)	3261	A	T	Likely pathogenic	0.538591	1
+Leu(UUR)	3262	A	C	Likely pathogenic	0.564079	1
+Leu(UUR)	3262	A	G	Likely pathogenic	0.536019	1
+Leu(UUR)	3262	A	T	Likely pathogenic	0.564079	1
+Leu(UUR)	3263	C	A	Likely neutral	0.448912	0
+Leu(UUR)	3263	C	G	Likely neutral	0.448912	0
+Leu(UUR)	3263	C	T	Likely neutral	0.408839	0
+Leu(UUR)	3264	T	A	Likely neutral	0.3832	1
+Leu(UUR)	3264	T	C	Likely neutral	0.3832	1
+Leu(UUR)	3264	T	G	Likely neutral	0.3832	1
+Leu(UUR)	3265	T	A	Likely pathogenic	0.658185	1
+Leu(UUR)	3265	T	C	Likely pathogenic	0.658185	1
+Leu(UUR)	3265	T	G	Likely pathogenic	0.658185	1
+Leu(UUR)	3266	A	C	Pathogenic	0.730303	1
+Leu(UUR)	3266	A	G	Pathogenic	0.730303	1
+Leu(UUR)	3266	A	T	Pathogenic	0.730303	1
+Leu(UUR)	3267	A	C	Pathogenic	0.69395	1
+Leu(UUR)	3267	A	G	Pathogenic	0.69395	1
+Leu(UUR)	3267	A	T	Pathogenic	0.69395	1
+Leu(UUR)	3268	A	C	Likely neutral	0.438823	0
+Leu(UUR)	3268	A	G	Likely neutral	0.327749	0
+Leu(UUR)	3268	A	T	Likely neutral	0.438823	0
+Leu(UUR)	3269	A	C	Likely neutral	0.428887	1
+Leu(UUR)	3269	A	G	Likely neutral	0.392283	0
+Leu(UUR)	3269	A	T	Likely pathogenic	0.507738	1
+Leu(UUR)	3270	C	A	Likely pathogenic	0.524454	0
+Leu(UUR)	3270	C	G	Likely pathogenic	0.524454	0
+Leu(UUR)	3270	C	T	Likely neutral	0.481341	0
+Leu(UUR)	3271	T	A	Likely pathogenic	0.540765	1
+Leu(UUR)	3271	T	C	Likely pathogenic	0.634749	1
+Leu(UUR)	3271	T	G	Likely pathogenic	0.540765	1
+Leu(UUR)	3272	T	A	Pathogenic	0.79398	1
+Leu(UUR)	3272	T	C	Pathogenic	0.79398	1
+Leu(UUR)	3272	T	G	Pathogenic	0.79398	1
+Leu(UUR)	3273	T	A	Pathogenic	0.829214	1
+Leu(UUR)	3273	T	C	Pathogenic	0.829214	1
+Leu(UUR)	3273	T	G	Pathogenic	0.829214	1
+Leu(UUR)	3274	A	C	Neutral	0.352845	1
+Leu(UUR)	3274	A	G	Neutral	0.262483	1
+Leu(UUR)	3274	A	T	Neutral	0.352845	1
+Leu(UUR)	3275	C	A	Neutral	0.141367	0
+Leu(UUR)	3275	C	G	Neutral	0.246902	0
+Leu(UUR)	3275	C	T	Neutral	0.179554	0
+Leu(UUR)	3276	A	C	Neutral	0.203655	1
+Leu(UUR)	3276	A	G	Neutral	0.203655	1
+Leu(UUR)	3276	A	T	Neutral	0.14992	1
+Leu(UUR)	3277	G	A	Neutral	0.271769	0
+Leu(UUR)	3277	G	C	Neutral	0.262894	0
+Leu(UUR)	3277	G	T	Neutral	0.274865	0
+Leu(UUR)	3278	T	A	Neutral	0.226699	0
+Leu(UUR)	3278	T	C	Neutral	0.16003	0
+Leu(UUR)	3278	T	G	Neutral	0.279066	0
+Leu(UUR)	3279	C	A	Pathogenic	0.842087	1
+Leu(UUR)	3279	C	G	Pathogenic	0.842087	1
+Leu(UUR)	3279	C	T	Pathogenic	0.842087	1
+Leu(UUR)	3280	A	C	Pathogenic	0.745681	1
+Leu(UUR)	3280	A	G	Pathogenic	0.745681	1
+Leu(UUR)	3280	A	T	Pathogenic	0.745681	1
+Leu(UUR)	3281	G	A	Pathogenic	0.922413	1
+Leu(UUR)	3281	G	C	Pathogenic	0.922413	1
+Leu(UUR)	3281	G	T	Pathogenic	0.922413	1
+Leu(UUR)	3282	A	C	Pathogenic	0.682441	1
+Leu(UUR)	3282	A	G	Pathogenic	0.682441	1
+Leu(UUR)	3282	A	T	Pathogenic	0.682441	1
+Leu(UUR)	3283	G	A	Likely pathogenic	0.569971	1
+Leu(UUR)	3283	G	C	Likely pathogenic	0.576816	1
+Leu(UUR)	3283	G	T	Likely pathogenic	0.576816	1
+Leu(UUR)	3284	G	A	Pathogenic	0.84375	1
+Leu(UUR)	3284	G	C	Pathogenic	0.894716	1
+Leu(UUR)	3284	G	T	Pathogenic	0.894716	1
+Leu(UUR)	3285	T	A	Likely neutral	0.383842	1
+Leu(UUR)	3285	T	C	Likely neutral	0.383842	1
+Leu(UUR)	3285	T	G	Likely neutral	0.383842	1
+Leu(UUR)	3286	T	A	Likely neutral	0.383662	1
+Leu(UUR)	3286	T	C	Likely neutral	0.383662	1
+Leu(UUR)	3286	T	G	Likely neutral	0.383662	1
+Leu(UUR)	3287	C	A	Pathogenic	0.842728	1
+Leu(UUR)	3287	C	G	Pathogenic	0.842728	1
+Leu(UUR)	3287	C	T	Pathogenic	0.842728	1
+Leu(UUR)	3288	A	C	Likely pathogenic	0.582711	1
+Leu(UUR)	3288	A	G	Likely pathogenic	0.511551	1
+Leu(UUR)	3288	A	T	Likely pathogenic	0.582711	1
+Leu(UUR)	3289	A	C	Pathogenic	0.719206	1
+Leu(UUR)	3289	A	G	Pathogenic	0.719206	1
+Leu(UUR)	3289	A	T	Pathogenic	0.719206	1
+Leu(UUR)	3290	T	A	Neutral	0.103678	0
+Leu(UUR)	3290	T	C	Neutral	0.129745	0
+Leu(UUR)	3290	T	G	Neutral	0.192212	0
+Leu(UUR)	3291	T	A	Neutral	0.333462	0
+Leu(UUR)	3291	T	C	Neutral	0.226115	0
+Leu(UUR)	3291	T	G	Neutral	0.333462	0
+Leu(UUR)	3292	C	A	Pathogenic	0.720907	1
+Leu(UUR)	3292	C	G	Pathogenic	0.720907	1
+Leu(UUR)	3292	C	T	Likely pathogenic	0.698818	1
+Leu(UUR)	3293	C	A	Pathogenic	0.781319	1
+Leu(UUR)	3293	C	G	Pathogenic	0.781319	1
+Leu(UUR)	3293	C	T	Pathogenic	0.781319	1
+Leu(UUR)	3294	T	A	Pathogenic	0.719823	1
+Leu(UUR)	3294	T	C	Pathogenic	0.719823	1
+Leu(UUR)	3294	T	G	Pathogenic	0.719823	1
+Leu(UUR)	3295	C	A	Pathogenic	0.87982	1
+Leu(UUR)	3295	C	G	Pathogenic	0.87982	1
+Leu(UUR)	3295	C	T	Pathogenic	0.87982	1
+Leu(UUR)	3296	T	A	Likely pathogenic	0.557289	1
+Leu(UUR)	3296	T	C	Likely pathogenic	0.557289	1
+Leu(UUR)	3296	T	G	Likely pathogenic	0.557289	1
+Leu(UUR)	3297	T	A	Neutral	0.293537	1
+Leu(UUR)	3297	T	C	Neutral	0.197522	1
+Leu(UUR)	3297	T	G	Neutral	0.293537	1
+Leu(UUR)	3298	C	A	Pathogenic	0.87982	1
+Leu(UUR)	3298	C	G	Pathogenic	0.87982	1
+Leu(UUR)	3298	C	T	Pathogenic	0.87982	1
+Leu(UUR)	3299	T	A	Likely pathogenic	0.540765	1
+Leu(UUR)	3299	T	C	Likely pathogenic	0.634749	0
+Leu(UUR)	3299	T	G	Likely pathogenic	0.540765	1
+Leu(UUR)	3300	T	A	Pathogenic	0.829214	1
+Leu(UUR)	3300	T	C	Pathogenic	0.829214	1
+Leu(UUR)	3300	T	G	Pathogenic	0.829214	1
+Leu(UUR)	3301	A	C	Pathogenic	0.807423	1
+Leu(UUR)	3301	A	G	Pathogenic	0.777312	1
+Leu(UUR)	3301	A	T	Pathogenic	0.807423	1
+Leu(UUR)	3302	A	C	Likely pathogenic	0.696009	1
+Leu(UUR)	3302	A	G	Likely pathogenic	0.67022	1
+Leu(UUR)	3302	A	T	Likely pathogenic	0.696009	1
+Leu(UUR)	3303	C	A	Pathogenic	0.640393	1
+Leu(UUR)	3303	C	G	Pathogenic	0.640393	1
+Leu(UUR)	3303	C	T	Likely pathogenic	0.593495	1
+Leu(UUR)	3304	A	C	Likely pathogenic	0.621974	1
+Leu(UUR)	3304	A	G	Likely pathogenic	0.621974	1
+Leu(UUR)	3304	A	T	Likely pathogenic	0.621974	1
+Lys	8295	C	A	Pathogenic	0.75487	1
+Lys	8295	C	G	Pathogenic	0.75487	1
+Lys	8295	C	T	Pathogenic	0.75487	1
+Lys	8296	A	C	Likely neutral	0.409524	1
+Lys	8296	A	G	Neutral	0.256305	1
+Lys	8296	A	T	Likely neutral	0.409524	1
+Lys	8297	C	A	Likely neutral	0.469811	1
+Lys	8297	C	G	Likely neutral	0.469811	1
+Lys	8297	C	T	Likely neutral	0.433864	1
+Lys	8298	T	A	Likely pathogenic	0.574268	1
+Lys	8298	T	C	Likely pathogenic	0.557713	1
+Lys	8298	T	G	Likely pathogenic	0.574268	1
+Lys	8299	G	A	Likely neutral	0.355078	1
+Lys	8299	G	C	Likely neutral	0.439799	1
+Lys	8299	G	T	Likely neutral	0.439799	1
+Lys	8300	T	A	Likely neutral	0.476341	1
+Lys	8300	T	C	Likely neutral	0.451013	0
+Lys	8300	T	G	Likely neutral	0.476341	1
+Lys	8301	A	C	Neutral	0.277752	1
+Lys	8301	A	G	Neutral	0.163032	1
+Lys	8301	A	T	Neutral	0.277752	1
+Lys	8302	A	C	Neutral	0.20828	0
+Lys	8302	A	G	Neutral	0.250338	0
+Lys	8302	A	T	Neutral	0.229031	0
+Lys	8303	A	C	Likely neutral	0.420677	1
+Lys	8303	A	G	Likely neutral	0.420677	1
+Lys	8303	A	T	Likely neutral	0.420677	1
+Lys	8304	G	A	Pathogenic	0.840736	1
+Lys	8304	G	C	Pathogenic	0.840736	1
+Lys	8304	G	T	Pathogenic	0.840736	1
+Lys	8305	C	A	Pathogenic	0.733736	1
+Lys	8305	C	G	Pathogenic	0.733736	1
+Lys	8305	C	T	Pathogenic	0.733736	1
+Lys	8306	T	A	Likely pathogenic	0.609704	1
+Lys	8306	T	C	Likely pathogenic	0.609704	1
+Lys	8306	T	G	Likely pathogenic	0.609704	1
+Lys	8307	A	C	Likely pathogenic	0.510467	1
+Lys	8307	A	G	Likely neutral	0.484182	0
+Lys	8307	A	T	Likely neutral	0.410387	0
+Lys	8308	A	C	Neutral	0.13199	0
+Lys	8308	A	G	Neutral	0.161329	0
+Lys	8308	A	T	Neutral	0.098319	0
+Lys	8309	C	A	Neutral	0.195639	0
+Lys	8309	C	G	Neutral	0.187254	0
+Lys	8309	C	T	Neutral	0.196899	0
+Lys	8310	T	A	Neutral	0.151379	0
+Lys	8310	T	C	Neutral	0.143926	0
+Lys	8310	T	G	Neutral	0.208629	0
+Lys	8311	T	A	Neutral	0.202106	0
+Lys	8311	T	C	Neutral	0.202106	0
+Lys	8311	T	G	Neutral	0.26863	1
+Lys	8312	A	C	Likely pathogenic	0.56842	1
+Lys	8312	A	G	Likely pathogenic	0.56842	1
+Lys	8312	A	T	Likely pathogenic	0.56842	1
+Lys	8313	G	A	Pathogenic	0.845407	1
+Lys	8313	G	C	Pathogenic	0.845407	1
+Lys	8313	G	T	Pathogenic	0.845407	1
+Lys	8314	C	A	Pathogenic	0.704565	1
+Lys	8314	C	G	Pathogenic	0.704565	1
+Lys	8314	C	T	Pathogenic	0.704565	1
+Lys	8315	A	C	Neutral	0.207551	0
+Lys	8315	A	G	Neutral	0.151324	0
+Lys	8315	A	T	Neutral	0.207551	0
+Lys	8316	T	A	Likely neutral	0.470578	1
+Lys	8316	T	C	Likely neutral	0.390029	1
+Lys	8316	T	G	Likely neutral	0.470578	1
+Lys	8317	T	A	Pathogenic	0.714553	1
+Lys	8317	T	C	Pathogenic	0.714553	1
+Lys	8317	T	G	Pathogenic	0.714553	1
+Lys	8318	A	C	Likely pathogenic	0.648689	1
+Lys	8318	A	G	Likely pathogenic	0.648689	1
+Lys	8318	A	T	Likely pathogenic	0.648689	1
+Lys	8319	A	C	Likely neutral	0.484068	1
+Lys	8319	A	G	Likely neutral	0.331588	1
+Lys	8319	A	T	Likely neutral	0.484068	1
+Lys	8320	C	A	Likely pathogenic	0.613414	1
+Lys	8320	C	G	Likely pathogenic	0.613414	1
+Lys	8320	C	T	Likely pathogenic	0.613414	1
+Lys	8321	C	A	Likely pathogenic	0.515981	1
+Lys	8321	C	G	Likely pathogenic	0.515981	1
+Lys	8321	C	T	Likely pathogenic	0.515981	1
+Lys	8322	T	A	Likely neutral	0.317038	1
+Lys	8322	T	C	Likely neutral	0.317038	1
+Lys	8322	T	G	Likely neutral	0.317038	1
+Lys	8323	T	A	Likely neutral	0.441868	1
+Lys	8323	T	C	Likely neutral	0.441868	1
+Lys	8323	T	G	Likely neutral	0.441868	1
+Lys	8324	T	A	Likely neutral	0.441868	1
+Lys	8324	T	C	Likely neutral	0.441868	1
+Lys	8324	T	G	Likely neutral	0.441868	1
+Lys	8325	T	A	Likely neutral	0.494633	1
+Lys	8325	T	C	Likely neutral	0.494633	1
+Lys	8325	T	G	Likely neutral	0.494633	1
+Lys	8326	A	C	Likely neutral	0.41359	1
+Lys	8326	A	G	Likely neutral	0.41359	1
+Lys	8326	A	T	Likely neutral	0.41359	1
+Lys	8327	A	C	Neutral	0.320997	1
+Lys	8327	A	G	Neutral	0.320997	1
+Lys	8327	A	T	Neutral	0.320997	1
+Lys	8328	G	A	Pathogenic	0.920617	1
+Lys	8328	G	C	Pathogenic	0.920617	1
+Lys	8328	G	T	Pathogenic	0.920617	1
+Lys	8329	T	A	Likely neutral	0.353742	1
+Lys	8329	T	C	Neutral	0.297142	1
+Lys	8329	T	G	Likely neutral	0.353742	1
+Lys	8330	T	A	Pathogenic	0.714553	1
+Lys	8330	T	C	Pathogenic	0.714553	1
+Lys	8330	T	G	Pathogenic	0.714553	1
+Lys	8331	A	C	Likely pathogenic	0.648689	1
+Lys	8331	A	G	Likely pathogenic	0.648689	1
+Lys	8331	A	T	Likely pathogenic	0.648689	1
+Lys	8332	A	C	Likely pathogenic	0.528613	1
+Lys	8332	A	G	Likely neutral	0.413731	1
+Lys	8332	A	T	Likely pathogenic	0.528613	1
+Lys	8333	A	C	Likely neutral	0.391217	1
+Lys	8333	A	G	Likely neutral	0.391217	1
+Lys	8333	A	T	Likely neutral	0.391217	1
+Lys	8334	G	A	Pathogenic	0.675288	1
+Lys	8334	G	C	Pathogenic	0.720936	1
+Lys	8334	G	T	Pathogenic	0.720936	1
+Lys	8335	A	C	Likely neutral	0.488735	1
+Lys	8335	A	G	Likely neutral	0.488735	1
+Lys	8335	A	T	Likely neutral	0.42312	1
+Lys	8336	T	A	Neutral	0.100849	0
+Lys	8336	T	C	Neutral	0.107897	0
+Lys	8336	T	G	Neutral	0.148433	0
+Lys	8337	T	A	Neutral	0.133522	0
+Lys	8337	T	C	Neutral	0.146347	0
+Lys	8337	T	G	Neutral	0.141034	0
+Lys	8338	A	C	Neutral	0.352349	1
+Lys	8338	A	G	Neutral	0.277054	1
+Lys	8338	A	T	Neutral	0.352349	1
+Lys	8339	A	C	Neutral	0.339333	1
+Lys	8339	A	G	Neutral	0.30676	0
+Lys	8339	A	T	Neutral	0.339333	1
+Lys	8340	G	A	Likely pathogenic	0.680551	1
+Lys	8340	G	C	Pathogenic	0.737344	1
+Lys	8340	G	T	Pathogenic	0.737344	1
+Lys	8341	A	C	Neutral	0.363408	1
+Lys	8341	A	G	Neutral	0.315032	1
+Lys	8341	A	T	Likely neutral	0.41479	1
+Lys	8342	G	A	Likely pathogenic	0.515229	0
+Lys	8342	G	C	Likely pathogenic	0.501246	1
+Lys	8342	G	T	Likely pathogenic	0.536113	1
+Lys	8343	A	C	Neutral	0.100926	0
+Lys	8343	A	G	Neutral	0.100926	0
+Lys	8343	A	T	Neutral	0.105285	0
+Lys	8344	A	C	Neutral	0.201723	0
+Lys	8344	A	G	Likely neutral	0.421511	0
+Lys	8344	A	T	Neutral	0.200497	0
+Lys	8345	C	A	Neutral	0.104156	0
+Lys	8345	C	G	Neutral	0.162753	0
+Lys	8345	C	T	Neutral	0.105464	0
+Lys	8346	C	A	Neutral	0.139255	0
+Lys	8346	C	G	Neutral	0.209486	0
+Lys	8346	C	T	Neutral	0.133954	0
+Lys	8347	A	C	Neutral	0.109275	0
+Lys	8347	A	G	Neutral	0.082719	0
+Lys	8347	A	T	Neutral	0.231454	0
+Lys	8348	A	C	Neutral	0.17732	0
+Lys	8348	A	G	Neutral	0.227084	0
+Lys	8348	A	T	Neutral	0.186225	0
+Lys	8349	C	A	Neutral	0.181366	0
+Lys	8349	C	G	Neutral	0.236948	0
+Lys	8349	C	T	Neutral	0.173425	0
+Lys	8350	A	C	Neutral	0.096582	0
+Lys	8350	A	G	Neutral	0.176164	0
+Lys	8350	A	T	Neutral	0.106679	0
+Lys	8351	C	A	Neutral	0.127376	0
+Lys	8351	C	G	Neutral	0.169921	0
+Lys	8351	C	T	Neutral	0.114843	0
+Lys	8352	C	A	Neutral	0.228614	1
+Lys	8352	C	G	Neutral	0.288908	1
+Lys	8352	C	T	Neutral	0.226689	0
+Lys	8353	T	A	Likely pathogenic	0.544106	1
+Lys	8353	T	C	Likely neutral	0.446467	1
+Lys	8353	T	G	Likely pathogenic	0.544106	1
+Lys	8354	C	A	Pathogenic	0.703726	1
+Lys	8354	C	G	Pathogenic	0.689661	1
+Lys	8354	C	T	Pathogenic	0.656646	1
+Lys	8355	T	A	Likely pathogenic	0.515457	1
+Lys	8355	T	C	Likely pathogenic	0.598657	0
+Lys	8355	T	G	Likely pathogenic	0.515457	1
+Lys	8356	T	A	Likely neutral	0.463534	1
+Lys	8356	T	C	Likely neutral	0.477805	1
+Lys	8356	T	G	Likely neutral	0.463534	1
+Lys	8357	T	A	Neutral	0.316351	1
+Lys	8357	T	C	Neutral	0.226011	1
+Lys	8357	T	G	Neutral	0.316351	1
+Lys	8358	A	C	Neutral	0.320745	1
+Lys	8358	A	G	Neutral	0.233102	0
+Lys	8358	A	T	Neutral	0.320745	1
+Lys	8359	C	A	Likely neutral	0.465578	1
+Lys	8359	C	G	Likely neutral	0.465578	1
+Lys	8359	C	T	Likely neutral	0.398332	1
+Lys	8360	A	C	Likely pathogenic	0.640941	1
+Lys	8360	A	G	Likely pathogenic	0.640941	1
+Lys	8360	A	T	Likely pathogenic	0.640941	1
+Lys	8361	G	A	Likely neutral	0.461656	1
+Lys	8361	G	C	Likely pathogenic	0.546806	1
+Lys	8361	G	T	Likely pathogenic	0.546806	1
+Lys	8362	T	A	Likely pathogenic	0.580395	1
+Lys	8362	T	C	Likely pathogenic	0.555092	1
+Lys	8362	T	G	Likely pathogenic	0.580395	1
+Lys	8363	G	A	Pathogenic	0.868016	1
+Lys	8363	G	C	Pathogenic	0.868016	1
+Lys	8363	G	T	Pathogenic	0.868016	1
+Lys	8364	A	C	Neutral	0.34192	1
+Lys	8364	A	G	Neutral	0.270775	1
+Lys	8364	A	T	Neutral	0.34192	1
+Met	4402	A	C	Likely neutral	0.398614	1
+Met	4402	A	G	Likely neutral	0.398614	1
+Met	4402	A	T	Likely neutral	0.398614	1
+Met	4403	G	A	Pathogenic	0.952477	1
+Met	4403	G	C	Pathogenic	0.952477	1
+Met	4403	G	T	Pathogenic	0.952477	1
+Met	4404	T	A	Likely pathogenic	0.619131	1
+Met	4404	T	C	Likely pathogenic	0.619131	1
+Met	4404	T	G	Likely pathogenic	0.619131	1
+Met	4405	A	C	Pathogenic	0.855084	1
+Met	4405	A	G	Pathogenic	0.855084	1
+Met	4405	A	T	Pathogenic	0.855084	1
+Met	4406	A	C	Likely neutral	0.347471	1
+Met	4406	A	G	Likely neutral	0.347471	1
+Met	4406	A	T	Likely neutral	0.347471	1
+Met	4407	G	A	Likely pathogenic	0.659084	1
+Met	4407	G	C	Likely pathogenic	0.659084	1
+Met	4407	G	T	Likely pathogenic	0.659084	1
+Met	4408	G	A	Pathogenic	0.922515	1
+Met	4408	G	C	Pathogenic	0.922515	1
+Met	4408	G	T	Pathogenic	0.922515	1
+Met	4409	T	A	Likely pathogenic	0.700112	1
+Met	4409	T	C	Likely pathogenic	0.700112	1
+Met	4409	T	G	Likely pathogenic	0.700112	1
+Met	4410	C	A	Pathogenic	0.844777	1
+Met	4410	C	G	Pathogenic	0.844777	1
+Met	4410	C	T	Pathogenic	0.844777	1
+Met	4411	A	C	Pathogenic	0.792798	1
+Met	4411	A	G	Pathogenic	0.792798	1
+Met	4411	A	T	Pathogenic	0.792798	1
+Met	4412	G	A	Pathogenic	0.916975	1
+Met	4412	G	C	Pathogenic	0.916975	1
+Met	4412	G	T	Pathogenic	0.916975	1
+Met	4413	C	A	Pathogenic	0.762294	1
+Met	4413	C	G	Pathogenic	0.762294	1
+Met	4413	C	T	Pathogenic	0.707162	1
+Met	4414	T	A	Pathogenic	0.668027	1
+Met	4414	T	C	Pathogenic	0.668027	1
+Met	4414	T	G	Pathogenic	0.668027	1
+Met	4415	A	C	Pathogenic	0.773953	1
+Met	4415	A	G	Pathogenic	0.773953	1
+Met	4415	A	T	Pathogenic	0.773953	1
+Met	4416	A	C	Pathogenic	0.715471	1
+Met	4416	A	G	Pathogenic	0.715471	1
+Met	4416	A	T	Pathogenic	0.715471	1
+Met	4417	A	C	Neutral	0.264208	1
+Met	4417	A	G	Neutral	0.264208	1
+Met	4417	A	T	Neutral	0.201621	1
+Met	4418	T	A	Likely neutral	0.389745	0
+Met	4418	T	C	Neutral	0.320825	0
+Met	4418	T	G	Likely neutral	0.400149	0
+Met	4419	A	C	Pathogenic	0.730303	1
+Met	4419	A	G	Pathogenic	0.730303	1
+Met	4419	A	T	Pathogenic	0.730303	1
+Met	4420	A	C	Likely pathogenic	0.552649	1
+Met	4420	A	G	Likely pathogenic	0.552649	1
+Met	4420	A	T	Likely pathogenic	0.552649	1
+Met	4421	G	A	Pathogenic	0.918634	1
+Met	4421	G	C	Pathogenic	0.918634	1
+Met	4421	G	T	Pathogenic	0.918634	1
+Met	4422	C	A	Pathogenic	0.825152	1
+Met	4422	C	G	Pathogenic	0.825152	1
+Met	4422	C	T	Pathogenic	0.825152	1
+Met	4423	T	A	Pathogenic	0.668027	1
+Met	4423	T	C	Pathogenic	0.668027	1
+Met	4423	T	G	Pathogenic	0.668027	1
+Met	4424	A	C	Likely pathogenic	0.628679	1
+Met	4424	A	G	Likely pathogenic	0.628679	1
+Met	4424	A	T	Likely pathogenic	0.628679	1
+Met	4425	T	A	Likely pathogenic	0.55278	1
+Met	4425	T	C	Likely pathogenic	0.55278	1
+Met	4425	T	G	Likely pathogenic	0.55278	1
+Met	4426	C	A	Pathogenic	0.663036	1
+Met	4426	C	G	Pathogenic	0.663036	1
+Met	4426	C	T	Likely pathogenic	0.640334	1
+Met	4427	G	A	Pathogenic	0.654715	1
+Met	4427	G	C	Pathogenic	0.654715	1
+Met	4427	G	T	Pathogenic	0.654715	1
+Met	4428	G	A	Likely pathogenic	0.662798	1
+Met	4428	G	C	Likely pathogenic	0.662798	1
+Met	4428	G	T	Likely pathogenic	0.662798	1
+Met	4429	G	A	Pathogenic	0.671012	1
+Met	4429	G	C	Pathogenic	0.671012	1
+Met	4429	G	T	Pathogenic	0.671012	1
+Met	4430	C	A	Likely pathogenic	0.53996	1
+Met	4430	C	G	Likely pathogenic	0.53996	1
+Met	4430	C	T	Likely pathogenic	0.53996	1
+Met	4431	C	A	Likely neutral	0.472365	1
+Met	4431	C	G	Likely neutral	0.472365	1
+Met	4431	C	T	Likely neutral	0.472365	1
+Met	4432	C	A	Pathogenic	0.690443	1
+Met	4432	C	G	Pathogenic	0.690443	1
+Met	4432	C	T	Pathogenic	0.690443	1
+Met	4433	A	C	Likely neutral	0.498595	1
+Met	4433	A	G	Likely neutral	0.498595	1
+Met	4433	A	T	Likely neutral	0.498595	1
+Met	4434	T	A	Likely pathogenic	0.548361	1
+Met	4434	T	C	Likely pathogenic	0.548361	1
+Met	4434	T	G	Likely pathogenic	0.548361	1
+Met	4435	A	C	Likely neutral	0.492288	1
+Met	4435	A	G	Likely neutral	0.492288	1
+Met	4435	A	T	Likely neutral	0.492288	1
+Met	4436	C	A	Likely pathogenic	0.565533	1
+Met	4436	C	G	Likely pathogenic	0.565533	1
+Met	4436	C	T	Likely pathogenic	0.565533	1
+Met	4437	C	A	Likely pathogenic	0.598646	1
+Met	4437	C	G	Likely pathogenic	0.598646	1
+Met	4437	C	T	Likely pathogenic	0.598646	1
+Met	4438	C	A	Likely pathogenic	0.598646	1
+Met	4438	C	G	Likely pathogenic	0.598646	1
+Met	4438	C	T	Likely pathogenic	0.598646	1
+Met	4439	C	A	Likely pathogenic	0.610936	1
+Met	4439	C	G	Likely pathogenic	0.610936	1
+Met	4439	C	T	Likely pathogenic	0.610936	1
+Met	4440	G	A	Pathogenic	0.887304	1
+Met	4440	G	C	Pathogenic	0.887304	1
+Met	4440	G	T	Pathogenic	0.887304	1
+Met	4441	A	C	Likely pathogenic	0.547549	1
+Met	4441	A	G	Likely pathogenic	0.547549	1
+Met	4441	A	T	Likely pathogenic	0.547549	1
+Met	4442	A	C	Likely pathogenic	0.525229	1
+Met	4442	A	G	Likely pathogenic	0.525229	1
+Met	4442	A	T	Likely pathogenic	0.525229	1
+Met	4443	A	C	Likely pathogenic	0.652921	1
+Met	4443	A	G	Likely pathogenic	0.652921	1
+Met	4443	A	T	Likely pathogenic	0.652921	1
+Met	4444	A	C	Pathogenic	0.67268	1
+Met	4444	A	G	Likely pathogenic	0.630286	1
+Met	4444	A	T	Pathogenic	0.67268	1
+Met	4445	T	A	Likely neutral	0.362784	1
+Met	4445	T	C	Neutral	0.320363	1
+Met	4445	T	G	Likely neutral	0.362784	1
+Met	4446	G	A	Pathogenic	0.905866	1
+Met	4446	G	C	Pathogenic	0.905866	1
+Met	4446	G	T	Pathogenic	0.905866	1
+Met	4447	T	A	Likely neutral	0.422137	1
+Met	4447	T	C	Likely neutral	0.422137	1
+Met	4447	T	G	Likely neutral	0.422137	1
+Met	4448	T	A	Likely neutral	0.363648	1
+Met	4448	T	C	Neutral	0.359222	0
+Met	4448	T	G	Likely neutral	0.363648	1
+Met	4449	G	A	Pathogenic	0.816939	1
+Met	4449	G	C	Pathogenic	0.816939	1
+Met	4449	G	T	Pathogenic	0.816939	1
+Met	4450	G	A	Pathogenic	0.922515	1
+Met	4450	G	C	Pathogenic	0.922515	1
+Met	4450	G	T	Pathogenic	0.922515	1
+Met	4451	T	A	Neutral	0.2483	1
+Met	4451	T	C	Neutral	0.232936	1
+Met	4451	T	G	Neutral	0.2483	1
+Met	4452	T	A	Neutral	0.153923	0
+Met	4452	T	C	Neutral	0.110407	0
+Met	4452	T	G	Neutral	0.241129	0
+Met	4453	A	C	Likely pathogenic	0.608066	1
+Met	4453	A	G	Likely pathogenic	0.608066	1
+Met	4453	A	T	Likely pathogenic	0.566102	1
+Met	4454	T	A	Neutral	0.12881	0
+Met	4454	T	C	Neutral	0.129075	0
+Met	4454	T	G	Neutral	0.237262	0
+Met	4455	A	C	Neutral	0.264562	1
+Met	4455	A	G	Neutral	0.341734	1
+Met	4455	A	T	Neutral	0.341734	1
+Met	4456	C	A	Neutral	0.227891	0
+Met	4456	C	G	Neutral	0.227891	0
+Met	4456	C	T	Neutral	0.167176	0
+Met	4457	C	A	Likely pathogenic	0.598646	1
+Met	4457	C	G	Likely pathogenic	0.598646	1
+Met	4457	C	T	Likely pathogenic	0.598646	1
+Met	4458	C	A	Pathogenic	0.769591	1
+Met	4458	C	G	Pathogenic	0.769591	1
+Met	4458	C	T	Pathogenic	0.769591	1
+Met	4459	T	A	Likely neutral	0.379894	1
+Met	4459	T	C	Likely neutral	0.391743	0
+Met	4459	T	G	Likely neutral	0.379894	1
+Met	4460	T	A	Likely neutral	0.406193	1
+Met	4460	T	C	Likely neutral	0.406193	1
+Met	4460	T	G	Likely neutral	0.406193	1
+Met	4461	C	A	Pathogenic	0.755523	1
+Met	4461	C	G	Pathogenic	0.755523	1
+Met	4461	C	T	Pathogenic	0.755523	1
+Met	4462	C	A	Likely pathogenic	0.598646	1
+Met	4462	C	G	Likely pathogenic	0.598646	1
+Met	4462	C	T	Likely pathogenic	0.598646	1
+Met	4463	C	A	Likely pathogenic	0.610936	1
+Met	4463	C	G	Likely pathogenic	0.610936	1
+Met	4463	C	T	Likely pathogenic	0.610936	1
+Met	4464	G	A	Likely neutral	0.475617	0
+Met	4464	G	C	Likely neutral	0.475617	0
+Met	4464	G	T	Likely pathogenic	0.500925	0
+Met	4465	T	A	Likely pathogenic	0.619131	1
+Met	4465	T	C	Likely pathogenic	0.619131	1
+Met	4465	T	G	Likely pathogenic	0.619131	1
+Met	4466	A	C	Likely pathogenic	0.545183	1
+Met	4466	A	G	Likely pathogenic	0.545183	1
+Met	4466	A	T	Likely pathogenic	0.545183	1
+Met	4467	C	A	Pathogenic	0.781012	1
+Met	4467	C	G	Pathogenic	0.781012	1
+Met	4467	C	T	Pathogenic	0.781012	1
+Met	4468	T	A	Pathogenic	0.668027	1
+Met	4468	T	C	Pathogenic	0.668027	1
+Met	4468	T	G	Pathogenic	0.668027	1
+Met	4469	A	C	Pathogenic	0.711029	1
+Met	4469	A	G	Pathogenic	0.711029	1
+Met	4469	A	T	Pathogenic	0.711029	1
+Phe	577	G	A	Pathogenic	0.934854	1
+Phe	577	G	C	Pathogenic	0.934854	1
+Phe	577	G	T	Pathogenic	0.934854	1
+Phe	578	T	A	Likely pathogenic	0.520981	1
+Phe	578	T	C	Likely pathogenic	0.520981	1
+Phe	578	T	G	Likely pathogenic	0.520981	1
+Phe	579	T	A	Pathogenic	0.771386	1
+Phe	579	T	C	Pathogenic	0.771386	1
+Phe	579	T	G	Pathogenic	0.771386	1
+Phe	580	T	A	Neutral	0.200147	0
+Phe	580	T	C	Neutral	0.216831	1
+Phe	580	T	G	Neutral	0.216831	0
+Phe	581	A	C	Pathogenic	0.711124	1
+Phe	581	A	G	Pathogenic	0.682377	1
+Phe	581	A	T	Pathogenic	0.711124	1
+Phe	582	T	A	Likely neutral	0.384262	1
+Phe	582	T	C	Likely neutral	0.464169	1
+Phe	582	T	G	Likely neutral	0.384262	1
+Phe	583	G	A	Pathogenic	0.899313	1
+Phe	583	G	C	Pathogenic	0.899313	1
+Phe	583	G	T	Pathogenic	0.899313	1
+Phe	584	T	A	Likely neutral	0.482597	1
+Phe	584	T	C	Likely neutral	0.482597	1
+Phe	584	T	G	Likely neutral	0.482597	1
+Phe	585	A	C	Likely neutral	0.468085	1
+Phe	585	A	G	Likely neutral	0.468085	1
+Phe	585	A	T	Likely neutral	0.468085	1
+Phe	586	G	A	Pathogenic	0.871132	1
+Phe	586	G	C	Pathogenic	0.871132	1
+Phe	586	G	T	Pathogenic	0.871132	1
+Phe	587	C	A	Pathogenic	0.77927	1
+Phe	587	C	G	Pathogenic	0.77927	1
+Phe	587	C	T	Pathogenic	0.77927	1
+Phe	588	T	A	Likely pathogenic	0.528246	1
+Phe	588	T	C	Likely pathogenic	0.528246	1
+Phe	588	T	G	Likely pathogenic	0.528246	1
+Phe	589	T	A	Pathogenic	0.775779	1
+Phe	589	T	C	Pathogenic	0.775779	1
+Phe	589	T	G	Pathogenic	0.775779	1
+Phe	590	A	C	Likely neutral	0.497037	1
+Phe	590	A	G	Likely neutral	0.497037	1
+Phe	590	A	T	Likely neutral	0.497037	1
+Phe	591	C	A	Neutral	0.148525	0
+Phe	591	C	G	Neutral	0.160122	0
+Phe	591	C	T	Neutral	0.11483	0
+Phe	592	C	A	Neutral	0.170547	0
+Phe	592	C	G	Neutral	0.26048	0
+Phe	592	C	T	Neutral	0.200404	0
+Phe	593	T	A	Neutral	0.159431	0
+Phe	593	T	C	Neutral	0.159431	0
+Phe	593	T	G	Neutral	0.283813	0
+Phe	594	C	A	Neutral	0.115895	0
+Phe	594	C	G	Neutral	0.178229	0
+Phe	594	C	T	Neutral	0.115981	0
+Phe	595	C	A	Neutral	0.141571	0
+Phe	595	C	G	Neutral	0.202378	0
+Phe	595	C	T	Neutral	0.141805	0
+Phe	596	T	A	Neutral	0.163953	0
+Phe	596	T	C	Neutral	0.159895	0
+Phe	596	T	G	Neutral	0.281721	0
+Phe	597	C	A	Neutral	0.346628	0
+Phe	597	C	G	Neutral	0.346628	0
+Phe	597	C	T	Neutral	0.210512	0
+Phe	598	A	C	Likely pathogenic	0.612614	1
+Phe	598	A	G	Likely pathogenic	0.612614	1
+Phe	598	A	T	Likely pathogenic	0.612614	1
+Phe	599	A	C	Pathogenic	0.73642	1
+Phe	599	A	G	Pathogenic	0.73642	1
+Phe	599	A	T	Pathogenic	0.73642	1
+Phe	600	A	C	Likely neutral	0.484202	1
+Phe	600	A	G	Likely neutral	0.484202	1
+Phe	600	A	T	Likely neutral	0.484202	1
+Phe	601	G	A	Pathogenic	0.878552	1
+Phe	601	G	C	Pathogenic	0.878552	1
+Phe	601	G	T	Pathogenic	0.878552	1
+Phe	602	C	A	Pathogenic	0.736641	1
+Phe	602	C	G	Pathogenic	0.736641	1
+Phe	602	C	T	Pathogenic	0.736641	1
+Phe	603	A	C	Likely neutral	0.467843	1
+Phe	603	A	G	Likely neutral	0.420688	1
+Phe	603	A	T	Likely neutral	0.467843	1
+Phe	604	A	C	Pathogenic	0.837565	1
+Phe	604	A	G	Pathogenic	0.837565	1
+Phe	604	A	T	Pathogenic	0.837565	1
+Phe	605	T	A	Neutral	0.156143	0
+Phe	605	T	C	Neutral	0.237883	0
+Phe	605	T	G	Neutral	0.155022	0
+Phe	606	A	C	Neutral	0.246892	1
+Phe	606	A	G	Neutral	0.172644	0
+Phe	606	A	T	Neutral	0.246892	1
+Phe	607	C	A	Pathogenic	0.778582	1
+Phe	607	C	G	Pathogenic	0.778582	1
+Phe	607	C	T	Pathogenic	0.75434	1
+Phe	608	A	C	Likely neutral	0.43567	1
+Phe	608	A	G	Likely neutral	0.276875	1
+Phe	608	A	T	Likely neutral	0.43567	1
+Phe	609	C	A	Likely pathogenic	0.560761	1
+Phe	609	C	G	Likely pathogenic	0.560761	1
+Phe	609	C	T	Likely pathogenic	0.560761	1
+Phe	610	T	A	Likely neutral	0.469432	1
+Phe	610	T	C	Likely neutral	0.469432	1
+Phe	610	T	G	Likely neutral	0.469432	1
+Phe	611	G	A	Pathogenic	0.765256	1
+Phe	611	G	C	Pathogenic	0.765256	1
+Phe	611	G	T	Pathogenic	0.765256	1
+Phe	612	A	C	Likely neutral	0.424786	1
+Phe	612	A	G	Likely neutral	0.424786	1
+Phe	612	A	T	Likely neutral	0.424786	1
+Phe	613	A	C	Likely pathogenic	0.612803	1
+Phe	613	A	G	Likely pathogenic	0.612803	1
+Phe	613	A	T	Likely pathogenic	0.612803	1
+Phe	614	A	C	Likely pathogenic	0.612803	1
+Phe	614	A	G	Likely pathogenic	0.612803	1
+Phe	614	A	T	Likely pathogenic	0.612803	1
+Phe	615	A	C	Likely pathogenic	0.635665	1
+Phe	615	A	G	Likely pathogenic	0.635665	1
+Phe	615	A	T	Likely pathogenic	0.635665	1
+Phe	616	T	A	Neutral	0.181048	1
+Phe	616	T	C	Neutral	0.181048	1
+Phe	616	T	G	Neutral	0.181048	1
+Phe	617	G	A	Pathogenic	0.798948	1
+Phe	617	G	C	Pathogenic	0.837125	1
+Phe	617	G	T	Pathogenic	0.837125	1
+Phe	618	T	A	Neutral	0.364271	1
+Phe	618	T	C	Likely neutral	0.46917	0
+Phe	618	T	G	Neutral	0.364271	1
+Phe	619	T	A	Neutral	0.25076	0
+Phe	619	T	C	Neutral	0.199734	0
+Phe	619	T	G	Neutral	0.25076	0
+Phe	620	T	A	Likely pathogenic	0.602285	1
+Phe	620	T	C	Likely pathogenic	0.630461	1
+Phe	620	T	G	Likely pathogenic	0.602285	1
+Phe	621	A	C	Neutral	0.255186	0
+Phe	621	A	G	Likely neutral	0.345793	0
+Phe	621	A	T	Likely neutral	0.345793	0
+Phe	622	G	A	Pathogenic	0.782111	1
+Phe	622	G	C	Pathogenic	0.782111	1
+Phe	622	G	T	Pathogenic	0.782111	1
+Phe	623	A	C	Pathogenic	0.656308	1
+Phe	623	A	G	Pathogenic	0.656308	1
+Phe	623	A	T	Pathogenic	0.656308	1
+Phe	624	C	A	Neutral	0.252311	0
+Phe	624	C	G	Neutral	0.252311	0
+Phe	624	C	T	Neutral	0.217176	0
+Phe	625	G	A	Likely pathogenic	0.548018	1
+Phe	625	G	C	Likely pathogenic	0.568285	1
+Phe	625	G	T	Likely pathogenic	0.568285	1
+Phe	626	G	A	Neutral	0.200042	1
+Phe	626	G	C	Neutral	0.308243	1
+Phe	626	G	T	Neutral	0.308243	1
+Phe	627	G	A	Neutral	0.225987	0
+Phe	627	G	C	Neutral	0.32629	1
+Phe	627	G	T	Neutral	0.32629	1
+Phe	628	C	A	Neutral	0.272936	0
+Phe	628	C	G	Neutral	0.272936	0
+Phe	628	C	T	Neutral	0.246571	0
+Phe	629	T	A	Neutral	0.192636	0
+Phe	629	T	C	Neutral	0.199467	0
+Phe	629	T	G	Neutral	0.223463	0
+Phe	630	C	A	Neutral	0.223899	0
+Phe	630	C	G	Neutral	0.278085	0
+Phe	630	C	T	Neutral	0.20873	0
+Phe	631	A	C	Neutral	0.102452	0
+Phe	631	A	G	Neutral	0.105082	0
+Phe	631	A	T	Neutral	0.099479	0
+Phe	632	C	A	Neutral	0.222078	0
+Phe	632	C	G	Neutral	0.320369	0
+Phe	632	C	T	Neutral	0.183188	0
+Phe	633	A	C	Neutral	0.107531	0
+Phe	633	A	G	Neutral	0.1084	0
+Phe	633	A	T	Neutral	0.100583	0
+Phe	634	T	A	Neutral	0.160546	0
+Phe	634	T	C	Neutral	0.191668	0
+Phe	634	T	G	Neutral	0.274671	0
+Phe	635	C	A	Neutral	0.21772	0
+Phe	635	C	G	Neutral	0.2159	0
+Phe	635	C	T	Neutral	0.214093	0
+Phe	636	A	C	Neutral	0.184812	0
+Phe	636	A	G	Neutral	0.06472	0
+Phe	636	A	T	Neutral	0.184812	0
+Phe	637	C	A	Likely neutral	0.430003	1
+Phe	637	C	G	Likely neutral	0.430003	1
+Phe	637	C	T	Neutral	0.353329	1
+Phe	638	C	A	Neutral	0.342454	1
+Phe	638	C	G	Neutral	0.342454	1
+Phe	638	C	T	Neutral	0.269293	1
+Phe	639	C	A	Likely pathogenic	0.591149	1
+Phe	639	C	G	Likely pathogenic	0.591149	1
+Phe	639	C	T	Likely pathogenic	0.591149	1
+Phe	640	C	A	Pathogenic	0.80198	1
+Phe	640	C	G	Pathogenic	0.80198	1
+Phe	640	C	T	Pathogenic	0.80198	1
+Phe	641	A	C	Likely pathogenic	0.551394	1
+Phe	641	A	G	Likely pathogenic	0.520698	1
+Phe	641	A	T	Likely pathogenic	0.551394	1
+Phe	642	T	A	Likely pathogenic	0.656983	1
+Phe	642	T	C	Likely pathogenic	0.672594	1
+Phe	642	T	G	Likely pathogenic	0.656983	1
+Phe	643	A	C	Likely pathogenic	0.61923	0
+Phe	643	A	G	Likely pathogenic	0.594441	1
+Phe	643	A	T	Likely pathogenic	0.594441	0
+Phe	644	A	C	Pathogenic	0.771652	1
+Phe	644	A	G	Pathogenic	0.771652	1
+Phe	644	A	T	Pathogenic	0.771652	1
+Phe	645	A	C	Likely pathogenic	0.684357	1
+Phe	645	A	G	Likely pathogenic	0.684357	1
+Phe	645	A	T	Likely pathogenic	0.684357	1
+Phe	646	C	A	Pathogenic	0.804488	1
+Phe	646	C	G	Pathogenic	0.804488	1
+Phe	646	C	T	Pathogenic	0.804488	1
+Phe	647	A	C	Likely pathogenic	0.587687	1
+Phe	647	A	G	Likely pathogenic	0.587687	1
+Phe	647	A	T	Likely pathogenic	0.587687	1
+Pro	16023	C	A	Pathogenic	0.804488	1
+Pro	16023	C	G	Pathogenic	0.804488	1
+Pro	16023	C	T	Pathogenic	0.804488	1
+Pro	16022	A	C	Pathogenic	0.699696	1
+Pro	16022	A	G	Pathogenic	0.699696	1
+Pro	16022	A	T	Pathogenic	0.699696	1
+Pro	16021	G	A	Likely pathogenic	0.550921	0
+Pro	16021	G	C	Likely pathogenic	0.607363	1
+Pro	16021	G	T	Likely pathogenic	0.607363	1
+Pro	16020	A	C	Neutral	0.306886	1
+Pro	16020	A	G	Neutral	0.257388	1
+Pro	16020	A	T	Neutral	0.306886	1
+Pro	16019	G	A	Likely pathogenic	0.558121	1
+Pro	16019	G	C	Likely pathogenic	0.622458	1
+Pro	16019	G	T	Likely pathogenic	0.622458	1
+Pro	16018	A	C	Likely neutral	0.392214	1
+Pro	16018	A	G	Neutral	0.313463	1
+Pro	16018	A	T	Likely neutral	0.392214	1
+Pro	16017	A	C	Likely neutral	0.376419	1
+Pro	16017	A	G	Neutral	0.288671	0
+Pro	16017	A	T	Likely neutral	0.376419	1
+Pro	16016	T	A	Likely neutral	0.432439	1
+Pro	16016	T	C	Likely neutral	0.432439	1
+Pro	16016	T	G	Likely neutral	0.432439	1
+Pro	16015	A	C	Likely neutral	0.468085	1
+Pro	16015	A	G	Likely neutral	0.468085	1
+Pro	16015	A	T	Likely neutral	0.468085	1
+Pro	16014	G	A	Pathogenic	0.821014	1
+Pro	16014	G	C	Pathogenic	0.821014	1
+Pro	16014	G	T	Pathogenic	0.821014	1
+Pro	16013	T	A	Likely pathogenic	0.520981	1
+Pro	16013	T	C	Likely pathogenic	0.520981	1
+Pro	16013	T	G	Likely pathogenic	0.520981	1
+Pro	16012	T	A	Pathogenic	0.771386	1
+Pro	16012	T	C	Pathogenic	0.771386	1
+Pro	16012	T	G	Pathogenic	0.771386	1
+Pro	16011	T	A	Likely pathogenic	0.623991	1
+Pro	16011	T	C	Likely pathogenic	0.623991	1
+Pro	16011	T	G	Likely pathogenic	0.623991	1
+Pro	16010	A	C	Likely pathogenic	0.649738	1
+Pro	16010	A	G	Likely pathogenic	0.649738	1
+Pro	16010	A	T	Likely pathogenic	0.649738	1
+Pro	16009	A	C	Likely pathogenic	0.575804	1
+Pro	16009	A	G	Likely pathogenic	0.575804	1
+Pro	16009	A	T	Likely pathogenic	0.552782	1
+Pro	16008	A	C	Neutral	0.221562	0
+Pro	16008	A	G	Neutral	0.145961	0
+Pro	16008	A	T	Neutral	0.148592	0
+Pro	16007	T	A	Neutral	0.163662	0
+Pro	16007	T	C	Neutral	0.212018	0
+Pro	16007	T	G	Neutral	0.212018	0
+Pro	16006	T	A	Neutral	0.196895	1
+Pro	16006	T	C	Neutral	0.251813	1
+Pro	16006	T	G	Neutral	0.251813	1
+Pro	16005	A	C	Likely neutral	0.432846	1
+Pro	16005	A	G	Likely neutral	0.432846	1
+Pro	16005	A	T	Likely neutral	0.432846	1
+Pro	16004	G	A	Pathogenic	0.788703	1
+Pro	16004	G	C	Pathogenic	0.788703	1
+Pro	16004	G	T	Pathogenic	0.788703	1
+Pro	16003	A	C	Likely pathogenic	0.557795	1
+Pro	16003	A	G	Likely pathogenic	0.557795	1
+Pro	16003	A	T	Likely pathogenic	0.557795	1
+Pro	16002	A	C	Pathogenic	0.837565	1
+Pro	16002	A	G	Pathogenic	0.837565	1
+Pro	16002	A	T	Pathogenic	0.837565	1
+Pro	16001	T	A	Neutral	0.356564	0
+Pro	16001	T	C	Neutral	0.268998	0
+Pro	16001	T	G	Neutral	0.356564	0
+Pro	16000	C	A	Neutral	0.212445	0
+Pro	16000	C	G	Neutral	0.217541	0
+Pro	16000	C	T	Neutral	0.212259	0
+Pro	15999	T	A	Likely neutral	0.392283	1
+Pro	15999	T	C	Likely neutral	0.407874	1
+Pro	15999	T	G	Likely neutral	0.392283	1
+Pro	15998	T	A	Likely neutral	0.48986	1
+Pro	15998	T	C	Likely neutral	0.499201	0
+Pro	15998	T	G	Likely neutral	0.48986	1
+Pro	15997	A	C	Likely neutral	0.407629	1
+Pro	15997	A	G	Neutral	0.311338	1
+Pro	15997	A	T	Likely neutral	0.407629	1
+Pro	15996	G	A	Pathogenic	0.878552	0
+Pro	15996	G	C	Pathogenic	0.878552	1
+Pro	15996	G	T	Pathogenic	0.878552	1
+Pro	15995	C	A	Likely neutral	0.481142	1
+Pro	15995	C	G	Likely neutral	0.481142	1
+Pro	15995	C	T	Likely neutral	0.315391	1
+Pro	15994	T	A	Likely neutral	0.343502	1
+Pro	15994	T	C	Likely neutral	0.343502	1
+Pro	15994	T	G	Likely neutral	0.343502	1
+Pro	15993	T	A	Likely pathogenic	0.527095	1
+Pro	15993	T	C	Likely pathogenic	0.527095	1
+Pro	15993	T	G	Likely pathogenic	0.527095	1
+Pro	15992	T	A	Likely neutral	0.323294	1
+Pro	15992	T	C	Likely neutral	0.323294	1
+Pro	15992	T	G	Likely neutral	0.323294	1
+Pro	15991	G	A	Likely pathogenic	0.558385	1
+Pro	15991	G	C	Likely pathogenic	0.558385	1
+Pro	15991	G	T	Likely pathogenic	0.558385	1
+Pro	15990	G	A	Likely pathogenic	0.515245	1
+Pro	15990	G	C	Likely pathogenic	0.515245	1
+Pro	15990	G	T	Likely pathogenic	0.515245	1
+Pro	15989	G	A	Pathogenic	0.694097	1
+Pro	15989	G	C	Pathogenic	0.694097	1
+Pro	15989	G	T	Pathogenic	0.694097	1
+Pro	15988	T	A	Neutral	0.239421	0
+Pro	15988	T	C	Neutral	0.307536	0
+Pro	15988	T	G	Neutral	0.211899	0
+Pro	15987	G	A	Neutral	0.295025	1
+Pro	15987	G	C	Likely neutral	0.428575	1
+Pro	15987	G	T	Likely neutral	0.428575	1
+Pro	15986	C	A	Neutral	0.345713	1
+Pro	15986	C	G	Neutral	0.345713	1
+Pro	15986	C	T	Likely neutral	0.285897	0
+Pro	15985	T	A	Likely pathogenic	0.582463	1
+Pro	15985	T	C	Likely pathogenic	0.543018	1
+Pro	15985	T	G	Likely pathogenic	0.582463	1
+Pro	15984	A	C	Likely pathogenic	0.524324	1
+Pro	15984	A	G	Likely pathogenic	0.514265	0
+Pro	15984	A	T	Likely pathogenic	0.524324	1
+Pro	15983	A	C	Likely neutral	0.421663	1
+Pro	15983	A	G	Neutral	0.317868	1
+Pro	15983	A	T	Likely neutral	0.421663	1
+Pro	15982	T	A	Neutral	0.133719	0
+Pro	15982	T	C	Neutral	0.128098	0
+Pro	15982	T	G	Neutral	0.153302	0
+Pro	15981	G	A	Likely neutral	0.476827	1
+Pro	15981	G	C	Likely pathogenic	0.526243	1
+Pro	15981	G	T	Likely pathogenic	0.526243	1
+Pro	15980	G	A	Pathogenic	0.735345	1
+Pro	15980	G	C	Pathogenic	0.735345	1
+Pro	15980	G	T	Pathogenic	0.735345	1
+Pro	15979	T	A	Likely neutral	0.455316	1
+Pro	15979	T	C	Likely neutral	0.396854	1
+Pro	15979	T	G	Likely neutral	0.455316	1
+Pro	15978	G	A	Neutral	0.267266	0
+Pro	15978	G	C	Likely neutral	0.387192	0
+Pro	15978	G	T	Likely neutral	0.387192	0
+Pro	15977	G	A	Neutral	0.305245	0
+Pro	15977	G	C	Likely neutral	0.415014	0
+Pro	15977	G	T	Likely neutral	0.415014	0
+Pro	15976	A	C	Neutral	0.295544	1
+Pro	15976	A	G	Neutral	0.197798	0
+Pro	15976	A	T	Neutral	0.295544	1
+Pro	15975	G	A	Pathogenic	0.759917	1
+Pro	15975	G	C	Pathogenic	0.766298	1
+Pro	15975	G	T	Pathogenic	0.766298	1
+Pro	15974	T	A	Neutral	0.142166	1
+Pro	15974	T	C	Neutral	0.151319	0
+Pro	15974	T	G	Neutral	0.142166	1
+Pro	15973	T	A	Neutral	0.125114	0
+Pro	15973	T	C	Neutral	0.138998	0
+Pro	15973	T	G	Neutral	0.138998	0
+Pro	15972	A	C	Neutral	0.207789	0
+Pro	15972	A	G	Neutral	0.082291	0
+Pro	15972	A	T	Neutral	0.082592	0
+Pro	15971	A	C	Neutral	0.229296	0
+Pro	15971	A	G	Neutral	0.189671	0
+Pro	15971	A	T	Neutral	0.206372	0
+Pro	15970	A	C	Neutral	0.203956	0
+Pro	15970	A	G	Neutral	0.159716	0
+Pro	15970	A	T	Neutral	0.153284	0
+Pro	15969	G	A	Neutral	0.299221	0
+Pro	15969	G	C	Likely neutral	0.41347	0
+Pro	15969	G	T	Neutral	0.296352	0
+Pro	15968	A	C	Neutral	0.18779	1
+Pro	15968	A	G	Neutral	0.132339	0
+Pro	15968	A	T	Neutral	0.145471	1
+Pro	15967	C	A	Likely neutral	0.487125	1
+Pro	15967	C	G	Likely pathogenic	0.517278	1
+Pro	15967	C	T	Likely pathogenic	0.501139	1
+Pro	15966	T	A	Neutral	0.361244	1
+Pro	15966	T	C	Likely neutral	0.363815	0
+Pro	15966	T	G	Neutral	0.361244	1
+Pro	15965	T	A	Neutral	0.333901	0
+Pro	15965	T	C	Neutral	0.196999	0
+Pro	15965	T	G	Neutral	0.333901	0
+Pro	15964	T	A	Neutral	0.247666	0
+Pro	15964	T	C	Neutral	0.162178	0
+Pro	15964	T	G	Neutral	0.247666	0
+Pro	15963	T	A	Neutral	0.350776	1
+Pro	15963	T	C	Neutral	0.281494	0
+Pro	15963	T	G	Neutral	0.350776	1
+Pro	15962	T	A	Likely pathogenic	0.50065	1
+Pro	15962	T	C	Likely pathogenic	0.50065	1
+Pro	15962	T	G	Likely pathogenic	0.50065	1
+Pro	15961	C	A	Likely pathogenic	0.515278	1
+Pro	15961	C	G	Likely pathogenic	0.515278	1
+Pro	15961	C	T	Likely neutral	0.474966	1
+Pro	15960	T	A	Neutral	0.365159	1
+Pro	15960	T	C	Neutral	0.283934	1
+Pro	15960	T	G	Neutral	0.365159	1
+Pro	15959	C	A	Likely pathogenic	0.520887	1
+Pro	15959	C	G	Likely pathogenic	0.520887	1
+Pro	15959	C	T	Likely neutral	0.498547	0
+Pro	15958	T	A	Likely pathogenic	0.618852	1
+Pro	15958	T	C	Likely pathogenic	0.618852	1
+Pro	15958	T	G	Likely pathogenic	0.618852	1
+Pro	15957	G	A	Pathogenic	0.812523	1
+Pro	15957	G	C	Pathogenic	0.812523	1
+Pro	15957	G	T	Pathogenic	0.741802	1
+Pro	15956	A	C	Likely neutral	0.492092	1
+Pro	15956	A	G	Likely neutral	0.450289	1
+Pro	15956	A	T	Likely neutral	0.492092	1
+Ser(AGY)	12207	G	A	Neutral	0.238865	0
+Ser(AGY)	12207	G	C	Neutral	0.364151	1
+Ser(AGY)	12207	G	T	Neutral	0.364151	1
+Ser(AGY)	12208	A	C	Likely neutral	0.482572	1
+Ser(AGY)	12208	A	G	Likely neutral	0.405666	1
+Ser(AGY)	12208	A	T	Likely neutral	0.482572	1
+Ser(AGY)	12209	G	A	Pathogenic	0.894294	1
+Ser(AGY)	12209	G	C	Pathogenic	0.894294	1
+Ser(AGY)	12209	G	T	Pathogenic	0.894294	1
+Ser(AGY)	12210	A	C	Likely neutral	0.393671	1
+Ser(AGY)	12210	A	G	Likely neutral	0.32814	1
+Ser(AGY)	12210	A	T	Likely neutral	0.393671	1
+Ser(AGY)	12211	A	C	Pathogenic	0.771652	1
+Ser(AGY)	12211	A	G	Pathogenic	0.771652	1
+Ser(AGY)	12211	A	T	Pathogenic	0.771652	1
+Ser(AGY)	12212	A	C	Likely neutral	0.372555	1
+Ser(AGY)	12212	A	G	Likely neutral	0.372555	1
+Ser(AGY)	12212	A	T	Neutral	0.314936	1
+Ser(AGY)	12213	G	A	Likely pathogenic	0.5389	1
+Ser(AGY)	12213	G	C	Pathogenic	0.660855	1
+Ser(AGY)	12213	G	T	Pathogenic	0.660855	1
+Ser(AGY)	12214	C	A	Neutral	0.131326	0
+Ser(AGY)	12214	C	G	Neutral	0.252503	0
+Ser(AGY)	12214	C	T	Neutral	0.155197	0
+Ser(AGY)	12215	T	A	Neutral	0.173214	0
+Ser(AGY)	12215	T	C	Neutral	0.173538	0
+Ser(AGY)	12215	T	G	Neutral	0.286658	0
+Ser(AGY)	12216	C	A	Neutral	0.261142	0
+Ser(AGY)	12216	C	G	Neutral	0.283541	0
+Ser(AGY)	12216	C	T	Neutral	0.241949	0
+Ser(AGY)	12217	A	C	Neutral	0.158749	0
+Ser(AGY)	12217	A	G	Neutral	0.134276	0
+Ser(AGY)	12217	A	T	Neutral	0.158749	0
+Ser(AGY)	12218	C	A	Likely pathogenic	0.563629	1
+Ser(AGY)	12218	C	G	Likely pathogenic	0.591088	1
+Ser(AGY)	12218	C	T	Likely pathogenic	0.522243	0
+Ser(AGY)	12219	A	C	Likely pathogenic	0.60524	1
+Ser(AGY)	12219	A	G	Likely pathogenic	0.60524	0
+Ser(AGY)	12219	A	T	Likely pathogenic	0.516085	1
+Ser(AGY)	12220	A	C	Neutral	0.305971	0
+Ser(AGY)	12220	A	G	Neutral	0.255746	0
+Ser(AGY)	12220	A	T	Neutral	0.255746	0
+Ser(AGY)	12221	G	A	Pathogenic	0.894294	1
+Ser(AGY)	12221	G	C	Pathogenic	0.894294	1
+Ser(AGY)	12221	G	T	Pathogenic	0.894294	1
+Ser(AGY)	12222	A	C	Likely neutral	0.393671	1
+Ser(AGY)	12222	A	G	Likely neutral	0.32814	1
+Ser(AGY)	12222	A	T	Likely neutral	0.393671	1
+Ser(AGY)	12223	A	C	Likely pathogenic	0.508148	1
+Ser(AGY)	12223	A	G	Likely neutral	0.430503	1
+Ser(AGY)	12223	A	T	Likely pathogenic	0.508148	1
+Ser(AGY)	12224	C	A	Likely neutral	0.423069	1
+Ser(AGY)	12224	C	G	Likely neutral	0.423069	1
+Ser(AGY)	12224	C	T	Likely neutral	0.349899	1
+Ser(AGY)	12225	T	A	Likely neutral	0.436455	1
+Ser(AGY)	12225	T	C	Likely neutral	0.421519	1
+Ser(AGY)	12225	T	G	Likely neutral	0.436455	1
+Ser(AGY)	12226	G	A	Likely pathogenic	0.508705	1
+Ser(AGY)	12226	G	C	Likely pathogenic	0.508705	1
+Ser(AGY)	12226	G	T	Likely pathogenic	0.508705	1
+Ser(AGY)	12227	C	A	Likely pathogenic	0.619777	1
+Ser(AGY)	12227	C	G	Likely pathogenic	0.619777	1
+Ser(AGY)	12227	C	T	Likely pathogenic	0.619777	1
+Ser(AGY)	12228	T	A	Likely neutral	0.487859	1
+Ser(AGY)	12228	T	C	Likely neutral	0.487859	1
+Ser(AGY)	12228	T	G	Likely neutral	0.487859	1
+Ser(AGY)	12229	A	C	Likely pathogenic	0.613322	1
+Ser(AGY)	12229	A	G	Likely pathogenic	0.613322	1
+Ser(AGY)	12229	A	T	Likely pathogenic	0.613322	1
+Ser(AGY)	12230	A	C	Likely pathogenic	0.632571	1
+Ser(AGY)	12230	A	G	Likely pathogenic	0.632571	1
+Ser(AGY)	12230	A	T	Likely pathogenic	0.632571	1
+Ser(AGY)	12231	C	A	Neutral	0.360071	0
+Ser(AGY)	12231	C	G	Neutral	0.360071	0
+Ser(AGY)	12231	C	T	Likely neutral	0.330221	0
+Ser(AGY)	12232	T	A	Likely pathogenic	0.532339	1
+Ser(AGY)	12232	T	C	Likely neutral	0.422117	1
+Ser(AGY)	12232	T	G	Likely pathogenic	0.532339	1
+Ser(AGY)	12233	C	A	Pathogenic	0.88991	1
+Ser(AGY)	12233	C	G	Pathogenic	0.88991	1
+Ser(AGY)	12233	C	T	Pathogenic	0.88991	1
+Ser(AGY)	12234	A	C	Neutral	0.11384	0
+Ser(AGY)	12234	A	G	Neutral	0.136307	0
+Ser(AGY)	12234	A	T	Neutral	0.117237	0
+Ser(AGY)	12235	T	A	Likely neutral	0.371949	1
+Ser(AGY)	12235	T	C	Neutral	0.309559	0
+Ser(AGY)	12235	T	G	Likely neutral	0.371949	1
+Ser(AGY)	12236	G	A	Neutral	0.087948	0
+Ser(AGY)	12236	G	C	Neutral	0.100071	1
+Ser(AGY)	12236	G	T	Neutral	0.163801	1
+Ser(AGY)	12237	C	A	Neutral	0.182701	0
+Ser(AGY)	12237	C	G	Neutral	0.280952	0
+Ser(AGY)	12237	C	T	Neutral	0.185733	0
+Ser(AGY)	12238	C	A	Neutral	0.126175	0
+Ser(AGY)	12238	C	G	Neutral	0.242866	0
+Ser(AGY)	12238	C	T	Neutral	0.134527	0
+Ser(AGY)	12239	C	A	Neutral	0.127735	0
+Ser(AGY)	12239	C	G	Neutral	0.24343	0
+Ser(AGY)	12239	C	T	Neutral	0.138405	0
+Ser(AGY)	12240	C	A	Likely pathogenic	0.560995	1
+Ser(AGY)	12240	C	G	Likely pathogenic	0.560995	1
+Ser(AGY)	12240	C	T	Likely pathogenic	0.535207	1
+Ser(AGY)	12241	C	A	Pathogenic	0.732438	1
+Ser(AGY)	12241	C	G	Pathogenic	0.732438	1
+Ser(AGY)	12241	C	T	Pathogenic	0.684383	1
+Ser(AGY)	12242	A	C	Neutral	0.242218	1
+Ser(AGY)	12242	A	G	Neutral	0.16925	1
+Ser(AGY)	12242	A	T	Neutral	0.242218	1
+Ser(AGY)	12243	T	A	Neutral	0.322339	1
+Ser(AGY)	12243	T	C	Likely neutral	0.326522	1
+Ser(AGY)	12243	T	G	Likely neutral	0.360093	1
+Ser(AGY)	12244	G	A	Likely neutral	0.362426	0
+Ser(AGY)	12244	G	C	Likely neutral	0.433774	1
+Ser(AGY)	12244	G	T	Likely neutral	0.433774	1
+Ser(AGY)	12245	T	A	Neutral	0.152705	0
+Ser(AGY)	12245	T	C	Neutral	0.15178	0
+Ser(AGY)	12245	T	G	Neutral	0.275343	0
+Ser(AGY)	12246	C	A	Neutral	0.177953	0
+Ser(AGY)	12246	C	G	Neutral	0.223301	0
+Ser(AGY)	12246	C	T	Neutral	0.186961	0
+Ser(AGY)	12247	T	A	Likely neutral	0.487859	1
+Ser(AGY)	12247	T	C	Likely neutral	0.487859	1
+Ser(AGY)	12247	T	G	Likely neutral	0.487859	1
+Ser(AGY)	12248	A	C	Likely pathogenic	0.649738	1
+Ser(AGY)	12248	A	G	Likely pathogenic	0.649738	1
+Ser(AGY)	12248	A	T	Likely pathogenic	0.649738	1
+Ser(AGY)	12249	A	C	Likely pathogenic	0.533011	1
+Ser(AGY)	12249	A	G	Likely pathogenic	0.601547	1
+Ser(AGY)	12249	A	T	Likely pathogenic	0.601547	1
+Ser(AGY)	12250	C	A	Neutral	0.181582	0
+Ser(AGY)	12250	C	G	Neutral	0.284573	0
+Ser(AGY)	12250	C	T	Neutral	0.15319	0
+Ser(AGY)	12251	A	C	Likely neutral	0.333518	1
+Ser(AGY)	12251	A	G	Likely neutral	0.42701	1
+Ser(AGY)	12251	A	T	Likely neutral	0.42701	1
+Ser(AGY)	12252	A	C	Neutral	0.12811	0
+Ser(AGY)	12252	A	G	Neutral	0.141112	0
+Ser(AGY)	12252	A	T	Neutral	0.12811	0
+Ser(AGY)	12253	C	A	Likely neutral	0.357078	1
+Ser(AGY)	12253	C	G	Likely neutral	0.426851	1
+Ser(AGY)	12253	C	T	Likely neutral	0.345529	0
+Ser(AGY)	12254	A	C	Likely neutral	0.43777	1
+Ser(AGY)	12254	A	G	Likely neutral	0.410261	1
+Ser(AGY)	12254	A	T	Likely neutral	0.467216	1
+Ser(AGY)	12255	T	A	Neutral	0.272806	1
+Ser(AGY)	12255	T	C	Neutral	0.252193	1
+Ser(AGY)	12255	T	G	Neutral	0.272806	1
+Ser(AGY)	12256	G	A	Likely pathogenic	0.632613	1
+Ser(AGY)	12256	G	C	Pathogenic	0.683754	1
+Ser(AGY)	12256	G	T	Pathogenic	0.683754	1
+Ser(AGY)	12257	G	A	Likely pathogenic	0.564315	1
+Ser(AGY)	12257	G	C	Likely pathogenic	0.596014	1
+Ser(AGY)	12257	G	T	Likely pathogenic	0.596014	1
+Ser(AGY)	12258	C	A	Likely pathogenic	0.680846	1
+Ser(AGY)	12258	C	G	Likely pathogenic	0.680846	1
+Ser(AGY)	12258	C	T	Likely pathogenic	0.565164	1
+Ser(AGY)	12259	T	A	Likely pathogenic	0.520496	1
+Ser(AGY)	12259	T	C	Likely pathogenic	0.506145	1
+Ser(AGY)	12259	T	G	Likely pathogenic	0.520496	1
+Ser(AGY)	12260	T	A	Likely neutral	0.457893	1
+Ser(AGY)	12260	T	C	Likely neutral	0.457893	1
+Ser(AGY)	12260	T	G	Likely pathogenic	0.528451	1
+Ser(AGY)	12261	T	A	Likely neutral	0.408271	1
+Ser(AGY)	12261	T	C	Neutral	0.296156	1
+Ser(AGY)	12261	T	G	Likely neutral	0.408271	1
+Ser(AGY)	12262	C	A	Pathogenic	0.872772	1
+Ser(AGY)	12262	C	G	Pathogenic	0.872772	1
+Ser(AGY)	12262	C	T	Pathogenic	0.872772	1
+Ser(AGY)	12263	T	A	Likely pathogenic	0.535079	1
+Ser(AGY)	12263	T	C	Likely neutral	0.414109	1
+Ser(AGY)	12263	T	G	Likely pathogenic	0.535079	1
+Ser(AGY)	12264	C	A	Likely neutral	0.445438	1
+Ser(AGY)	12264	C	G	Likely neutral	0.445438	1
+Ser(AGY)	12264	C	T	Likely neutral	0.345831	0
+Ser(AGY)	12265	A	C	Likely neutral	0.469398	NA
+Ser(AGY)	12265	A	G	Likely neutral	0.396023	NA
+Ser(AGY)	12265	A	T	Likely neutral	0.469398	NA
+Ser(UCN)	7514	G	A	Likely neutral	0.358036	0
+Ser(UCN)	7514	G	C	Likely neutral	0.471184	0
+Ser(UCN)	7514	G	T	Likely neutral	0.471184	0
+Ser(UCN)	7513	A	C	Likely neutral	0.363778	1
+Ser(UCN)	7513	A	G	Neutral	0.27138	1
+Ser(UCN)	7513	A	T	Likely neutral	0.363778	1
+Ser(UCN)	7512	A	C	Likely neutral	0.427673	1
+Ser(UCN)	7512	A	G	Likely neutral	0.427217	1
+Ser(UCN)	7512	A	T	Likely neutral	0.427673	1
+Ser(UCN)	7511	A	C	Pathogenic	0.771652	1
+Ser(UCN)	7511	A	G	Pathogenic	0.771652	1
+Ser(UCN)	7511	A	T	Pathogenic	0.771652	1
+Ser(UCN)	7510	A	C	Likely pathogenic	0.650529	1
+Ser(UCN)	7510	A	G	Likely pathogenic	0.567912	0
+Ser(UCN)	7510	A	T	Likely pathogenic	0.650529	1
+Ser(UCN)	7509	A	C	Neutral	0.327324	1
+Ser(UCN)	7509	A	G	Neutral	0.249866	1
+Ser(UCN)	7509	A	T	Neutral	0.327324	1
+Ser(UCN)	7508	G	A	Pathogenic	0.879617	1
+Ser(UCN)	7508	G	C	Pathogenic	0.897808	1
+Ser(UCN)	7508	G	T	Pathogenic	0.897808	1
+Ser(UCN)	7507	T	A	Likely neutral	0.399471	1
+Ser(UCN)	7507	T	C	Likely neutral	0.488581	1
+Ser(UCN)	7507	T	G	Likely neutral	0.488581	1
+Ser(UCN)	7506	C	A	Pathogenic	0.645334	1
+Ser(UCN)	7506	C	G	Pathogenic	0.645334	1
+Ser(UCN)	7506	C	T	Likely pathogenic	0.587697	1
+Ser(UCN)	7505	A	C	Likely pathogenic	0.525514	1
+Ser(UCN)	7505	A	G	Likely neutral	0.464196	1
+Ser(UCN)	7505	A	T	Likely pathogenic	0.525514	1
+Ser(UCN)	7504	T	A	Neutral	0.181048	1
+Ser(UCN)	7504	T	C	Neutral	0.181048	1
+Ser(UCN)	7504	T	G	Neutral	0.181048	1
+Ser(UCN)	7503	G	A	Likely neutral	0.438424	0
+Ser(UCN)	7503	G	C	Likely neutral	0.429994	1
+Ser(UCN)	7503	G	T	Likely neutral	0.429994	1
+Ser(UCN)	7502	G	A	Neutral	0.111081	0
+Ser(UCN)	7502	G	C	Neutral	0.258936	1
+Ser(UCN)	7502	G	T	Neutral	0.121719	1
+Ser(UCN)	7501	A	C	Neutral	0.279432	0
+Ser(UCN)	7501	A	G	Neutral	0.154138	0
+Ser(UCN)	7501	A	T	Neutral	0.152683	0
+Ser(UCN)	7500	G	A	Likely neutral	0.467531	1
+Ser(UCN)	7500	G	C	Likely neutral	0.467531	1
+Ser(UCN)	7500	G	T	Likely neutral	0.467531	1
+Ser(UCN)	7499	G	A	Likely neutral	0.463125	1
+Ser(UCN)	7499	G	C	Likely neutral	0.463125	1
+Ser(UCN)	7499	G	T	Likely neutral	0.437557	1
+Ser(UCN)	7498	C	A	Neutral	0.094459	0
+Ser(UCN)	7498	C	G	Neutral	0.195308	0
+Ser(UCN)	7498	C	T	Neutral	0.116729	0
+Ser(UCN)	7497	C	A	Likely pathogenic	0.507597	1
+Ser(UCN)	7497	C	G	Likely pathogenic	0.507597	1
+Ser(UCN)	7497	C	T	Likely pathogenic	0.57753	0
+Ser(UCN)	7496	A	C	Likely pathogenic	0.600502	1
+Ser(UCN)	7496	A	G	Likely pathogenic	0.568997	1
+Ser(UCN)	7496	A	T	Likely pathogenic	0.600502	1
+Ser(UCN)	7495	T	A	Likely neutral	0.371533	1
+Ser(UCN)	7495	T	C	Likely neutral	0.402134	1
+Ser(UCN)	7495	T	G	Likely neutral	0.371533	1
+Ser(UCN)	7494	G	A	Likely neutral	0.383438	1
+Ser(UCN)	7494	G	C	Likely neutral	0.487427	1
+Ser(UCN)	7494	G	T	Likely neutral	0.487427	1
+Ser(UCN)	7493	G	A	Neutral	0.134482	0
+Ser(UCN)	7493	G	C	Neutral	0.156925	0
+Ser(UCN)	7493	G	T	Neutral	0.156925	0
+Ser(UCN)	7492	G	A	Neutral	0.158634	1
+Ser(UCN)	7492	G	C	Neutral	0.253827	1
+Ser(UCN)	7492	G	T	Neutral	0.157042	1
+Ser(UCN)	7491	G	A	Likely pathogenic	0.509586	0
+Ser(UCN)	7491	G	C	Likely pathogenic	0.601204	1
+Ser(UCN)	7491	G	T	Likely pathogenic	0.601204	1
+Ser(UCN)	7490	T	A	Neutral	0.237657	0
+Ser(UCN)	7490	T	C	Neutral	0.22979	0
+Ser(UCN)	7490	T	G	Neutral	0.237657	0
+Ser(UCN)	7489	T	A	Likely neutral	0.456958	1
+Ser(UCN)	7489	T	C	Likely neutral	0.456958	1
+Ser(UCN)	7489	T	G	Likely neutral	0.456958	1
+Ser(UCN)	7488	G	A	Pathogenic	0.788893	1
+Ser(UCN)	7488	G	C	Pathogenic	0.788893	1
+Ser(UCN)	7488	G	T	Pathogenic	0.788893	1
+Ser(UCN)	7487	G	A	Likely pathogenic	0.609572	1
+Ser(UCN)	7487	G	C	Likely pathogenic	0.609572	1
+Ser(UCN)	7487	G	T	Likely pathogenic	0.609572	1
+Ser(UCN)	7486	C	A	Likely pathogenic	0.619777	1
+Ser(UCN)	7486	C	G	Likely pathogenic	0.619777	1
+Ser(UCN)	7486	C	T	Likely pathogenic	0.619777	1
+Ser(UCN)	7485	T	A	Likely neutral	0.343502	1
+Ser(UCN)	7485	T	C	Likely neutral	0.343502	1
+Ser(UCN)	7485	T	G	Likely neutral	0.343502	1
+Ser(UCN)	7484	T	A	Likely neutral	0.323294	1
+Ser(UCN)	7484	T	C	Likely neutral	0.323294	1
+Ser(UCN)	7484	T	G	Likely neutral	0.323294	1
+Ser(UCN)	7483	G	A	Pathogenic	0.765256	1
+Ser(UCN)	7483	G	C	Pathogenic	0.765256	1
+Ser(UCN)	7483	G	T	Pathogenic	0.765256	1
+Ser(UCN)	7482	A	C	Likely neutral	0.424786	1
+Ser(UCN)	7482	A	G	Likely neutral	0.424786	1
+Ser(UCN)	7482	A	T	Likely neutral	0.424786	1
+Ser(UCN)	7481	A	C	Likely pathogenic	0.612803	1
+Ser(UCN)	7481	A	G	Likely pathogenic	0.612803	1
+Ser(UCN)	7481	A	T	Likely pathogenic	0.612803	1
+Ser(UCN)	7480	A	C	Likely pathogenic	0.632571	1
+Ser(UCN)	7480	A	G	Likely pathogenic	0.632571	1
+Ser(UCN)	7480	A	T	Likely pathogenic	0.632571	1
+Ser(UCN)	7479	C	A	Pathogenic	0.674612	1
+Ser(UCN)	7479	C	G	Pathogenic	0.674612	1
+Ser(UCN)	7479	C	T	Pathogenic	0.674612	1
+Ser(UCN)	7478	C	A	Likely pathogenic	0.539477	1
+Ser(UCN)	7478	C	G	Likely pathogenic	0.539477	1
+Ser(UCN)	7478	C	T	Likely neutral	0.376789	1
+Ser(UCN)	7477	A	C	Likely pathogenic	0.62625	1
+Ser(UCN)	7477	A	G	Likely pathogenic	0.579156	1
+Ser(UCN)	7477	A	T	Likely pathogenic	0.62625	1
+Ser(UCN)	7476	G	A	Neutral	0.24235	0
+Ser(UCN)	7476	G	C	Likely neutral	0.377072	0
+Ser(UCN)	7476	G	T	Neutral	0.319611	0
+Ser(UCN)	7475	C	A	Likely neutral	0.413198	1
+Ser(UCN)	7475	C	G	Likely neutral	0.413198	1
+Ser(UCN)	7475	C	T	Likely neutral	0.438658	0
+Ser(UCN)	7474	T	A	Likely neutral	0.374825	1
+Ser(UCN)	7474	T	C	Likely neutral	0.326299	1
+Ser(UCN)	7474	T	G	Likely neutral	0.360619	1
+Ser(UCN)	7473	T	A	Neutral	0.307664	1
+Ser(UCN)	7473	T	C	Likely neutral	0.37221	1
+Ser(UCN)	7473	T	G	Likely neutral	0.37221	1
+Ser(UCN)	7472	T	A	Likely neutral	0.288846	1
+Ser(UCN)	7472	T	C	Likely neutral	0.245297	1
+Ser(UCN)	7472	T	G	Likely neutral	0.391973	1
+Ser(UCN)	7471	G	A	Neutral	0.15503	0
+Ser(UCN)	7471	G	C	Neutral	0.218392	0
+Ser(UCN)	7471	G	T	Neutral	0.108031	0
+Ser(UCN)	7470	G	A	Likely pathogenic	0.630322	1
+Ser(UCN)	7470	G	C	Likely pathogenic	0.630322	1
+Ser(UCN)	7470	G	T	Likely pathogenic	0.630322	1
+Ser(UCN)	7469	G	A	Neutral	0.21291	0
+Ser(UCN)	7469	G	C	Neutral	0.334834	0
+Ser(UCN)	7469	G	T	Neutral	0.334834	0
+Ser(UCN)	7468	G	A	Neutral	0.273838	0
+Ser(UCN)	7468	G	C	Neutral	0.350133	0
+Ser(UCN)	7468	G	T	Neutral	0.350133	0
+Ser(UCN)	7467	G	A	Likely neutral	0.485138	1
+Ser(UCN)	7467	G	C	Likely pathogenic	0.550972	1
+Ser(UCN)	7467	G	T	Likely pathogenic	0.550972	1
+Ser(UCN)	7466	G	A	Pathogenic	0.90568	1
+Ser(UCN)	7466	G	C	Pathogenic	0.90568	1
+Ser(UCN)	7466	G	T	Pathogenic	0.90568	1
+Ser(UCN)	7465	T	A	Likely neutral	0.404409	1
+Ser(UCN)	7465	T	C	Likely neutral	0.404409	1
+Ser(UCN)	7465	T	G	Likely neutral	0.404409	1
+Ser(UCN)	7464	T	A	Likely neutral	0.429305	1
+Ser(UCN)	7464	T	C	Likely neutral	0.429305	1
+Ser(UCN)	7464	T	G	Likely neutral	0.429305	1
+Ser(UCN)	7463	C	A	Likely pathogenic	0.538927	1
+Ser(UCN)	7463	C	G	Likely pathogenic	0.538927	1
+Ser(UCN)	7463	C	T	Likely pathogenic	0.538927	1
+Ser(UCN)	7462	G	A	Neutral	0.333989	0
+Ser(UCN)	7462	G	C	Likely neutral	0.470235	0
+Ser(UCN)	7462	G	T	Likely neutral	0.470235	0
+Ser(UCN)	7461	A	C	Likely pathogenic	0.612609	1
+Ser(UCN)	7461	A	G	Likely pathogenic	0.612609	1
+Ser(UCN)	7461	A	T	Likely pathogenic	0.612609	1
+Ser(UCN)	7460	T	A	Neutral	0.203413	0
+Ser(UCN)	7460	T	C	Neutral	0.178472	0
+Ser(UCN)	7460	T	G	Neutral	0.219961	0
+Ser(UCN)	7459	T	A	Likely neutral	0.375079	1
+Ser(UCN)	7459	T	C	Likely neutral	0.375079	1
+Ser(UCN)	7459	T	G	Likely neutral	0.375079	1
+Ser(UCN)	7458	C	A	Pathogenic	0.71995	1
+Ser(UCN)	7458	C	G	Pathogenic	0.71995	1
+Ser(UCN)	7458	C	T	Pathogenic	0.71995	1
+Ser(UCN)	7457	C	A	Pathogenic	0.696834	1
+Ser(UCN)	7457	C	G	Pathogenic	0.696834	1
+Ser(UCN)	7457	C	T	Likely pathogenic	0.617531	1
+Ser(UCN)	7456	T	A	Neutral	0.304551	1
+Ser(UCN)	7456	T	C	Neutral	0.248974	1
+Ser(UCN)	7456	T	G	Neutral	0.304551	1
+Ser(UCN)	7455	T	A	Likely neutral	0.410004	0
+Ser(UCN)	7455	T	C	Likely neutral	0.400273	0
+Ser(UCN)	7455	T	G	Likely neutral	0.410004	0
+Ser(UCN)	7454	C	A	Pathogenic	0.71995	1
+Ser(UCN)	7454	C	G	Pathogenic	0.71995	1
+Ser(UCN)	7454	C	T	Pathogenic	0.71995	1
+Ser(UCN)	7453	C	A	Pathogenic	0.773437	1
+Ser(UCN)	7453	C	G	Pathogenic	0.773437	1
+Ser(UCN)	7453	C	T	Pathogenic	0.773437	1
+Ser(UCN)	7452	T	A	Likely pathogenic	0.528246	1
+Ser(UCN)	7452	T	C	Likely pathogenic	0.528246	1
+Ser(UCN)	7452	T	G	Likely pathogenic	0.528246	1
+Ser(UCN)	7451	T	A	Pathogenic	0.71886	1
+Ser(UCN)	7451	T	C	Pathogenic	0.698648	0
+Ser(UCN)	7451	T	G	Pathogenic	0.71886	1
+Ser(UCN)	7450	T	A	Pathogenic	0.771386	1
+Ser(UCN)	7450	T	C	Pathogenic	0.771386	1
+Ser(UCN)	7450	T	G	Pathogenic	0.771386	1
+Ser(UCN)	7449	T	A	Neutral	0.344527	1
+Ser(UCN)	7449	T	C	Neutral	0.280758	1
+Ser(UCN)	7449	T	G	Neutral	0.344527	1
+Ser(UCN)	7448	T	A	Pathogenic	0.771386	1
+Ser(UCN)	7448	T	C	Pathogenic	0.771386	1
+Ser(UCN)	7448	T	G	Pathogenic	0.771386	1
+Ser(UCN)	7447	T	A	Likely neutral	0.349145	0
+Ser(UCN)	7447	T	C	Neutral	0.216578	0
+Ser(UCN)	7447	T	G	Likely neutral	0.349145	0
+Ser(UCN)	7446	G	A	Likely neutral	0.362193	1
+Ser(UCN)	7446	G	C	Likely neutral	0.448222	1
+Ser(UCN)	7446	G	T	Likely neutral	0.448222	1
+Thr	15888	G	A	Pathogenic	0.899313	1
+Thr	15888	G	C	Pathogenic	0.899313	1
+Thr	15888	G	T	Pathogenic	0.899313	1
+Thr	15889	T	A	Neutral	0.307251	1
+Thr	15889	T	C	Neutral	0.229341	0
+Thr	15889	T	G	Neutral	0.307251	1
+Thr	15890	C	A	Likely pathogenic	0.638697	1
+Thr	15890	C	G	Likely pathogenic	0.638697	1
+Thr	15890	C	T	Likely pathogenic	0.60705	1
+Thr	15891	C	A	Likely pathogenic	0.542213	1
+Thr	15891	C	G	Likely pathogenic	0.542213	1
+Thr	15891	C	T	Likely neutral	0.418548	1
+Thr	15892	T	A	Neutral	0.300453	0
+Thr	15892	T	C	Neutral	0.318162	0
+Thr	15892	T	G	Neutral	0.317873	1
+Thr	15893	T	A	Neutral	0.14236	0
+Thr	15893	T	C	Neutral	0.146551	0
+Thr	15893	T	G	Neutral	0.145422	0
+Thr	15894	G	A	Likely pathogenic	0.569774	1
+Thr	15894	G	C	Pathogenic	0.652696	1
+Thr	15894	G	T	Pathogenic	0.652696	1
+Thr	15895	T	A	Likely neutral	0.482597	1
+Thr	15895	T	C	Likely neutral	0.482597	1
+Thr	15895	T	G	Likely neutral	0.482597	1
+Thr	15896	A	C	Likely neutral	0.468085	1
+Thr	15896	A	G	Likely neutral	0.468085	1
+Thr	15896	A	T	Likely neutral	0.468085	1
+Thr	15897	G	A	Pathogenic	0.886803	1
+Thr	15897	G	C	Pathogenic	0.907099	1
+Thr	15897	G	T	Pathogenic	0.907099	1
+Thr	15898	T	A	Likely pathogenic	0.561343	1
+Thr	15898	T	C	Likely pathogenic	0.561343	1
+Thr	15898	T	G	Likely pathogenic	0.561343	1
+Thr	15899	A	C	Pathogenic	0.78682	1
+Thr	15899	A	G	Pathogenic	0.78682	1
+Thr	15899	A	T	Pathogenic	0.78682	1
+Thr	15900	T	A	Likely pathogenic	0.526134	0
+Thr	15900	T	C	Likely neutral	0.465269	0
+Thr	15900	T	G	Likely pathogenic	0.526134	1
+Thr	15901	A	C	Likely pathogenic	0.649738	1
+Thr	15901	A	G	Likely pathogenic	0.649738	1
+Thr	15901	A	T	Likely pathogenic	0.649738	1
+Thr	15902	A	C	Likely neutral	0.427934	0
+Thr	15902	A	G	Likely neutral	0.416528	0
+Thr	15902	A	T	Likely neutral	0.427934	0
+Thr	15903	A	C	Neutral	0.107571	0
+Thr	15903	A	G	Neutral	0.112074	0
+Thr	15903	A	T	Likely neutral	0.309719	0
+Thr	15904	C	A	Neutral	0.225513	0
+Thr	15904	C	G	Neutral	0.290941	0
+Thr	15904	C	T	Neutral	0.189618	0
+Thr	15905	T	A	Neutral	0.118337	0
+Thr	15905	T	C	Neutral	0.122583	0
+Thr	15905	T	G	Neutral	0.224411	0
+Thr	15906	A	C	Likely neutral	0.4657	1
+Thr	15906	A	G	Likely neutral	0.4657	1
+Thr	15906	A	T	Likely neutral	0.4657	1
+Thr	15907	A	C	Neutral	0.340803	1
+Thr	15907	A	G	Neutral	0.232561	0
+Thr	15907	A	T	Neutral	0.24177	0
+Thr	15908	T	A	Likely pathogenic	0.500021	1
+Thr	15908	T	C	Likely pathogenic	0.500021	1
+Thr	15908	T	G	Likely pathogenic	0.500021	1
+Thr	15909	A	C	Likely neutral	0.482315	1
+Thr	15909	A	G	Likely neutral	0.482315	1
+Thr	15909	A	T	Likely neutral	0.482315	1
+Thr	15910	C	A	Pathogenic	0.650833	1
+Thr	15910	C	G	Pathogenic	0.650833	1
+Thr	15910	C	T	Likely pathogenic	0.550419	1
+Thr	15911	A	C	Neutral	0.105751	0
+Thr	15911	A	G	Neutral	0.129018	0
+Thr	15911	A	T	Neutral	0.105655	0
+Thr	15912	C	A	Likely neutral	0.418381	1
+Thr	15912	C	G	Likely neutral	0.418381	1
+Thr	15912	C	T	Neutral	0.298175	0
+Thr	15913	C	A	Neutral	0.287904	1
+Thr	15913	C	G	Neutral	0.343792	1
+Thr	15913	C	T	Neutral	0.277398	1
+Thr	15914	A	C	Neutral	0.350651	0
+Thr	15914	A	G	Neutral	0.360233	0
+Thr	15914	A	T	Neutral	0.350651	0
+Thr	15915	G	A	Pathogenic	0.934854	1
+Thr	15915	G	C	Pathogenic	0.934854	1
+Thr	15915	G	T	Pathogenic	0.934854	1
+Thr	15916	T	A	Likely neutral	0.482502	1
+Thr	15916	T	C	Likely neutral	0.333705	0
+Thr	15916	T	G	Likely neutral	0.482502	1
+Thr	15917	C	A	Pathogenic	0.699895	1
+Thr	15917	C	G	Pathogenic	0.699895	1
+Thr	15917	C	T	Pathogenic	0.699895	1
+Thr	15918	T	A	Likely neutral	0.343502	1
+Thr	15918	T	C	Likely neutral	0.343502	1
+Thr	15918	T	G	Likely neutral	0.343502	1
+Thr	15919	T	A	Likely neutral	0.323294	1
+Thr	15919	T	C	Likely neutral	0.323294	1
+Thr	15919	T	G	Likely neutral	0.323294	1
+Thr	15920	G	A	Pathogenic	0.71321	1
+Thr	15920	G	C	Pathogenic	0.71321	1
+Thr	15920	G	T	Pathogenic	0.71321	1
+Thr	15921	T	A	Likely neutral	0.392006	1
+Thr	15921	T	C	Likely neutral	0.392006	1
+Thr	15921	T	G	Likely neutral	0.392006	1
+Thr	15922	A	C	Likely pathogenic	0.613322	1
+Thr	15922	A	G	Likely pathogenic	0.613322	1
+Thr	15922	A	T	Likely pathogenic	0.613322	1
+Thr	15923	A	C	Likely pathogenic	0.612803	1
+Thr	15923	A	G	Likely pathogenic	0.612803	1
+Thr	15923	A	T	Likely pathogenic	0.612803	1
+Thr	15924	A	C	Likely neutral	0.336399	1
+Thr	15924	A	G	Likely neutral	0.284635	0
+Thr	15924	A	T	Likely neutral	0.456602	1
+Thr	15925	C	A	Pathogenic	0.674612	1
+Thr	15925	C	G	Pathogenic	0.674612	1
+Thr	15925	C	T	Pathogenic	0.674612	1
+Thr	15926	C	A	Neutral	0.314404	1
+Thr	15926	C	G	Neutral	0.314404	1
+Thr	15926	C	T	Neutral	0.235253	1
+Thr	15927	G	A	Neutral	0.112642	1
+Thr	15927	G	C	Neutral	0.21902	1
+Thr	15927	G	T	Neutral	0.115085	1
+Thr	15928	G	A	Neutral	0.192205	0
+Thr	15928	G	C	Neutral	0.342514	1
+Thr	15928	G	T	Neutral	0.342514	1
+Thr	15929	A	C	Neutral	0.340695	1
+Thr	15929	A	G	Neutral	0.340695	1
+Thr	15929	A	T	Neutral	0.340695	1
+Thr	15930	G	A	Likely pathogenic	0.544642	0
+Thr	15930	G	C	Likely pathogenic	0.521249	0
+Thr	15930	G	T	Likely pathogenic	0.556957	0
+Thr	15931	A	C	Likely pathogenic	0.515854	1
+Thr	15931	A	G	Likely pathogenic	0.558998	1
+Thr	15931	A	T	Likely pathogenic	0.558998	1
+Thr	15932	T	A	Neutral	0.19673	0
+Thr	15932	T	C	Neutral	0.178202	0
+Thr	15932	T	G	Neutral	0.251819	0
+Thr	15933	G	A	Pathogenic	0.917206	1
+Thr	15933	G	C	Pathogenic	0.917206	1
+Thr	15933	G	T	Pathogenic	0.917206	1
+Thr	15934	A	C	Neutral	0.248284	1
+Thr	15934	A	G	Neutral	0.17629	1
+Thr	15934	A	T	Neutral	0.248284	1
+Thr	15935	A	C	Likely pathogenic	0.536265	1
+Thr	15935	A	G	Likely neutral	0.453959	1
+Thr	15935	A	T	Likely pathogenic	0.536265	1
+Thr	15936	A	C	Likely neutral	0.353345	1
+Thr	15936	A	G	Likely neutral	0.37957	0
+Thr	15936	A	T	Likely neutral	0.403725	1
+Thr	15937	A	C	Neutral	0.193993	0
+Thr	15937	A	G	Neutral	0.167704	0
+Thr	15937	A	T	Neutral	0.167704	0
+Thr	15938	C	A	Neutral	0.105726	0
+Thr	15938	C	G	Neutral	0.111076	0
+Thr	15938	C	T	Neutral	0.108191	0
+Thr	15939	C	A	Neutral	0.143245	0
+Thr	15939	C	G	Neutral	0.147112	0
+Thr	15939	C	T	Neutral	0.139607	0
+Thr	15940	T	A	Neutral	0.124797	0
+Thr	15940	T	C	Neutral	0.141223	0
+Thr	15940	T	G	Neutral	0.198859	0
+Thr	15941	T	A	Neutral	0.213742	0
+Thr	15941	T	C	Neutral	0.215017	0
+Thr	15941	T	G	Neutral	0.279332	0
+Thr	15942	T	A	Neutral	0.255196	1
+Thr	15942	T	C	Likely neutral	0.273136	0
+Thr	15942	T	G	Neutral	0.322178	1
+Thr	15943	T	A	Likely neutral	0.457893	1
+Thr	15943	T	C	Likely neutral	0.457893	1
+Thr	15943	T	G	Likely pathogenic	0.528451	1
+Thr	15944	T	A	Neutral	0.299089	1
+Thr	15944	T	C	Neutral	0.215342	1
+Thr	15944	T	G	Neutral	0.299089	1
+Thr	15945	C	A	Pathogenic	0.71995	1
+Thr	15945	C	G	Pathogenic	0.71995	1
+Thr	15945	C	T	Pathogenic	0.71995	1
+Thr	15946	C	A	Likely pathogenic	0.529361	1
+Thr	15946	C	G	Likely pathogenic	0.529361	1
+Thr	15946	C	T	Likely neutral	0.438712	1
+Thr	15947	A	C	Neutral	0.173185	0
+Thr	15947	A	G	Neutral	0.279403	0
+Thr	15947	A	T	Neutral	0.182028	0
+Thr	15948	A	C	Neutral	0.25759	1
+Thr	15948	A	G	Neutral	0.222027	0
+Thr	15948	A	T	Neutral	0.25759	0
+Thr	15949	G	A	Likely neutral	0.324313	1
+Thr	15949	G	C	Likely neutral	0.393341	1
+Thr	15949	G	T	Likely neutral	0.393341	1
+Thr	15950	G	A	Neutral	0.231938	1
+Thr	15950	G	C	Likely neutral	0.438175	1
+Thr	15950	G	T	Likely neutral	0.438175	1
+Thr	15951	A	C	Neutral	0.269853	1
+Thr	15951	A	G	Neutral	0.099395	0
+Thr	15951	A	T	Neutral	0.269853	1
+Thr	15952	C	A	Pathogenic	0.75682	1
+Thr	15952	C	G	Pathogenic	0.75682	1
+Thr	15952	C	T	Pathogenic	0.702962	1
+Thr	15953	A	C	Likely neutral	0.411876	1
+Thr	15953	A	G	Likely neutral	0.471841	1
+Thr	15953	A	T	Likely neutral	0.471841	1
+Trp	5512	A	C	Likely pathogenic	0.597953	1
+Trp	5512	A	G	Likely pathogenic	0.597953	1
+Trp	5512	A	T	Likely pathogenic	0.597953	1
+Trp	5513	G	A	Pathogenic	0.922413	1
+Trp	5513	G	C	Pathogenic	0.922413	1
+Trp	5513	G	T	Pathogenic	0.922413	1
+Trp	5514	A	C	Likely neutral	0.406457	1
+Trp	5514	A	G	Likely neutral	0.367531	1
+Trp	5514	A	T	Likely neutral	0.406457	1
+Trp	5515	A	C	Likely pathogenic	0.597211	1
+Trp	5515	A	G	Likely neutral	0.470197	1
+Trp	5515	A	T	Likely pathogenic	0.597211	1
+Trp	5516	A	C	Likely neutral	0.378625	1
+Trp	5516	A	G	Neutral	0.254524	1
+Trp	5516	A	T	Likely neutral	0.378625	1
+Trp	5517	T	A	Likely neutral	0.453193	1
+Trp	5517	T	C	Likely neutral	0.453193	1
+Trp	5517	T	G	Likely neutral	0.493033	1
+Trp	5518	T	A	Pathogenic	0.79398	1
+Trp	5518	T	C	Pathogenic	0.79398	1
+Trp	5518	T	G	Pathogenic	0.79398	1
+Trp	5519	T	A	Pathogenic	0.687236	1
+Trp	5519	T	C	Pathogenic	0.687236	1
+Trp	5519	T	G	Pathogenic	0.687236	1
+Trp	5520	A	C	Likely pathogenic	0.551845	1
+Trp	5520	A	G	Likely pathogenic	0.551845	1
+Trp	5520	A	T	Likely pathogenic	0.551845	1
+Trp	5521	G	A	Pathogenic	0.741292	1
+Trp	5521	G	C	Pathogenic	0.741292	1
+Trp	5521	G	T	Pathogenic	0.741292	1
+Trp	5522	G	A	Pathogenic	0.922515	1
+Trp	5522	G	C	Pathogenic	0.922515	1
+Trp	5522	G	T	Pathogenic	0.922515	1
+Trp	5523	T	A	Neutral	0.186119	1
+Trp	5523	T	C	Neutral	0.169426	0
+Trp	5523	T	G	Neutral	0.209366	1
+Trp	5524	T	A	Pathogenic	0.688287	1
+Trp	5524	T	C	Pathogenic	0.688287	1
+Trp	5524	T	G	Pathogenic	0.688287	1
+Trp	5525	A	C	Pathogenic	0.773953	1
+Trp	5525	A	G	Pathogenic	0.773953	1
+Trp	5525	A	T	Pathogenic	0.773953	1
+Trp	5526	A	C	Neutral	0.196869	0
+Trp	5526	A	G	Neutral	0.218266	0
+Trp	5526	A	T	Neutral	0.164174	0
+Trp	5527	A	C	Neutral	0.161273	0
+Trp	5527	A	G	Neutral	0.137588	0
+Trp	5527	A	T	Neutral	0.161273	0
+Trp	5528	T	A	Neutral	0.124652	0
+Trp	5528	T	C	Neutral	0.136198	0
+Trp	5528	T	G	Neutral	0.226665	0
+Trp	5529	A	C	Neutral	0.097234	0
+Trp	5529	A	G	Neutral	0.23399	0
+Trp	5529	A	T	Neutral	0.089557	0
+Trp	5530	C	A	Neutral	0.297049	0
+Trp	5530	C	G	Neutral	0.297049	0
+Trp	5530	C	T	Neutral	0.226736	0
+Trp	5531	A	C	Likely pathogenic	0.614457	0
+Trp	5531	A	G	Likely pathogenic	0.614457	0
+Trp	5531	A	T	Likely pathogenic	0.614457	0
+Trp	5532	G	A	Pathogenic	0.842272	1
+Trp	5532	G	C	Pathogenic	0.842272	1
+Trp	5532	G	T	Pathogenic	0.842272	1
+Trp	5533	A	C	Likely pathogenic	0.537935	1
+Trp	5533	A	G	Likely pathogenic	0.537935	0
+Trp	5533	A	T	Likely neutral	0.415347	1
+Trp	5534	C	A	Pathogenic	0.660627	1
+Trp	5534	C	G	Pathogenic	0.660627	1
+Trp	5534	C	T	Likely pathogenic	0.629609	1
+Trp	5535	C	A	Pathogenic	0.818507	1
+Trp	5535	C	G	Pathogenic	0.818507	1
+Trp	5535	C	T	Pathogenic	0.818507	1
+Trp	5536	A	C	Neutral	0.292853	0
+Trp	5536	A	G	Neutral	0.226716	0
+Trp	5536	A	T	Neutral	0.242777	0
+Trp	5537	A	C	Neutral	0.260629	1
+Trp	5537	A	G	Neutral	0.28435	1
+Trp	5537	A	T	Neutral	0.349229	1
+Trp	5538	G	A	Pathogenic	0.72402	1
+Trp	5538	G	C	Pathogenic	0.766744	1
+Trp	5538	G	T	Pathogenic	0.745791	1
+Trp	5539	A	C	Neutral	0.333896	0
+Trp	5539	A	G	Neutral	0.212846	0
+Trp	5539	A	T	Neutral	0.333896	0
+Trp	5540	G	A	Pathogenic	0.916975	1
+Trp	5540	G	C	Pathogenic	0.916975	1
+Trp	5540	G	T	Pathogenic	0.916975	1
+Trp	5541	C	A	Likely pathogenic	0.640928	1
+Trp	5541	C	G	Likely pathogenic	0.640928	1
+Trp	5541	C	T	Likely pathogenic	0.640928	1
+Trp	5542	C	A	Likely pathogenic	0.609069	1
+Trp	5542	C	G	Likely pathogenic	0.609069	1
+Trp	5542	C	T	Likely pathogenic	0.609069	1
+Trp	5543	T	A	Likely neutral	0.3832	1
+Trp	5543	T	C	Likely neutral	0.3832	1
+Trp	5543	T	G	Likely neutral	0.3832	1
+Trp	5544	T	A	Likely neutral	0.414136	1
+Trp	5544	T	C	Likely neutral	0.414136	1
+Trp	5544	T	G	Likely neutral	0.414136	1
+Trp	5545	C	A	Pathogenic	0.842728	1
+Trp	5545	C	G	Pathogenic	0.842728	1
+Trp	5545	C	T	Pathogenic	0.842728	1
+Trp	5546	A	C	Likely pathogenic	0.643438	1
+Trp	5546	A	G	Likely pathogenic	0.643438	1
+Trp	5546	A	T	Likely pathogenic	0.643438	1
+Trp	5547	A	C	Pathogenic	0.69395	1
+Trp	5547	A	G	Pathogenic	0.69395	1
+Trp	5547	A	T	Pathogenic	0.69395	1
+Trp	5548	A	C	Likely neutral	0.387825	1
+Trp	5548	A	G	Likely neutral	0.387825	1
+Trp	5548	A	T	Likely neutral	0.387825	1
+Trp	5549	G	A	Pathogenic	0.916975	1
+Trp	5549	G	C	Pathogenic	0.916975	1
+Trp	5549	G	T	Pathogenic	0.916975	1
+Trp	5550	C	A	Likely pathogenic	0.640928	1
+Trp	5550	C	G	Likely pathogenic	0.640928	1
+Trp	5550	C	T	Likely pathogenic	0.640928	1
+Trp	5551	C	A	Neutral	0.214552	0
+Trp	5551	C	G	Neutral	0.214552	0
+Trp	5551	C	T	Neutral	0.152615	0
+Trp	5552	C	A	Likely pathogenic	0.628756	1
+Trp	5552	C	G	Likely pathogenic	0.628756	1
+Trp	5552	C	T	Likely neutral	0.4994	1
+Trp	5553	T	A	Likely pathogenic	0.574301	1
+Trp	5553	T	C	Likely neutral	0.45425	1
+Trp	5553	T	G	Likely pathogenic	0.574301	1
+Trp	5554	C	A	Neutral	0.204051	0
+Trp	5554	C	G	Neutral	0.293624	0
+Trp	5554	C	T	Neutral	0.187176	0
+Trp	5555	A	C	Pathogenic	0.693833	1
+Trp	5555	A	G	Pathogenic	0.693833	1
+Trp	5555	A	T	Pathogenic	0.693833	1
+Trp	5556	G	A	Pathogenic	0.857369	1
+Trp	5556	G	C	Pathogenic	0.857369	1
+Trp	5556	G	T	Pathogenic	0.857369	1
+Trp	5557	T	A	Neutral	0.121745	0
+Trp	5557	T	C	Neutral	0.120991	0
+Trp	5557	T	G	Neutral	0.22355	0
+Trp	5558	A	C	Pathogenic	0.855084	1
+Trp	5558	A	G	Pathogenic	0.855084	1
+Trp	5558	A	T	Pathogenic	0.855084	1
+Trp	5559	A	C	Likely neutral	0.398614	1
+Trp	5559	A	G	Likely neutral	0.398614	1
+Trp	5559	A	T	Likely neutral	0.398614	1
+Trp	5560	G	A	Pathogenic	0.722128	1
+Trp	5560	G	C	Pathogenic	0.736561	1
+Trp	5560	G	T	Pathogenic	0.736561	1
+Trp	5561	T	A	Likely neutral	0.340067	1
+Trp	5561	T	C	Likely neutral	0.364834	1
+Trp	5561	T	G	Likely neutral	0.340067	1
+Trp	5562	T	A	Neutral	0.141766	0
+Trp	5562	T	C	Neutral	0.127936	0
+Trp	5562	T	G	Neutral	0.153419	0
+Trp	5563	G	A	Neutral	0.118986	0
+Trp	5563	G	C	Neutral	0.103012	0
+Trp	5563	G	T	Neutral	0.112039	0
+Trp	5564	C	A	Neutral	0.106499	0
+Trp	5564	C	G	Neutral	0.248927	0
+Trp	5564	C	T	Neutral	0.106322	0
+Trp	5565	A	C	Neutral	0.068889	0
+Trp	5565	A	G	Neutral	0.204346	0
+Trp	5565	A	T	Neutral	0.072555	0
+Trp	5566	A	C	Neutral	0.132466	0
+Trp	5566	A	G	Neutral	0.13757	0
+Trp	5566	A	T	Neutral	0.13757	0
+Trp	5567	T	A	Neutral	0.219474	0
+Trp	5567	T	C	Neutral	0.178248	0
+Trp	5567	T	G	Neutral	0.263867	0
+Trp	5568	A	C	Neutral	0.24467	1
+Trp	5568	A	G	Neutral	0.122773	1
+Trp	5568	A	T	Neutral	0.24467	1
+Trp	5569	C	A	Likely pathogenic	0.591346	1
+Trp	5569	C	G	Likely pathogenic	0.591346	1
+Trp	5569	C	T	Likely pathogenic	0.591189	1
+Trp	5570	T	A	Likely pathogenic	0.557289	1
+Trp	5570	T	C	Likely pathogenic	0.557289	1
+Trp	5570	T	G	Likely pathogenic	0.557289	1
+Trp	5571	T	A	Pathogenic	0.829214	1
+Trp	5571	T	C	Pathogenic	0.829214	1
+Trp	5571	T	G	Pathogenic	0.829214	1
+Trp	5572	A	C	Pathogenic	0.855084	1
+Trp	5572	A	G	Pathogenic	0.855084	1
+Trp	5572	A	T	Pathogenic	0.855084	1
+Trp	5573	A	C	Pathogenic	0.638009	1
+Trp	5573	A	G	Likely pathogenic	0.571772	1
+Trp	5573	A	T	Likely pathogenic	0.571772	1
+Trp	5574	T	A	Neutral	0.321573	1
+Trp	5574	T	C	Neutral	0.273117	1
+Trp	5574	T	G	Neutral	0.321573	1
+Trp	5575	T	A	Likely pathogenic	0.535449	1
+Trp	5575	T	C	Likely neutral	0.403817	1
+Trp	5575	T	G	Likely pathogenic	0.535449	1
+Trp	5576	T	A	Likely neutral	0.418812	1
+Trp	5576	T	C	Neutral	0.332292	1
+Trp	5576	T	G	Likely neutral	0.418812	1
+Trp	5577	C	A	Pathogenic	0.87982	1
+Trp	5577	C	G	Pathogenic	0.87982	1
+Trp	5577	C	T	Pathogenic	0.87982	1
+Trp	5578	T	A	Likely pathogenic	0.676586	1
+Trp	5578	T	C	Likely pathogenic	0.676586	1
+Trp	5578	T	G	Likely pathogenic	0.676586	1
+Trp	5579	G	A	Pathogenic	0.74339	1
+Trp	5579	G	C	Pathogenic	0.74339	1
+Trp	5579	G	T	Pathogenic	0.74339	1
+Tyr	5891	G	A	Likely pathogenic	0.566028	1
+Tyr	5891	G	C	Likely pathogenic	0.566028	1
+Tyr	5891	G	T	Likely pathogenic	0.566028	1
+Tyr	5890	G	A	Pathogenic	0.699232	1
+Tyr	5890	G	C	Pathogenic	0.807849	1
+Tyr	5890	G	T	Pathogenic	0.807849	1
+Tyr	5889	T	A	Likely pathogenic	0.567584	1
+Tyr	5889	T	C	Likely pathogenic	0.552298	0
+Tyr	5889	T	G	Likely pathogenic	0.567584	1
+Tyr	5888	A	C	Pathogenic	0.675364	1
+Tyr	5888	A	G	Likely pathogenic	0.652202	1
+Tyr	5888	A	T	Pathogenic	0.675364	1
+Tyr	5887	A	C	Likely pathogenic	0.544754	1
+Tyr	5887	A	G	Likely neutral	0.41559	1
+Tyr	5887	A	T	Likely pathogenic	0.544754	1
+Tyr	5886	A	C	Likely pathogenic	0.543772	1
+Tyr	5886	A	G	Likely neutral	0.462275	1
+Tyr	5886	A	T	Likely pathogenic	0.543772	1
+Tyr	5885	A	C	Pathogenic	0.639455	1
+Tyr	5885	A	G	Likely pathogenic	0.529556	1
+Tyr	5885	A	T	Pathogenic	0.639455	1
+Tyr	5884	T	A	Neutral	0.274396	1
+Tyr	5884	T	C	Neutral	0.274396	1
+Tyr	5884	T	G	Neutral	0.274396	1
+Tyr	5883	G	A	Likely pathogenic	0.599765	1
+Tyr	5883	G	C	Likely pathogenic	0.599765	1
+Tyr	5883	G	T	Likely pathogenic	0.599765	1
+Tyr	5882	G	A	Pathogenic	0.652536	0
+Tyr	5882	G	C	Pathogenic	0.652536	1
+Tyr	5882	G	T	Pathogenic	0.652536	1
+Tyr	5881	C	A	Pathogenic	0.77927	1
+Tyr	5881	C	G	Pathogenic	0.77927	1
+Tyr	5881	C	T	Pathogenic	0.77927	1
+Tyr	5880	T	A	Likely neutral	0.48008	1
+Tyr	5880	T	C	Likely neutral	0.408953	0
+Tyr	5880	T	G	Likely neutral	0.48008	1
+Tyr	5879	G	A	Pathogenic	0.759021	1
+Tyr	5879	G	C	Pathogenic	0.759021	1
+Tyr	5879	G	T	Pathogenic	0.759021	1
+Tyr	5878	A	C	Likely pathogenic	0.615024	1
+Tyr	5878	A	G	Likely pathogenic	0.615024	1
+Tyr	5878	A	T	Likely pathogenic	0.615024	1
+Tyr	5877	G	A	Pathogenic	0.733829	0
+Tyr	5877	G	C	Pathogenic	0.756255	0
+Tyr	5877	G	T	Pathogenic	0.756255	0
+Tyr	5876	T	A	Neutral	0.300563	1
+Tyr	5876	T	C	Neutral	0.300563	1
+Tyr	5876	T	G	Likely neutral	0.326931	1
+Tyr	5875	G	A	Neutral	0.188192	0
+Tyr	5875	G	C	Neutral	0.325222	0
+Tyr	5875	G	T	Neutral	0.202622	0
+Tyr	5874	A	C	Likely neutral	0.430041	1
+Tyr	5874	A	G	Likely neutral	0.410451	1
+Tyr	5874	A	T	Likely neutral	0.430041	0
+Tyr	5873	A	C	Neutral	0.283986	1
+Tyr	5873	A	G	Neutral	0.190742	0
+Tyr	5873	A	T	Neutral	0.283986	1
+Tyr	5872	G	A	Pathogenic	0.878552	1
+Tyr	5872	G	C	Pathogenic	0.878552	1
+Tyr	5872	G	T	Pathogenic	0.878552	1
+Tyr	5871	C	A	Pathogenic	0.677962	1
+Tyr	5871	C	G	Pathogenic	0.677962	1
+Tyr	5871	C	T	Likely pathogenic	0.593063	0
+Tyr	5870	A	C	Likely neutral	0.436136	1
+Tyr	5870	A	G	Likely neutral	0.413631	1
+Tyr	5870	A	T	Likely neutral	0.436136	1
+Tyr	5869	T	A	Pathogenic	0.638231	1
+Tyr	5869	T	C	Pathogenic	0.638231	1
+Tyr	5869	T	G	Pathogenic	0.638231	1
+Tyr	5868	T	A	Likely neutral	0.456958	1
+Tyr	5868	T	C	Likely neutral	0.456958	1
+Tyr	5868	T	G	Likely neutral	0.456958	1
+Tyr	5867	G	A	Likely neutral	0.444132	0
+Tyr	5867	G	C	Likely neutral	0.425295	0
+Tyr	5867	G	T	Likely neutral	0.425295	0
+Tyr	5866	G	A	Pathogenic	0.755929	1
+Tyr	5866	G	C	Pathogenic	0.755929	1
+Tyr	5866	G	T	Pathogenic	0.755929	1
+Tyr	5865	A	C	Neutral	0.346132	1
+Tyr	5865	A	G	Neutral	0.191444	0
+Tyr	5865	A	T	Neutral	0.346132	1
+Tyr	5864	C	A	Likely pathogenic	0.560761	1
+Tyr	5864	C	G	Likely pathogenic	0.560761	1
+Tyr	5864	C	T	Likely pathogenic	0.560761	1
+Tyr	5863	T	A	Likely neutral	0.469432	1
+Tyr	5863	T	C	Likely neutral	0.469432	1
+Tyr	5863	T	G	Likely neutral	0.469432	1
+Tyr	5862	G	A	Pathogenic	0.71321	1
+Tyr	5862	G	C	Pathogenic	0.71321	1
+Tyr	5862	G	T	Pathogenic	0.71321	1
+Tyr	5861	T	A	Likely neutral	0.392006	1
+Tyr	5861	T	C	Likely neutral	0.392006	1
+Tyr	5861	T	G	Likely neutral	0.392006	1
+Tyr	5860	A	C	Likely pathogenic	0.613322	1
+Tyr	5860	A	G	Likely pathogenic	0.613322	1
+Tyr	5860	A	T	Likely pathogenic	0.613322	1
+Tyr	5859	A	C	Likely pathogenic	0.612803	1
+Tyr	5859	A	G	Likely pathogenic	0.612803	1
+Tyr	5859	A	T	Likely pathogenic	0.612803	1
+Tyr	5858	A	C	Likely pathogenic	0.635665	1
+Tyr	5858	A	G	Likely pathogenic	0.635665	1
+Tyr	5858	A	T	Likely pathogenic	0.635665	1
+Tyr	5857	T	A	Likely neutral	0.419483	1
+Tyr	5857	T	C	Neutral	0.332919	0
+Tyr	5857	T	G	Likely neutral	0.419483	1
+Tyr	5856	C	A	Pathogenic	0.872772	1
+Tyr	5856	C	G	Pathogenic	0.872772	1
+Tyr	5856	C	T	Pathogenic	0.872772	1
+Tyr	5855	T	A	Likely pathogenic	0.602417	0
+Tyr	5855	T	C	Likely pathogenic	0.584404	0
+Tyr	5855	T	G	Likely pathogenic	0.602417	0
+Tyr	5854	A	C	Pathogenic	0.777675	1
+Tyr	5854	A	G	Pathogenic	0.777675	1
+Tyr	5854	A	T	Pathogenic	0.777675	1
+Tyr	5853	A	C	Pathogenic	0.771652	1
+Tyr	5853	A	G	Pathogenic	0.771652	1
+Tyr	5853	A	T	Pathogenic	0.771652	1
+Tyr	5852	A	C	Neutral	0.189589	0
+Tyr	5852	A	G	Neutral	0.156911	0
+Tyr	5852	A	T	Neutral	0.189589	0
+Tyr	5851	G	A	Likely neutral	0.343963	0
+Tyr	5851	G	C	Likely neutral	0.343199	0
+Tyr	5851	G	T	Likely neutral	0.343199	0
+Tyr	5850	A	C	Pathogenic	0.656308	1
+Tyr	5850	A	G	Pathogenic	0.656308	1
+Tyr	5850	A	T	Pathogenic	0.656308	1
+Tyr	5849	C	A	Likely pathogenic	0.523403	0
+Tyr	5849	C	G	Likely pathogenic	0.523403	0
+Tyr	5849	C	T	Likely neutral	0.429598	0
+Tyr	5848	A	C	Likely neutral	0.484956	1
+Tyr	5848	A	G	Neutral	0.355051	1
+Tyr	5848	A	T	Likely neutral	0.484956	1
+Tyr	5847	G	A	Likely pathogenic	0.566028	1
+Tyr	5847	G	C	Likely pathogenic	0.566028	1
+Tyr	5847	G	T	Likely pathogenic	0.566028	1
+Tyr	5846	G	A	Neutral	0.192933	0
+Tyr	5846	G	C	Neutral	0.246317	0
+Tyr	5846	G	T	Neutral	0.246317	0
+Tyr	5845	G	A	Likely neutral	0.485138	1
+Tyr	5845	G	C	Likely pathogenic	0.550972	1
+Tyr	5845	G	T	Likely pathogenic	0.550972	1
+Tyr	5844	G	A	Pathogenic	0.699232	1
+Tyr	5844	G	C	Pathogenic	0.807849	1
+Tyr	5844	G	T	Pathogenic	0.807849	1
+Tyr	5843	T	A	Neutral	0.067953	0
+Tyr	5843	T	C	Neutral	0.081426	0
+Tyr	5843	T	G	Neutral	0.123361	0
+Tyr	5842	T	A	Neutral	0.20499	0
+Tyr	5842	T	C	Neutral	0.20499	0
+Tyr	5842	T	G	Neutral	0.172327	0
+Tyr	5841	A	C	Neutral	0.126839	0
+Tyr	5841	A	G	Neutral	0.12175	0
+Tyr	5841	A	T	Neutral	0.137389	0
+Tyr	5840	G	A	Neutral	0.124559	0
+Tyr	5840	G	C	Neutral	0.12441	0
+Tyr	5840	G	T	Neutral	0.200063	0
+Tyr	5839	G	A	Neutral	0.15067	0
+Tyr	5839	G	C	Neutral	0.138591	0
+Tyr	5839	G	T	Neutral	0.138584	0
+Tyr	5838	C	A	Likely neutral	0.480853	1
+Tyr	5838	C	G	Likely pathogenic	0.522092	1
+Tyr	5838	C	T	Likely pathogenic	0.522092	1
+Tyr	5837	C	A	Pathogenic	0.736003	1
+Tyr	5837	C	G	Pathogenic	0.736003	1
+Tyr	5837	C	T	Pathogenic	0.703567	1
+Tyr	5836	T	A	Neutral	0.380113	0
+Tyr	5836	T	C	Neutral	0.308453	0
+Tyr	5836	T	G	Neutral	0.380113	0
+Tyr	5835	C	A	Pathogenic	0.816508	1
+Tyr	5835	C	G	Pathogenic	0.816508	1
+Tyr	5835	C	T	Pathogenic	0.775613	1
+Tyr	5834	T	A	Likely neutral	0.467816	1
+Tyr	5834	T	C	Likely neutral	0.422755	1
+Tyr	5834	T	G	Likely neutral	0.467816	1
+Tyr	5833	T	A	Pathogenic	0.71886	1
+Tyr	5833	T	C	Pathogenic	0.698648	1
+Tyr	5833	T	G	Pathogenic	0.71886	1
+Tyr	5832	T	A	Likely pathogenic	0.510841	1
+Tyr	5832	T	C	Likely neutral	0.378166	1
+Tyr	5832	T	G	Likely pathogenic	0.510841	1
+Tyr	5831	T	A	Pathogenic	0.681074	1
+Tyr	5831	T	C	Likely pathogenic	0.616584	1
+Tyr	5831	T	G	Pathogenic	0.681074	1
+Tyr	5830	T	A	Pathogenic	0.709134	1
+Tyr	5830	T	C	Pathogenic	0.683155	1
+Tyr	5830	T	G	Pathogenic	0.709134	1
+Tyr	5829	A	C	Likely neutral	0.434744	1
+Tyr	5829	A	G	Neutral	0.353317	0
+Tyr	5829	A	T	Likely neutral	0.434744	1
+Tyr	5828	C	A	Likely neutral	0.416491	1
+Tyr	5828	C	G	Likely neutral	0.416491	1
+Tyr	5828	C	T	Neutral	0.301549	1
+Tyr	5827	C	A	Pathogenic	0.80198	1
+Tyr	5827	C	G	Pathogenic	0.80198	1
+Tyr	5827	C	T	Pathogenic	0.80198	1
+Val	1602	C	A	Pathogenic	0.818507	1
+Val	1602	C	G	Pathogenic	0.818507	1
+Val	1602	C	T	Pathogenic	0.818507	1
+Val	1603	A	C	Pathogenic	0.745681	1
+Val	1603	A	G	Pathogenic	0.745681	1
+Val	1603	A	T	Pathogenic	0.745681	1
+Val	1604	G	A	Likely neutral	0.451534	1
+Val	1604	G	C	Likely neutral	0.474076	1
+Val	1604	G	T	Likely neutral	0.450714	1
+Val	1605	A	C	Neutral	0.259081	1
+Val	1605	A	G	Neutral	0.223913	1
+Val	1605	A	T	Neutral	0.315932	1
+Val	1606	G	A	Pathogenic	0.779739	1
+Val	1606	G	C	Pathogenic	0.790112	1
+Val	1606	G	T	Pathogenic	0.790112	1
+Val	1607	T	A	Neutral	0.165038	0
+Val	1607	T	C	Neutral	0.102979	0
+Val	1607	T	G	Neutral	0.165038	0
+Val	1608	G	A	Likely pathogenic	0.580013	1
+Val	1608	G	C	Pathogenic	0.652515	1
+Val	1608	G	T	Pathogenic	0.652515	1
+Val	1609	T	A	Likely pathogenic	0.552764	1
+Val	1609	T	C	Likely pathogenic	0.552764	1
+Val	1609	T	G	Likely pathogenic	0.552764	1
+Val	1610	A	C	Likely pathogenic	0.551845	1
+Val	1610	A	G	Likely pathogenic	0.551845	1
+Val	1610	A	T	Likely pathogenic	0.551845	1
+Val	1611	G	A	Pathogenic	0.918634	1
+Val	1611	G	C	Pathogenic	0.918634	1
+Val	1611	G	T	Pathogenic	0.918634	1
+Val	1612	C	A	Pathogenic	0.825152	1
+Val	1612	C	G	Pathogenic	0.825152	1
+Val	1612	C	T	Pathogenic	0.825152	1
+Val	1613	T	A	Likely pathogenic	0.557289	1
+Val	1613	T	C	Likely pathogenic	0.557289	1
+Val	1613	T	G	Likely pathogenic	0.557289	1
+Val	1614	T	A	Pathogenic	0.683773	1
+Val	1614	T	C	Likely pathogenic	0.613899	1
+Val	1614	T	G	Pathogenic	0.683773	1
+Val	1615	A	C	Pathogenic	0.773953	0
+Val	1615	A	G	Pathogenic	0.773953	0
+Val	1615	A	T	Pathogenic	0.773953	0
+Val	1616	A	C	Likely pathogenic	0.653947	0
+Val	1616	A	G	Likely pathogenic	0.653947	0
+Val	1616	A	T	Likely pathogenic	0.58548	0
+Val	1617	C	A	Neutral	0.184392	0
+Val	1617	C	G	Neutral	0.224777	0
+Val	1617	C	T	Neutral	0.184618	0
+Val	1618	A	C	Neutral	0.092506	0
+Val	1618	A	G	Neutral	0.245585	0
+Val	1618	A	T	Neutral	0.092506	0
+Val	1619	C	A	Neutral	0.168419	0
+Val	1619	C	G	Neutral	0.302624	0
+Val	1619	C	T	Neutral	0.169324	0
+Val	1620	A	C	Likely pathogenic	0.643438	1
+Val	1620	A	G	Likely pathogenic	0.643438	1
+Val	1620	A	T	Likely pathogenic	0.643438	1
+Val	1621	A	C	Pathogenic	0.814917	1
+Val	1621	A	G	Pathogenic	0.814917	1
+Val	1621	A	T	Pathogenic	0.814917	1
+Val	1622	A	C	Likely pathogenic	0.552649	1
+Val	1622	A	G	Likely pathogenic	0.552649	1
+Val	1622	A	T	Likely pathogenic	0.552649	1
+Val	1623	G	A	Pathogenic	0.916975	1
+Val	1623	G	C	Pathogenic	0.916975	1
+Val	1623	G	T	Pathogenic	0.916975	1
+Val	1624	C	A	Pathogenic	0.81625	1
+Val	1624	C	G	Pathogenic	0.81625	1
+Val	1624	C	T	Pathogenic	0.81625	1
+Val	1625	A	C	Likely neutral	0.4663	1
+Val	1625	A	G	Likely neutral	0.4663	1
+Val	1625	A	T	Likely neutral	0.432579	1
+Val	1626	C	A	Neutral	0.222835	1
+Val	1626	C	G	Neutral	0.273098	1
+Val	1626	C	T	Neutral	0.233046	0
+Val	1627	C	A	Likely pathogenic	0.536431	1
+Val	1627	C	G	Likely pathogenic	0.536431	1
+Val	1627	C	T	Likely neutral	0.462081	1
+Val	1628	C	A	Neutral	0.269017	0
+Val	1628	C	G	Neutral	0.269017	0
+Val	1628	C	T	Neutral	0.210215	0
+Val	1629	A	C	Likely neutral	0.460113	1
+Val	1629	A	G	Likely pathogenic	0.517984	0
+Val	1629	A	T	Likely neutral	0.422284	1
+Val	1630	A	C	Likely pathogenic	0.506865	1
+Val	1630	A	G	Likely pathogenic	0.554686	1
+Val	1630	A	T	Likely pathogenic	0.506865	1
+Val	1631	C	A	Likely pathogenic	0.620733	1
+Val	1631	C	G	Likely pathogenic	0.620733	1
+Val	1631	C	T	Likely pathogenic	0.620733	1
+Val	1632	T	A	Neutral	0.229313	0
+Val	1632	T	C	Neutral	0.196229	0
+Val	1632	T	G	Neutral	0.229313	0
+Val	1633	T	A	Likely pathogenic	0.658185	1
+Val	1633	T	C	Likely pathogenic	0.658185	1
+Val	1633	T	G	Likely pathogenic	0.658185	1
+Val	1634	A	C	Likely neutral	0.492288	1
+Val	1634	A	G	Likely neutral	0.492288	1
+Val	1634	A	T	Likely neutral	0.492288	1
+Val	1635	C	A	Pathogenic	0.694013	1
+Val	1635	C	G	Pathogenic	0.694013	1
+Val	1635	C	T	Pathogenic	0.694013	1
+Val	1636	A	C	Likely pathogenic	0.573432	1
+Val	1636	A	G	Likely pathogenic	0.573432	1
+Val	1636	A	T	Likely pathogenic	0.573432	1
+Val	1637	C	A	Likely pathogenic	0.620733	1
+Val	1637	C	G	Likely pathogenic	0.620733	1
+Val	1637	C	T	Likely pathogenic	0.620733	1
+Val	1638	T	A	Likely neutral	0.482162	1
+Val	1638	T	C	Likely pathogenic	0.59443	1
+Val	1638	T	G	Likely neutral	0.482162	1
+Val	1639	T	A	Likely neutral	0.482599	1
+Val	1639	T	C	Likely pathogenic	0.51963	0
+Val	1639	T	G	Likely neutral	0.482599	1
+Val	1640	A	C	Neutral	0.151947	0
+Val	1640	A	G	Neutral	0.12219	0
+Val	1640	A	T	Neutral	0.206442	0
+Val	1641	G	A	Likely neutral	0.379025	1
+Val	1641	G	C	Likely neutral	0.443954	1
+Val	1641	G	T	Likely neutral	0.443954	1
+Val	1642	G	A	Likely neutral	0.356067	0
+Val	1642	G	C	Likely neutral	0.370489	1
+Val	1642	G	T	Likely neutral	0.370489	1
+Val	1643	A	C	Likely pathogenic	0.615723	1
+Val	1643	A	G	Likely pathogenic	0.615723	1
+Val	1643	A	T	Likely pathogenic	0.615723	1
+Val	1644	G	A	Pathogenic	0.67475	1
+Val	1644	G	C	Pathogenic	0.714829	1
+Val	1644	G	T	Pathogenic	0.714829	1
+Val	1645	A	C	Pathogenic	0.684314	1
+Val	1645	A	G	Pathogenic	0.684314	1
+Val	1645	A	T	Pathogenic	0.684314	1
+Val	1646	T	A	Likely neutral	0.419863	1
+Val	1646	T	C	Likely neutral	0.419863	1
+Val	1646	T	G	Likely neutral	0.436615	1
+Val	1647	T	A	Neutral	0.173794	0
+Val	1647	T	C	Neutral	0.165093	0
+Val	1647	T	G	Neutral	0.264192	0
+Val	1648	T	A	Likely pathogenic	0.506978	1
+Val	1648	T	C	Likely neutral	0.455924	0
+Val	1648	T	G	Likely pathogenic	0.506978	1
+Val	1649	C	A	Pathogenic	0.800913	1
+Val	1649	C	G	Pathogenic	0.800913	1
+Val	1649	C	T	Pathogenic	0.762121	1
+Val	1650	A	C	Likely pathogenic	0.555265	1
+Val	1650	A	G	Likely pathogenic	0.555265	1
+Val	1650	A	T	Likely pathogenic	0.604743	1
+Val	1651	A	C	Neutral	0.237235	0
+Val	1651	A	G	Neutral	0.26665	0
+Val	1651	A	T	Neutral	0.230133	0
+Val	1652	C	A	Neutral	0.196636	0
+Val	1652	C	G	Neutral	0.228122	0
+Val	1652	C	T	Neutral	0.207634	0
+Val	1653	T	A	Neutral	0.145633	0
+Val	1653	T	C	Neutral	0.142241	0
+Val	1653	T	G	Neutral	0.133693	0
+Val	1654	T	A	Neutral	0.12057	0
+Val	1654	T	C	Neutral	0.118854	0
+Val	1654	T	G	Neutral	0.255485	0
+Val	1655	A	C	Neutral	0.089963	0
+Val	1655	A	G	Neutral	0.168334	0
+Val	1655	A	T	Neutral	0.139142	0
+Val	1656	A	C	Neutral	0.182689	0
+Val	1656	A	G	Likely neutral	0.276865	0
+Val	1656	A	T	Neutral	0.23258	0
+Val	1657	C	A	Neutral	0.220846	0
+Val	1657	C	G	Neutral	0.292524	0
+Val	1657	C	T	Neutral	0.205122	0
+Val	1658	T	A	Neutral	0.252129	0
+Val	1658	T	C	Neutral	0.247647	0
+Val	1658	T	G	Neutral	0.245721	0
+Val	1659	T	A	Likely neutral	0.358341	1
+Val	1659	T	C	Neutral	0.219053	1
+Val	1659	T	G	Likely neutral	0.321079	1
+Val	1660	G	A	Pathogenic	0.857104	1
+Val	1660	G	C	Pathogenic	0.901169	1
+Val	1660	G	T	Pathogenic	0.901169	1
+Val	1661	A	C	Likely pathogenic	0.51685	1
+Val	1661	A	G	Likely neutral	0.368605	0
+Val	1661	A	T	Likely pathogenic	0.51685	1
+Val	1662	C	A	Neutral	0.111774	0
+Val	1662	C	G	Neutral	0.195341	0
+Val	1662	C	T	Neutral	0.110309	0
+Val	1663	C	A	Neutral	0.347093	1
+Val	1663	C	G	Neutral	0.310174	1
+Val	1663	C	T	Neutral	0.26243	1
+Val	1664	G	A	Neutral	0.167118	0
+Val	1664	G	C	Neutral	0.165542	0
+Val	1664	G	T	Neutral	0.237694	0
+Val	1665	C	A	Likely pathogenic	0.510362	1
+Val	1665	C	G	Likely pathogenic	0.510362	1
+Val	1665	C	T	Likely neutral	0.401464	1
+Val	1666	T	A	Likely pathogenic	0.515111	1
+Val	1666	T	C	Likely neutral	0.458156	1
+Val	1666	T	G	Likely pathogenic	0.515111	1
+Val	1667	C	A	Likely neutral	0.427855	1
+Val	1667	C	G	Likely neutral	0.461296	1
+Val	1667	C	T	Likely neutral	0.431584	1
+Val	1668	T	A	Likely pathogenic	0.676586	1
+Val	1668	T	C	Likely pathogenic	0.676586	1
+Val	1668	T	G	Likely pathogenic	0.676586	1
+Val	1669	G	A	Pathogenic	0.93127	1
+Val	1669	G	C	Pathogenic	0.93127	1
+Val	1669	G	T	Pathogenic	0.93127	1
+Val	1670	A	C	Likely pathogenic	0.627038	1
+Val	1670	A	G	Likely pathogenic	0.627038	1
+Val	1670	A	T	Likely pathogenic	0.627038	1
