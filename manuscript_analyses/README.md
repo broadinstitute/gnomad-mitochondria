@@ -2,7 +2,7 @@
 This directory contains scripts and data files needed to generate figures and analyses included in the gnomAD mtDNA manuscript. Note that the gnomAD data files used (VCF with genotype and heteroplasmy level data for each sample, and txt with sample annotations) are not publicly available and in the code below refers to raw data present in the $SOURCE_DIR directory that is not publicly available. However these scripts detail how the raw data were processed and transformed into the manuscript figure panels and statistics. 
 
 ##############################################################################################################################
-## Notes for analyses and figures relating to NUMTs, coverage, and insert size (figures 1, 2, S2, S3, 3E)
+## Notes for analyses and figures relating to NUMTs, coverage, insert sizes, and characteristics of heteroplasmic and homoplasmic variants (figures 1, 2, 3E, S2, S3, S4)
 ##############################################################################################################################
 
 Run preprocess scripts (this will take several hours and require high memory) that create tab delimited files required for R scripts
@@ -20,7 +20,7 @@ The following preprocess bash shell scripts call several perl scripts for furthe
  merge_sets.pl : perl script performs a database join (similar to Excel vlookup function) between two tab-delimited files that share a common key column
  count_mnv.pl : perl script to identify multi-nucleotide variants (MNVs); Input is tab-delimited file (one line per variant per person) sorted by SAMPLE_ID then by POS; Output is set of unique variants (POS.REF.ALT) with the allele count of that variant in the dataset (AC), the allele count of that variant as part of a multi-nucleotide variant (AC_MNV) and the percentage (AC_MNV/AC). For example: adjacent variants 5185.G.A (present in 1 sample) and 5186.A.T (present in 80 samples) were observed together in 1 sample and thus two lines would be output “5185.G.A 1 1 1” and “5186.A.T 80 1 0.0125”
 
-### Generate plots for figures 1, 2, S2, S3, 3E
+### Generate plots for figures 1, 2, S2, S3, 3E, S4
 Call R scripts that generate statistics and figures (see plots/ directory); 
 note fig2.R takes > 30min
 
@@ -29,9 +29,9 @@ use R-3.5
 mkdir -p plots
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig1.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig2.R
+Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig3E.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS2.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS3.R
-Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_fig3E.R
 Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_figS4.R
 ```
 
