@@ -322,13 +322,13 @@ def add_terra_metadata(
     Add Terra metadata to the MatrixTable.
 
     The participant_data file can be obtained by downloading the participant data after running Mutect2 in Terra. This file should contain the following columns:
-    entity:participant_id: 
-    s: Uploaded to Terra by user, sample name
-    contamination: Output by Mutect2, gives the estimate of mitochondrial contamination
-    freemix_percentage: Uploaded to Terra by user, can be calculated with VerifyBamID
-    major_haplogroup: Output by Mutect2 which utilizes Haplogrep
-    wgs_median_coverage: Uploaded to Terra by user, can be calculated with Picard's CollectWgsMetrics
-    mt_mean_coverage: Output by Mutect2, gives the mean mitochondrial coverage
+        - entity:participant_id: Participant ID uploaded to Terra by user
+        - s: Sample ID uploaded to Terra by user
+        - contamination: Output by Mutect2, gives the estimate of mitochondrial contamination
+        - freemix_percentage: Uploaded to Terra by user, can be calculated with VerifyBamID
+        - major_haplogroup: Output by Mutect2 which utilizes Haplogrep
+        - wgs_median_coverage: Uploaded to Terra by user, can be calculated with Picard's CollectWgsMetrics
+        - mt_mean_coverage: Output by Mutect2, gives the mean mitochondrial coverage
 
     :param input_mt: MatrixTable
     :param participant_data: Path to metadata file downloaded from Terra
