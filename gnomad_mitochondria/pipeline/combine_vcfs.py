@@ -172,8 +172,10 @@ def join_mitochondria_vcfs_into_mt(
     for sample, vcf_path in vcf_paths.items():
         try:
             mt = hl.import_vcf(vcf_path, reference_genome="GRCh38")
-        except:
-            raise ValueError(f"vcf path {vcf_path} does not exist for sample {sample}")
+        except Exception as e:
+            raise ValueError(
+                f"vcf path {vcf_path} does not exist for sample {sample}"
+            ) from e
 
         # Because the vcfs are split, there is only one AF value, although misinterpreted as an array because Number=A in VCF header
         # Second value of MMQ is the value of the mapping quality for the alternate allele

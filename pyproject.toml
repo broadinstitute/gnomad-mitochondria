@@ -20,7 +20,6 @@ disable = [
   "invalid-unary-operand-type",
   "pointless-string-statement",
   "protected-access",
-  "raise-missing-from",
   "redefined-outer-name",
   "unspecified-encoding",
   "unused-argument",
