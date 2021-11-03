@@ -45,7 +45,7 @@ Rscript --vanilla --default-packages="utils,grDevices,graphics,stats" generate_f
 ## Notes for analyses and figures relating to variant statistics, sample distribution, and coverage post filtering
 ##############################################################################################################################
 
-`generate_Fig1A_4_3BCD_S5ABC_S6.R` is used to plot variant statistics, sample distributions, and coverage metrics. This script takes four input files:
+`generate_fig1A_4_3BCD_S5ABC_S6.R` is used to plot variant statistics, sample distributions, and coverage metrics. This script takes four input files:
 1. sample_annotations: The sample annotations file output by add_annotations.py for release samples
 2. variant_data: Combined sites-only file (with txt extension) output by add_annotations.py
 3. coverage: Mean coverages, tab-delimited file of 'locus', in format of chrM:position, and 'mean', mean coverage across all samples at that position (metrics can be obtained and extracted by running annotate_coverage.py)
@@ -65,10 +65,10 @@ The output consists of plots for Figure 1A, Figure 4, Figure 3BCD, Supplemental 
 
 Note that the gnomAD data files used (VCF with genotype and heteroplasmy level data for each sample, and txt with sample annotations) are not publicly available. The path to the directories with the required files (`insilicos`,`other_databases`,`synthetic_vcf`, and the input gnomAD data) can be specified via `reformat_vcf.py`, the default follows the directory structure of this repo. 
 
-The script produces two output files: (1) `reformated.vcf`, which is used as the input file for figures 5, 6, S5D, S7, S8 and table S3, the input for `make_TableS4.R` is generated via the second output file, (2) `annotated_synthetic.vcf`. The latter file is provided in this repo.
+The script produces two output files: (1) `reformated.vcf`, which is used as the input file for figures 5, 6, S5D, S7, S8 and table S3, the input for `generate_tableS4.R` is generated via the second output file, (2) `annotated_synthetic.vcf`. The latter file is provided in this repo.
 
 ### Generate plots for figures 5, 6, S5D, S7, S8 and tables 3, 4
-The figures were generated in R. The script `make_all_Figs5_6_S5d_S7_S8_Tables_S3_S4.R` can be used to produce all specified figures and tables. Alternatively, the figures can be generated individually using the relevant scripts (named for the figure or table they produce). Note that `options(bitmapType = 'cairo', device = 'png')` can be commented/uncommented depending on if you are using Rstudio or the terminal to run the R scripts (relevant for collate_Figure5.R, make_FigS7.R, make_FigS8.R, make_Fig6.R, make FigS5d.R, make_all_Figs5_6_S5d_S7_S8_Tables_S3_S4.R scripts). 
+The figures were generated in R. The script `generate_all_figs5_6_S5d_S7_S8_tables_S3_S4.R` can be used to produce all specified figures and tables. Alternatively, the figures can be generated individually using the relevant scripts (named for the figure or table they produce). Note that `options(bitmapType = 'cairo', device = 'png')` can be commented/uncommented depending on if you are using Rstudio or the terminal to run the R scripts (relevant for collate_Figure5.R, generate_figS7.R, generate_figS8.R, generate_fig6.R, generate_figS5D.R, generate_all_figs5_6_S5d_S7_S8_tables_S3_S4.R scripts). 
 
 **Version details**
 R v3.6.1: `cowplot 1.0.0` `dplyr 0.8.5` `forcats 0.5.0` `ggbeeswarm 0.6.0` `ggplot2 2_3.3.0 ` `ggpubr 0.3.0` `ggrepel 0.8.2` `gridExtra 2.3` `plyr 1.8.6` `tidyr 1.1.0` `scales 1.1.1` `stringr 1.4.0`
