@@ -1932,7 +1932,7 @@ def main(args):  # noqa: D103
 
     # If specified, subet to only the gnomAD samples in the current release
     if gnomad_subset:
-        logger.warn("Subsetting results to gnomAD release samples...")
+        logger.warning("Subsetting results to gnomAD release samples...")
         subset_name = "_gnomad"
 
         # Subset to release samples and filter out rows that no longer have at least one alt call

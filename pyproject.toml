@@ -17,7 +17,6 @@ disable = [
   "anomalous-backslash-in-string",
   "cell-var-from-loop",
   "dangerous-default-value",
-  "deprecated-method",
   "invalid-unary-operand-type",
   "pointless-string-statement",
   "protected-access",

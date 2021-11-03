@@ -94,7 +94,7 @@ def main(args):  # noqa: D103
     overwrite = args.overwrite
 
     if args.overwrite == False and hl.hadoop_exists(output_ht):
-        logger.warn(
+        logger.warning(
             "Overwrite is set to False but file already exists at %s, script will run but output will not be written",
             output_ht,
         )

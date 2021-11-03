@@ -348,7 +348,7 @@ def main(args):  # noqa: D103
     output_path_mt = f"{output_bucket}/raw_combined.mt"
 
     if args.overwrite == False and hl.hadoop_exists(output_path_mt):
-        logger.warn(
+        logger.warning(
             "Overwrite is set to False but file already exists at %s, script will run but output will not be written",
             output_path_mt,
         )
