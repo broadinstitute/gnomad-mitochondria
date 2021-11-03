@@ -22,6 +22,5 @@ disable = [
   "protected-access",
   "redefined-outer-name",
   "unspecified-encoding",
-  "unused-argument",
   "unused-variable",
 ]
