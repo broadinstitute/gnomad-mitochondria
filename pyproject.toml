@@ -5,3 +5,12 @@ add_ignore = [
   "D100", # Do not require docstrings for modules.
   "D104", # Do not require docstrings for packages (in __init__.py).
 ]
+
+[tool.pylint.messages_control]
+disable = [
+  # Ignore refactor and convention categories
+  "R",
+  "C",
+  # Allow todo/fixme comments
+  "fixme",
+]
