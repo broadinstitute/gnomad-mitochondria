@@ -141,9 +141,9 @@ def main(args):  # noqa: D103
 
     cov_mt = cov_mt.key_rows_by("locus").drop("chrom", "pos")
 
-    output_mt = re.sub("\.ht$", ".mt", output_ht)
-    output_tsv = re.sub("\.ht$", ".tsv", output_ht)
-    output_samples = re.sub("\.ht$", "_sample_level.txt", output_ht)
+    output_mt = re.sub(r"\.ht$", ".mt", output_ht)
+    output_tsv = re.sub(r"\.ht$", ".tsv", output_ht)
+    output_samples = re.sub(r"\.ht$", "_sample_level.txt", output_ht)
 
     logger.info("Writing sample level coverage...")
     sample_mt = cov_mt.key_rows_by(pos=cov_mt.locus.position)

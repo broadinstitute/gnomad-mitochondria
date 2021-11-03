@@ -91,8 +91,8 @@ def add_variant_context(input_mt: hl.MatrixTable) -> hl.MatrixTable:
 
     # Split columns into separate annotations
     vc_ht = vc_ht.annotate(
-        ref=vc_ht["POS.REF.ALT"].split("\.")[1],
-        alt=vc_ht["POS.REF.ALT"].split("\.")[2],
+        ref=vc_ht["POS.REF.ALT"].split(r"\.")[1],
+        alt=vc_ht["POS.REF.ALT"].split(r"\.")[2],
         strand=vc_ht.Context_category.split("_")[-1],
         variant=vc_ht.Context_category.split("_")[0],
     )

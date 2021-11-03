@@ -46,7 +46,7 @@ def main(args):  # noqa: D103
     )
     cov_ht = cov_mt.rows()
 
-    output_ht = re.sub("\.tsv$", ".ht", out_tsv_path)
+    output_ht = re.sub(r"\.tsv$", ".ht", out_tsv_path)
     cov_ht = cov_ht.checkpoint(output_ht, overwrite=True)
 
     logger.info("Writing results to tsv...")
