@@ -744,7 +744,7 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     final_pops = [x for x in POPS if x in found_pops]
 
     if len(found_pops - set(POPS)) > 0:
-        sys.exit(f"Invalid population found")
+        sys.exit("Invalid population found")
     input_mt = input_mt.annotate_globals(pop_order=final_pops)
 
     pre_pop_annotation_labels = [

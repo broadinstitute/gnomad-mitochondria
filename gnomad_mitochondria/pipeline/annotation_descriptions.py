@@ -287,10 +287,10 @@ def add_descriptions(
         hap_faf_hom=hl.struct(
             Description=f"List of filtering allele frequency for each haplogroup restricted to homoplasmic variants, haplogroup order: {hap_order}"
         ),
-        hapmax_AF_hom=hl.struct(Description=f"Haplogroup with maximum AF_hom"),
-        hapmax_AF_het=hl.struct(Description=f"Haplogroup with maximum AF_het"),
+        hapmax_AF_hom=hl.struct(Description="Haplogroup with maximum AF_hom"),
+        hapmax_AF_het=hl.struct(Description="Haplogroup with maximum AF_het"),
         faf_hapmax_hom=hl.struct(
-            Description=f"Maximum filtering allele frequency across haplogroups restricted to homoplasmic variants"
+            Description="Maximum filtering allele frequency across haplogroups restricted to homoplasmic variants"
         ),
         pop_AN=hl.struct(
             Description=f"List of overall allele number for each population, population order: {population_order}"
