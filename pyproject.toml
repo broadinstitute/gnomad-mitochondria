@@ -5,3 +5,28 @@ add_ignore = [
   "D100", # Do not require docstrings for modules.
   "D104", # Do not require docstrings for packages (in __init__.py).
 ]
+
+[tool.pylint.messages_control]
+disable = [
+  # Ignore refactor and convention categories
+  "R",
+  "C",
+  # Allow todo/fixme comments
+  "fixme",
+  # Warnings
+  "anomalous-backslash-in-string",
+  "cell-var-from-loop",
+  "dangerous-default-value",
+  "deprecated-method",
+  "f-string-without-interpolation",
+  "invalid-unary-operand-type",
+  "logging-fstring-interpolation",
+  "pointless-string-statement",
+  "protected-access",
+  "raise-missing-from",
+  "redefined-outer-name",
+  "unspecified-encoding",
+  "unused-argument",
+  "unused-import",
+  "unused-variable",
+]
