@@ -3,6 +3,5 @@ convention = "pep257"
 match = ".*\\.py"
 add_ignore = [
   "D100", # Do not require docstrings for modules.
-  "D103", # Do not require docstrings for functions.
   "D104", # Do not require docstrings for packages (in __init__.py).
 ]

@@ -13,7 +13,7 @@ from batch.batch_utils import (
 )
 
 
-def main():
+def main():  # noqa: D103
     p = init_arg_parser()
     p.add_argument(
         "--infile", required=True, help="Tab delimited file of participant and bam_path"

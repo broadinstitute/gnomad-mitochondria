@@ -335,7 +335,7 @@ def apply_mito_artifact_filter(
     return mt
 
 
-def main(args):
+def main(args):  # noqa: D103
     participant_data = args.participant_data
     coverage_mt_path = args.coverage_mt_path
     vcf_col_name = args.vcf_col_name

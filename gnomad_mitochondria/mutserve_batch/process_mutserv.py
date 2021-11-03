@@ -291,7 +291,7 @@ def initiate_deletion(
                 break
 
 
-def main(args):
+def main(args):  # noqa: D103
     input_file = args.input_file
     output_file = args.output_file
     mt_reference = args.mt_reference

@@ -1890,7 +1890,7 @@ def format_vcf(
     return input_mt, meta_dict, vcf_header_file
 
 
-def main(args):
+def main(args):  # noqa: D103
     mt_path = args.mt_path
     output_dir = args.output_dir
     participant_data = args.participant_data

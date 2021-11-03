@@ -16,7 +16,7 @@ logger = logging.getLogger("subset cov")
 logger.setLevel(logging.INFO)
 
 
-def main(args):
+def main(args):  # noqa: D103
     input_mt_path = args.input_mt_path
     cov_mt_path = args.cov_mt_path
     out_tsv_path = args.out_tsv_path
