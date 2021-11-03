@@ -1,2 +1,3 @@
-black==19.10b0
+black==19.10b0 # This should be kept in sync with the version in .pre-commit-config.yaml
 pip-tools
+pydocstyle==6.0.0 # This should be kept in sync with the version in .pre-commit-config.yaml
