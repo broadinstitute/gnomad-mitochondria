@@ -3,16 +3,16 @@ library(ggpubr)
 
 dir.create("figures")
 
-source("make_Fig5a.R", echo = TRUE) 
+source("generate_fig5A.R", echo = TRUE) 
 load("figures/Fig5a.rdata")
 
-source("make_Fig5b.R", echo = TRUE) 
+source("generate_fig5B.R", echo = TRUE) 
 load("figures/Fig5b.rdata")
 
-source("make_Fig5c.R", echo = TRUE) 
+source("generate_fig5C.R", echo = TRUE) 
 load("figures/Fig5c.rdata")
 
-source("make_Fig5def.R", echo = TRUE)
+source("generate_fig5DEF.R", echo = TRUE)
 load("figures/Fig5def.rdata")
 
 ggarrange(ggarrange(plota, plotb, labels = c("A", "B"), ncol = 2, nrow = 1, font.label = list(size = 22), widths = c(1, 1.5)),
