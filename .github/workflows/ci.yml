@@ -24,8 +24,12 @@ jobs:
             pip-
       - name: Install dependencies
         run: |
+          pip install wheel
           pip install -r requirements-dev.txt
+          pip install hail gnomad
       - name: Check formatting
         run: black --check .
       - name: Check docstrings
         run: pydocstyle
+      - name: Run Pylint
+        run: pylint gnomad_mitochondria
