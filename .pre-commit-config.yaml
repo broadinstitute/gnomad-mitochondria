@@ -12,8 +12,7 @@ repos:
       - id: black
         language_version: python3
   - repo: https://github.com/pycqa/pydocstyle
-    rev: 6.0.0 # This should be kept in sync with the version in requirements-dev.in
+    rev: 6.1.1 # This should be kept in sync with the version in requirements-dev.in
     hooks:
       - id: pydocstyle
-        args:
-        - --ignore=D100,D103,D212
+        additional_dependencies: ["toml"]
