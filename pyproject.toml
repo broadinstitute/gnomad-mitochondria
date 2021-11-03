@@ -27,6 +27,5 @@ disable = [
   "redefined-outer-name",
   "unspecified-encoding",
   "unused-argument",
-  "unused-import",
   "unused-variable",
 ]

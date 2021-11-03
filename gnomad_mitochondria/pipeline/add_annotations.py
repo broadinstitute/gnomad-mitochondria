@@ -6,7 +6,6 @@ import re
 import sys
 
 from collections import Counter
-from os.path import dirname
 from textwrap import dedent
 
 from gnomad.utils.annotations import age_hists_expr
