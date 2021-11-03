@@ -13,4 +13,20 @@ disable = [
   "C",
   # Allow todo/fixme comments
   "fixme",
+  # Warnings
+  "anomalous-backslash-in-string",
+  "cell-var-from-loop",
+  "dangerous-default-value",
+  "deprecated-method",
+  "f-string-without-interpolation",
+  "invalid-unary-operand-type",
+  "logging-fstring-interpolation",
+  "pointless-string-statement",
+  "protected-access",
+  "raise-missing-from",
+  "redefined-outer-name",
+  "unspecified-encoding",
+  "unused-argument",
+  "unused-import",
+  "unused-variable",
 ]
