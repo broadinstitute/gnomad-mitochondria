@@ -1,0 +1,7 @@
+[tool.pydocstyle]
+convention = "pep257"
+match = ".*\\.py"
+add_ignore = [
+  "D100", # Do not require docstrings for modules.
+  "D104", # Do not require docstrings for packages (in __init__.py).
+]

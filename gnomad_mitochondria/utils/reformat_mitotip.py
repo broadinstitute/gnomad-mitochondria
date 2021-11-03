@@ -4,7 +4,7 @@ import argparse
 from subprocess import check_output
 
 
-def main(args):
+def main(args):  # noqa: D103
     mitotip_scores = args.mitotip_scores
     mt_reference = args.mt_reference
     output_file = args.output_file

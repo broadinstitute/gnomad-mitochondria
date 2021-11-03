@@ -86,7 +86,7 @@ def multi_way_union_mts(mts: list, temp_dir: str, chunk_size: int) -> hl.MatrixT
     )
 
 
-def main(args):
+def main(args):  # noqa: D103
     input_tsv = args.input_tsv
     output_ht = args.output_ht
     temp_dir = args.temp_dir
