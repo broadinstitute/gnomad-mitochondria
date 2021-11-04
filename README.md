@@ -40,7 +40,7 @@ Required inputs:
 
 Annotations to the mt/vcf are added by running the add_annotations.py script. Some of the main functions in this script include:
 * Sets the GT to heteroplasmic (0/1) or homoplasmic (1/1) based on the supplied min-het-threshold (default: 0.10) and min-hom-threshold (0.95)
-* Adds sample annotations from data download in Terra ("participant_id", "contamination", "freemix_percentage", "major_haplogroup", "wgs_median_coverage", "mt_mean_coverage"). "contamination", "major_haplogroup", and "mt_mean_coverage" are output by the Mutect2 mitochondria pipeline, whereas "freemix_percentage" (from VerifyBamID) and "wgs_median_coverage" (from CollectWgsMetrics) should be uploaded by the user (as well as "age" and "pop" if the "subset-to-gnomad-release" argument cannot be used)
+* Adds sample annotations from data download in Terra ("participant_id", "contamination", "freemix_percentage", "major_haplogroup", "wgs_median_coverage", "mt_mean_coverage"). "contamination", "major_haplogroup", and "mt_mean_coverage" are output by the Mutect2 mitochondria pipeline, whereas "freemix_percentage" (from VerifyBamID) and "wgs_median_coverage" (from CollectWgsMetrics) should be uploaded by the user (as well as "age" and "pop" if the "subset-to-gnomad-release" argument cannot be used). Column "s" (Sample ID) is used as the key for joining.
 * Annotates a variant as "hap_defining_variant" (based on Phylotree), and adds in-silico predictors of variant severity (from PON-mt-tRNA and MitoTIP)
 * Adds sample metadata, at minimum inferred nuclear ancestry ("pop") should be supplied
 * Filters out samples with low (< 50) or high (> 500) estimated mitochondria copy number
