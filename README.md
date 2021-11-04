@@ -39,7 +39,7 @@ Required inputs:
 ## Step 3: add_annotations.py
 
 Annotations to the mt/vcf are added by running the add_annotations.py script. Some of the main functions in this script include:
-* Sets the GT to heteroplasmic (0/1) or homoplasmic (1/1) based on the supplied min_het_threshold (default: 0.10) and min_hom_threshold (0.95)
+* Sets the GT to heteroplasmic (0/1) or homoplasmic (1/1) based on the supplied min-het-threshold (default: 0.10) and min-hom-threshold (0.95)
 * Adds sample annotations from data download in Terra ("participant_id", "contamination", "freemix_percentage", "major_haplogroup", "wgs_median_coverage", "mt_mean_coverage"). "contamination", "major_haplogroup", and "mt_mean_coverage" are output by the Mutect2 mitochondria pipeline, whereas "freemix_percentage" (from VerifyBamID) and "wgs_median_coverage" (from CollectWgsMetrics) should be uploaded by the user (as well as "age" and "pop" if the "subset-to-gnomad-release" argument cannot be used)
 * Annotates a variant as "hap_defining_variant" (based on Phylotree), and adds in-silico predictors of variant severity (from PON-mt-tRNA and MitoTIP)
 * Adds sample metadata, at minimum inferred nuclear ancestry ("pop") should be supplied
@@ -50,9 +50,9 @@ Annotations to the mt/vcf are added by running the add_annotations.py script. So
 	* "artifact_prone_site": Variant overlaps a site that is known to be problematic. Applied in combine_vcfs.py.
 	* "indel_stack": All samples with the given indel were multiallelic for heteroplasmic indels at the site.
 	* "npg": No pass genotype. No sample had a pass genotype for the variant.
-* Flags "common_low_heteroplasmy" variants, which are variants found at an overall frequency of > 0.001 across all samples with a PASS genotype and heteroplasmy level > 0 and < 50% (includes variants < vaf_filter_threshold  which are subsequently filtered)
-* Sets genotypes < vaf_filter_threshold (default: 0.01) to homoplasmic reference
-* Sets non-PASS genotypes and genotypes with heteroplasmy < min_het_threshold (default: 0.10) to missing
+* Flags "common_low_heteroplasmy" variants, which are variants found at an overall frequency of > 0.001 across all samples with a PASS genotype and heteroplasmy level > 0 and < 50% (includes variants < vaf-filter-threshold  which are subsequently filtered)
+* Sets genotypes < vaf-filter-threshold (default: 0.01) to homoplasmic reference
+* Sets non-PASS genotypes and genotypes with heteroplasmy < min-het-threshold (default: 0.10) to missing
 * Outputs summary of variant statistics and applied filters ("stats.txt" and "stats_pass.txt")
 
 Required inputs:
@@ -63,7 +63,7 @@ Required inputs:
 
 Output will include an annotated mt.vcf, sites-only ht/vcf, and simplified txt file containing only the variant-identifying information as well as "filters", "AC_hom", "AC_het", "AF_hom", "AF_het", "AN", "max_hl".
 
-NOTE: vaf_filter_threshold should match what was supplied as the vaf_filter_threshold when running the Mutect2 mitochondria pipeline.
+NOTE: vaf-filter-threshold should match what was supplied as the vaf_filter_threshold when running the Mutect2 mitochondria pipeline.
 
 
 
