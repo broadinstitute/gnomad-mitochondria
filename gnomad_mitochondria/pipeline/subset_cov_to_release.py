@@ -21,7 +21,7 @@ def main(args):  # noqa: D103
     cov_mt_path = args.cov_mt_path
     out_tsv_path = args.out_tsv_path
 
-    logger.info(f"Subsetting coverage mt to samples in the input mt...")
+    logger.info("Subsetting coverage mt to samples in the input mt...")
     input_mt = hl.read_matrix_table(input_mt_path)
     cov_mt = hl.read_matrix_table(cov_mt_path)
     samples_to_subset = hl.literal(input_mt.s.collect())
@@ -46,10 +46,10 @@ def main(args):  # noqa: D103
     )
     cov_ht = cov_mt.rows()
 
-    output_ht = re.sub("\.tsv$", ".ht", out_tsv_path)
+    output_ht = re.sub(r"\.tsv$", ".ht", out_tsv_path)
     cov_ht = cov_ht.checkpoint(output_ht, overwrite=True)
 
-    logger.info(f"Writing results to tsv...")
+    logger.info("Writing results to tsv...")
     cov_ht.export(out_tsv_path)
 
 

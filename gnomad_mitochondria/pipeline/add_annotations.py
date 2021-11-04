@@ -6,7 +6,6 @@ import re
 import sys
 
 from collections import Counter
-from os.path import dirname
 from textwrap import dedent
 
 from gnomad.utils.annotations import age_hists_expr
@@ -92,8 +91,8 @@ def add_variant_context(input_mt: hl.MatrixTable) -> hl.MatrixTable:
 
     # Split columns into separate annotations
     vc_ht = vc_ht.annotate(
-        ref=vc_ht["POS.REF.ALT"].split("\.")[1],
-        alt=vc_ht["POS.REF.ALT"].split("\.")[2],
+        ref=vc_ht["POS.REF.ALT"].split(r"\.")[1],
+        alt=vc_ht["POS.REF.ALT"].split(r"\.")[2],
         strand=vc_ht.Context_category.split("_")[-1],
         variant=vc_ht.Context_category.split("_")[0],
     )
@@ -745,7 +744,7 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     final_pops = [x for x in POPS if x in found_pops]
 
     if len(found_pops - set(POPS)) > 0:
-        sys.exit(f"Invalid population found")
+        sys.exit("Invalid population found")
     input_mt = input_mt.annotate_globals(pop_order=final_pops)
 
     pre_pop_annotation_labels = [
@@ -1933,7 +1932,7 @@ def main(args):  # noqa: D103
 
     # If specified, subet to only the gnomAD samples in the current release
     if gnomad_subset:
-        logger.warn("Subsetting results to gnomAD release samples...")
+        logger.warning("Subsetting results to gnomAD release samples...")
         subset_name = "_gnomad"
 
         # Subset to release samples and filter out rows that no longer have at least one alt call

@@ -157,13 +157,12 @@ def multi_way_union_mts(mts: list, temp_dir: str, chunk_size: int) -> hl.MatrixT
 
 
 def join_mitochondria_vcfs_into_mt(
-    vcf_paths: Dict[str, str], output_bucket: str, temp_dir: str, chunk_size: int = 100
+    vcf_paths: Dict[str, str], temp_dir: str, chunk_size: int = 100
 ) -> hl.MatrixTable:
     """
     Reformat and join individual mitochondrial VCFs into one MatrixTable.
 
     :param vcf_paths: Dictionary of samples to combine (sample as key, path to VCF as value)
-    :param output_bucket: Path to bucket to which results should be written
     :param temp_dir: Path to temporary directory for intermediate results
     :param chunk_size: Number of MatrixTables to join per chunk (the number of individual VCFs that should be combined at a time)
     :return: Joined MatrixTable of samples given in vcf_paths dictionary
@@ -172,8 +171,10 @@ def join_mitochondria_vcfs_into_mt(
     for sample, vcf_path in vcf_paths.items():
         try:
             mt = hl.import_vcf(vcf_path, reference_genome="GRCh38")
-        except:
-            raise ValueError(f"vcf path {vcf_path} does not exist for sample {sample}")
+        except Exception as e:
+            raise ValueError(
+                f"vcf path {vcf_path} does not exist for sample {sample}"
+            ) from e
 
         # Because the vcfs are split, there is only one AF value, although misinterpreted as an array because Number=A in VCF header
         # Second value of MMQ is the value of the mapping quality for the alternate allele
@@ -348,7 +349,7 @@ def main(args):  # noqa: D103
     output_path_mt = f"{output_bucket}/raw_combined.mt"
 
     if args.overwrite == False and hl.hadoop_exists(output_path_mt):
-        logger.warn(
+        logger.warning(
             "Overwrite is set to False but file already exists at %s, script will run but output will not be written",
             output_path_mt,
         )
@@ -359,9 +360,7 @@ def main(args):  # noqa: D103
     )
 
     logger.info("Combining VCFs...")
-    combined_mt = join_mitochondria_vcfs_into_mt(
-        vcf_paths, output_bucket, args.temp_dir, chunk_size
-    )
+    combined_mt = join_mitochondria_vcfs_into_mt(vcf_paths, args.temp_dir, chunk_size)
     combined_mt = combined_mt.checkpoint(output_path_mt, overwrite=args.overwrite)
 
     logger.info("Removing select sample-level filters...")
