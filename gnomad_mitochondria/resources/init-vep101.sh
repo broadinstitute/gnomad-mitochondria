@@ -10,8 +10,6 @@ export VEP_DOCKER_IMAGE=gcr.io/broad-mpg-gnomad/vep_101
 mkdir -p /vep_data/loftee_data
 mkdir -p /vep_data/homo_sapiens
 
-PACKAGES="slackclient==2.9.3 sklearn tabulate scipy statsmodels ggplot hdbscan websocket-client scikit-learn joblib"
-pip install --upgrade --no-deps $PACKAGES
 
 # Install docker
 apt-get update
