@@ -185,7 +185,8 @@ def join_mitochondria_vcfs_into_mt(
             TLOD=mt.info["TLOD"][0],
             FT=hl.if_else(hl.len(mt.filters) == 0, {"PASS"}, mt.filters),
         )
-        # Use GRCh37 as reference as most external resources added in downstream scripts use GRCh37 contig names (although note that the actual sequences of the mitochondria in both GRCh37 and GRCh38 are the same)
+        # Use GRCh37 reference as most external resources added in downstream scripts use GRCh37 contig names
+        # (although note that the actual sequences of the mitochondria in both GRCh37 and GRCh38 are the same)
         mt = mt.key_rows_by(
             locus=hl.locus("MT", mt.locus.position, reference_genome="GRCh37"),
             alleles=mt.alleles,
