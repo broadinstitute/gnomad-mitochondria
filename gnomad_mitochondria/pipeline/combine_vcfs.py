@@ -39,7 +39,7 @@ logging.basicConfig(
 logger = logging.getLogger("combine_mitochondria_vcfs_into_mt")
 logger.setLevel(logging.INFO)
 
-logger.info("Setting hail flag to avoid array index out of bounds error error...")
+logger.info("Setting hail flag to avoid array index out of bounds error...")
 # Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
 # TODO: reassess if this flag is still needed for future versions of Hail
 hl._set_flags(no_whole_stage_codegen="1")
@@ -185,7 +185,8 @@ def join_mitochondria_vcfs_into_mt(
             TLOD=mt.info["TLOD"][0],
             FT=hl.if_else(hl.len(mt.filters) == 0, {"PASS"}, mt.filters),
         )
-        # Use GRCh37 as reference as most external resources added in downstream scripts use GRCh37 contig names (although note that the actual sequences of the mitochondira in both GRCh37 and GRCh38 are the same)
+        # Use GRCh37 reference as most external resources added in downstream scripts use GRCh37 contig names
+        # (although note that the actual sequences of the mitochondria in both GRCh37 and GRCh38 are the same)
         mt = mt.key_rows_by(
             locus=hl.locus("MT", mt.locus.position, reference_genome="GRCh37"),
             alleles=mt.alleles,

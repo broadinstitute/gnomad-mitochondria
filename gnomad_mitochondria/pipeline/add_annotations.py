@@ -42,7 +42,7 @@ logging.basicConfig(
 logger = logging.getLogger("add annotations")
 logger.setLevel(logging.INFO)
 
-logger.info("Setting hail flag to avoid array index out of bounds error error...")
+logger.info("Setting hail flag to avoid array index out of bounds error...")
 # Setting this flag isn't generally recommended, but is needed (since at least Hail version 0.2.75) to avoid an array index out of bounds error until changes are made in future versions of Hail
 # TODO: reassess if this flag is still needed for future versions of Hail
 hl._set_flags(no_whole_stage_codegen="1")
