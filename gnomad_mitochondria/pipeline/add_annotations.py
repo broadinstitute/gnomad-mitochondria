@@ -18,7 +18,7 @@ from gnomad.resources.grch38.reference_data import dbsnp, _import_dbsnp
 from gnomad_mitochondria.pipeline.annotation_descriptions import (
     add_descriptions,
     adjust_descriptions,
-)
+)  # pylint: disable=import-error
 
 # Github repo locations for imports:
 # gnomad: https://github.com/broadinstitute/gnomad_methods
