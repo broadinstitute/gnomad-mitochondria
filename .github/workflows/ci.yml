@@ -32,4 +32,4 @@ jobs:
       - name: Check docstrings
         run: pydocstyle
       - name: Run Pylint
-        run: pylint gnomad_mitochondria
+        run: PYTHONPATH=$(pwd):$PYTHONPATH pylint gnomad_mitochondria
