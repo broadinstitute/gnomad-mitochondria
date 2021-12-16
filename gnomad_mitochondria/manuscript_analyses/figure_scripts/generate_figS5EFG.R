@@ -5,10 +5,9 @@ library(reshape2)
 # read in 3 databases and merge;
 # For each database, create universal ID as M-POS-REF-ALT
 ############################
-DIR="manuscript_analyses/final_data_files/other_databases/"
-gnomad=read.delim(paste(DIR,"gnomad.genomes.v3.1.sites.chrM.reduced_annotations.tsv.txt",sep=""),stringsAsFactors=FALSE)
-mitomap=read.delim(paste(DIR,"MITOMAP_polymorphisms_02022021.cgi",sep=""),stringsAsFactors=FALSE)
-helix=read.delim(paste(DIR,"HelixMTdb_20200327.tsv",sep=""),stringsAsFactors=FALSE)
+gnomad=read.delim("final_data_files/gnomad/gnomad.genomes.v3.1.sites.chrM.reduced_annotations.tsv",stringsAsFactors=FALSE)
+mitomap=read.delim("final_data_files/other_databases/MITOMAP_polymorphisms_02022021.cgi",stringsAsFactors=FALSE)
+helix=read.delim("final_data_files/other_databases/HelixMTdb_20200327.tsv",stringsAsFactors=FALSE)
 
 # gnomad: get pass sites only
 gnomad=gnomad[gnomad$filters == "PASS",]
@@ -136,8 +135,8 @@ ggplot(mat,aes(y=HelixMTdb.AF_hom,x=gnomAD.AF_hom,color=category)) +
 dev.off()
 
 # statistics
-# how many shared SNVs = 7731
-sum((mat$gnomAD.AC_hom > 0) & (mat$MITOMAP.AC_hom >0))
+# how many shared SNVs = 8497
+sum((mat$gnomAD.AC_hom > 0) & (mat$HelixMTdb.AC_hom >0))
 # how many more homoplasmic variants does gnomAD have over helixMTdb? 712
 sum((mat$gnomAD.AC_hom > 0)  & (mat$HelixMTdb.AC_hom ==0))
 # what % increase of new SNVs does gnomAD have over HelixMTdb? 0.06
