@@ -28,10 +28,10 @@ from gnomad_mitochondria.pipeline.annotation_descriptions import (
 POPS.append("NA")
 
 RESOURCES = {
-    "variant_context": "gs://gnomad-public-requester-pays/resources/mitochondria/variant_context/chrM_pos_ref_alt_context_categories.txt",
-    "phylotree": "gs://gnomad-public-requester-pays/resources/mitochondria/phylotree/rCRS-centered_phylo_vars_final_update.txt",
-    "pon_mt_trna": "gs://gnomad-public-requester-pays/resources/mitochondria/trna_predictions/pon_mt_trna_predictions_08_27_2020.txt",
-    "mitotip": "gs://gnomad-public-requester-pays/resources/mitochondria/trna_predictions/mitotip_scores_08_27_2020.txt",
+    "variant_context": "gs://gcp-public-data--gnomad/resources/mitochondria/variant_context/chrM_pos_ref_alt_context_categories.txt",
+    "phylotree": "gs://gcp-public-data--gnomad/resources/mitochondria/phylotree/rCRS-centered_phylo_vars_final_update.txt",
+    "pon_mt_trna": "gs://gcp-public-data--gnomad/resources/mitochondria/trna_predictions/pon_mt_trna_predictions_08_27_2020.txt",
+    "mitotip": "gs://gcp-public-data--gnomad/resources/mitochondria/trna_predictions/mitotip_scores_08_27_2020.txt",
 }
 
 
