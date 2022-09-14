@@ -7,6 +7,8 @@ export VEP_BUCKET=hail-${VEP_REPLICATE}-vep
 export ASSEMBLY=GRCh38
 export VEP_DOCKER_IMAGE=gcr.io/broad-mpg-gnomad/vep_101
 
+pip install slackclient
+
 mkdir -p /vep_data/loftee_data
 mkdir -p /vep_data/homo_sapiens
 
