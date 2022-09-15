@@ -80,7 +80,7 @@ hailctl dataproc start CLUSTER_NAME \
 --num-preemptible-workers 15 \
 --max-idle 2h \
 --properties=spark:spark.speculation=true \
---packages "git+https://github.com/broadinstitute/gnomad_methods.git@master"
+--packages "git+https://github.com/broadinstitute/gnomad_methods.git@main"
 ```
 
 Scripts assume samples have been processed on GRCh38. More information on details of the pipeline and detailed descriptions of annotations can be found on our [blog](https://gnomad.broadinstitute.org/news/2020-11-gnomad-v3-1-mitochondrial-dna-variants/).

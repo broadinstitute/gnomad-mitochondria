@@ -7,7 +7,8 @@ export VEP_BUCKET=hail-${VEP_REPLICATE}-vep
 export ASSEMBLY=GRCh38
 export VEP_DOCKER_IMAGE=gcr.io/broad-mpg-gnomad/vep_101
 
-pip install slackclient
+PACKAGES="slackclient==2.9.3 sklearn tabulate scipy statsmodels ggplot hdbscan websocket-client scikit-learn joblib"
+pip install --upgrade --no-deps $PACKAGES
 
 mkdir -p /vep_data/loftee_data
 mkdir -p /vep_data/homo_sapiens
