@@ -19,6 +19,33 @@ from gnomad_mitochondria.pipeline.annotation_descriptions import (
     add_descriptions,
     adjust_descriptions,
 )
+from gnomad_mitochondria.utils.annotations import (
+    add_age_and_pop,
+    add_annotations_by_hap_and_pop,
+    add_filter_annotations,
+    add_genotype,
+    add_gnomad_metadata,
+    add_hap_defining,
+    add_quality_histograms,
+    add_rsids,
+    add_sample_annotations,
+    add_terra_metadata,
+    add_trna_predictions,
+    add_variant_context,
+    add_vep,
+    generate_expressions,
+)
+from gnomad_mitochondria.utils.exports import (
+    export_simplified_variants,
+    format_vcf,
+    generate_output_paths,
+    report_stats,
+)
+from gnomad_mitochondria.utils.filtering import (
+    filter_by_contamination,
+    filter_by_copy_number,
+    filter_genotypes,
+)
 
 # Github repo locations for imports:
 # gnomad: https://github.com/broadinstitute/gnomad_methods
@@ -158,7 +185,8 @@ def add_age_and_pop(input_mt: hl.MatrixTable, participant_data: str) -> hl.Matri
     :return: MatrixTable with select age and pop annotations added
     """
     ht = hl.import_table(
-        participant_data, types={"age": hl.tint32, "pop": hl.tstr},
+        participant_data,
+        types={"age": hl.tint32, "pop": hl.tstr},
     ).key_by("s")
 
     ht = ht.select("age", "pop")
@@ -2103,10 +2131,12 @@ if __name__ == "__main__":
         required=True,
     )
     parser.add_argument(
-        "--slack-token", help="Slack token that allows integration with slack",
+        "--slack-token",
+        help="Slack token that allows integration with slack",
     )
     parser.add_argument(
-        "--slack-channel", help="Slack channel to post results and notifications to",
+        "--slack-channel",
+        help="Slack channel to post results and notifications to",
     )
     parser.add_argument(
         "--min-het-threshold",
