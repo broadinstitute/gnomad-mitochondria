@@ -46,7 +46,9 @@ hl._set_flags(no_whole_stage_codegen="1")
 
 
 def collect_vcf_paths(
-    participant_data: str, vcf_col_name: str, participants_to_subset: str = None,
+    participant_data: str,
+    vcf_col_name: str,
+    participants_to_subset: str = None,
 ) -> Dict[str, str]:
     """
     Create dictionary of VCF paths for only the samples specified in participants_to_subset.
@@ -265,7 +267,8 @@ def determine_hom_refs(
 
 
 def apply_mito_artifact_filter(
-    mt: hl.MatrixTable, artifact_prone_sites_path: str,
+    mt: hl.MatrixTable,
+    artifact_prone_sites_path: str,
 ) -> hl.MatrixTable:
     """
     Add in artifact_prone_site filter.

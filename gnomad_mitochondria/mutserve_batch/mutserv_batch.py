@@ -52,7 +52,7 @@ def main():  # noqa: D103
                 )
 
                 file_stats = hl.hadoop_stat(bam_path)
-                bam_size = int(round(file_stats["size_bytes"] / 10.0 ** 9))
+                bam_size = int(round(file_stats["size_bytes"] / 10.0**9))
 
                 j = init_job(
                     b,

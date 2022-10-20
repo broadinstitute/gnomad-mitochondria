@@ -76,10 +76,12 @@ if __name__ == "__main__":
         required=True,
     )
     parser.add_argument(
-        "--slack-token", help="Slack token that allows integration with slack",
+        "--slack-token",
+        help="Slack token that allows integration with slack",
     )
     parser.add_argument(
-        "--slack-channel", help="Slack channel to post results and notifications to",
+        "--slack-channel",
+        help="Slack channel to post results and notifications to",
     )
 
     args = parser.parse_args()
