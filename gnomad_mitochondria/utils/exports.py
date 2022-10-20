@@ -1,5 +1,10 @@
 import hail as hl
 
+from collections import Counter
+from textwrap import dedent
+
+from gnomad.utils.vep import vep_struct_to_csq
+
 
 def generate_output_paths(
     output_dir: str, file_name: str, subset_name: str, extension: str
