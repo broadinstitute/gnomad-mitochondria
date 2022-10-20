@@ -3,10 +3,7 @@ import argparse
 import hail as hl
 import logging
 
-from gnomad.utils.annotations import age_hists_expr
-from gnomad.utils.reference_genome import add_reference_sequence
 from gnomad.utils.slack import slack_notifications
-from gnomad_qc.v3.resources.meta import meta  # pylint: disable=import-error
 from gnomad_mitochondria.pipeline.annotation_descriptions import (
     add_descriptions,
     adjust_descriptions,

@@ -5,6 +5,10 @@ import sys
 
 from gnomad.resources.grch38.gnomad import POPS
 from gnomad.resources.grch38.reference_data import dbsnp, _import_dbsnp
+from gnomad.utils.annotations import age_hists_expr
+from gnomad.utils.reference_genome import add_reference_sequence
+from gnomad_qc.v3.resources.meta import meta  # pylint: disable=import-error
+
 
 logging.basicConfig(
     format="%(asctime)s (%(name)s %(lineno)s): %(message)s",
@@ -713,6 +717,28 @@ def filter_genotypes_below_min_het_threshold(
     return input_mt
 
 
+def get_indel_expr(input_mt: hl.MatrixTable) -> hl.expr.BooleanExpression:
+    """
+    Generate expression for filtering to indels that should be used to evaluate indel stacks.
+
+    To be considered a variant to be used to evaluate indel stacks, the variant should:
+    a) be an indel
+    b) have a heteroplasmy level >= 0.01 and <= 0.95
+    c) have a PASS genotype
+
+    :param input_mt: MatrixTable
+    :return: Expression to be used for determining if a variant is an indel that should to be used to evaluate indel stacks
+    """
+    indel_expr = (
+        hl.is_indel(input_mt.alleles[0], input_mt.alleles[1])
+        & (input_mt.HL <= 0.95)
+        & (input_mt.HL >= 0.01)
+        & (input_mt.FT == {"PASS"})
+    )
+
+    return indel_expr
+
+
 def apply_indel_stack_filter(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
     Apply the indel_stack filter to the MatrixTable.
@@ -760,6 +786,38 @@ def apply_indel_stack_filter(input_mt: hl.MatrixTable) -> hl.MatrixTable:
             input_mt.filters.add("indel_stack"),
             input_mt.filters,
         )
+    )
+
+    return input_mt
+
+
+def apply_common_low_het_flag(input_mt: hl.MatrixTable) -> hl.MatrixTable:
+    """
+    Apply the common_low_heteroplasmy flag to the MatrixTable.
+
+    The common_low_heteroplasmy flag marks variants where the overall frequency is > 0.001 for samples with a heteroplasmy level > 0 and < 0.50 and either "low_allele_frac" or "PASS" for the genotype filter
+
+    NOTE: The "low_allele_frac" is applied by Mutect2 to variants with a heteroplasmy level below the supplied vaf_filter_threshold
+
+    :param input_mt: MatrixTable
+    :return: MatrixTable with the common_low_heteroplasmy flag added
+    """
+    input_mt = input_mt.annotate_rows(
+        AC_mid_het=hl.agg.count_where(
+            (input_mt.HL < 0.50)
+            & (input_mt.HL > 0.0)
+            & ((input_mt.FT == {"PASS"}) | (input_mt.FT == {"low_allele_frac"}))
+        )
+    )
+    input_mt = input_mt.annotate_rows(
+        AF_mid_het=input_mt.AC_mid_het
+        / hl.agg.count_where(
+            hl.is_defined(input_mt.HL)
+            & ((input_mt.FT == {"PASS"}) | (input_mt.FT == {"low_allele_frac"}))
+        )
+    )
+    input_mt = input_mt.annotate_rows(
+        common_low_heteroplasmy=input_mt.AF_mid_het > 0.001
     )
 
     return input_mt
