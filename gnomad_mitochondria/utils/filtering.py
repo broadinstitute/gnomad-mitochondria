@@ -1,5 +1,6 @@
 import hail as hl
 import logging
+import sys
 
 
 logging.basicConfig(
@@ -151,35 +152,6 @@ def filter_by_contamination(
     return input_mt, n_contaminated
 
 
-def filter_genotypes_below_min_het_threshold(
-    input_mt: hl.MatrixTable, min_het_threshold: float = 0.10
-) -> hl.MatrixTable:
-    """
-    Filter out genotypes with a heteroplasmy below the min_het_threshold.
-
-    This filter is a genotype level filter to remove variants with a heteroplasmy level below the specified min_het_threshold
-    NOTE: Should later parameterize this function to allow other heteroplasmy cutoffs?
-
-    :param input_mt: MatrixTable
-    :param min_het_threshold: Minimum heteroplasmy level to define a variant as a PASS heteroplasmic variant, genotypes below this threshold will count towards the heteroplasmy_below_min_het_threshold filter and be set to missing
-    :return: MatrixTable with the heteroplasmy_below_min_het_threshold in the FT field added where applicable
-    """
-    input_mt = input_mt.annotate_entries(
-        FT=hl.if_else(
-            (input_mt.HL < min_het_threshold) & (input_mt.GT.is_het()),
-            input_mt.FT.add("heteroplasmy_below_min_het_threshold"),
-            input_mt.FT,
-        )
-    )
-
-    # Remove "PASS" from FT if it's not the only filter
-    input_mt = input_mt.annotate_entries(
-        FT=hl.if_else(input_mt.FT != {"PASS"}, input_mt.FT.remove("PASS"), input_mt.FT)
-    )
-
-    return input_mt
-
-
 def filter_genotypes(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
     Set all genotype field values to missing if the variant is not "PASS" for that sample.
@@ -201,99 +173,26 @@ def filter_genotypes(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     return input_mt
 
 
-def remove_low_allele_frac_genotypes(
-    input_mt: hl.MatrixTable, vaf_filter_threshold: float = 0.01
-) -> hl.MatrixTable:
+def get_indel_expr(input_mt: hl.MatrixTable) -> hl.expr.BooleanExpression:
     """
-    Remove low_allele_frac genotypes and sets the call to homoplasmic reference.
+    Generate expression for filtering to indels that should be used to evaluate indel stacks.
 
-    NOTE: vaf_filter_threshold should match what was supplied to the vaf_filter_threshold when running Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter, Mutect2 will have flagged these variants as "low_allele_frac"
+    To be considered a variant to be used to evaluate indel stacks, the variant should:
+    a) be an indel
+    b) have a heteroplasmy level >= 0.01 and <= 0.95
+    c) have a PASS genotype
 
     :param input_mt: MatrixTable
-    :param vaf_filter_threshold: Should match vaf_filter_threshold supplied to Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter
-    :return: MatrixTable with genotypes below the vaf_filter_threshold set to homoplasmic reference
+    :return: Expression to be used for determining if a variant is an indel that should to be used to evaluate indel stacks
     """
-    # Set HL to 0 if < vaf_filter_threshold and remove variants that no longer have at least one alt call
-    input_mt = input_mt.annotate_entries(
-        HL=hl.if_else(
-            (input_mt.HL > 0) & (input_mt.HL < vaf_filter_threshold), 0, input_mt.HL
-        )
-    )
-    # Filter field for all variants with a heteroplasmy of 0 should be set to PASS
-    # This step is needed to prevent homref calls that are filtered
-    input_mt = input_mt.annotate_entries(
-        FT=hl.if_else(input_mt.HL < vaf_filter_threshold, {"PASS"}, input_mt.FT)
-    )
-    input_mt = input_mt.annotate_entries(
-        GT=hl.if_else(
-            input_mt.HL < vaf_filter_threshold, hl.parse_call("0/0"), input_mt.GT
-        )
+    indel_expr = (
+        hl.is_indel(input_mt.alleles[0], input_mt.alleles[1])
+        & (input_mt.HL <= 0.95)
+        & (input_mt.HL >= 0.01)
+        & (input_mt.FT == {"PASS"})
     )
 
-    # Check that variants no longer contain the "low_allele_frac" filter (vaf_filter_threshold should be set to appropriate level to remove these variants)
-    laf_rows = input_mt.filter_rows(
-        hl.agg.any(hl.str(input_mt.FT).contains("low_allele_frac"))
-    )
-    n_laf_rows = laf_rows.count_rows()
-    if n_laf_rows > 0:
-        sys.exit(
-            "low_allele_frac filter should no longer be present after applying vaf_filter_threshold (vaf_filter_threshold should equal the vaf_filter_threshold supplied to Mutect2)"
-        )
-    input_mt = input_mt.filter_rows(hl.agg.any(input_mt.HL > 0))
-
-    return input_mt
-
-
-def apply_indel_stack_filter(input_mt: hl.MatrixTable) -> hl.MatrixTable:
-    """
-    Apply the indel_stack filter to the MatrixTable.
-
-    The indel_stack filter marks alleles where all samples with the variant call had at least 2 different indels called at the position
-
-    :param input_mt: MatrixTable
-    :return: MatrixTable with the indel_stack filter added
-    """
-    # Add variant-level indel_stack at any indel allele where all samples with a variant call had at least 2 different indels called at that position
-    # If any sample had a solo indel at that position, do not filter
-    indel_expr = get_indel_expr(input_mt)
-    input_mt = input_mt.annotate_cols(
-        indel_pos_counter=hl.agg.filter(
-            indel_expr, hl.agg.counter(input_mt.locus.position)
-        )
-    )
-    indel_expr = get_indel_expr(input_mt)
-    input_mt = input_mt.annotate_entries(
-        indel_occurences=(
-            hl.case()
-            .when(
-                (
-                    indel_expr
-                    & (input_mt.indel_pos_counter.get(input_mt.locus.position) >= 2)
-                ),
-                "stack",
-            )
-            .when(
-                (
-                    indel_expr
-                    & (input_mt.indel_pos_counter.get(input_mt.locus.position) == 1)
-                ),
-                "solo",
-            )
-            .or_missing()
-        )
-    )
-
-    # If stack is true and solo is false, the indel is stack only and should be filtered out
-    input_mt = input_mt.annotate_rows(
-        filters=hl.if_else(
-            hl.agg.any(input_mt.indel_occurences == "stack")
-            & ~hl.agg.any(input_mt.indel_occurences == "solo"),
-            input_mt.filters.add("indel_stack"),
-            input_mt.filters,
-        )
-    )
-
-    return input_mt
+    return indel_expr
 
 
 def apply_common_low_het_flag(input_mt: hl.MatrixTable) -> hl.MatrixTable:
@@ -323,26 +222,6 @@ def apply_common_low_het_flag(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     )
     input_mt = input_mt.annotate_rows(
         common_low_heteroplasmy=input_mt.AF_mid_het > 0.001
-    )
-
-    return input_mt
-
-
-def apply_npg_filter(input_mt: hl.MatrixTable) -> hl.MatrixTable:
-    """
-    Apply the npg filter to the MatrixTable.
-
-    The npg (no pass genotypes) filter marks sites that don't have at least one pass alt call
-
-    :param input_mt: MatrixTable
-    :return: MatrixTable with the npg filter added
-    """
-    input_mt = input_mt.annotate_rows(
-        filters=hl.if_else(
-            ~(hl.agg.any((input_mt.HL > 0.0) & (input_mt.FT == {"PASS"}))),
-            input_mt.filters.add("npg"),
-            input_mt.filters,
-        )
     )
 
     return input_mt
