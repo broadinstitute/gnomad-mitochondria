@@ -688,11 +688,11 @@ def apply_npg_filter(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     return input_mt
 
 
-def filter_genotypes_below_min_het_threshold(
+def apply_heteroplasmy_below_min_het_threshold_filter(
     input_mt: hl.MatrixTable, min_het_threshold: float = 0.10
 ) -> hl.MatrixTable:
     """
-    Filter out genotypes with a heteroplasmy below the min_het_threshold.
+    Add filter to genotypes with a heteroplasmy below the min_het_threshold.
 
     This filter is a genotype level filter to remove variants with a heteroplasmy level below the specified min_het_threshold
     NOTE: Should later parameterize this function to allow other heteroplasmy cutoffs?
@@ -875,7 +875,7 @@ def add_filter_annotations(
     logger.info(
         "Filtering genotypes below with heteroplasmy below the min_het_threshold..."
     )
-    input_mt = filter_genotypes_below_min_het_threshold(input_mt, min_het_threshold)
+    input_mt = apply_heteroplasmy_below_min_het_threshold_filter(input_mt, min_het_threshold)
     n_het_below_min_het_threshold = input_mt.aggregate_entries(
         hl.agg.count_where(
             hl.str(input_mt.FT).contains("heteroplasmy_below_min_het_threshold")
