@@ -312,7 +312,7 @@ def generate_expressions(
     """
     Create expressions to use for annotating the MatrixTable.
 
-    The expressions include AC, AN, AF, filtering allele frequency (FAF) split by homplasmic/heteroplasmic, haplgroup, and population.
+    The expressions include AC, AN, AF, filtering allele frequency (FAF) split by homplasmic/heteroplasmic, haplogroup, and population.
     Also includes calcuations of mean DP, MQ, and TLOD.
 
     :param input_mt: MatrixTable
@@ -846,7 +846,7 @@ def add_filter_annotations(
     min_het_threshold: float = 0.10,
 ) -> hl.MatrixTable:
     """
-    Generate histogram for number of individuals with the specified sample-level filter at different heteroplasmy levels.
+    Add genotype and variant level filters and flags
 
     :param input_mt: MatrixTable
     :param vaf_filter_threshold: Should match vaf_filter_threshold supplied to Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter
