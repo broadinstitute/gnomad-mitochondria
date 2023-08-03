@@ -846,7 +846,7 @@ def add_filter_annotations(
     min_het_threshold: float = 0.10,
 ) -> hl.MatrixTable:
     """
-    Add genotype and variant level filters and flags
+    Add genotype and variant level filters and flags.
 
     :param input_mt: MatrixTable
     :param vaf_filter_threshold: Should match vaf_filter_threshold supplied to Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter
