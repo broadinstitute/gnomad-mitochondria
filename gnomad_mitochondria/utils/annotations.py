@@ -17,6 +17,9 @@ logging.basicConfig(
 logger = logging.getLogger("add annotations")
 logger.setLevel(logging.INFO)
 
+# Use populations from gnomAD v3
+POPS = POPS["v3"]
+
 # Include NA in POPS to account for cases where population annotations are missing
 POPS.append("NA")
 
