@@ -180,11 +180,10 @@ def main(args):  # noqa: D103
         # Add variant annotations such as AC, AF, and AN
         mt = mt.annotate_rows(**dict(generate_expressions(mt, min_hom_threshold)))
         # Checkpoint to help avoid Hail errors from large queries
-        mt = mt.checkpoint(f"{output_dir}/temp.mt", overwrite=args.overwrite)
+        mt = mt.checkpoint(new_temp_file(prefix="temp", extension="mt"))
 
         logger.info("Adding quality histograms...")
         mt = add_quality_histograms(mt)
-        # mt = mt.checkpoint(new_temp_file(prefix="hist", extension="mt"))
 
         logger.info("Adding per-haplogroup and population annotations...")
         mt = add_annotations_by_hap_and_pop(mt)
