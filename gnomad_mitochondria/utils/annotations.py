@@ -510,7 +510,6 @@ def drop_prefix(annotation_name: str) -> str:
     :param annotation_name: Annotation name starting prefixed with "pre".
     :return: Annotation name with prefix "pre" removed.
     """
-
     return re.sub("pre_", "", annotation_name)
 
 
