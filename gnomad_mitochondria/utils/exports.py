@@ -3,7 +3,7 @@ import hail as hl
 from collections import Counter
 from textwrap import dedent
 
-from gnomad.utils.vep import vep_struct_to_csq
+from gnomad.utils.vep import vep_struct_to_csq, VEP_CSQ_FIELDS
 
 
 def generate_output_paths(
@@ -286,7 +286,12 @@ def format_vcf(
         dp_hist_alt_bin_freq=input_mt.dp_hist_alt.bin_freq,
     )
 
-    input_mt = input_mt.annotate_rows(vep=vep_struct_to_csq(input_mt.vep))
+    input_mt = input_mt.annotate_rows(
+        vep=vep_struct_to_csq(
+            vep_expr=input_mt.vep,
+            csq_fields=VEP_CSQ_FIELDS[hl.eval(input_mt.vep_version)[1:]],
+        )
+    )
 
     # Get length of annotations to use in Number fields in the VCF where necessary
     len_hap_hl_hist = len(input_mt.hap_hl_hist.take(1)[0])

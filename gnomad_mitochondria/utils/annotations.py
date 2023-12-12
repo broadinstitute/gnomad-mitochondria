@@ -8,6 +8,7 @@ from gnomad.resources.grch38.reference_data import dbsnp, _import_dbsnp
 from gnomad.utils.annotations import age_hists_expr
 from gnomad.utils.reference_genome import add_reference_sequence
 from gnomad_qc.v3.resources.meta import meta  # pylint: disable=import-error
+from hail.utils.misc import new_temp_file
 
 
 logging.basicConfig(
@@ -502,6 +503,17 @@ def add_quality_histograms(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     return input_mt
 
 
+def drop_prefix(annotation_name: str) -> str:
+    """
+    Drop prefix "pre" from the given annotation name.
+
+    :param annotation_name: Annotation name starting prefixed with "pre".
+    :return: Annotation name with prefix "pre" removed.
+    """
+
+    return re.sub("pre_", "", annotation_name)
+
+
 def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
     """
     Add variant annotations (such as AC, AN, AF, heteroplasmy histogram, and filtering allele frequency) split by haplogroup and population.
@@ -518,12 +530,16 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
         if not re.match("^[A-Z]", i):
             sys.exit(f"Invalid haplogroup {i}, does not start with a letter")
 
-    pre_hap_annotation_labels = [
+    # Split pre hap annotations into two batches to avoid ClassTooLargeException.
+    pre_hap_annotation_labels_b1 = [
         "pre_hap_AC",
         "pre_hap_AN",
         "pre_hap_AF",
         "pre_hap_AC_het",
         "pre_hap_AC_hom",
+    ]
+
+    pre_hap_annotation_labels_b2 = [
         "pre_hap_AF_hom",
         "pre_hap_AF_het",
         "pre_hap_hl_hist",
@@ -531,13 +547,27 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
         "pre_hap_faf_hom",
     ]
 
-    for i in pre_hap_annotation_labels:
-        final_annotation = re.sub(
-            "pre_", "", i
-        )  # remove "pre" prefix for final annotations
-        input_mt = input_mt.annotate_rows(
-            **{final_annotation: standardize_haps(input_mt, i, sorted(list_hap_order))}
-        )
+    # Add ordered haplogroup annotations for AC, AN, AF, AC_het, AC_hom.
+    input_mt = input_mt.annotate_rows(
+        **{
+            drop_prefix(i): standardize_haps(input_mt, i, sorted(list_hap_order))
+            for i in pre_hap_annotation_labels_b1
+        }
+    )
+    input_mt = input_mt.checkpoint(
+        new_temp_file(prefix="hap_annotations_b1", extension="mt")
+    )
+
+    # Add ordered haplogroup annotations for AF_het, AF_hom, hl_hist, faf, and faf_hom.
+    input_mt = input_mt.annotate_rows(
+        **{
+            drop_prefix(i): standardize_haps(input_mt, i, sorted(list_hap_order))
+            for i in pre_hap_annotation_labels_b2
+        }
+    )
+    input_mt = input_mt.checkpoint(
+        new_temp_file(prefix="hap_annotations_b2", extension="mt")
+    )
 
     # Get a list of indexes where AC of the haplogroup is greater than 0, then get the list of haplogroups with that index
     input_mt = input_mt.annotate_rows(
@@ -583,6 +613,7 @@ def add_annotations_by_hap_and_pop(input_mt: hl.MatrixTable) -> hl.MatrixTable:
         input_mt = input_mt.annotate_rows(
             **{final_annotation: standardize_pops(input_mt, i, final_pops)}
         )
+    input_mt = input_mt.checkpoint(new_temp_file(prefix="input_mt_pop", extension="mt"))
 
     # Drop intermediate annotations
     annotations_to_drop = [
