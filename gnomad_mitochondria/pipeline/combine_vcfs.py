@@ -434,7 +434,7 @@ if __name__ == "__main__":
     p.add_argument(
         "-f",
         "--file-name",
-        help="File name to use for output files (will be used the the .vcf.bgz and .mt outputs)",
+        help="File name to use for output files (will be used for naming the .vcf.bgz and .mt outputs)",
         required=True,
     )
     p.add_argument(
