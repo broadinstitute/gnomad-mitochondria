@@ -266,68 +266,68 @@ def main(args):  # noqa: D103
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="This script adds variant annotations to the mitochondria VCF/MT"
+        description="This script adds variant annotations to the mitochondria VCF/MT."
     )
-    parser.add_argument("-m", "--mt-path", help="Path to combined mt", required=True)
+    parser.add_argument("-m", "--mt-path", help="Path to combined mt.", required=True)
     parser.add_argument(
         "-d",
         "--output-dir",
-        help="Path to directory to which output should be written",
+        help="Path to directory to which output should be written.",
         required=True,
     )
     parser.add_argument(
         "-a",
         "--participant-data",
-        help="Output file that results from Terra data download",
+        help="Output file that results from Terra data download.",
         required=True,
     )
     parser.add_argument(
         "-v",
         "--vep-results",
-        help="MatrixTable path to output vep results (either the existing results or where to ouput new vep results if also setting run_vep)",
+        help="MatrixTable path to output vep results (either the existing results or where to ouput new vep results if also setting run_vep).",
         required=True,
     )
     parser.add_argument(
         "--slack-token",
-        help="Slack token that allows integration with slack",
+        help="Slack token that allows integration with slack.",
     )
     parser.add_argument(
         "--slack-channel",
-        help="Slack channel to post results and notifications to",
+        help="Slack channel to post results and notifications to.",
     )
     parser.add_argument(
         "--min-het-threshold",
-        help="Minimum heteroplasmy level to define a variant as a PASS heteroplasmic variant, genotypes below this threshold will count towards the heteroplasmy_below_min_het_threshold filter and be set to missing",
+        help="Minimum heteroplasmy level to define a variant as a PASS heteroplasmic variant, genotypes below this threshold will count towards the heteroplasmy_below_min_het_threshold filter and be set to missing.",
         type=float,
         default=0.10,
     )
     parser.add_argument(
         "--min-hom-threshold",
-        help="Minimum heteroplasmy level to define a variant as homoplasmic",
+        help="Minimum heteroplasmy level to define a variant as homoplasmic.",
         type=float,
         default=0.95,
     )
     parser.add_argument(
         "--vaf-filter-threshold",
-        help="Should match vaf_filter_threshold supplied to Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter",
+        help="Should match vaf_filter_threshold supplied to Mutect2, variants below this value will be set to homoplasmic reference after calculating the common_low_heteroplasmy filter.",
         type=float,
         default=0.01,
     )
     parser.add_argument(
         "--subset-to-gnomad-release",
-        help="Set to True to only include released gnomAD samples",
+        help="Set to True to only include released gnomAD samples.",
         action="store_true",
     )
     parser.add_argument(
         "--keep-all-samples",
-        help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number)",
+        help="Set to True to keep all samples (will skip steps that filter samples because of contamination and/or mitochondrial copy number).",
         action="store_true",
     )
     parser.add_argument(
-        "--run-vep", help="Set to True to run/rerun vep", action="store_true"
+        "--run-vep", help="Set to True to run/rerun vep.", action="store_true"
     )
     parser.add_argument(
-        "--overwrite", help="Overwrites existing files", action="store_true"
+        "--overwrite", help="Overwrites existing files.", action="store_true"
     )
 
     args = parser.parse_args()
