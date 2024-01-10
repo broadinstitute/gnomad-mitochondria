@@ -7,6 +7,9 @@ export VEP_BUCKET=hail-${VEP_REPLICATE}-vep
 export ASSEMBLY=GRCh38
 export VEP_DOCKER_IMAGE=gcr.io/broad-mpg-gnomad/vep_101
 
+PACKAGES="slackclient==2.9.3 sklearn tabulate scipy statsmodels ggplot hdbscan websocket-client scikit-learn joblib"
+pip install --upgrade --no-deps $PACKAGES
+
 mkdir -p /vep_data/loftee_data
 mkdir -p /vep_data/homo_sapiens
 
@@ -36,14 +39,14 @@ wait
 ################################################################
 
 # GCS copy of ftp://ftp.ensembl.org/pub/release-101/variation/indexed_vep_cache/homo_sapiens_merged_vep_101_GRCh38.tar.gz
-gsutil -u $PROJECT cat gs://gnomad-public-requester-pays/resources/vep/v101/homo_sapiens_merged_vep_101_GRCh38.tar.gz | tar -xzf - -C /vep_data
+gsutil -u $PROJECT cat gs://gcp-public-data--gnomad/resources/vep/v101/homo_sapiens_merged_vep_101_GRCh38.tar.gz | tar -xzf - -C /vep_data
 
 wait
 
 # FASTA file from Hail's VEP 101 data
-gsutil -u $PROJECT cp gs://gnomad-public-requester-pays/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz /vep_data/
-gsutil -u $PROJECT cp gs://gnomad-public-requester-pays/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz.fai /vep_data/
-gsutil -u $PROJECT cp gs://gnomad-public-requester-pays/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz.gzi /vep_data/
+gsutil -u $PROJECT cp gs://gcp-public-data--gnomad/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz /vep_data/
+gsutil -u $PROJECT cp gs://gcp-public-data--gnomad/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz.fai /vep_data/
+gsutil -u $PROJECT cp gs://gcp-public-data--gnomad/resources/vep/Homo_sapiens.GRCh38.dna.toplevel.fa.gz.gzi /vep_data/
 
 # Create config file.
 

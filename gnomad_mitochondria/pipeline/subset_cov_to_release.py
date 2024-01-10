@@ -55,31 +55,33 @@ def main(args):  # noqa: D103
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="This script subsets the coverage files to the sample in the supplied mt"
+        description="This script subsets the coverage files to the sample in the supplied mt."
     )
     parser.add_argument(
         "-i",
         "--input-mt-path",
-        help='Path to MatrixTable containing a sample "s" column (coverage mt will be subset to the samples in this mt)',
+        help='Path to MatrixTable containing a sample "s" column (coverage mt will be subset to the samples in this mt).',
         required=True,
     )
     parser.add_argument(
         "-c",
         "--cov-mt-path",
-        help="Path to MatrixTable of per base coverages for all samples (per sample and per variant",
+        help="Path to MatrixTable of per base coverages for all samples (per sample and per variant.",
         required=True,
     )
     parser.add_argument(
         "-o",
         "--out-tsv-path",
-        help="Path to which resulting tsv should be written",
+        help="Path to which resulting tsv should be written.",
         required=True,
     )
     parser.add_argument(
-        "--slack-token", help="Slack token that allows integration with slack",
+        "--slack-token",
+        help="Slack token that allows integration with slack.",
     )
     parser.add_argument(
-        "--slack-channel", help="Slack channel to post results and notifications to",
+        "--slack-channel",
+        help="Slack channel to post results and notifications to.",
     )
 
     args = parser.parse_args()

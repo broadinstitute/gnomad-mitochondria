@@ -158,37 +158,39 @@ def main(args):  # noqa: D103
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="This script combines individual mitochondria coverage files and outputs a hail table with coverage annotations"
+        description="This script combines individual mitochondria coverage files and outputs a hail table with coverage annotations."
     )
     parser.add_argument(
         "-i",
         "--input-tsv",
-        help="Input file with coverage files to combine in tab-delimited format of participant_id, base_level_coverage_metrics, sample",
+        help="Input file with coverage files to combine in tab-delimited format of participant_id, base_level_coverage_metrics, sample.",
         required=True,
     )
     parser.add_argument(
-        "-o", "--output-ht", help="Name of ht to write output", required=True
+        "-o", "--output-ht", help="Name of ht to write output.", required=True
     )
     parser.add_argument(
         "-t",
         "--temp-dir",
-        help="Temporary directory to use for intermediate outputs",
+        help="Temporary directory to use for intermediate outputs.",
         required=True,
     )
     parser.add_argument(
-        "--slack-token", help="Slack token that allows integration with slack",
+        "--slack-token",
+        help="Slack token that allows integration with slack.",
     )
     parser.add_argument(
-        "--slack-channel", help="Slack channel to post results and notifications to",
+        "--slack-channel",
+        help="Slack channel to post results and notifications to.",
     )
     parser.add_argument(
         "--chunk-size",
-        help="Chunk size to use for combining VCFs (the number of individual VCFs that should be combined at a time)",
+        help="Chunk size to use for combining VCFs (the number of individual VCFs that should be combined at a time).",
         type=int,
         default=100,
     )
     parser.add_argument(
-        "--overwrite", help="Overwrites existing files", action="store_true"
+        "--overwrite", help="Overwrites existing files.", action="store_true"
     )
 
     args = parser.parse_args()
