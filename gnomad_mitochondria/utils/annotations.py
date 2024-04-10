@@ -19,7 +19,7 @@ logger = logging.getLogger("add annotations")
 logger.setLevel(logging.INFO)
 
 # Use populations from gnomAD v3
-POPS = POPS["v3"]  # pylint: disable=invalid-sequence-index
+POPS = POPS["v3"]["genomes"]  # pylint: disable=invalid-sequence-index
 
 # Include NA in POPS to account for cases where population annotations are missing
 POPS.append("NA")
